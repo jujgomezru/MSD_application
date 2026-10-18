@@ -48,3 +48,19 @@ po/*~
 
 # RStudio Connect folder
 rsconnect/
+
+# Quarto
+/.quarto/
+/_site/
+# _freeze/ sí se versiona: GitHub Actions publica a partir de él.
+
+# renv
+renv/library/
+renv/local/
+renv/staging/
+
+# Datos: los crudos no se versionan (se obtienen con los scripts de descarga)
+data/raw/*
+!data/raw/.gitkeep
+
+**/*.quarto_ipynb

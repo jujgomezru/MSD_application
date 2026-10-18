@@ -1,0 +1,19 @@
+body {
+  background-color: #fcfcfb;
+}
+
+figure img {
+  max-width: 100%;
+  height: auto;
+}
+
+.figure-caption,
+figcaption {
+  color: #52514e;
+  font-size: 0.9rem;
+}
+
+.nota-fuente {
+  color: #898781;
+  font-size: 0.8rem;
+}

@@ -1,0 +1,14 @@
+nombre,investigacion,entidad,descripcion,metodo,id_dataset,url
+pqrd_supersalud,ambas,Supersalud,"Peticiones, quejas y reclamos por motivo y EPS",datos.gov.co,,https://www.datos.gov.co
+moca_oportunidad_citas,especialistas,Minsalud,"Tiempos de espera por especialidad, departamento, municipio e IPS (Res. 256 de 2016), 2017-2026",scripts/02_descargar_moca.R,,https://rssvr2.sispro.gov.co/IndicadoresMOCA/
+ordenamiento_eps,especialistas,Minsalud,"Ordenamiento anual de EPS",manual,,https://www.minsalud.gov.co
+ecv_dane,especialistas,DANE,"Encuesta Nacional de Calidad de Vida, módulo de salud",manual,,https://microdatos.dane.gov.co
+tutelas_defensoria,ambas,Defensoría del Pueblo,"Informe La tutela y los derechos a la salud",manual,,https://www.defensoria.gov.co
+cartera_achc,especialistas,ACHC,"Estudio de cartera hospitalaria",manual,,https://achc.org.co
+cac_informes,medicamentos,Cuenta de Alto Costo,"Situación de enfermedades de alto costo",manual,,https://cuentadealtocosto.org
+presupuestos_maximos_adres,medicamentos,ADRES,"Giros y ejecución de presupuestos máximos",manual,,https://www.adres.gov.co
+sismed,medicamentos,Minsalud,"Precios y unidades vendidas de medicamentos",manual,,https://www.sispro.gov.co
+desabastecimiento_invima,medicamentos,Invima,"Listado de medicamentos desabastecidos o en riesgo",manual,,https://www.invima.gov.co
+rethus,especialistas,Minsalud,"Registro Único Nacional del Talento Humano en Salud por departamento de residencia y perfil (corte 2022)",datos.gov.co,my8c-6xkk,https://www.datos.gov.co/d/my8c-6xkk
+poblacion_dane,ambas,DANE,"Proyecciones de población departamental 2018-2050 (CNPV 2018, actualización post COVID-19)",R/poblacion.R,,https://www.dane.gov.co/index.php/estadisticas-por-tema/demografia-y-poblacion/proyecciones-de-poblacion
+mgn_departamentos,ambas,DANE,"Marco Geoestadístico Nacional 2025, límites departamentales",scripts/04_preparar_mapa.R,,https://geoportal.dane.gov.co/mparcgis/rest/services/Divipola/Serv_DIVIPOLA_MGN_2025/FeatureServer/319

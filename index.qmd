@@ -1,0 +1,295 @@
+---
+title: "Barreras de acceso en salud en Colombia"
+subtitle: "Gráficas de apoyo"
+author: "jujgomezru"
+date: last-modified
+---
+
+Gráficas elaboradas con datos públicos y reportes oficiales. El código fuente está en el
+[repositorio](https://github.com/jujgomezru/MSD_application) y las fuentes, en `data/fuentes.csv`.
+
+## Espera por departamento
+
+```{ojs}
+//| echo: false
+P = import("https://cdn.jsdelivr.net/npm/@observablehq/plot@0.6.17/+esm")
+
+geo = FileAttachment("data/geo/departamentos.geojson").json()
+
+datos = FileAttachment("data/processed/mapa_espera_departamentos.csv").csv()
+  .then(filas => filas.map(d => ({
+    ...d,
+    dias: d.dias === "" ? null : +d.dias,
+    citas: +d.citas,
+    promedio_nacional: +d.promedio_nacional
+  })))
+
+orden = ["Medicina general", "Medicina interna", "Cirugía general", "Ginecología", "Obstetricia", "Pediatría"]
+
+viewof especialidad = Inputs.select(orden, {label: "Especialidad", value: "Medicina general"})
+```
+
+```{ojs}
+//| echo: false
+fmt = x => x.toLocaleString("es-CO", {minimumFractionDigits: 1, maximumFractionDigits: 1})
+mes = d => new Date(d + "T00:00:00").toLocaleDateString("es-CO", {month: "long", year: "numeric"})
+
+seleccion = datos.filter(d => d.especialidad === especialidad && d.dias !== null)
+media = seleccion[0].promedio_nacional
+porCodigo = new Map(seleccion.map(d => [d.cod_depto, d]))
+
+// La escala pivota en el promedio nacional: verde por debajo, rojo por encima.
+dominio = {
+  const valores = seleccion.map(d => d.dias);
+  return [Math.min(...valores, media - 0.01), media, Math.max(...valores, media + 0.01)];
+}
+
+md`Promedio nacional: **${fmt(media)} días**. Los departamentos en verde asignan citas más rápido
+que el promedio y los rojos, más lento. Días promedio entre la solicitud y la cita asignada,
+${mes(seleccion[0].desde.slice(0, 7) + "-01")} a ${mes(seleccion[0].hasta)}, ponderado por número de citas.`
+```
+
+```{ojs}
+//| echo: false
+mapa = P.plot({
+  width: 640,
+  projection: {type: "mercator", domain: geo},
+  color: {
+    type: "linear",
+    domain: dominio,
+    range: ["#1b7837", "#f0efec", "#b2182b"],
+    label: "Días de espera",
+    tickFormat: fmt
+  },
+  marks: [
+    P.geo(geo, {fill: "#e1e0d9", stroke: "#fcfcfb", strokeWidth: 0.8}),
+    P.geo(geo, P.centroid({
+      filter: f => porCodigo.has(f.properties.DPTO_CCDGO),
+      // El filtro se aplica después de evaluar los canales: de ahí el ?.
+      fill: f => porCodigo.get(f.properties.DPTO_CCDGO)?.dias,
+      stroke: "#fcfcfb",
+      strokeWidth: 0.8,
+      title: f => {
+        const d = porCodigo.get(f.properties.DPTO_CCDGO);
+        if (!d) return null;
+        const diferencia = d.dias - media;
+        return `${d.departamento}\n${fmt(d.dias)} días ` +
+          `(${diferencia >= 0 ? "+" : "−"}${fmt(Math.abs(diferencia))} frente al promedio)\n` +
+          `${d.citas.toLocaleString("es-CO")} citas`;
+      },
+      tip: true
+    }))
+  ]
+})
+
+html`${mapa.legend("color", {marginLeft: 16, width: 360, tickFormat: fmt})}${mapa}`
+```
+
+<p class="nota-fuente">Fuente: Minsalud, Observatorio Nacional de Calidad en Salud (Res. 256 de 2016);
+límites departamentales: DANE, Marco Geoestadístico Nacional 2025. Los departamentos en gris no tienen
+datos para la especialidad. En departamentos con pocas citas el promedio es menos estable.</p>
+
+```{ojs}
+//| echo: false
+Inputs.table(
+  seleccion.map(d => ({
+    Departamento: d.departamento,
+    "Días": d.dias,
+    "Frente al promedio": d.dias - media,
+    Citas: d.citas
+  })),
+  {
+    sort: "Días",
+    reverse: true,
+    rows: 12,
+    format: {
+      "Días": fmt,
+      "Frente al promedio": x => (x >= 0 ? "+" : "−") + fmt(Math.abs(x)),
+      Citas: x => x.toLocaleString("es-CO")
+    }
+  }
+)
+```
+
+## Especialistas por departamento
+
+```{ojs}
+//| echo: false
+especialistas = FileAttachment("data/processed/mapa_especialistas_departamentos.csv").csv()
+  .then(filas => filas.map(d => ({
+    ...d,
+    profesionales: +d.profesionales,
+    poblacion: +d.poblacion,
+    por_100k: +d.por_100k,
+    tasa_nacional: +d.tasa_nacional
+  })))
+
+ordenPerfiles = ["Medicina interna", "Cirugía general", "Ginecología y obstetricia", "Pediatría", "Médicos (pregrado)"]
+
+viewof perfil = Inputs.select(ordenPerfiles, {label: "Especialidad", value: "Medicina interna"})
+```
+
+```{ojs}
+//| echo: false
+seleccionEsp = especialistas.filter(d => d.especialidad === perfil)
+tasaNacional = seleccionEsp[0].tasa_nacional
+porCodigoEsp = new Map(seleccionEsp.map(d => [d.cod_depto, d]))
+
+// Pivote en la tasa nacional: verde por encima (más especialistas), rojo por debajo.
+dominioEsp = {
+  const valores = seleccionEsp.map(d => d.por_100k);
+  return [Math.min(...valores, tasaNacional - 0.01), tasaNacional, Math.max(...valores, tasaNacional + 0.01)];
+}
+
+md`Tasa nacional: **${fmt(tasaNacional)} por cada 100.000 habitantes**. Los departamentos en verde
+tienen más profesionales por habitante que el promedio nacional y los rojos, menos.`
+```
+
+```{ojs}
+//| echo: false
+mapaEsp = P.plot({
+  width: 640,
+  projection: {type: "mercator", domain: geo},
+  color: {
+    type: "linear",
+    domain: dominioEsp,
+    range: ["#b2182b", "#f0efec", "#1b7837"],
+    label: "Profesionales por 100.000 habitantes",
+    tickFormat: fmt
+  },
+  marks: [
+    P.geo(geo, P.centroid({
+      fill: f => porCodigoEsp.get(f.properties.DPTO_CCDGO)?.por_100k,
+      stroke: "#fcfcfb",
+      strokeWidth: 0.8,
+      title: f => {
+        const d = porCodigoEsp.get(f.properties.DPTO_CCDGO);
+        if (!d) return null;
+        return `${d.departamento}\n${fmt(d.por_100k)} por 100.000 habitantes\n` +
+          `${d.profesionales.toLocaleString("es-CO")} profesionales registrados`;
+      },
+      tip: true
+    }))
+  ]
+})
+
+html`${mapaEsp.legend("color", {marginLeft: 16, width: 360, tickFormat: fmt})}${mapaEsp}`
+```
+
+<p class="nota-fuente">Fuente: Minsalud, Registro Único Nacional del Talento Humano en Salud (ReTHUS),
+corte 2022, por departamento de residencia; población: DANE, proyecciones 2022. ReTHUS es acumulado:
+incluye profesionales que pudieron retirarse, fallecer o mudarse, así que sirve para comparar
+departamentos, no como conteo exacto. Cundinamarca aparece baja porque muchos profesionales que
+trabajan allí residen en Bogotá. "Médicos (pregrado)" incluye a todos los títulos de medicina, también
+a quienes luego se especializaron.</p>
+
+```{ojs}
+//| echo: false
+Inputs.table(
+  seleccionEsp.map(d => ({
+    Departamento: d.departamento,
+    "Por 100.000 hab.": d.por_100k,
+    Profesionales: d.profesionales,
+    "Población": d.poblacion
+  })),
+  {
+    sort: "Por 100.000 hab.",
+    reverse: true,
+    rows: 12,
+    format: {
+      "Por 100.000 hab.": fmt,
+      Profesionales: x => x.toLocaleString("es-CO"),
+      "Población": x => x.toLocaleString("es-CO")
+    }
+  }
+)
+```
+
+## Citas por habitante y tiempo de espera
+
+```{ojs}
+//| echo: false
+percapita = FileAttachment("data/processed/citas_per_capita_departamentos.csv").csv()
+  .then(filas => filas.map(d => ({
+    ...d,
+    citas: +d.citas,
+    poblacion: +d.poblacion,
+    citas_por_1000: +d.citas_por_1000,
+    dias: +d.dias,
+    citas_por_1000_nacional: +d.citas_por_1000_nacional,
+    promedio_nacional: +d.promedio_nacional
+  })))
+
+viewof especialidadPc = Inputs.select(orden, {label: "Especialidad", value: "Medicina interna"})
+```
+
+```{ojs}
+//| echo: false
+seleccionPc = percapita.filter(d => d.especialidad === especialidadPc)
+citasNac = seleccionPc[0].citas_por_1000_nacional
+diasNac = seleccionPc[0].promedio_nacional
+
+// Se rotulan los departamentos más grandes y los más alejados del promedio.
+rotulados = new Set([
+  ...[...seleccionPc].sort((a, b) => b.poblacion - a.poblacion).slice(0, 4),
+  ...[...seleccionPc].sort((a, b) => a.citas_por_1000 - b.citas_por_1000).slice(0, 4),
+  ...[...seleccionPc].sort((a, b) => b.dias - a.dias).slice(0, 3)
+].map(d => d.departamento))
+
+md`Cada punto es un departamento; su tamaño indica la población. Las líneas marcan los valores
+nacionales: **${fmt(citasNac)} citas por cada 1.000 habitantes** y **${fmt(diasNac)} días** de espera.
+Abajo a la izquierda están los departamentos con pocas citas por habitante y espera corta: allí la
+espera corta puede reflejar poca oferta local y no buen acceso.`
+```
+
+```{ojs}
+//| echo: false
+P.plot({
+  width: 720,
+  height: 480,
+  marginRight: 20,
+  grid: true,
+  x: {label: "Citas asignadas por cada 1.000 habitantes →", tickFormat: fmt},
+  y: {label: "↑ Días de espera", tickFormat: fmt, zero: true},
+  r: {range: [3, 22]},
+  marks: [
+    P.ruleX([citasNac], {stroke: "#898781", strokeDasharray: "4,3"}),
+    P.ruleY([diasNac], {stroke: "#898781", strokeDasharray: "4,3"}),
+    P.text(["Menos citas, más espera"], {frameAnchor: "top-left", dx: 6, dy: 6, fill: "#52514e", fontSize: 11}),
+    P.text(["Más citas, más espera"], {frameAnchor: "top-right", dx: -6, dy: 6, fill: "#52514e", fontSize: 11}),
+    P.text(["Menos citas, menos espera"], {frameAnchor: "bottom-left", dx: 6, dy: -6, fill: "#52514e", fontSize: 11}),
+    P.text(["Más citas, menos espera"], {frameAnchor: "bottom-right", dx: -6, dy: -6, fill: "#52514e", fontSize: 11}),
+    P.dot(seleccionPc, {
+      x: "citas_por_1000",
+      y: "dias",
+      r: "poblacion",
+      fill: "#2a78d6",
+      fillOpacity: 0.7,
+      stroke: "#fcfcfb",
+      strokeWidth: 1,
+      title: d => `${d.departamento}\n${fmt(d.citas_por_1000)} citas por 1.000 habitantes\n` +
+        `${fmt(d.dias)} días de espera\n${d.citas.toLocaleString("es-CO")} citas en el periodo`,
+      tip: true
+    }),
+    P.text(seleccionPc.filter(d => rotulados.has(d.departamento)), {
+      x: "citas_por_1000",
+      y: "dias",
+      text: d => d.departamento.replace("Archipiélago de San Andrés, Providencia y Santa Catalina", "San Andrés"),
+      dy: -12,
+      fontSize: 10,
+      fill: "#0b0b0b"
+    })
+  ]
+})
+```
+
+<p class="nota-fuente">Fuente: Minsalud, Observatorio Nacional de Calidad en Salud (Res. 256 de 2016),
+julio de 2025 a junio de 2026; población: DANE, proyecciones (promedio 2025-2026). Las citas se cuentan
+en el departamento de la IPS que atiende, no en el de residencia del paciente, y dependen de la
+cobertura del reporte de cada departamento.</p>
+
+## Espera nacional por especialidad
+
+![](figures/espera_nacional_linea.svg)
+
+![](figures/espera_nacional_barras.svg)

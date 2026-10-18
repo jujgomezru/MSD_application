@@ -1,0 +1,40 @@
+project:
+  type: website
+  output-dir: _site
+  render:
+    - index.qmd
+  resources:
+    - data/geo/departamentos.geojson
+    - data/processed/mapa_espera_departamentos.csv
+    - data/processed/mapa_especialistas_departamentos.csv
+    - data/processed/citas_per_capita_departamentos.csv
+
+lang: es
+
+website:
+  title: "Barreras de acceso en salud en Colombia"
+  navbar:
+    left:
+      - href: index.qmd
+        text: Inicio
+    right:
+      - icon: github
+        href: https://github.com/jujgomezru/MSD_application
+
+format:
+  html:
+    theme: cosmo
+    css: styles.css
+    toc: true
+    code-fold: true
+    code-tools: true
+    fig-width: 8
+    fig-height: 5
+
+execute:
+  # Los resultados se calculan localmente y se guardan en _freeze/,
+  # así GitHub Actions publica sin instalar R ni descargar datos.
+  freeze: auto
+  echo: true
+  warning: false
+  message: false
