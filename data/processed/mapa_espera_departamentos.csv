@@ -1,0 +1,198 @@
+cod_depto,departamento,especialidad,dias,citas,promedio_nacional,desde,hasta
+05,Antioquia,Cirugía general,8.32,121404,10.71,2025-07-01,2026-06-30
+08,Atlántico,Cirugía general,9.08,110818,10.71,2025-07-01,2026-06-30
+11,"Bogotá, D.C.",Cirugía general,13.46,227943,10.71,2025-07-01,2026-06-30
+13,Bolívar,Cirugía general,11.19,50806,10.71,2025-07-01,2026-06-30
+15,Boyacá,Cirugía general,6.36,21300,10.71,2025-07-01,2026-06-30
+17,Caldas,Cirugía general,7.64,21694,10.71,2025-07-01,2026-06-30
+18,Caquetá,Cirugía general,6.19,5042,10.71,2025-07-01,2026-06-30
+19,Cauca,Cirugía general,7.84,16085,10.71,2025-07-01,2026-06-30
+20,Cesar,Cirugía general,11.74,42267,10.71,2025-07-01,2026-06-30
+23,Córdoba,Cirugía general,16.77,56176,10.71,2025-07-01,2026-06-30
+25,Cundinamarca,Cirugía general,9.56,63003,10.71,2025-07-01,2026-06-30
+27,Chocó,Cirugía general,5.35,3519,10.71,2025-07-01,2026-06-30
+41,Huila,Cirugía general,17.2,27783,10.71,2025-07-01,2026-06-30
+44,La Guajira,Cirugía general,6.72,16740,10.71,2025-07-01,2026-06-30
+47,Magdalena,Cirugía general,10.27,26887,10.71,2025-07-01,2026-06-30
+50,Meta,Cirugía general,8.03,20976,10.71,2025-07-01,2026-06-30
+52,Nariño,Cirugía general,7.33,18709,10.71,2025-07-01,2026-06-30
+54,Norte de Santander,Cirugía general,7.95,47434,10.71,2025-07-01,2026-06-30
+63,Quindio,Cirugía general,6.3,7034,10.71,2025-07-01,2026-06-30
+66,Risaralda,Cirugía general,8.75,14719,10.71,2025-07-01,2026-06-30
+68,Santander,Cirugía general,8.75,42355,10.71,2025-07-01,2026-06-30
+70,Sucre,Cirugía general,8.99,30033,10.71,2025-07-01,2026-06-30
+73,Tolima,Cirugía general,11.39,35756,10.71,2025-07-01,2026-06-30
+76,Valle del Cauca,Cirugía general,12.39,106623,10.71,2025-07-01,2026-06-30
+81,Arauca,Cirugía general,4.85,6363,10.71,2025-07-01,2026-06-30
+85,Casanare,Cirugía general,8.09,4500,10.71,2025-07-01,2026-06-30
+86,Putumayo,Cirugía general,6.55,7202,10.71,2025-07-01,2026-06-30
+88,"Archipiélago de San Andrés, Providencia y Santa Catalina",Cirugía general,8.2,2128,10.71,2025-07-01,2026-06-30
+91,Amazonas,Cirugía general,6.67,974,10.71,2025-07-01,2026-06-30
+94,Guainía,Cirugía general,3.47,301,10.71,2025-07-01,2026-06-30
+95,Guaviare,Cirugía general,8.75,1517,10.71,2025-07-01,2026-06-30
+97,Vaupés,Cirugía general,2.53,375,10.71,2025-07-01,2026-06-30
+99,Vichada,Cirugía general,2.93,524,10.71,2025-07-01,2026-06-30
+05,Antioquia,Ginecología,9.33,207370,9.44,2025-07-01,2026-06-30
+08,Atlántico,Ginecología,7.63,164923,9.44,2025-07-01,2026-06-30
+11,"Bogotá, D.C.",Ginecología,10.69,515686,9.44,2025-07-01,2026-06-30
+13,Bolívar,Ginecología,10.44,76436,9.44,2025-07-01,2026-06-30
+15,Boyacá,Ginecología,5.35,47583,9.44,2025-07-01,2026-06-30
+17,Caldas,Ginecología,11.51,27182,9.44,2025-07-01,2026-06-30
+18,Caquetá,Ginecología,4.6,9124,9.44,2025-07-01,2026-06-30
+19,Cauca,Ginecología,4.49,57566,9.44,2025-07-01,2026-06-30
+20,Cesar,Ginecología,9.1,70200,9.44,2025-07-01,2026-06-30
+23,Córdoba,Ginecología,15.09,85763,9.44,2025-07-01,2026-06-30
+25,Cundinamarca,Ginecología,9.22,165741,9.44,2025-07-01,2026-06-30
+27,Chocó,Ginecología,9.93,22738,9.44,2025-07-01,2026-06-30
+41,Huila,Ginecología,19.07,38237,9.44,2025-07-01,2026-06-30
+44,La Guajira,Ginecología,3.83,48193,9.44,2025-07-01,2026-06-30
+47,Magdalena,Ginecología,9.53,60173,9.44,2025-07-01,2026-06-30
+50,Meta,Ginecología,8.46,44894,9.44,2025-07-01,2026-06-30
+52,Nariño,Ginecología,6.03,38961,9.44,2025-07-01,2026-06-30
+54,Norte de Santander,Ginecología,5.85,54370,9.44,2025-07-01,2026-06-30
+63,Quindio,Ginecología,9.19,17102,9.44,2025-07-01,2026-06-30
+66,Risaralda,Ginecología,9.14,55507,9.44,2025-07-01,2026-06-30
+68,Santander,Ginecología,8.07,116230,9.44,2025-07-01,2026-06-30
+70,Sucre,Ginecología,8.46,53267,9.44,2025-07-01,2026-06-30
+73,Tolima,Ginecología,10.84,61218,9.44,2025-07-01,2026-06-30
+76,Valle del Cauca,Ginecología,10.95,191982,9.44,2025-07-01,2026-06-30
+81,Arauca,Ginecología,4.08,14200,9.44,2025-07-01,2026-06-30
+85,Casanare,Ginecología,4.5,17193,9.44,2025-07-01,2026-06-30
+86,Putumayo,Ginecología,5.08,13904,9.44,2025-07-01,2026-06-30
+88,"Archipiélago de San Andrés, Providencia y Santa Catalina",Ginecología,7.2,3187,9.44,2025-07-01,2026-06-30
+91,Amazonas,Ginecología,9.19,1818,9.44,2025-07-01,2026-06-30
+94,Guainía,Ginecología,6.44,455,9.44,2025-07-01,2026-06-30
+95,Guaviare,Ginecología,10.37,3083,9.44,2025-07-01,2026-06-30
+97,Vaupés,Ginecología,5.16,604,9.44,2025-07-01,2026-06-30
+99,Vichada,Ginecología,2.49,1070,9.44,2025-07-01,2026-06-30
+05,Antioquia,Medicina general,5.58,5858000,3.72,2025-07-01,2026-06-30
+08,Atlántico,Medicina general,2.9,1691410,3.72,2025-07-01,2026-06-30
+11,"Bogotá, D.C.",Medicina general,4.07,5346618,3.72,2025-07-01,2026-06-30
+13,Bolívar,Medicina general,2.47,1160433,3.72,2025-07-01,2026-06-30
+15,Boyacá,Medicina general,2.36,821062,3.72,2025-07-01,2026-06-30
+17,Caldas,Medicina general,2.93,568659,3.72,2025-07-01,2026-06-30
+18,Caquetá,Medicina general,1.1,147033,3.72,2025-07-01,2026-06-30
+19,Cauca,Medicina general,1.57,1080277,3.72,2025-07-01,2026-06-30
+20,Cesar,Medicina general,3.12,565721,3.72,2025-07-01,2026-06-30
+23,Córdoba,Medicina general,2.42,930076,3.72,2025-07-01,2026-06-30
+25,Cundinamarca,Medicina general,2.92,2433461,3.72,2025-07-01,2026-06-30
+27,Chocó,Medicina general,1.49,176695,3.72,2025-07-01,2026-06-30
+41,Huila,Medicina general,3.18,660023,3.72,2025-07-01,2026-06-30
+44,La Guajira,Medicina general,1.27,693481,3.72,2025-07-01,2026-06-30
+47,Magdalena,Medicina general,2.63,667590,3.72,2025-07-01,2026-06-30
+50,Meta,Medicina general,3.72,700350,3.72,2025-07-01,2026-06-30
+52,Nariño,Medicina general,1.83,975290,3.72,2025-07-01,2026-06-30
+54,Norte de Santander,Medicina general,2.41,979434,3.72,2025-07-01,2026-06-30
+63,Quindio,Medicina general,3.54,371211,3.72,2025-07-01,2026-06-30
+66,Risaralda,Medicina general,4.87,1212005,3.72,2025-07-01,2026-06-30
+68,Santander,Medicina general,3.29,1572568,3.72,2025-07-01,2026-06-30
+70,Sucre,Medicina general,1.6,483772,3.72,2025-07-01,2026-06-30
+73,Tolima,Medicina general,3.83,700449,3.72,2025-07-01,2026-06-30
+76,Valle del Cauca,Medicina general,5.67,3117078,3.72,2025-07-01,2026-06-30
+81,Arauca,Medicina general,2.15,277243,3.72,2025-07-01,2026-06-30
+85,Casanare,Medicina general,1.77,300946,3.72,2025-07-01,2026-06-30
+86,Putumayo,Medicina general,1.13,171989,3.72,2025-07-01,2026-06-30
+88,"Archipiélago de San Andrés, Providencia y Santa Catalina",Medicina general,2.78,32738,3.72,2025-07-01,2026-06-30
+91,Amazonas,Medicina general,1.16,20518,3.72,2025-07-01,2026-06-30
+94,Guainía,Medicina general,0.99,20748,3.72,2025-07-01,2026-06-30
+95,Guaviare,Medicina general,2.89,46061,3.72,2025-07-01,2026-06-30
+97,Vaupés,Medicina general,1.18,11935,3.72,2025-07-01,2026-06-30
+99,Vichada,Medicina general,1.25,29256,3.72,2025-07-01,2026-06-30
+05,Antioquia,Medicina interna,13.78,276588,11.94,2025-07-01,2026-06-30
+08,Atlántico,Medicina interna,14.22,274639,11.94,2025-07-01,2026-06-30
+11,"Bogotá, D.C.",Medicina interna,14.03,659096,11.94,2025-07-01,2026-06-30
+13,Bolívar,Medicina interna,8.8,130045,11.94,2025-07-01,2026-06-30
+15,Boyacá,Medicina interna,6.48,52754,11.94,2025-07-01,2026-06-30
+17,Caldas,Medicina interna,17.2,67532,11.94,2025-07-01,2026-06-30
+18,Caquetá,Medicina interna,5.6,10973,11.94,2025-07-01,2026-06-30
+19,Cauca,Medicina interna,6.41,48817,11.94,2025-07-01,2026-06-30
+20,Cesar,Medicina interna,10.33,109428,11.94,2025-07-01,2026-06-30
+23,Córdoba,Medicina interna,13.4,176328,11.94,2025-07-01,2026-06-30
+25,Cundinamarca,Medicina interna,9.78,191654,11.94,2025-07-01,2026-06-30
+27,Chocó,Medicina interna,11.79,33856,11.94,2025-07-01,2026-06-30
+41,Huila,Medicina interna,12.24,57443,11.94,2025-07-01,2026-06-30
+44,La Guajira,Medicina interna,3.43,91704,11.94,2025-07-01,2026-06-30
+47,Magdalena,Medicina interna,11.21,99838,11.94,2025-07-01,2026-06-30
+50,Meta,Medicina interna,9.47,62405,11.94,2025-07-01,2026-06-30
+52,Nariño,Medicina interna,7.61,69718,11.94,2025-07-01,2026-06-30
+54,Norte de Santander,Medicina interna,6.63,104160,11.94,2025-07-01,2026-06-30
+63,Quindio,Medicina interna,9.61,35625,11.94,2025-07-01,2026-06-30
+66,Risaralda,Medicina interna,11.98,80650,11.94,2025-07-01,2026-06-30
+68,Santander,Medicina interna,10.68,153370,11.94,2025-07-01,2026-06-30
+70,Sucre,Medicina interna,9.45,96095,11.94,2025-07-01,2026-06-30
+73,Tolima,Medicina interna,9.89,85147,11.94,2025-07-01,2026-06-30
+76,Valle del Cauca,Medicina interna,16.33,331112,11.94,2025-07-01,2026-06-30
+81,Arauca,Medicina interna,5.15,24564,11.94,2025-07-01,2026-06-30
+85,Casanare,Medicina interna,7.77,17739,11.94,2025-07-01,2026-06-30
+86,Putumayo,Medicina interna,5.75,21752,11.94,2025-07-01,2026-06-30
+88,"Archipiélago de San Andrés, Providencia y Santa Catalina",Medicina interna,12.94,5078,11.94,2025-07-01,2026-06-30
+91,Amazonas,Medicina interna,6.05,1652,11.94,2025-07-01,2026-06-30
+94,Guainía,Medicina interna,8.15,454,11.94,2025-07-01,2026-06-30
+95,Guaviare,Medicina interna,13.17,2305,11.94,2025-07-01,2026-06-30
+97,Vaupés,Medicina interna,7.77,951,11.94,2025-07-01,2026-06-30
+99,Vichada,Medicina interna,2.43,1395,11.94,2025-07-01,2026-06-30
+05,Antioquia,Obstetricia,16.9,58656,8.71,2025-07-01,2026-06-30
+08,Atlántico,Obstetricia,5.85,45154,8.71,2025-07-01,2026-06-30
+11,"Bogotá, D.C.",Obstetricia,10.05,96808,8.71,2025-07-01,2026-06-30
+13,Bolívar,Obstetricia,6.52,38886,8.71,2025-07-01,2026-06-30
+15,Boyacá,Obstetricia,4.87,12963,8.71,2025-07-01,2026-06-30
+17,Caldas,Obstetricia,9.25,12212,8.71,2025-07-01,2026-06-30
+18,Caquetá,Obstetricia,2.38,1261,8.71,2025-07-01,2026-06-30
+19,Cauca,Obstetricia,4.36,6704,8.71,2025-07-01,2026-06-30
+20,Cesar,Obstetricia,10.48,38494,8.71,2025-07-01,2026-06-30
+23,Córdoba,Obstetricia,20.75,26140,8.71,2025-07-01,2026-06-30
+25,Cundinamarca,Obstetricia,4.89,29552,8.71,2025-07-01,2026-06-30
+27,Chocó,Obstetricia,17.27,944,8.71,2025-07-01,2026-06-30
+41,Huila,Obstetricia,7.17,22144,8.71,2025-07-01,2026-06-30
+44,La Guajira,Obstetricia,3.96,16539,8.71,2025-07-01,2026-06-30
+47,Magdalena,Obstetricia,3.9,16674,8.71,2025-07-01,2026-06-30
+50,Meta,Obstetricia,10.48,10633,8.71,2025-07-01,2026-06-30
+52,Nariño,Obstetricia,4.51,9098,8.71,2025-07-01,2026-06-30
+54,Norte de Santander,Obstetricia,4.31,35245,8.71,2025-07-01,2026-06-30
+63,Quindio,Obstetricia,8.66,4787,8.71,2025-07-01,2026-06-30
+66,Risaralda,Obstetricia,8.46,10618,8.71,2025-07-01,2026-06-30
+68,Santander,Obstetricia,6.86,25740,8.71,2025-07-01,2026-06-30
+70,Sucre,Obstetricia,3.89,10947,8.71,2025-07-01,2026-06-30
+73,Tolima,Obstetricia,8.43,17626,8.71,2025-07-01,2026-06-30
+76,Valle del Cauca,Obstetricia,7.55,57765,8.71,2025-07-01,2026-06-30
+81,Arauca,Obstetricia,6.03,2990,8.71,2025-07-01,2026-06-30
+85,Casanare,Obstetricia,2.76,3363,8.71,2025-07-01,2026-06-30
+86,Putumayo,Obstetricia,2.95,4418,8.71,2025-07-01,2026-06-30
+88,"Archipiélago de San Andrés, Providencia y Santa Catalina",Obstetricia,5.8,569,8.71,2025-07-01,2026-06-30
+91,Amazonas,Obstetricia,10.27,1496,8.71,2025-07-01,2026-06-30
+95,Guaviare,Obstetricia,8.72,185,8.71,2025-07-01,2026-06-30
+97,Vaupés,Obstetricia,4.09,68,8.71,2025-07-01,2026-06-30
+99,Vichada,Obstetricia,2.8,50,8.71,2025-07-01,2026-06-30
+05,Antioquia,Pediatría,6.48,167321,6.25,2025-07-01,2026-06-30
+08,Atlántico,Pediatría,5.13,213715,6.25,2025-07-01,2026-06-30
+11,"Bogotá, D.C.",Pediatría,7.74,695724,6.25,2025-07-01,2026-06-30
+13,Bolívar,Pediatría,5.12,144295,6.25,2025-07-01,2026-06-30
+15,Boyacá,Pediatría,4.27,53177,6.25,2025-07-01,2026-06-30
+17,Caldas,Pediatría,6.34,29093,6.25,2025-07-01,2026-06-30
+18,Caquetá,Pediatría,3.24,10991,6.25,2025-07-01,2026-06-30
+19,Cauca,Pediatría,4.5,43027,6.25,2025-07-01,2026-06-30
+20,Cesar,Pediatría,7.49,85263,6.25,2025-07-01,2026-06-30
+23,Córdoba,Pediatría,8.84,104173,6.25,2025-07-01,2026-06-30
+25,Cundinamarca,Pediatría,6.16,273253,6.25,2025-07-01,2026-06-30
+27,Chocó,Pediatría,7.59,8630,6.25,2025-07-01,2026-06-30
+41,Huila,Pediatría,6.1,56970,6.25,2025-07-01,2026-06-30
+44,La Guajira,Pediatría,4.63,73804,6.25,2025-07-01,2026-06-30
+47,Magdalena,Pediatría,4.13,92557,6.25,2025-07-01,2026-06-30
+50,Meta,Pediatría,7.66,58822,6.25,2025-07-01,2026-06-30
+52,Nariño,Pediatría,4.12,39365,6.25,2025-07-01,2026-06-30
+54,Norte de Santander,Pediatría,4.03,85108,6.25,2025-07-01,2026-06-30
+63,Quindio,Pediatría,4.73,29628,6.25,2025-07-01,2026-06-30
+66,Risaralda,Pediatría,6.2,48832,6.25,2025-07-01,2026-06-30
+68,Santander,Pediatría,4.69,136086,6.25,2025-07-01,2026-06-30
+70,Sucre,Pediatría,4.08,65439,6.25,2025-07-01,2026-06-30
+73,Tolima,Pediatría,6.86,68962,6.25,2025-07-01,2026-06-30
+76,Valle del Cauca,Pediatría,6.95,202320,6.25,2025-07-01,2026-06-30
+81,Arauca,Pediatría,4.46,16977,6.25,2025-07-01,2026-06-30
+85,Casanare,Pediatría,5.96,17623,6.25,2025-07-01,2026-06-30
+86,Putumayo,Pediatría,3.4,13886,6.25,2025-07-01,2026-06-30
+88,"Archipiélago de San Andrés, Providencia y Santa Catalina",Pediatría,4.44,5683,6.25,2025-07-01,2026-06-30
+91,Amazonas,Pediatría,4.73,1793,6.25,2025-07-01,2026-06-30
+94,Guainía,Pediatría,5.51,838,6.25,2025-07-01,2026-06-30
+95,Guaviare,Pediatría,11.06,2110,6.25,2025-07-01,2026-06-30
+97,Vaupés,Pediatría,6.18,818,6.25,2025-07-01,2026-06-30
+99,Vichada,Pediatría,2.07,1800,6.25,2025-07-01,2026-06-30

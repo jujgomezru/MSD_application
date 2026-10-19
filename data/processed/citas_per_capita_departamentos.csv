@@ -1,0 +1,198 @@
+cod_depto,departamento,especialidad,citas,poblacion,citas_por_1000,dias,citas_por_1000_nacional,promedio_nacional,cuadrante,desde,hasta
+05,Antioquia,Cirugía general,121404,6946181,17.48,8.32,21.77,10.71,"Menos citas, menos espera",2025-07-01,2026-06-30
+08,Atlántico,Cirugía general,110818,2875469,38.54,9.08,21.77,10.71,"Más citas, menos espera",2025-07-01,2026-06-30
+11,"Bogotá, D.C.",Cirugía general,227943,7944432,28.69,13.46,21.77,10.71,"Más citas, más espera",2025-07-01,2026-06-30
+13,Bolívar,Cirugía general,50806,2246236,22.62,11.19,21.77,10.71,"Más citas, más espera",2025-07-01,2026-06-30
+15,Boyacá,Cirugía general,21300,1293120,16.47,6.36,21.77,10.71,"Menos citas, menos espera",2025-07-01,2026-06-30
+17,Caldas,Cirugía general,21694,1055644,20.55,7.64,21.77,10.71,"Menos citas, menos espera",2025-07-01,2026-06-30
+18,Caquetá,Cirugía general,5042,430454,11.71,6.19,21.77,10.71,"Menos citas, menos espera",2025-07-01,2026-06-30
+19,Cauca,Cirugía general,16085,1606238,10.01,7.84,21.77,10.71,"Menos citas, menos espera",2025-07-01,2026-06-30
+20,Cesar,Cirugía general,42267,1481492,28.53,11.74,21.77,10.71,"Más citas, más espera",2025-07-01,2026-06-30
+23,Córdoba,Cirugía general,56176,2003610,28.04,16.77,21.77,10.71,"Más citas, más espera",2025-07-01,2026-06-30
+25,Cundinamarca,Cirugía general,63003,3568172,17.66,9.56,21.77,10.71,"Menos citas, menos espera",2025-07-01,2026-06-30
+27,Chocó,Cirugía general,3519,596287,5.9,5.35,21.77,10.71,"Menos citas, menos espera",2025-07-01,2026-06-30
+41,Huila,Cirugía general,27783,1215288,22.86,17.2,21.77,10.71,"Más citas, más espera",2025-07-01,2026-06-30
+44,La Guajira,Cirugía general,16740,1074648,15.58,6.72,21.77,10.71,"Menos citas, menos espera",2025-07-01,2026-06-30
+47,Magdalena,Cirugía general,26887,1551628,17.33,10.27,21.77,10.71,"Menos citas, menos espera",2025-07-01,2026-06-30
+50,Meta,Cirugía general,20976,1161528,18.06,8.03,21.77,10.71,"Menos citas, menos espera",2025-07-01,2026-06-30
+52,Nariño,Cirugía general,18709,1717660,10.89,7.33,21.77,10.71,"Menos citas, menos espera",2025-07-01,2026-06-30
+54,Norte de Santander,Cirugía general,47434,1713540,27.68,7.95,21.77,10.71,"Más citas, menos espera",2025-07-01,2026-06-30
+63,Quindio,Cirugía general,7034,557867,12.61,6.3,21.77,10.71,"Menos citas, menos espera",2025-07-01,2026-06-30
+66,Risaralda,Cirugía general,14719,1005005,14.65,8.75,21.77,10.71,"Menos citas, menos espera",2025-07-01,2026-06-30
+68,Santander,Cirugía general,42355,2404502,17.61,8.75,21.77,10.71,"Menos citas, menos espera",2025-07-01,2026-06-30
+70,Sucre,Cirugía general,30033,1040577,28.86,8.99,21.77,10.71,"Más citas, menos espera",2025-07-01,2026-06-30
+73,Tolima,Cirugía general,35756,1388696,25.75,11.39,21.77,10.71,"Más citas, más espera",2025-07-01,2026-06-30
+76,Valle del Cauca,Cirugía general,106623,4711690,22.63,12.39,21.77,10.71,"Más citas, más espera",2025-07-01,2026-06-30
+81,Arauca,Cirugía general,6363,279606,22.76,4.85,21.77,10.71,"Más citas, menos espera",2025-07-01,2026-06-30
+85,Casanare,Cirugía general,4500,475566,9.46,8.09,21.77,10.71,"Menos citas, menos espera",2025-07-01,2026-06-30
+86,Putumayo,Cirugía general,7202,393166,18.32,6.55,21.77,10.71,"Menos citas, menos espera",2025-07-01,2026-06-30
+88,"Archipiélago de San Andrés, Providencia y Santa Catalina",Cirugía general,2128,63482,33.52,8.2,21.77,10.71,"Más citas, menos espera",2025-07-01,2026-06-30
+91,Amazonas,Cirugía general,974,85476,11.39,6.67,21.77,10.71,"Menos citas, menos espera",2025-07-01,2026-06-30
+94,Guainía,Cirugía general,301,60386,4.98,3.47,21.77,10.71,"Menos citas, menos espera",2025-07-01,2026-06-30
+95,Guaviare,Cirugía general,1517,84764,17.9,8.75,21.77,10.71,"Menos citas, menos espera",2025-07-01,2026-06-30
+97,Vaupés,Cirugía general,375,44316,8.46,2.53,21.77,10.71,"Menos citas, menos espera",2025-07-01,2026-06-30
+99,Vichada,Cirugía general,524,151464,3.46,2.93,21.77,10.71,"Menos citas, menos espera",2025-07-01,2026-06-30
+05,Antioquia,Ginecología,207370,6946181,29.85,9.33,42.95,9.44,"Menos citas, menos espera",2025-07-01,2026-06-30
+08,Atlántico,Ginecología,164923,2875469,57.36,7.63,42.95,9.44,"Más citas, menos espera",2025-07-01,2026-06-30
+11,"Bogotá, D.C.",Ginecología,515686,7944432,64.91,10.69,42.95,9.44,"Más citas, más espera",2025-07-01,2026-06-30
+13,Bolívar,Ginecología,76436,2246236,34.03,10.44,42.95,9.44,"Menos citas, más espera",2025-07-01,2026-06-30
+15,Boyacá,Ginecología,47583,1293120,36.8,5.35,42.95,9.44,"Menos citas, menos espera",2025-07-01,2026-06-30
+17,Caldas,Ginecología,27182,1055644,25.75,11.51,42.95,9.44,"Menos citas, más espera",2025-07-01,2026-06-30
+18,Caquetá,Ginecología,9124,430454,21.2,4.6,42.95,9.44,"Menos citas, menos espera",2025-07-01,2026-06-30
+19,Cauca,Ginecología,57566,1606238,35.84,4.49,42.95,9.44,"Menos citas, menos espera",2025-07-01,2026-06-30
+20,Cesar,Ginecología,70200,1481492,47.38,9.1,42.95,9.44,"Más citas, menos espera",2025-07-01,2026-06-30
+23,Córdoba,Ginecología,85763,2003610,42.8,15.09,42.95,9.44,"Menos citas, más espera",2025-07-01,2026-06-30
+25,Cundinamarca,Ginecología,165741,3568172,46.45,9.22,42.95,9.44,"Más citas, menos espera",2025-07-01,2026-06-30
+27,Chocó,Ginecología,22738,596287,38.13,9.93,42.95,9.44,"Menos citas, más espera",2025-07-01,2026-06-30
+41,Huila,Ginecología,38237,1215288,31.46,19.07,42.95,9.44,"Menos citas, más espera",2025-07-01,2026-06-30
+44,La Guajira,Ginecología,48193,1074648,44.85,3.83,42.95,9.44,"Más citas, menos espera",2025-07-01,2026-06-30
+47,Magdalena,Ginecología,60173,1551628,38.78,9.53,42.95,9.44,"Menos citas, más espera",2025-07-01,2026-06-30
+50,Meta,Ginecología,44894,1161528,38.65,8.46,42.95,9.44,"Menos citas, menos espera",2025-07-01,2026-06-30
+52,Nariño,Ginecología,38961,1717660,22.68,6.03,42.95,9.44,"Menos citas, menos espera",2025-07-01,2026-06-30
+54,Norte de Santander,Ginecología,54370,1713540,31.73,5.85,42.95,9.44,"Menos citas, menos espera",2025-07-01,2026-06-30
+63,Quindio,Ginecología,17102,557867,30.66,9.19,42.95,9.44,"Menos citas, menos espera",2025-07-01,2026-06-30
+66,Risaralda,Ginecología,55507,1005005,55.23,9.14,42.95,9.44,"Más citas, menos espera",2025-07-01,2026-06-30
+68,Santander,Ginecología,116230,2404502,48.34,8.07,42.95,9.44,"Más citas, menos espera",2025-07-01,2026-06-30
+70,Sucre,Ginecología,53267,1040577,51.19,8.46,42.95,9.44,"Más citas, menos espera",2025-07-01,2026-06-30
+73,Tolima,Ginecología,61218,1388696,44.08,10.84,42.95,9.44,"Más citas, más espera",2025-07-01,2026-06-30
+76,Valle del Cauca,Ginecología,191982,4711690,40.75,10.95,42.95,9.44,"Menos citas, más espera",2025-07-01,2026-06-30
+81,Arauca,Ginecología,14200,279606,50.79,4.08,42.95,9.44,"Más citas, menos espera",2025-07-01,2026-06-30
+85,Casanare,Ginecología,17193,475566,36.15,4.5,42.95,9.44,"Menos citas, menos espera",2025-07-01,2026-06-30
+86,Putumayo,Ginecología,13904,393166,35.36,5.08,42.95,9.44,"Menos citas, menos espera",2025-07-01,2026-06-30
+88,"Archipiélago de San Andrés, Providencia y Santa Catalina",Ginecología,3187,63482,50.2,7.2,42.95,9.44,"Más citas, menos espera",2025-07-01,2026-06-30
+91,Amazonas,Ginecología,1818,85476,21.27,9.19,42.95,9.44,"Menos citas, menos espera",2025-07-01,2026-06-30
+94,Guainía,Ginecología,455,60386,7.53,6.44,42.95,9.44,"Menos citas, menos espera",2025-07-01,2026-06-30
+95,Guaviare,Ginecología,3083,84764,36.37,10.37,42.95,9.44,"Menos citas, más espera",2025-07-01,2026-06-30
+97,Vaupés,Ginecología,604,44316,13.63,5.16,42.95,9.44,"Menos citas, menos espera",2025-07-01,2026-06-30
+99,Vichada,Ginecología,1070,151464,7.06,2.49,42.95,9.44,"Menos citas, menos espera",2025-07-01,2026-06-30
+05,Antioquia,Medicina general,5858000,6946181,843.34,5.58,635.46,3.72,"Más citas, más espera",2025-07-01,2026-06-30
+08,Atlántico,Medicina general,1691410,2875469,588.22,2.9,635.46,3.72,"Menos citas, menos espera",2025-07-01,2026-06-30
+11,"Bogotá, D.C.",Medicina general,5346618,7944432,673,4.07,635.46,3.72,"Más citas, más espera",2025-07-01,2026-06-30
+13,Bolívar,Medicina general,1160433,2246236,516.61,2.47,635.46,3.72,"Menos citas, menos espera",2025-07-01,2026-06-30
+15,Boyacá,Medicina general,821062,1293120,634.95,2.36,635.46,3.72,"Menos citas, menos espera",2025-07-01,2026-06-30
+17,Caldas,Medicina general,568659,1055644,538.68,2.93,635.46,3.72,"Menos citas, menos espera",2025-07-01,2026-06-30
+18,Caquetá,Medicina general,147033,430454,341.58,1.1,635.46,3.72,"Menos citas, menos espera",2025-07-01,2026-06-30
+19,Cauca,Medicina general,1080277,1606238,672.55,1.57,635.46,3.72,"Más citas, menos espera",2025-07-01,2026-06-30
+20,Cesar,Medicina general,565721,1481492,381.86,3.12,635.46,3.72,"Menos citas, menos espera",2025-07-01,2026-06-30
+23,Córdoba,Medicina general,930076,2003610,464.2,2.42,635.46,3.72,"Menos citas, menos espera",2025-07-01,2026-06-30
+25,Cundinamarca,Medicina general,2433461,3568172,681.99,2.92,635.46,3.72,"Más citas, menos espera",2025-07-01,2026-06-30
+27,Chocó,Medicina general,176695,596287,296.33,1.49,635.46,3.72,"Menos citas, menos espera",2025-07-01,2026-06-30
+41,Huila,Medicina general,660023,1215288,543.1,3.18,635.46,3.72,"Menos citas, menos espera",2025-07-01,2026-06-30
+44,La Guajira,Medicina general,693481,1074648,645.31,1.27,635.46,3.72,"Más citas, menos espera",2025-07-01,2026-06-30
+47,Magdalena,Medicina general,667590,1551628,430.25,2.63,635.46,3.72,"Menos citas, menos espera",2025-07-01,2026-06-30
+50,Meta,Medicina general,700350,1161528,602.96,3.72,635.46,3.72,"Menos citas, menos espera",2025-07-01,2026-06-30
+52,Nariño,Medicina general,975290,1717660,567.8,1.83,635.46,3.72,"Menos citas, menos espera",2025-07-01,2026-06-30
+54,Norte de Santander,Medicina general,979434,1713540,571.58,2.41,635.46,3.72,"Menos citas, menos espera",2025-07-01,2026-06-30
+63,Quindio,Medicina general,371211,557867,665.41,3.54,635.46,3.72,"Más citas, menos espera",2025-07-01,2026-06-30
+66,Risaralda,Medicina general,1212005,1005005,1205.97,4.87,635.46,3.72,"Más citas, más espera",2025-07-01,2026-06-30
+68,Santander,Medicina general,1572568,2404502,654.01,3.29,635.46,3.72,"Más citas, menos espera",2025-07-01,2026-06-30
+70,Sucre,Medicina general,483772,1040577,464.91,1.6,635.46,3.72,"Menos citas, menos espera",2025-07-01,2026-06-30
+73,Tolima,Medicina general,700449,1388696,504.39,3.83,635.46,3.72,"Menos citas, más espera",2025-07-01,2026-06-30
+76,Valle del Cauca,Medicina general,3117078,4711690,661.56,5.67,635.46,3.72,"Más citas, más espera",2025-07-01,2026-06-30
+81,Arauca,Medicina general,277243,279606,991.55,2.15,635.46,3.72,"Más citas, menos espera",2025-07-01,2026-06-30
+85,Casanare,Medicina general,300946,475566,632.82,1.77,635.46,3.72,"Menos citas, menos espera",2025-07-01,2026-06-30
+86,Putumayo,Medicina general,171989,393166,437.45,1.13,635.46,3.72,"Menos citas, menos espera",2025-07-01,2026-06-30
+88,"Archipiélago de San Andrés, Providencia y Santa Catalina",Medicina general,32738,63482,515.7,2.78,635.46,3.72,"Menos citas, menos espera",2025-07-01,2026-06-30
+91,Amazonas,Medicina general,20518,85476,240.04,1.16,635.46,3.72,"Menos citas, menos espera",2025-07-01,2026-06-30
+94,Guainía,Medicina general,20748,60386,343.59,0.99,635.46,3.72,"Menos citas, menos espera",2025-07-01,2026-06-30
+95,Guaviare,Medicina general,46061,84764,543.4,2.89,635.46,3.72,"Menos citas, menos espera",2025-07-01,2026-06-30
+97,Vaupés,Medicina general,11935,44316,269.32,1.18,635.46,3.72,"Menos citas, menos espera",2025-07-01,2026-06-30
+99,Vichada,Medicina general,29256,151464,193.15,1.25,635.46,3.72,"Menos citas, menos espera",2025-07-01,2026-06-30
+05,Antioquia,Medicina interna,276588,6946181,39.82,13.78,63.4,11.94,"Menos citas, más espera",2025-07-01,2026-06-30
+08,Atlántico,Medicina interna,274639,2875469,95.51,14.22,63.4,11.94,"Más citas, más espera",2025-07-01,2026-06-30
+11,"Bogotá, D.C.",Medicina interna,659096,7944432,82.96,14.03,63.4,11.94,"Más citas, más espera",2025-07-01,2026-06-30
+13,Bolívar,Medicina interna,130045,2246236,57.89,8.8,63.4,11.94,"Menos citas, menos espera",2025-07-01,2026-06-30
+15,Boyacá,Medicina interna,52754,1293120,40.8,6.48,63.4,11.94,"Menos citas, menos espera",2025-07-01,2026-06-30
+17,Caldas,Medicina interna,67532,1055644,63.97,17.2,63.4,11.94,"Más citas, más espera",2025-07-01,2026-06-30
+18,Caquetá,Medicina interna,10973,430454,25.49,5.6,63.4,11.94,"Menos citas, menos espera",2025-07-01,2026-06-30
+19,Cauca,Medicina interna,48817,1606238,30.39,6.41,63.4,11.94,"Menos citas, menos espera",2025-07-01,2026-06-30
+20,Cesar,Medicina interna,109428,1481492,73.86,10.33,63.4,11.94,"Más citas, menos espera",2025-07-01,2026-06-30
+23,Córdoba,Medicina interna,176328,2003610,88.01,13.4,63.4,11.94,"Más citas, más espera",2025-07-01,2026-06-30
+25,Cundinamarca,Medicina interna,191654,3568172,53.71,9.78,63.4,11.94,"Menos citas, menos espera",2025-07-01,2026-06-30
+27,Chocó,Medicina interna,33856,596287,56.78,11.79,63.4,11.94,"Menos citas, menos espera",2025-07-01,2026-06-30
+41,Huila,Medicina interna,57443,1215288,47.27,12.24,63.4,11.94,"Menos citas, más espera",2025-07-01,2026-06-30
+44,La Guajira,Medicina interna,91704,1074648,85.33,3.43,63.4,11.94,"Más citas, menos espera",2025-07-01,2026-06-30
+47,Magdalena,Medicina interna,99838,1551628,64.34,11.21,63.4,11.94,"Más citas, menos espera",2025-07-01,2026-06-30
+50,Meta,Medicina interna,62405,1161528,53.73,9.47,63.4,11.94,"Menos citas, menos espera",2025-07-01,2026-06-30
+52,Nariño,Medicina interna,69718,1717660,40.59,7.61,63.4,11.94,"Menos citas, menos espera",2025-07-01,2026-06-30
+54,Norte de Santander,Medicina interna,104160,1713540,60.79,6.63,63.4,11.94,"Menos citas, menos espera",2025-07-01,2026-06-30
+63,Quindio,Medicina interna,35625,557867,63.86,9.61,63.4,11.94,"Más citas, menos espera",2025-07-01,2026-06-30
+66,Risaralda,Medicina interna,80650,1005005,80.25,11.98,63.4,11.94,"Más citas, más espera",2025-07-01,2026-06-30
+68,Santander,Medicina interna,153370,2404502,63.78,10.68,63.4,11.94,"Más citas, menos espera",2025-07-01,2026-06-30
+70,Sucre,Medicina interna,96095,1040577,92.35,9.45,63.4,11.94,"Más citas, menos espera",2025-07-01,2026-06-30
+73,Tolima,Medicina interna,85147,1388696,61.31,9.89,63.4,11.94,"Menos citas, menos espera",2025-07-01,2026-06-30
+76,Valle del Cauca,Medicina interna,331112,4711690,70.27,16.33,63.4,11.94,"Más citas, más espera",2025-07-01,2026-06-30
+81,Arauca,Medicina interna,24564,279606,87.85,5.15,63.4,11.94,"Más citas, menos espera",2025-07-01,2026-06-30
+85,Casanare,Medicina interna,17739,475566,37.3,7.77,63.4,11.94,"Menos citas, menos espera",2025-07-01,2026-06-30
+86,Putumayo,Medicina interna,21752,393166,55.33,5.75,63.4,11.94,"Menos citas, menos espera",2025-07-01,2026-06-30
+88,"Archipiélago de San Andrés, Providencia y Santa Catalina",Medicina interna,5078,63482,79.99,12.94,63.4,11.94,"Más citas, más espera",2025-07-01,2026-06-30
+91,Amazonas,Medicina interna,1652,85476,19.33,6.05,63.4,11.94,"Menos citas, menos espera",2025-07-01,2026-06-30
+94,Guainía,Medicina interna,454,60386,7.52,8.15,63.4,11.94,"Menos citas, menos espera",2025-07-01,2026-06-30
+95,Guaviare,Medicina interna,2305,84764,27.19,13.17,63.4,11.94,"Menos citas, más espera",2025-07-01,2026-06-30
+97,Vaupés,Medicina interna,951,44316,21.46,7.77,63.4,11.94,"Menos citas, menos espera",2025-07-01,2026-06-30
+99,Vichada,Medicina interna,1395,151464,9.21,2.43,63.4,11.94,"Menos citas, menos espera",2025-07-01,2026-06-30
+05,Antioquia,Obstetricia,58656,6946181,8.44,16.9,11.64,8.71,"Menos citas, más espera",2025-07-01,2026-06-30
+08,Atlántico,Obstetricia,45154,2875469,15.7,5.85,11.64,8.71,"Más citas, menos espera",2025-07-01,2026-06-30
+11,"Bogotá, D.C.",Obstetricia,96808,7944432,12.19,10.05,11.64,8.71,"Más citas, más espera",2025-07-01,2026-06-30
+13,Bolívar,Obstetricia,38886,2246236,17.31,6.52,11.64,8.71,"Más citas, menos espera",2025-07-01,2026-06-30
+15,Boyacá,Obstetricia,12963,1293120,10.02,4.87,11.64,8.71,"Menos citas, menos espera",2025-07-01,2026-06-30
+17,Caldas,Obstetricia,12212,1055644,11.57,9.25,11.64,8.71,"Menos citas, más espera",2025-07-01,2026-06-30
+18,Caquetá,Obstetricia,1261,430454,2.93,2.38,11.64,8.71,"Menos citas, menos espera",2025-07-01,2026-06-30
+19,Cauca,Obstetricia,6704,1606238,4.17,4.36,11.64,8.71,"Menos citas, menos espera",2025-07-01,2026-06-30
+20,Cesar,Obstetricia,38494,1481492,25.98,10.48,11.64,8.71,"Más citas, más espera",2025-07-01,2026-06-30
+23,Córdoba,Obstetricia,26140,2003610,13.05,20.75,11.64,8.71,"Más citas, más espera",2025-07-01,2026-06-30
+25,Cundinamarca,Obstetricia,29552,3568172,8.28,4.89,11.64,8.71,"Menos citas, menos espera",2025-07-01,2026-06-30
+27,Chocó,Obstetricia,944,596287,1.58,17.27,11.64,8.71,"Menos citas, más espera",2025-07-01,2026-06-30
+41,Huila,Obstetricia,22144,1215288,18.22,7.17,11.64,8.71,"Más citas, menos espera",2025-07-01,2026-06-30
+44,La Guajira,Obstetricia,16539,1074648,15.39,3.96,11.64,8.71,"Más citas, menos espera",2025-07-01,2026-06-30
+47,Magdalena,Obstetricia,16674,1551628,10.75,3.9,11.64,8.71,"Menos citas, menos espera",2025-07-01,2026-06-30
+50,Meta,Obstetricia,10633,1161528,9.15,10.48,11.64,8.71,"Menos citas, más espera",2025-07-01,2026-06-30
+52,Nariño,Obstetricia,9098,1717660,5.3,4.51,11.64,8.71,"Menos citas, menos espera",2025-07-01,2026-06-30
+54,Norte de Santander,Obstetricia,35245,1713540,20.57,4.31,11.64,8.71,"Más citas, menos espera",2025-07-01,2026-06-30
+63,Quindio,Obstetricia,4787,557867,8.58,8.66,11.64,8.71,"Menos citas, menos espera",2025-07-01,2026-06-30
+66,Risaralda,Obstetricia,10618,1005005,10.57,8.46,11.64,8.71,"Menos citas, menos espera",2025-07-01,2026-06-30
+68,Santander,Obstetricia,25740,2404502,10.7,6.86,11.64,8.71,"Menos citas, menos espera",2025-07-01,2026-06-30
+70,Sucre,Obstetricia,10947,1040577,10.52,3.89,11.64,8.71,"Menos citas, menos espera",2025-07-01,2026-06-30
+73,Tolima,Obstetricia,17626,1388696,12.69,8.43,11.64,8.71,"Más citas, menos espera",2025-07-01,2026-06-30
+76,Valle del Cauca,Obstetricia,57765,4711690,12.26,7.55,11.64,8.71,"Más citas, menos espera",2025-07-01,2026-06-30
+81,Arauca,Obstetricia,2990,279606,10.69,6.03,11.64,8.71,"Menos citas, menos espera",2025-07-01,2026-06-30
+85,Casanare,Obstetricia,3363,475566,7.07,2.76,11.64,8.71,"Menos citas, menos espera",2025-07-01,2026-06-30
+86,Putumayo,Obstetricia,4418,393166,11.24,2.95,11.64,8.71,"Menos citas, menos espera",2025-07-01,2026-06-30
+88,"Archipiélago de San Andrés, Providencia y Santa Catalina",Obstetricia,569,63482,8.96,5.8,11.64,8.71,"Menos citas, menos espera",2025-07-01,2026-06-30
+91,Amazonas,Obstetricia,1496,85476,17.5,10.27,11.64,8.71,"Más citas, más espera",2025-07-01,2026-06-30
+95,Guaviare,Obstetricia,185,84764,2.18,8.72,11.64,8.71,"Menos citas, más espera",2025-07-01,2026-06-30
+97,Vaupés,Obstetricia,68,44316,1.53,4.09,11.64,8.71,"Menos citas, menos espera",2025-07-01,2026-06-30
+99,Vichada,Obstetricia,50,151464,0.33,2.8,11.64,8.71,"Menos citas, menos espera",2025-07-01,2026-06-30
+05,Antioquia,Pediatría,167321,6946181,24.09,6.48,53.51,6.25,"Menos citas, más espera",2025-07-01,2026-06-30
+08,Atlántico,Pediatría,213715,2875469,74.32,5.13,53.51,6.25,"Más citas, menos espera",2025-07-01,2026-06-30
+11,"Bogotá, D.C.",Pediatría,695724,7944432,87.57,7.74,53.51,6.25,"Más citas, más espera",2025-07-01,2026-06-30
+13,Bolívar,Pediatría,144295,2246236,64.24,5.12,53.51,6.25,"Más citas, menos espera",2025-07-01,2026-06-30
+15,Boyacá,Pediatría,53177,1293120,41.12,4.27,53.51,6.25,"Menos citas, menos espera",2025-07-01,2026-06-30
+17,Caldas,Pediatría,29093,1055644,27.56,6.34,53.51,6.25,"Menos citas, más espera",2025-07-01,2026-06-30
+18,Caquetá,Pediatría,10991,430454,25.53,3.24,53.51,6.25,"Menos citas, menos espera",2025-07-01,2026-06-30
+19,Cauca,Pediatría,43027,1606238,26.79,4.5,53.51,6.25,"Menos citas, menos espera",2025-07-01,2026-06-30
+20,Cesar,Pediatría,85263,1481492,57.55,7.49,53.51,6.25,"Más citas, más espera",2025-07-01,2026-06-30
+23,Córdoba,Pediatría,104173,2003610,51.99,8.84,53.51,6.25,"Menos citas, más espera",2025-07-01,2026-06-30
+25,Cundinamarca,Pediatría,273253,3568172,76.58,6.16,53.51,6.25,"Más citas, menos espera",2025-07-01,2026-06-30
+27,Chocó,Pediatría,8630,596287,14.47,7.59,53.51,6.25,"Menos citas, más espera",2025-07-01,2026-06-30
+41,Huila,Pediatría,56970,1215288,46.88,6.1,53.51,6.25,"Menos citas, menos espera",2025-07-01,2026-06-30
+44,La Guajira,Pediatría,73804,1074648,68.68,4.63,53.51,6.25,"Más citas, menos espera",2025-07-01,2026-06-30
+47,Magdalena,Pediatría,92557,1551628,59.65,4.13,53.51,6.25,"Más citas, menos espera",2025-07-01,2026-06-30
+50,Meta,Pediatría,58822,1161528,50.64,7.66,53.51,6.25,"Menos citas, más espera",2025-07-01,2026-06-30
+52,Nariño,Pediatría,39365,1717660,22.92,4.12,53.51,6.25,"Menos citas, menos espera",2025-07-01,2026-06-30
+54,Norte de Santander,Pediatría,85108,1713540,49.67,4.03,53.51,6.25,"Menos citas, menos espera",2025-07-01,2026-06-30
+63,Quindio,Pediatría,29628,557867,53.11,4.73,53.51,6.25,"Menos citas, menos espera",2025-07-01,2026-06-30
+66,Risaralda,Pediatría,48832,1005005,48.59,6.2,53.51,6.25,"Menos citas, menos espera",2025-07-01,2026-06-30
+68,Santander,Pediatría,136086,2404502,56.6,4.69,53.51,6.25,"Más citas, menos espera",2025-07-01,2026-06-30
+70,Sucre,Pediatría,65439,1040577,62.89,4.08,53.51,6.25,"Más citas, menos espera",2025-07-01,2026-06-30
+73,Tolima,Pediatría,68962,1388696,49.66,6.86,53.51,6.25,"Menos citas, más espera",2025-07-01,2026-06-30
+76,Valle del Cauca,Pediatría,202320,4711690,42.94,6.95,53.51,6.25,"Menos citas, más espera",2025-07-01,2026-06-30
+81,Arauca,Pediatría,16977,279606,60.72,4.46,53.51,6.25,"Más citas, menos espera",2025-07-01,2026-06-30
+85,Casanare,Pediatría,17623,475566,37.06,5.96,53.51,6.25,"Menos citas, menos espera",2025-07-01,2026-06-30
+86,Putumayo,Pediatría,13886,393166,35.32,3.4,53.51,6.25,"Menos citas, menos espera",2025-07-01,2026-06-30
+88,"Archipiélago de San Andrés, Providencia y Santa Catalina",Pediatría,5683,63482,89.52,4.44,53.51,6.25,"Más citas, menos espera",2025-07-01,2026-06-30
+91,Amazonas,Pediatría,1793,85476,20.98,4.73,53.51,6.25,"Menos citas, menos espera",2025-07-01,2026-06-30
+94,Guainía,Pediatría,838,60386,13.88,5.51,53.51,6.25,"Menos citas, menos espera",2025-07-01,2026-06-30
+95,Guaviare,Pediatría,2110,84764,24.89,11.06,53.51,6.25,"Menos citas, más espera",2025-07-01,2026-06-30
+97,Vaupés,Pediatría,818,44316,18.46,6.18,53.51,6.25,"Menos citas, menos espera",2025-07-01,2026-06-30
+99,Vichada,Pediatría,1800,151464,11.88,2.07,53.51,6.25,"Menos citas, menos espera",2025-07-01,2026-06-30

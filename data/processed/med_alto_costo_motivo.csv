@@ -1,0 +1,91 @@
+corte,grupo,motivo,n
+post,Autoinmunes y reumáticas,Demora en la autorización,2433
+post,Autoinmunes y reumáticas,Demora o entrega incompleta,4549
+post,Autoinmunes y reumáticas,Fallas en la dispensación,4
+post,Autoinmunes y reumáticas,Negación de la autorización,371
+post,Autoinmunes y reumáticas,Negación de la entrega,8909
+post,Autoinmunes y reumáticas,Reembolsos,9
+post,Cáncer,Demora en la autorización,7657
+post,Cáncer,Demora o entrega incompleta,11432
+post,Cáncer,Fallas en la dispensación,12
+post,Cáncer,Negación de la autorización,1166
+post,Cáncer,Negación de la entrega,23733
+post,Cáncer,Reembolsos,86
+post,Enfermedad renal y trasplante,Demora en la autorización,2406
+post,Enfermedad renal y trasplante,Demora o entrega incompleta,6323
+post,Enfermedad renal y trasplante,Fallas en la dispensación,6
+post,Enfermedad renal y trasplante,Negación de la autorización,398
+post,Enfermedad renal y trasplante,Negación de la entrega,13994
+post,Enfermedad renal y trasplante,Reembolsos,29
+post,Enfermedades huérfanas,Demora en la autorización,1349
+post,Enfermedades huérfanas,Demora o entrega incompleta,2160
+post,Enfermedades huérfanas,Fallas en la dispensación,6
+post,Enfermedades huérfanas,Negación de la autorización,246
+post,Enfermedades huérfanas,Negación de la entrega,3264
+post,Enfermedades huérfanas,Reembolsos,10
+post,Hemofilia y coagulopatías,Demora en la autorización,98
+post,Hemofilia y coagulopatías,Demora o entrega incompleta,114
+post,Hemofilia y coagulopatías,Fallas en la dispensación,1
+post,Hemofilia y coagulopatías,Negación de la autorización,16
+post,Hemofilia y coagulopatías,Negación de la entrega,259
+post,Hemofilia y coagulopatías,Reembolsos,1
+post,Otras intervenciones de alto costo,Demora en la autorización,540
+post,Otras intervenciones de alto costo,Demora o entrega incompleta,1298
+post,Otras intervenciones de alto costo,Fallas en la dispensación,2
+post,Otras intervenciones de alto costo,Negación de la autorización,117
+post,Otras intervenciones de alto costo,Negación de la entrega,2852
+post,Otras intervenciones de alto costo,Reembolsos,14
+post,VIH,Demora en la autorización,1046
+post,VIH,Demora o entrega incompleta,3061
+post,VIH,Fallas en la dispensación,5
+post,VIH,Negación de la autorización,185
+post,VIH,Negación de la entrega,6107
+post,VIH,Reembolsos,15
+pre,Autoinmunes y reumáticas,Demora en la autorización,4053
+pre,Autoinmunes y reumáticas,Demora o entrega incompleta,12438
+pre,Autoinmunes y reumáticas,Fallas en la dispensación,41
+pre,Autoinmunes y reumáticas,Negación de la autorización,114
+pre,Autoinmunes y reumáticas,Negación de la entrega,352
+pre,Autoinmunes y reumáticas,Otros,7
+pre,Autoinmunes y reumáticas,Reembolsos,23
+pre,Cáncer,Demora en la autorización,13251
+pre,Cáncer,Demora o entrega incompleta,37129
+pre,Cáncer,Fallas en la dispensación,119
+pre,Cáncer,Negación de la autorización,413
+pre,Cáncer,Negación de la entrega,1379
+pre,Cáncer,Otros,29
+pre,Cáncer,Reembolsos,162
+pre,Enfermedad renal y trasplante,Demora en la autorización,4205
+pre,Enfermedad renal y trasplante,Demora o entrega incompleta,13612
+pre,Enfermedad renal y trasplante,Fallas en la dispensación,46
+pre,Enfermedad renal y trasplante,Negación de la autorización,171
+pre,Enfermedad renal y trasplante,Negación de la entrega,487
+pre,Enfermedad renal y trasplante,Otros,9
+pre,Enfermedad renal y trasplante,Reembolsos,32
+pre,Enfermedades huérfanas,Demora en la autorización,3934
+pre,Enfermedades huérfanas,Demora o entrega incompleta,8657
+pre,Enfermedades huérfanas,Fallas en la dispensación,19
+pre,Enfermedades huérfanas,Negación de la autorización,192
+pre,Enfermedades huérfanas,Negación de la entrega,804
+pre,Enfermedades huérfanas,Otros,22
+pre,Enfermedades huérfanas,Reembolsos,27
+pre,Hemofilia y coagulopatías,Demora en la autorización,273
+pre,Hemofilia y coagulopatías,Demora o entrega incompleta,546
+pre,Hemofilia y coagulopatías,Fallas en la dispensación,1
+pre,Hemofilia y coagulopatías,Negación de la autorización,10
+pre,Hemofilia y coagulopatías,Negación de la entrega,30
+pre,Hemofilia y coagulopatías,Reembolsos,1
+pre,Otras intervenciones de alto costo,Demora en la autorización,904
+pre,Otras intervenciones de alto costo,Demora o entrega incompleta,2796
+pre,Otras intervenciones de alto costo,Fallas en la dispensación,12
+pre,Otras intervenciones de alto costo,Negación de la autorización,35
+pre,Otras intervenciones de alto costo,Negación de la entrega,96
+pre,Otras intervenciones de alto costo,Otros,3
+pre,Otras intervenciones de alto costo,Reembolsos,8
+pre,VIH,Demora en la autorización,2005
+pre,VIH,Demora o entrega incompleta,8511
+pre,VIH,Fallas en la dispensación,23
+pre,VIH,Negación de la autorización,82
+pre,VIH,Negación de la entrega,384
+pre,VIH,Otros,8
+pre,VIH,Reembolsos,14

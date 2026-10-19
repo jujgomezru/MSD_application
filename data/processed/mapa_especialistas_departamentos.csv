@@ -1,0 +1,166 @@
+cod_depto,departamento,especialidad,profesionales,poblacion,por_100k,tasa_nacional
+05,Antioquia,Cirugía general,393,6777249,5.8,4.93
+08,Atlántico,Cirugía general,158,2774009,5.7,4.93
+11,"Bogotá, D.C.",Cirugía general,789,7849206,10.05,4.93
+13,Bolívar,Cirugía general,93,2195275,4.24,4.93
+15,Boyacá,Cirugía general,43,1268367,3.39,4.93
+17,Caldas,Cirugía general,53,1041232,5.09,4.93
+18,Caquetá,Cirugía general,9,418724,2.15,4.93
+19,Cauca,Cirugía general,41,1549859,2.65,4.93
+20,Cesar,Cirugía general,42,1379279,3.05,4.93
+23,Córdoba,Cirugía general,51,1917742,2.66,4.93
+25,Cundinamarca,Cirugía general,49,3316583,1.48,4.93
+27,Chocó,Cirugía general,3,572258,0.52,4.93
+41,Huila,Cirugía general,61,1166143,5.23,4.93
+44,La Guajira,Cirugía general,25,1007580,2.48,4.93
+47,Magdalena,Cirugía general,29,1485394,1.95,4.93
+50,Meta,Cirugía general,25,1118349,2.24,4.93
+52,Nariño,Cirugía general,45,1684282,2.67,4.93
+54,Norte de Santander,Cirugía general,58,1659814,3.49,4.93
+63,Quindío,Cirugía general,30,554581,5.41,4.93
+66,Risaralda,Cirugía general,50,986996,5.07,4.93
+68,Santander,Cirugía general,109,2341058,4.66,4.93
+70,Sucre,Cirugía general,30,988782,3.03,4.93
+73,Tolima,Cirugía general,42,1368345,3.07,4.93
+76,Valle del Cauca,Cirugía general,284,4658811,6.1,4.93
+81,Arauca,Cirugía general,6,274806,2.18,4.93
+85,Casanare,Cirugía general,10,455615,2.19,4.93
+86,Putumayo,Cirugía general,7,374360,1.87,4.93
+88,"Archipiélago de San Andrés, Providencia y Santa Catalina",Cirugía general,1,62801,1.59,4.93
+91,Amazonas,Cirugía general,2,81996,2.44,4.93
+94,Guainía,Cirugía general,0,55129,0,4.93
+95,Guaviare,Cirugía general,1,84107,1.19,4.93
+97,Vaupés,Cirugía general,0,43009,0,4.93
+99,Vichada,Cirugía general,1,131824,0.76,4.93
+05,Antioquia,Ginecología y obstetricia,506,6777249,7.47,7.27
+08,Atlántico,Ginecología y obstetricia,311,2774009,11.21,7.27
+11,"Bogotá, D.C.",Ginecología y obstetricia,1110,7849206,14.14,7.27
+13,Bolívar,Ginecología y obstetricia,176,2195275,8.02,7.27
+15,Boyacá,Ginecología y obstetricia,58,1268367,4.57,7.27
+17,Caldas,Ginecología y obstetricia,59,1041232,5.67,7.27
+18,Caquetá,Ginecología y obstetricia,12,418724,2.87,7.27
+19,Cauca,Ginecología y obstetricia,63,1549859,4.06,7.27
+20,Cesar,Ginecología y obstetricia,89,1379279,6.45,7.27
+23,Córdoba,Ginecología y obstetricia,83,1917742,4.33,7.27
+25,Cundinamarca,Ginecología y obstetricia,55,3316583,1.66,7.27
+27,Chocó,Ginecología y obstetricia,6,572258,1.05,7.27
+41,Huila,Ginecología y obstetricia,84,1166143,7.2,7.27
+44,La Guajira,Ginecología y obstetricia,48,1007580,4.76,7.27
+47,Magdalena,Ginecología y obstetricia,59,1485394,3.97,7.27
+50,Meta,Ginecología y obstetricia,44,1118349,3.93,7.27
+52,Nariño,Ginecología y obstetricia,60,1684282,3.56,7.27
+54,Norte de Santander,Ginecología y obstetricia,85,1659814,5.12,7.27
+63,Quindío,Ginecología y obstetricia,40,554581,7.21,7.27
+66,Risaralda,Ginecología y obstetricia,75,986996,7.6,7.27
+68,Santander,Ginecología y obstetricia,174,2341058,7.43,7.27
+70,Sucre,Ginecología y obstetricia,55,988782,5.56,7.27
+73,Tolima,Ginecología y obstetricia,63,1368345,4.6,7.27
+76,Valle del Cauca,Ginecología y obstetricia,377,4658811,8.09,7.27
+81,Arauca,Ginecología y obstetricia,8,274806,2.91,7.27
+85,Casanare,Ginecología y obstetricia,22,455615,4.83,7.27
+86,Putumayo,Ginecología y obstetricia,9,374360,2.4,7.27
+88,"Archipiélago de San Andrés, Providencia y Santa Catalina",Ginecología y obstetricia,4,62801,6.37,7.27
+91,Amazonas,Ginecología y obstetricia,5,81996,6.1,7.27
+94,Guainía,Ginecología y obstetricia,0,55129,0,7.27
+95,Guaviare,Ginecología y obstetricia,2,84107,2.38,7.27
+97,Vaupés,Ginecología y obstetricia,0,43009,0,7.27
+99,Vichada,Ginecología y obstetricia,4,131824,3.03,7.27
+05,Antioquia,Medicina interna,745,6777249,10.99,10.4
+08,Atlántico,Medicina interna,450,2774009,16.22,10.4
+11,"Bogotá, D.C.",Medicina interna,1644,7849206,20.94,10.4
+13,Bolívar,Medicina interna,200,2195275,9.11,10.4
+15,Boyacá,Medicina interna,70,1268367,5.52,10.4
+17,Caldas,Medicina interna,92,1041232,8.84,10.4
+18,Caquetá,Medicina interna,8,418724,1.91,10.4
+19,Cauca,Medicina interna,65,1549859,4.19,10.4
+20,Cesar,Medicina interna,108,1379279,7.83,10.4
+23,Córdoba,Medicina interna,118,1917742,6.15,10.4
+25,Cundinamarca,Medicina interna,95,3316583,2.86,10.4
+27,Chocó,Medicina interna,14,572258,2.45,10.4
+41,Huila,Medicina interna,116,1166143,9.95,10.4
+44,La Guajira,Medicina interna,55,1007580,5.46,10.4
+47,Magdalena,Medicina interna,91,1485394,6.13,10.4
+50,Meta,Medicina interna,52,1118349,4.65,10.4
+52,Nariño,Medicina interna,90,1684282,5.34,10.4
+54,Norte de Santander,Medicina interna,115,1659814,6.93,10.4
+63,Quindío,Medicina interna,43,554581,7.75,10.4
+66,Risaralda,Medicina interna,114,986996,11.55,10.4
+68,Santander,Medicina interna,275,2341058,11.75,10.4
+70,Sucre,Medicina interna,65,988782,6.57,10.4
+73,Tolima,Medicina interna,75,1368345,5.48,10.4
+76,Valle del Cauca,Medicina interna,581,4658811,12.47,10.4
+81,Arauca,Medicina interna,13,274806,4.73,10.4
+85,Casanare,Medicina interna,17,455615,3.73,10.4
+86,Putumayo,Medicina interna,11,374360,2.94,10.4
+88,"Archipiélago de San Andrés, Providencia y Santa Catalina",Medicina interna,7,62801,11.15,10.4
+91,Amazonas,Medicina interna,3,81996,3.66,10.4
+94,Guainía,Medicina interna,0,55129,0,10.4
+95,Guaviare,Medicina interna,1,84107,1.19,10.4
+97,Vaupés,Medicina interna,0,43009,0,10.4
+99,Vichada,Medicina interna,0,131824,0,10.4
+05,Antioquia,Médicos (pregrado),22774,6777249,336.04,457.25
+08,Atlántico,Médicos (pregrado),11059,2774009,398.66,457.25
+11,"Bogotá, D.C.",Médicos (pregrado),45524,7849206,579.98,457.25
+13,Bolívar,Médicos (pregrado),5570,2195275,253.73,457.25
+15,Boyacá,Médicos (pregrado),2754,1268367,217.13,457.25
+17,Caldas,Médicos (pregrado),3229,1041232,310.11,457.25
+18,Caquetá,Médicos (pregrado),538,418724,128.49,457.25
+19,Cauca,Médicos (pregrado),2005,1549859,129.37,457.25
+20,Cesar,Médicos (pregrado),3353,1379279,243.1,457.25
+23,Córdoba,Médicos (pregrado),3892,1917742,202.95,457.25
+25,Cundinamarca,Médicos (pregrado),3256,3316583,98.17,457.25
+27,Chocó,Médicos (pregrado),350,572258,61.16,457.25
+41,Huila,Médicos (pregrado),2983,1166143,255.8,457.25
+44,La Guajira,Médicos (pregrado),1867,1007580,185.3,457.25
+47,Magdalena,Médicos (pregrado),2643,1485394,177.93,457.25
+50,Meta,Médicos (pregrado),1811,1118349,161.94,457.25
+52,Nariño,Médicos (pregrado),4231,1684282,251.2,457.25
+54,Norte de Santander,Médicos (pregrado),3228,1659814,194.48,457.25
+63,Quindío,Médicos (pregrado),1523,554581,274.62,457.25
+66,Risaralda,Médicos (pregrado),3409,986996,345.39,457.25
+68,Santander,Médicos (pregrado),8796,2341058,375.73,457.25
+70,Sucre,Médicos (pregrado),2147,988782,217.14,457.25
+73,Tolima,Médicos (pregrado),4986,1368345,364.38,457.25
+76,Valle del Cauca,Médicos (pregrado),16096,4658811,345.5,457.25
+81,Arauca,Médicos (pregrado),463,274806,168.48,457.25
+85,Casanare,Médicos (pregrado),692,455615,151.88,457.25
+86,Putumayo,Médicos (pregrado),405,374360,108.18,457.25
+88,"Archipiélago de San Andrés, Providencia y Santa Catalina",Médicos (pregrado),174,62801,277.07,457.25
+91,Amazonas,Médicos (pregrado),123,81996,150.01,457.25
+94,Guainía,Médicos (pregrado),15,55129,27.21,457.25
+95,Guaviare,Médicos (pregrado),88,84107,104.63,457.25
+97,Vaupés,Médicos (pregrado),4,43009,9.3,457.25
+99,Vichada,Médicos (pregrado),29,131824,22,457.25
+05,Antioquia,Pediatría,583,6777249,8.6,9.83
+08,Atlántico,Pediatría,345,2774009,12.44,9.83
+11,"Bogotá, D.C.",Pediatría,1727,7849206,22,9.83
+13,Bolívar,Pediatría,195,2195275,8.88,9.83
+15,Boyacá,Pediatría,79,1268367,6.23,9.83
+17,Caldas,Pediatría,75,1041232,7.2,9.83
+18,Caquetá,Pediatría,16,418724,3.82,9.83
+19,Cauca,Pediatría,72,1549859,4.65,9.83
+20,Cesar,Pediatría,136,1379279,9.86,9.83
+23,Córdoba,Pediatría,132,1917742,6.88,9.83
+25,Cundinamarca,Pediatría,90,3316583,2.71,9.83
+27,Chocó,Pediatría,6,572258,1.05,9.83
+41,Huila,Pediatría,115,1166143,9.86,9.83
+44,La Guajira,Pediatría,76,1007580,7.54,9.83
+47,Magdalena,Pediatría,110,1485394,7.41,9.83
+50,Meta,Pediatría,49,1118349,4.38,9.83
+52,Nariño,Pediatría,97,1684282,5.76,9.83
+54,Norte de Santander,Pediatría,95,1659814,5.72,9.83
+63,Quindío,Pediatría,42,554581,7.57,9.83
+66,Risaralda,Pediatría,78,986996,7.9,9.83
+68,Santander,Pediatría,231,2341058,9.87,9.83
+70,Sucre,Pediatría,82,988782,8.29,9.83
+73,Tolima,Pediatría,68,1368345,4.97,9.83
+76,Valle del Cauca,Pediatría,507,4658811,10.88,9.83
+81,Arauca,Pediatría,16,274806,5.82,9.83
+85,Casanare,Pediatría,16,455615,3.51,9.83
+86,Putumayo,Pediatría,8,374360,2.14,9.83
+88,"Archipiélago de San Andrés, Providencia y Santa Catalina",Pediatría,4,62801,6.37,9.83
+91,Amazonas,Pediatría,3,81996,3.66,9.83
+94,Guainía,Pediatría,1,55129,1.81,9.83
+95,Guaviare,Pediatría,3,84107,3.57,9.83
+97,Vaupés,Pediatría,0,43009,0,9.83
+99,Vichada,Pediatría,0,131824,0,9.83
