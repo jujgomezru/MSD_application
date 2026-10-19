@@ -4,6 +4,7 @@
 
 source(here::here("R", "setup.R"))
 source(here("R", "poblacion.R"))
+source(here("R", "afiliados.R"))
 
 citas <- read_csv(here("data", "processed", "reclamos_citas.csv.gz"),
                   col_types = cols(.default = "c", n = "i")) |>
@@ -69,3 +70,21 @@ citas |>
     pct_negacion = negacion / (negacion + demora)
   ) |>
   write_csv(here("data", "processed", "citas_reclamos_departamento.csv"))
+
+# EPS: reclamos por negación o demora de citas con especialista en 2025, totales
+# y por 10.000 afiliados (BDUA de la ADRES, último corte).
+citas |>
+  filter(corte == "post", anio == "2025", nivel == "Especialista",
+         tipo %in% c("Negación de la cita", "Demora en la cita"),
+         str_detect(coalesce(tipo_entidad, ""), "RÉGIMEN (CONTRIBUTIVO|SUBSIDIADO)")) |>
+  mutate(eps = str_squish(toupper(eps))) |>
+  summarise(
+    negacion = sum(n[tipo == "Negación de la cita"]),
+    demora = sum(n[tipo == "Demora en la cita"]),
+    .by = c(eps_codigo, eps)
+  ) |>
+  mutate(total = negacion + demora) |>
+  reclamos_por_afiliados(c("negacion", "demora", "total")) |>
+  mutate(pct_negacion = negacion / total) |>
+  arrange(desc(total_10k)) |>
+  write_csv(here("data", "processed", "citas_reclamos_eps.csv"))

@@ -1,238 +1,238 @@
-medicamento,estado,causa,prioridad,grupo_terapeutico,grupo_alto_costo,alto_costo
-Abacavir solución oral,Desabastecido,Alerta sanitaria / descontinuación del producto,Enfermedades infecciosas,Agentes de accion directa contra el virus (sistem),VIH,TRUE
-Abacavir tabletas,En monitorización,Baja rentabilidad,Enfermedades infecciosas,Antivirales de uso sistemico,VIH,TRUE
-Acetato de ciproterona tableta,En riesgo de desabastecimiento,Aumento de la demanda,Cáncer,Antiandrogenos,Cáncer,TRUE
-"Aciclovir tabletas 200mg,500mg y 800mg",En monitorización,No definida por el invima.,Enfermedades infecciosas,Agentes de accion directa contra el virus (sistem),,FALSE
-Aciclovir ungüento oftálmico,Desabastecido,Alerta sanitaria / descontinuación del producto,Enfermedades infecciosas,Agentes de accion directa contra el virus (sistem),,FALSE
-Acido tranexámico 500 mg/5mL solución Inyectable,No desabastecido,Problemas de manufactura,Enfermedades crónicas,Antifibrinoliticos,,FALSE
-Acido Valproico Jarabe 250mg/5ml/120ml,En riesgo de desabastecimiento,Problemas en la adquisición de materia prima,Enfermedades crónicas,Antiepilepticos,,FALSE
-Adenosina 3 mg y 6 mg,En monitorización,Problemas de manufactura,Enfermedades infecciosas,Agentes de accion directa contra el virus (sistem),,FALSE
-Adrenalina solución inyectable,En monitorización,Problemas de manufactura,Vasoactivo / inotrópicos,"Estimulantes cardiacos, excluidos glicosidos card.",,FALSE
-Afatinib,No desabastecido,Ninguna. Medicamento no desabastecido,Cáncer,Otros antineoplásicos,Cáncer,TRUE
-Agua Estéril de grandes volúmenes 250 ml-500ml 1000ml y 3000ml,En monitorización,Aumento de la demanda,Líquidos y electrolitos,Todos los demas productos no terapeuticos,,FALSE
-Albendazol suspensión,En monitorización,No definida por el invima.,Enfermedades infecciosas,Antiparasitarios,,FALSE
-Albendazol tabletas,En monitorización,No definida por el invima.,Enfermedades infecciosas,Antiparasitarios,,FALSE
-Albumina Humana Solución Inyectable,En riesgo de desabastecimiento,Asignación controlada para colombia razón por la cual no se suple el 100% de la demanda,Enfermedades crónicas,Sustitutos de la sangre y soluc. Para perfusion,,FALSE
-Alfa-metildopa tabletas 250mg,No desabastecido,Ninguna. Medicamento no desabastecido,Enfermedades crónicas,Antiadrenergicos de accion central (antihipertens),,FALSE
-Alopurinol 100mg y 300mg,Desabastecido,Problemas en la adquisición de materia prima,Enfermedades crónicas,Preparados contra la gota,,FALSE
-Alprostadil Solución inyectable,En monitorización,Modificaciones de registro sanitario pendientes,Enfermedades crónicas,Otros preparados cardiacos,,FALSE
-Aminofilina solución inyectable,En monitorización,Insuficientes oferentes,Enfermedades crónicas,"Estimulantes cardiacos, excluidos glicosidos card.",,FALSE
-Amiodarona tableta y solución inyectable,No desabastecido,Ninguna. Medicamento no desabastecido,Enfermedades crónicas,Antiarritmicos,,FALSE
-Amitriptilina tabletas,No desabastecido,Aumento de la demanda,Salud mental,Antidepresivos,,FALSE
-Amoxicilina 500mg Tabletas Y Capsulas,En monitorización,Aumento de la demanda,Enfermedades infecciosas,Antibióticos,,FALSE
-Amoxicilina Polvo para inyección,Desabastecido,Problemas en la adquisición de materia prima,Enfermedades infecciosas,Antibióticos,,FALSE
-Amoxicilina Polvo para reconstituir vía oral,En monitorización,Problemas en la adquisición de materia prima,Enfermedades infecciosas,Antibióticos,,FALSE
-Amoxicilina/Clavulona to suspensión oral,En riesgo de desabastecimiento,Aumento de la demanda,Enfermedades infecciosas,"Antibacterianos betalactamicos, penicilinas",,FALSE
-Amoxicilina/Clavulona to Tableta,En monitorización,Aumento de la demanda,Enfermedades infecciosas,Antibióticos,,FALSE
-Anfotericina B Liposomal Polvo Liofilizado Para Reconstituir a Solución Inyectable,No desabastecido,Ninguna. Medicamento no desabastecido,Enfermedades infecciosas,Antimicoticos de uso sistemico,,FALSE
-Aripiprazol 15 mg Tableta,No desabastecido,Insuficientes oferentes,Salud mental,Antipsicoticos,,FALSE
-Articaina varias Inyectables,No desabastecido,Aumento de la demanda,Uso anestésico,Antestesicos locales,,FALSE
-Atorvastatina tabletas 20mg-40mg y 80mg,En monitorización,Problemas en la adquisición de materia prima,Enfermedades crónicas,Modificadores de los lipidos solos,,FALSE
-Atropina solución inyectable,En monitorización,Aumento de la demanda,Enfermedades crónicas,Otros preparados cardiacos,,FALSE
-Azitromicina suspensión oral,En monitorización,No definida por el invima.,Enfermedades infecciosas,Antibióticos,,FALSE
-Azitromicina tableta 500mg,En monitorización,Problemas en la adquisición de materia prima,Enfermedades infecciosas,Antibióticos,,FALSE
-Azul de metileno,No desabastecido,Aumento de la demanda,Varios,Varios,,FALSE
-Bicalutamida tableta,En monitorización,Baja rentabilidad,Cáncer,Terapia endocrina,Cáncer,TRUE
-Bicarbonato De Sodio Solución Inyectable 1meq/Ml/10 Ml,Desabastecido,Problemas en la adquisición de materia prima,Líquidos y electrolitos,Soluciones intravenosas aditivas,,FALSE
-Biperideno tableta 2mg,En monitorización,Aumento de la demanda,Enfermedades crónicas,Anticolinergicos (antiparkinsonianos),,FALSE
-Bupivacaina Con Epinefrina (Con Preservantes) Solución Inyectable 0.5 %/20 Ml - 0.5 %/10 Ml - 0.75 %/10 Ml,En monitorización,Aumento de la demanda,Uso anestésico,Anestésicos locales,,FALSE
-Bupivacaina Sin Epinefrina Solución Inyectable 0.5 %/20 Ml - 0.5 %/10 Ml,En monitorización,Aumento de la demanda,Uso anestésico,Anestésicos locales,,FALSE
-Carbamazepina solución oral,No desabastecido,Ninguna. Medicamento no desabastecido,Enfermedades crónicas,Antiepilepticos,,FALSE
-Carbamazepina solución oral tableta 400mg,No desabastecido,Ninguna. Medicamento no desabastecido,Enfermedades crónicas,Antiepilepticos,,FALSE
-Carbamazepina tableta 200mg,No desabastecido,Ninguna. Medicamento no desabastecido,Enfermedades crónicas,Antiepilepticos,,FALSE
-Carbonato De Calcio (1500mg) /Vitamina D3 Tableta,En monitorización,Aumento de la demanda,Enfermedades crónicas,Calcio,,FALSE
-Carboplatino 10mg/ Ml Solución inyectable,En monitorización,Problemas en la adquisición de materia prima,Cáncer,Antineoplasicos,Cáncer,TRUE
-Cefalotina 1gr polvo estéril para reconstituir a solución inyectable,En monitorización,Problemas en la adquisición de materia prima,Enfermedades infecciosas,Otros antibacterianos betalactamicos,,FALSE
-Cefazolina 1gr polvo estéril para reconstituir a solución inyectable,En monitorización,Problemas en la adquisición de materia prima,Enfermedades infecciosas,Otros antibacterianos betalactamicos,,FALSE
-Cefradina solución oral,Desabastecido,Alerta sanitaria / descontinuación del producto,Enfermedades infecciosas,Otros antibacterianos betalactamicos,,FALSE
-Cefuroxima suspensión oral,No desabastecido,Aumento de la demanda,Enfermedades infecciosas,Otros antibacterianos betalactamicos,,FALSE
-Cefuroxima tabletas,En monitorización,Aumento de la demanda,Enfermedades crónicas,Antibacterianos de uso sistemico,,FALSE
-Ciclofosfamida 1g Vial,No desabastecido,Ninguna. Medicamento no desabastecido,Cáncer,Agentes alquilantes (antineoplasicos),Cáncer,TRUE
-Ciprofloxacina solución inyectable,En monitorización,Aumento de la demanda,Enfermedades infecciosas,Antibióticos,,FALSE
-Ciprofloxacina tabletas 250mg,Desabastecido,Insuficientes oferentes,Enfermedades infecciosas,Antibióticos,,FALSE
-Ciprofloxacina tabletas 500mg,En monitorización,Aumento de la demanda,Enfermedades infecciosas,Antibióticos,,FALSE
-Citarabina 500 Mg/10ml solución inyectable,En monitorización,No definida por el invima.,Cáncer,Antineoplasicos,Cáncer,TRUE
-Citrato De Clomifeno Tableta,Desabastecido,No definida por el invima.,Salud sexual y reproductiva,Hormonas sexuales y moduladores de aparato genital,,FALSE
-Claritromicina suspensión oral,En monitorización,Aumento de la demanda,Enfermedades infecciosas,Antibacterianos de uso sistemico,,FALSE
-Claritromicina tabletas,En monitorización,Aumento de la demanda,Enfermedades infecciosas,Macrolidos y lincosamidas (antiinfecc. Sistemicos),,FALSE
-Cloroquina Solución Oral,En monitorización,Insuficientes oferentes,Enfermedades infecciosas,Antimalaricos,,FALSE
-Cloroquina tabletas,Desabastecido,Insuficientes oferentes,Enfermedades infecciosas,Antimalaricos,,FALSE
-Cloruro de potasio,En monitorización,Aumento de la demanda,Líquidos y electrolitos,Soluciones intravenosas aditivas,,FALSE
-Clozapina tableta,En monitorización,Restricción o dificultades con cupo api,Salud mental,Antipsicoticos,,FALSE
-Colistimetato sódico polvo para inhalar,En monitorización,Insuficientes oferentes,Enfermedades infecciosas,Otros antibacterianos (antiinfecciosos sistemicos),,FALSE
-Cromoglicato sódico 2% y 4% Solución oftálmica,En monitorización,Problemas de manufactura,Enfermedades crónicas,Descongestionantes y antialergicos (oftalmicos),,FALSE
-Dalteparina Sódica Sl. Inyectable,Desabastecido,Aumento de la demanda,Enfermedades crónicas,Antitromboticos,,FALSE
-Dantroleno sódico,En monitorización,Insuficientes oferentes,Enfermedades crónicas,Sistema musculo-esqueletico,,FALSE
-Darunavir Tabletas,En monitorización,No definida por el invima.,Enfermedades infecciosas,Antivirales de uso sistemico,VIH,TRUE
-Daunorrubicina x 20 mg,En monitorización,Problemas en la adquisición de materia prima,Cáncer,Antibioticos citotoxicos y sust.relac.(Antineopla),Cáncer,TRUE
-Deflazacort tabletas x 6 y 30 mg,En monitorización,Insuficientes oferentes,Enfermedades crónicas,"Corticosteroides de uso sistemico, solos",,FALSE
-Desatinib tableta,En monitorización,No definida por el invima.,Cáncer,Otros antineoplasicos,Cáncer,TRUE
-Desloratadina jarabe,En monitorización,Aumento de la demanda,Enfermedades infecciosas,Antihistaminicos de uso sistemico,,FALSE
-Desloratadina tableta,En monitorización,Aumento de la demanda,Enfermedades infecciosas,Antihistaminicos de uso sistemico,,FALSE
-Desmopresina Spay Nasal Y Oral,En monitorización,Modificaciones de registro sanitario pendientes,Enfermedades crónicas,Hormonas del lobulo posterior de la hipofisis,,FALSE
-Desvenlafaxina,En monitorización,No definida por el invima.,Salud mental,Antidepresivos,,FALSE
-Dexametasona ampolla de 4 y 8mg,No desabastecido,Ninguna. Medicamento no desabastecido,Enfermedades crónicas,"Corticosteroides de uso sistemico, solos",,FALSE
-Dextrosa en agua destilada al 5%,En monitorización,Aumento de la demanda,Líquidos y electrolitos,Soluciones intravenosas,,FALSE
-Dienogest tabletas,En monitorización,Aumento de la demanda,Salud sexual y reproductiva,Hormonas sexuales y moduladores de aparato genital,,FALSE
-Dienogest+Estardiol tabletas,No desabastecido,Aumento de la demanda,Salud sexual y reproductiva,Hormonas sexuales y moduladores de aparato genital,,FALSE
-Dinitrato de isosorbida 5 mg Tableta sublingual,En monitorización,Aumento de la demanda,Vasoactivo / inotrópicos,Vasodilatadores usados en cardioterapia,,FALSE
-Dipirona ampolla de 1gr y 2.5gr,En monitorización,Aumento de la demanda,Enfermedades infecciosas,Otros analgesicos y antipireticos,,FALSE
-Dobutamina solución inyectable,No desabastecido,Problemas en la adquisición de materia prima,Vasoactivo / inotrópicos,"Estimulantes cardiacos, excluidos glicosidos card.",,FALSE
-Doxiciclina 100mg Tableta Oral,En monitorización,Aumento de la demanda,Enfermedades infecciosas,Antibióticos,,FALSE
-Drospirenona Etinilestradiol Fuerte,No desabastecido,Ninguna. Medicamento no desabastecido,Salud sexual y reproductiva,Hormonas anticonceptivas de uso sistemico,,FALSE
-Drospirenona Etinilestradiol Suave,No desabastecido,Ninguna. Medicamento no desabastecido,Salud sexual y reproductiva,Hormonas anticonceptivas de uso sistemico,,FALSE
-Dulaglutida sol. Inyectable,En riesgo de desabastecimiento,Aumento de la demanda,Enfermedades crónicas,"Antidiabeticos orales, excl. Insulinas",,FALSE
-Efavirez tableta,En monitorización,Aumento de la demanda,Enfermedades infecciosas,Antivirales de uso sistemico,,FALSE
-Enalapril tabletas de 5mg y 20mg,En monitorización,Aumento de la demanda,Enfermedades crónicas,Inhibidores enzima convertasa angiotensina -ieca-,,FALSE
-Enantato De Noretisterona 50mg + Valerato De Estradiol 5mg solución inyectable,Desabastecido,Aumento de la demanda,Salud sexual y reproductiva,Progestagenos y estrogenos en asociacion,,FALSE
-Enoxaparina Sódica Sl. Inyectable en susu diferentes concentraciones.,En monitorización,Aumento de la demanda,Enfermedades crónicas,Antitromboticos,,FALSE
-Eritromicina Tabletas 500mg,En monitorización,Problemas en la adquisición de materia prima,Enfermedades infecciosas,Macrolidos y lincosamidas (antiinfecc. Sistemicos),,FALSE
-Eritropoyetina recombinante humana solución inyectable,No desabastecido,Ninguna. Medicamento no desabastecido,Enfermedades crónicas,Antianemicos,,FALSE
-Eritropoyetina polvo estéril para reconstituir a suspensión inyectable,En riesgo de desabastecimiento,No definida por el invima.,Enfermedades crónicas,Antianemicos,,FALSE
-Escitalopram tabletas,En monitorización,No definida por el invima.,Salud mental,Antidepresivos,,FALSE
-Esomeprazol capsulas y tabletas,En monitorización,Problemas en la adquisición de materia prima,Enfermedades crónicas,Medicamentos para ulcera peptica y reflujo,,FALSE
-"Estradiol gel tópico 0,06 g / 100 g.",Desabastecido,Insuficientes oferentes,Salud sexual y reproductiva,Estrogenos,,FALSE
-"Estrógenos Conjugados 0,625mg/g Crema Vaginal",Desabastecido,Insuficientes oferentes,Salud sexual y reproductiva,Progestagenos y estrogenos en asociacion,,FALSE
-Eszopiclona tableta,En monitorización,No definida por el invima.,Salud mental,Hipnoticos y sedantes,,FALSE
-Etinilestradiol tabletas,En monitorización,Riesgo de abastecimiento de pvc,Salud sexual y reproductiva,Progestagenos y estrogenos en asociacion,,FALSE
-Exenatida sol. Inyectable,En monitorización,No definida por el invima.,Enfermedades crónicas,Antidiabeticos,,FALSE
-Extracto de surfactante pulmonar bovino 3ml,En monitorización,En revisión sala especializada de medicamentos sem,Salud sexual y reproductiva,Tratamiento neonatos,,FALSE
-"Fenilbutirato x 48,3 G gránulos",No desabastecido,Insuficientes oferentes,Enfermedades crónicas,Otros preparados aparato digestivo y metabolismo,,FALSE
-Fenitoína 100 mg Capsulas,En monitorización,Problemas de manufactura,Enfermedades crónicas,Antiepilepticos,,FALSE
-"Fenobarbital tabletas 10, 50 y 100 mg",En monitorización,Problemas de manufactura,Enfermedades crónicas,Antiepilepticos,,FALSE
-"Fenoterol/ Bromuro de ipratropio 0,5 mg/ml 0,25 mg/ml Solución inhalación",No desabastecido,Problemas en la adquisición de materia prima,Enfermedades crónicas,Adrenergicos inhalados (antiasmaticos),,FALSE
-Fentanilo Citrato Sl. Inyectable,En monitorización,Aumento de la demanda,Uso anestésico,Anestesicos,,FALSE
-Fibrinogeno Humano Solución inyectable.,En monitorización,No definida por el invima.,Enfermedades crónicas,Antifibrinoliticos,,FALSE
-Fluconazol tabletas,En monitorización,No definida por el invima.,Enfermedades infecciosas,Antimicoticos de uso sistemico,,FALSE
-"Fludrocortisona 0,1 mg Tableta",No desabastecido,Problemas en la adquisición de materia prima,Enfermedades crónicas,"Corticosteroides de uso sistemico, solos",,FALSE
-Fluorouracilo solución inyectable,En monitorización,Problemas de manufactura,Cáncer,Antineoplasicos,Cáncer,TRUE
-"Fluoxetina tableta, jarabe y capsula",En monitorización,No definida por el invima.,Salud mental,Antidepresivos,,FALSE
-Fosfomicina 4g Inyectables,En monitorización,Problemas en la adquisición de materia prima,Enfermedades infecciosas,Otros antibacterianos (antiinfecciosos sistemicos),,FALSE
-Glibenclamida tabletas,En monitorización,No definida por el invima.,Enfermedades crónicas,Antidiabeticos,,FALSE
-Glimepirida tableta,En monitorización,No definida por el invima.,Enfermedades crónicas,Antidiabeticos,,FALSE
-Gluconato De Calcio al 10% Sl. Inyectable en sus diferentes concentraciones,En monitorización,Aumento de la demanda,Líquidos y electrolitos,Calcio,,FALSE
-Gonadotropina Coriónica Humana,En monitorización,Restricción o dificultades con cupo api,Salud sexual y reproductiva,Gonadotropinas y otros estimulantes de ovulacion,,FALSE
-Haloperidol tableta y solución inyectable.,En monitorización,Baja rentabilidad,Salud mental,Antipsicoticos,,FALSE
-Heparina sódica Sl. Inyectable en sus diferentes concentraciones,En monitorización,Problemas en la adquisición de materia prima,Enfermedades crónicas,Antitromboticos,,FALSE
-Heparina sódica Sl. Inyectable en sus diferentes concentraciones,No desabastecido,Ninguna. Medicamento no desabastecido,Enfermedades crónicas,Antitromboticos,,FALSE
-Hidralazina ampolla y tableta,Desabastecido,Insuficientes oferentes,Enfermedades crónicas,Antihipertensivos,,FALSE
-Hidrocortisona tableta,En monitorización,Aumento de la demanda,Enfermedades crónicas,"Corticosteroides de uso sistemico, solos",,FALSE
-"Hidromorfona tabletas 2mg, 2,5mg y 5 mg",En monitorización,Problemas de manufactura,Enfermedades crónicas,Analgesicos opiaceos,,FALSE
-Hidroxicloroquina tabletas,En monitorización,Aumento de la demanda,Enfermedades infecciosas,Antimalaricos,,FALSE
-Hierro polimaltosado+acido fólica tableta,En monitorización,Aumento de la demanda,Enfermedades crónicas,Preparados de hierro (antianemicos),,FALSE
-Idarubicina,No desabastecido,No definida por el invima.,Cáncer,Antibioticos citotoxicos y sust.relac.(Antineopla),Cáncer,TRUE
-Iloprost suspensión para inhalar de 10mcg y 20mcg,En monitorización,Aumento de la demanda,Enfermedades crónicas,Antitromboticos,,FALSE
-Imatinib tableta,En monitorización,No definida por el invima.,Cáncer,Antineoplasicos,Cáncer,TRUE
-Imipramina tableta,En monitorización,Aumento de la demanda,Enfermedades crónicas,Antidepresivos,,FALSE
-Inmunoglobulina AntiD - Rh 300 mcg Inyectables,No desabastecido,Problemas en la adquisición de materia prima,Enfermedades infecciosas,Inmunoglobulinas,Biológicos e inmunosupresores,TRUE
-Inmunoglobulina humana normal solución inyectable 5% (50mg/1ml),En riesgo de desabastecimiento,Desabastecimiento de activo,Enfermedades infecciosas,Inmunoglobulinas,Biológicos e inmunosupresores,TRUE
-"Inmunoglobulinas específicas neutralizantes del veneno de las especies Micrurus dumerilii, micrurus mipartitus, micrurus isozonus y micrurus surinamensis.",En monitorización,Insuficientes oferentes,Enfermedades infecciosas,Sueros inmunologicos e inmunoglobulinas,Biológicos e inmunosupresores,TRUE
-Insulina Lispro Sol. Intecyable,En monitorización,No definida por el invima.,Enfermedades crónicas,Antidiabeticos,,FALSE
-Iobitridol solución inyectable,En riesgo de desabastecimiento,Aumento de la demanda,Medicamento uso diagnóstico,Medios de contraste radiologicos iodados,,FALSE
-Ioduro Sódico (I -131),En riesgo de desabastecimiento,Aumento de la demanda,Medicamento uso diagnóstico,Varios,,FALSE
-Iopramida solución inyectable,En monitorización,No definida por el invima.,Medicamento uso diagnóstico,Medios de contraste radiologicos iodados,,FALSE
-Ioversol solución inyectable,En riesgo de desabastecimiento,Baja rentabilidad,Medicamento uso diagnóstico,Medios de contraste,,FALSE
-Ipilimumab solución inyectable,En riesgo de desabastecimiento,Estudio respuesta a auto pendientes,Cáncer,Otros antineoplásicos,Cáncer,TRUE
-"Isoproterenol 0,2 mg/ml Inyectables",En monitorización,Problemas de manufactura,Vasoactivo / inotrópicos,"Estimulantes cardiacos, excluidos glicosidos card.",,FALSE
-R-L- Asparaginasa (Aislada de E- Coli) RECOMBINANTE- Polvo liofilizado para reconstituir a solución inyectable,En monitorización,Baja rentabilidad,Enfermedades crónicas,Otros antineoplasicos,,FALSE
-Lamivudina tabletas y Sl. oral,En monitorización,Dificultades logísticas,Enfermedades infecciosas,Agentes de accion directa contra el virus (sistem),VIH,TRUE
-Lamivudina y Abacavir tabletas,En monitorización,No definida por el invima.,Enfermedades infecciosas,Antivirales de uso sistemico,VIH,TRUE
-Lamivudina+Lidovudin a+Nevirapina tabletas,Desabastecido,No definida por el invima.,Enfermedades infecciosas,Antivirales de uso sistemico,VIH,TRUE
-Lamivudina+Tenofovir +Efavires tabletas,En monitorización,No definida por el invima.,Enfermedades infecciosas,Antivirales de uso sistemico,VIH,TRUE
-Lamivudina+Zidovudi na,En monitorización,No definida por el invima.,Enfermedades infecciosas,Antivirales de uso sistemico,VIH,TRUE
-Lamivudina+zidovudin a+Abacavir tabletas,Desabastecido,No definida por el invima.,Enfermedades infecciosas,Antivirales de uso sistemico,VIH,TRUE
-Lapinovir y Ritonavir tableta recubierta y cápsula dura.,En monitorización,Baja rentabilidad,Enfermedades infecciosas,Antivirales de uso sistemico,VIH,TRUE
-Levodopa + Benserazida Tableta 250mg/50mg,Desabastecido,Modificaciones de registro sanitario pendientes,Enfermedades crónicas,Dopaminergicos (antiparkinsonianos),,FALSE
-Carbidopa-Levodopa tabletas,En monitorización,Demora en proceso de importación,Enfermedades crónicas,Dopaminergicos (antiparkinsonianos),,FALSE
-Levomepromazina tableta,En monitorización,No definida por el invima.,Salud mental,Antipsicoticos,,FALSE
-Levonorgestrel tableta 0.03mg,Desabastecido,Insuficientes oferentes,Salud sexual y reproductiva,Hormonas anticonceptivas de uso sistemico,,FALSE
-"Levonorgestrel tabletas 0,03 mg",Desabastecido,Aumento de la demanda,Salud sexual y reproductiva,Hormonas anticonceptivas de uso sistemico,,FALSE
-Levosimendan solución inyectables,En monitorización,Aumento de la demanda,Enfermedades crónicas,"Estimulantes cardiacos, excluidos glicosidos card.",,FALSE
-"Levotiroxina tabletas 50mcg,75mcg,100mc g,150mcg, 135mcg y 200mcg",En riesgo de desabastecimiento,Aumento de la demanda,Enfermedades crónicas,Preparados tirodeos,,FALSE
-Lidocaína Sin Epinefrina Solución Inyectable 1 %/10 Ml - 1 %/20 Ml - 1 %/50 Ml - 2 %/1.8 Ml - 2 %/10 Ml - 2 %/20 Ml - 2 %/50 Ml,En monitorización,Aumento de la demanda,Uso anestésico,Antestesicos locales,,FALSE
-Lisdexanfetamina Dimesilato,En riesgo de desabastecimiento,Aumento de la demanda,Salud mental,"Psicoestimulantes, medic. Para adhd y nootropicos",,FALSE
-Loratadina solución oral,En monitorización,Aumento de la demanda,Enfermedades infecciosas,Antihistaminicos de uso sistemico,,FALSE
-Lorazepam tableta,En monitorización,No definida por el invima.,Salud mental,Ansioliticos,,FALSE
-Losartan tabletas,En monitorización,Aumento de la demanda,Enfermedades crónicas,Antagonistas angiotensina ii,,FALSE
-Medroxiprogesterona ampolla,No desabastecido,Ninguna. Medicamento no desabastecido,Salud sexual y reproductiva,Terapia endocrina,,FALSE
-Medroxiprogesterona + Cipionato de Estradiol 50 mg + 10mg/1mL solución inyectable,En monitorización,Problemas de manufactura,Salud sexual y reproductiva,Hormonas sexuales y moduladores de aparato genital,,FALSE
-"Melfalán tabletas, solución inyectable y polvo para reconstruir.",En monitorización,Problemas de manufactura,Cáncer,Agentes alquilantes (antineoplasicos),Cáncer,TRUE
-Mepivacaina Varias Inyectables,No desabastecido,Aumento de la demanda,Uso anestésico,Antestesicos locales,,FALSE
-Mesna 400 mg solución inyectable,En riesgo de desabastecimiento,No definida por el invima.,Enfermedades crónicas,Todos los demas productos terapeuticos,,FALSE
-Metformina + Glibenclamida tabletas,Desabastecido,No definida por el invima.,Enfermedades crónicas,Antidiabeticos,,FALSE
-Metformina tableta de 500mg - 850mg y 1000mg,En monitorización,No definida por el invima.,Enfermedades crónicas,Antidiabeticos,,FALSE
-Metformina +Glimepirida tabletas,En monitorización,No definida por el invima.,Enfermedades crónicas,Antidiabeticos,,FALSE
-Metformina +Saxagliptina tableta,Desabastecido,No definida por el invima.,Enfermedades crónicas,Antidiabeticos,,FALSE
-Metoprolol Succinato tabletas 25 y 100mg,En riesgo de desabastecimiento,Aumento de la demanda,Enfermedades crónicas,Betabloqueantes,,FALSE
-Metoprolol Succinato tabletas 50 y 200mg,Desabastecido,Aumento de la demanda,Enfermedades crónicas,Betabloqueantes solos,,FALSE
-"Metotrexato 2,5 mg Tableta",Desabastecido,Problemas en la adquisición de materia prima,Cáncer,Antimetabolitos (antineoplasicos),Cáncer,TRUE
-Metronidazol suspensión oral,En monitorización,Aumento de la demanda,Enfermedades infecciosas,Amebicidas y otros antiprotozoarios,,FALSE
-Metrotrexate solución inyectable.,No desabastecido,Ninguna. Medicamento no desabastecido,Cáncer,Antineoplasicos,Cáncer,TRUE
-Midazolam solución inyectable en sus diferentes presentaciones,En monitorización,Aumento de la demanda,Uso anestésico,Hipnoticos y sedantes,,FALSE
-Mifepristona tabletas,No desabastecido,Ninguna. Medicamento no desabastecido,Salud sexual y reproductiva,Antiprogestágenos,,FALSE
-Mirtazapina tableta de 15 mg y 30mg,En monitorización,Insuficientes oferentes,Enfermedades crónicas,Antidepresivos,,FALSE
-Misoprostol 200mcg oral y 50mcg vaginal,En monitorización,Problemas en la adquisición de materia prima,Enfermedades crónicas,Medicamentos para ulcera peptica y reflujo,,FALSE
-Molnupiravir tabletas 200mg,No desabastecido,No definida por el invima.,Enfermedades infecciosas,Agentes de accion directa contra el virus (sistem),,FALSE
-Montelukast Capsulas/Tabletas,En monitorización,No definida por el invima.,Enfermedades crónicas,"Otros para obstruccion de vias respiratorias, uso sistemico",,FALSE
-Morfina 10 mg/ml Solución Inyectable,En monitorización,Problemas de manufactura,Enfermedades crónicas,Analgesicos opiaceos,,FALSE
-Naproxeno tableta 250mg y 500mg,En monitorización,Aumento de la demanda,Enfermedades infecciosas,Antiinflamatorios y antireumaticos no esteroideos,,FALSE
-Neostigmina Solución Inyectable,En monitorización,Aumento de la demanda,Enfermedades crónicas,Parasimpaticomimeticos (otros medic.accion snc),,FALSE
-Nevirapina Suspensión Oral 5mL.,No desabastecido,No definida por el invima.,Enfermedades infecciosas,Agentes de accion directa contra el virus (sistem),VIH,TRUE
-Nifedipina tabletas 10mg,Desabastecido,Aumento de la demanda,Enfermedades crónicas,Bloq. Canales calcio selectivos efecto vascular,,FALSE
-Nitroprusiato de sodio solución Inyectable,En monitorización,Insuficientes oferentes,Enfermedades crónicas,Antihipertensivos accion musculo liso arteriolas,,FALSE
-Norepinefrina solución inyectable 1mg/1mL,En monitorización,Problemas de manufactura,Vasoactivo / inotrópicos,"Estimulantes cardiacos, excluidos glicosidos card.",,FALSE
-Olanzapina tabletas,En monitorización,No definida por el invima.,Salud mental,Psicolepticos,,FALSE
-Omeprazol Sódico Polvo Liofilizado Para Reconstituir A Solución Inyectable,En monitorización,Aumento de la demanda,Enfermedades crónicas,Medicamentos para ulcera peptica y reflujo,,FALSE
-Ondansetrón Clorhidrato Solución Inyectable y tabletas,En monitorización,No definida por el invima.,Enfermedades crónicas,Antiemeticos y antinauseantes,,FALSE
-Oseltamivir tabletas,En monitorización,No definida por el invima.,Enfermedades infecciosas,Antivirales de uso sistemico,,FALSE
-Oxicodona tableta y solución inyectable.,Desabastecido,Aumento de la demanda,Enfermedades crónicas,Analgesicos opiaceos,,FALSE
-Oxigeno GAS,En monitorización,Aumento de la demanda,Enfermedades crónicas,Todos los demas productos terapeuticos,,FALSE
-Oxitocina solución inyectable 5 UI,En monitorización,Problemas de manufactura,Salud sexual y reproductiva,Hormonas del lobulo posterior de la hipofisis,,FALSE
-Paclitaxel solución inyectable,En monitorización,Baja rentabilidad,Cáncer,Antineoplasicos,Cáncer,TRUE
-"Pancreatina Capsula Dura Correspondiente A: 18,000 U De Amilasa, 25.000 U De Lipasa, 1000 U De Proteasas Totales (CREON 25.000 - 300MG)",En monitorización,Aumento de la demanda,Enfermedades crónicas,"Digestivos, incluidos enzimas",,FALSE
-"Pancreatina Capsula Dura Correspondiente A: 8,000 U De Amilasa, 10.000 U De Lipasa, 600 U De Proteasas Totales (CREON 10.000 - 150MG)",En monitorización,Aumento de la demanda,Enfermedades crónicas,"Digestivos, incluidos enzimas",,FALSE
-Pancreatina en gránulos equivalente a: 5000 unidades PH EUR. Lipasa 3600 unidades PH EUR. Amilasa 200 unidades PH EUR. Proteasa,Desabastecido,Pendiente liberación de lote,Enfermedades crónicas,"Digestivos, incluidos enzimas",,FALSE
-Paracetamol (acetaminofén) 1G/100ml solución inyectable parainfusión,En monitorización,Aumento de la demanda,Enfermedades infecciosas,Otros analgesicos y antipireticos,,FALSE
-Paracetamol (acetaminofén) solución oral,En riesgo de desabastecimiento,Aumento de la demanda,Enfermedades infecciosas,Otros analgesicos y antipireticos,,FALSE
-Paracetamol (acetaminofén) tabletas,En monitorización,Baja rentabilidad,Enfermedades infecciosas,Analgesicos,,FALSE
-Pemetrexed 500MG solución inyectable,En monitorización,Baja rentabilidad,Cáncer,Antineoplasicos,Cáncer,TRUE
-Pipotiazina 25 mg sl. Inyectables,En monitorización,Problemas de manufactura,Salud mental,Antipsicoticos,,FALSE
-Pirimetamina x 25 mg Sulfadoxima 500 mg+ pirimetamina x 25 mg Espiramicina x 3 mUI,En monitorización,Insuficientes oferentes,Enfermedades infecciosas,Antimalaricos,,FALSE
-Plerixafor solución inyectable,No desabastecido,Ninguna. Medicamento no desabastecido,Cáncer,Citokinas e inmunomoduladores,Cáncer,TRUE
-Pregabalina tabletas,En monitorización,Problemas de manufactura,Enfermedades crónicas,Antiepilepticos,,FALSE
-Propafenona tableta 150mg,No desabastecido,Aumento de la demanda,Vasoactivo / inotrópicos,Antiarritmicos,,FALSE
-Protamina Solución Inyectable,Desabastecido,Modificaciones de registro sanitario pendientes,Varios,Antidotos,,FALSE
-Quetiapina tableta,En riesgo de desabastecimiento,Aumento de la demanda,Salud mental,Antipsicoticos,,FALSE
-Ranitidina en todas sus presentaciones orales.,Desabastecido,Alerta sanitaria / descontinuación del producto,Enfermedades crónicas,Medicamentos para trastornos por la secrecion gastrica,,FALSE
-Ranitidina solución inyectable,Desabastecido,Alerta sanitaria / descontinuación del producto,Enfermedades crónicas,Medicamentos para ulcera peptica y reflujo,,FALSE
-Rifaximina tabletas,En monitorización,Problemas en la adquisición de materia prima,Enfermedades infecciosas,Antiinfecciosos intestinales,,FALSE
-Risankizumab 90 mg/ml,Desabastecido,Alerta sanitaria / descontinuación del producto,Cáncer,Otros antineoplásicos,Cáncer,TRUE
-Risperidona Tableta,En monitorización,Aumento de la demanda,Salud mental,Antipsicoticos,,FALSE
-Ritonavir 100 mg Tableta,En monitorización,Insuficientes oferentes,Enfermedades infecciosas,Agentes de accion directa contra el virus (sistem),VIH,TRUE
-Ritonavir-Lopinavir Solución oral,Desabastecido,Insuficientes oferentes,Enfermedades infecciosas,Agentes de accion directa contra el virus (sistem),VIH,TRUE
-Rosuvastatina + Ezetimibe tabletas,En monitorización,Aumento de la demanda,Enfermedades crónicas,Modificadores de los lipidos solos,,FALSE
-Rosuvastatina tabletas,En monitorización,Aumento de la demanda,Enfermedades crónicas,Modificadores de los lipidos solos,,FALSE
-Rosuvastatina Y Fenofibrato tabletas,En monitorización,Aumento de la demanda,Enfermedades crónicas,Modificadores de los lipidos solos,,FALSE
-Sacarato de Hierro III 20mg/ ml,En monitorización,No definida por el invima.,Enfermedades crónicas,Antianemicos,,FALSE
-Sertralina tableta 50mg,En monitorización,Aumento de la demanda,Salud mental,Antidepresivos,,FALSE
-Somatropina 6mg y 20mg,No desabastecido,Modificaciones de registro sanitario pendientes,Enfermedades crónicas,Hormonas del lobulo anterior hipofisis y analogos,,FALSE
-Sulfato de Magnesio al 20%,En monitorización,Aumento de la demanda,Salud sexual y reproductiva,Sustitutos de la sangre y soluc. Para perfusion,,FALSE
-Sulfato Ferroso 25mg/1ml Sol Oral,En monitorización,Problemas en la adquisición de materia prima,Enfermedades crónicas,Preparados de hierro (antianemicos),,FALSE
-Tacrolimus5 mg/inyectables,No desabastecido,Modificaciones de registro sanitario pendientes,Enfermedades crónicas,Inmunosupresores,Biológicos e inmunosupresores,TRUE
-Tadafilo tabletas 5mg,En monitorización,Aumento de la demanda,Enfermedades crónicas,"Otros preparados urologicos, incl.antiespasmodicos",,FALSE
-Tamoxifeno tableta 10 mg,Desabastecido,Problemas de manufactura,Cáncer,Antagonistas hormonales y sustancias relacionadas,Cáncer,TRUE
-Tamoxifeno tableta 20 mg,En monitorización,Problemas de manufactura,Cáncer,Antagonistas hormonales y sustancias relacionadas,Cáncer,TRUE
-"Tamsulosina tableta 0,4mg",No desabastecido,No definida por el invima.,Enfermedades crónicas,Medicamentosos urologicos,,FALSE
-Tecnecio 99,En riesgo de desabastecimiento,Desabastecimiento mundial de molibdeno,Medicamento uso diagnóstico,Varios,,FALSE
-Tenecteplase (activador tisular del plasminógeno humano) (10000u) polvo para reconstituir a sol. Iny. 50 mg,No desabastecido,Aumento de la demanda,Enfermedades crónicas,Antitromboticos,,FALSE
-Tenofovir Disoproxil y Emtricitabina Tabletas y Sl. Oral,En monitorización,Problemas en la adquisición de materia prima,Enfermedades infecciosas,Antivirales de uso sistemico,VIH,TRUE
-Trazodona tableta,En monitorización,No definida por el invima.,Salud mental,Antidepresivos,,FALSE
-Trimebutina tabletas,En monitorización,No definida por el invima.,Enfermedades crónicas,"Digestivos, incluidos enzimas",,FALSE
-Trimetoprim/sulfamet oxazol tabletas,En monitorización,Problemas en la adquisición de materia prima,Enfermedades infecciosas,Antibióticos,,FALSE
-Valsartán tabletas,En monitorización,Aumento de la demanda,Enfermedades crónicas,Antagonistas angiotensina ii,,FALSE
-Vancomicina solución inyectable,En monitorización,No definida por el invima.,Enfermedades infecciosas,Antibacterianos de uso sistemico,,FALSE
-Vildagliptina + metformina clorhidrato tableta,No desabastecido,No definida por el invima.,Enfermedades crónicas,Antidiabeticos,,FALSE
-Vildagliptina tableta,En monitorización,No definida por el invima.,Enfermedades crónicas,Hipoglicemiantes orales,,FALSE
-Vinblastina1mg/1ml solución Inyectable,En monitorización,Problemas de manufactura,Cáncer,Alcaloides vegetales y prod. Naturales (antineopl),Cáncer,TRUE
-Vincristina 1 mg Inyectables,En monitorización,Problemas de manufactura,Cáncer,Alcaloides vegetales y prod. Naturales (antineopl),Cáncer,TRUE
-Warfarina 5 mg Tableta,En monitorización,Problemas de manufactura,Enfermedades crónicas,Antitromboticos,,FALSE
+medicamento,estado,causa,prioridad,grupo_terapeutico,grupo_alto_costo,alto_costo,principio_activo,unidad,precio_min,precio_mediana,precio_max,presentaciones,precio_regulado
+Abacavir solución oral,Desabastecido,Alerta sanitaria / descontinuación del producto,Enfermedades infecciosas,Agentes de accion directa contra el virus (sistem),VIH,TRUE,Abacavir,Frasco,696.2441315,21051.89565075,41407.54717,2,FALSE
+Abacavir tabletas,En monitorización,Baja rentabilidad,Enfermedades infecciosas,Antivirales de uso sistemico,VIH,TRUE,Abacavir,Tableta,696.2441315,696.2441315,696.2441315,1,FALSE
+Acetato de ciproterona tableta,En riesgo de desabastecimiento,Aumento de la demanda,Cáncer,Antiandrogenos,Cáncer,TRUE,Ciproterona,Tableta,2099,2099,2099,1,TRUE
+"Aciclovir tabletas 200mg,500mg y 800mg",En monitorización,No definida por el invima.,Enfermedades infecciosas,Agentes de accion directa contra el virus (sistem),,FALSE,Aciclovir,Tableta,96.8202765,280,1066.666667,11,TRUE
+Aciclovir ungüento oftálmico,Desabastecido,Alerta sanitaria / descontinuación del producto,Enfermedades infecciosas,Agentes de accion directa contra el virus (sistem),,FALSE,Aciclovir,Tableta,96.8202765,1753.2656339999999,17318.84615,24,TRUE
+Acido tranexámico 500 mg/5mL solución Inyectable,No desabastecido,Problemas de manufactura,Enfermedades crónicas,Antifibrinoliticos,,FALSE,Acido Tranexamico,Ampolla,2342.602555,2994.9549925,4479.465915,4,FALSE
+Acido Valproico Jarabe 250mg/5ml/120ml,En riesgo de desabastecimiento,Problemas en la adquisición de materia prima,Enfermedades crónicas,Antiepilepticos,,FALSE,Acido Valproico,Capsula,159.2522927,5053.716237,34431.31042,11,TRUE
+Adenosina 3 mg y 6 mg,En monitorización,Problemas de manufactura,Enfermedades infecciosas,Agentes de accion directa contra el virus (sistem),,FALSE,Adenosina,Ampolla,3159.759788,17018.23708,25275,3,TRUE
+Adrenalina solución inyectable,En monitorización,Problemas de manufactura,Vasoactivo / inotrópicos,"Estimulantes cardiacos, excluidos glicosidos card.",,FALSE,Adrenalina,Ampolla,3703.557007,3703.557007,3703.557007,1,FALSE
+Afatinib,No desabastecido,Ninguna. Medicamento no desabastecido,Cáncer,Otros antineoplásicos,Cáncer,TRUE,Afatinib,Tableta,121298.7458,180049.9722,240728.3636,3,TRUE
+Agua Estéril de grandes volúmenes 250 ml-500ml 1000ml y 3000ml,En monitorización,Aumento de la demanda,Líquidos y electrolitos,Todos los demas productos no terapeuticos,,FALSE,Agua Esteril,Ampolla,6.823076923,1286.40382494,27276.5,8,FALSE
+Albendazol suspensión,En monitorización,No definida por el invima.,Enfermedades infecciosas,Antiparasitarios,,FALSE,Albendazol,Tableta,94.62727273,682.1995753,9305.900778,12,FALSE
+Albendazol tabletas,En monitorización,No definida por el invima.,Enfermedades infecciosas,Antiparasitarios,,FALSE,Albendazol,Tableta,94.62727273,197.3712855,3869.936996,6,FALSE
+Albumina Humana Solución Inyectable,En riesgo de desabastecimiento,Asignación controlada para colombia razón por la cual no se suple el 100% de la demanda,Enfermedades crónicas,Sustitutos de la sangre y soluc. Para perfusion,,FALSE,Albumina Humana,Vial,94516,172906.0811,535200,3,FALSE
+Alfa-metildopa tabletas 250mg,No desabastecido,Ninguna. Medicamento no desabastecido,Enfermedades crónicas,Antiadrenergicos de accion central (antihipertens),,FALSE,Metildopa,Tableta,932.8415844,1217.9032387,1502.964893,2,FALSE
+Alopurinol 100mg y 300mg,Desabastecido,Problemas en la adquisición de materia prima,Enfermedades crónicas,Preparados contra la gota,,FALSE,Alopurinol,Tableta,81.2896616,581.6666667,1049.983333,3,FALSE
+Alprostadil Solución inyectable,En monitorización,Modificaciones de registro sanitario pendientes,Enfermedades crónicas,Otros preparados cardiacos,,FALSE,Alprostadil,Vial,42830.43863,176116.7805,500000,3,FALSE
+Aminofilina solución inyectable,En monitorización,Insuficientes oferentes,Enfermedades crónicas,"Estimulantes cardiacos, excluidos glicosidos card.",,FALSE,Aminofilina,Ampolla,1700,1700,1700,1,FALSE
+Amiodarona tableta y solución inyectable,No desabastecido,Ninguna. Medicamento no desabastecido,Enfermedades crónicas,Antiarritmicos,,FALSE,Amiodarona,Tableta,361.7725204,448.7348631,11124.99056,3,FALSE
+Amitriptilina tabletas,No desabastecido,Aumento de la demanda,Salud mental,Antidepresivos,,FALSE,Amitriptilina,Tableta,22.49526565,68.19222554,165,5,FALSE
+Amoxicilina 500mg Tabletas Y Capsulas,En monitorización,Aumento de la demanda,Enfermedades infecciosas,Antibióticos,,FALSE,Amoxicilina,Capsula,186.7186411,258.3614748,3000,12,FALSE
+Amoxicilina Polvo para inyección,Desabastecido,Problemas en la adquisición de materia prima,Enfermedades infecciosas,Antibióticos,,FALSE,Amoxicilina,Vial,3498,3498,3498,1,FALSE
+Amoxicilina Polvo para reconstituir vía oral,En monitorización,Problemas en la adquisición de materia prima,Enfermedades infecciosas,Antibióticos,,FALSE,Amoxicilina,Vial,3498,3498,3498,1,FALSE
+Amoxicilina/Clavulona to suspensión oral,En riesgo de desabastecimiento,Aumento de la demanda,Enfermedades infecciosas,"Antibacterianos betalactamicos, penicilinas",,FALSE,Amoxicilina,Frasco,186.7186411,2420.215223,32769.23077,23,FALSE
+Amoxicilina/Clavulona to Tableta,En monitorización,Aumento de la demanda,Enfermedades infecciosas,Antibióticos,,FALSE,Amoxicilina,Capsula,186.7186411,258.3614748,3000,12,FALSE
+Anfotericina B Liposomal Polvo Liofilizado Para Reconstituir a Solución Inyectable,No desabastecido,Ninguna. Medicamento no desabastecido,Enfermedades infecciosas,Antimicoticos de uso sistemico,,FALSE,Anfotericina B,Vial,37231.50538,415590.1427,800731.7073,3,TRUE
+Aripiprazol 15 mg Tableta,No desabastecido,Insuficientes oferentes,Salud mental,Antipsicoticos,,FALSE,Aripiprazol,Tableta,249.9951729,409.9565217,704.2389993,7,TRUE
+Articaina varias Inyectables,No desabastecido,Aumento de la demanda,Uso anestésico,Antestesicos locales,,FALSE,,,,,,0,FALSE
+Atorvastatina tabletas 20mg-40mg y 80mg,En monitorización,Problemas en la adquisición de materia prima,Enfermedades crónicas,Modificadores de los lipidos solos,,FALSE,Atorvastatina,Tableta,4.893507522,315.55620835,7006.735537,30,FALSE
+Atropina solución inyectable,En monitorización,Aumento de la demanda,Enfermedades crónicas,Otros preparados cardiacos,,FALSE,Atropina,Ampolla,6.699297012,6.973516949,571.483871,3,FALSE
+Azitromicina suspensión oral,En monitorización,No definida por el invima.,Enfermedades infecciosas,Antibióticos,,FALSE,Azitromicina,Tableta,226.6666667,5480,76623.56064,19,FALSE
+Azitromicina tableta 500mg,En monitorización,Problemas en la adquisición de materia prima,Enfermedades infecciosas,Antibióticos,,FALSE,Azitromicina,Tableta,226.6666667,1100,22580.8,9,FALSE
+Azul de metileno,No desabastecido,Aumento de la demanda,Varios,Varios,,FALSE,,,,,,0,FALSE
+Bicalutamida tableta,En monitorización,Baja rentabilidad,Cáncer,Terapia endocrina,Cáncer,TRUE,Bicalutamida,Tableta,629.3895,2162.17086,2553.858268,4,TRUE
+Bicarbonato De Sodio Solución Inyectable 1meq/Ml/10 Ml,Desabastecido,Problemas en la adquisición de materia prima,Líquidos y electrolitos,Soluciones intravenosas aditivas,,FALSE,Sodio Bicarbonato,Ampolla,14.08831242,607.09306921,1200.097826,2,FALSE
+Biperideno tableta 2mg,En monitorización,Aumento de la demanda,Enfermedades crónicas,Anticolinergicos (antiparkinsonianos),,FALSE,Biperideno,Tableta,147.9246484,304.9623242,462,2,FALSE
+Bupivacaina Con Epinefrina (Con Preservantes) Solución Inyectable 0.5 %/20 Ml - 0.5 %/10 Ml - 0.75 %/10 Ml,En monitorización,Aumento de la demanda,Uso anestésico,Anestésicos locales,,FALSE,Bupivacaina Y Epinefrina,Ampolla,151415.3348,151415.3348,151415.3348,1,FALSE
+Bupivacaina Sin Epinefrina Solución Inyectable 0.5 %/20 Ml - 0.5 %/10 Ml,En monitorización,Aumento de la demanda,Uso anestésico,Anestésicos locales,,FALSE,Bupivacaina Y Epinefrina,Ampolla,151415.3348,151415.3348,151415.3348,1,FALSE
+Carbamazepina solución oral,No desabastecido,Ninguna. Medicamento no desabastecido,Enfermedades crónicas,Antiepilepticos,,FALSE,Carbamazepina,Frasco,116.3583034,2693.424703,6448,6,TRUE
+Carbamazepina solución oral tableta 400mg,No desabastecido,Ninguna. Medicamento no desabastecido,Enfermedades crónicas,Antiepilepticos,,FALSE,Carbamazepina,Tableta,116.3583034,342,685,3,TRUE
+Carbamazepina tableta 200mg,No desabastecido,Ninguna. Medicamento no desabastecido,Enfermedades crónicas,Antiepilepticos,,FALSE,Carbamazepina,Tableta,116.3583034,342,685,3,TRUE
+Carbonato De Calcio (1500mg) /Vitamina D3 Tableta,En monitorización,Aumento de la demanda,Enfermedades crónicas,Calcio,,FALSE,Vitamina D3 Y Carbonato De Calcio,Tableta,32.15680655,32.15680655,32.15680655,1,FALSE
+Carboplatino 10mg/ Ml Solución inyectable,En monitorización,Problemas en la adquisición de materia prima,Cáncer,Antineoplasicos,Cáncer,TRUE,Carboplatino,Vial,83181.93624,86814.671,90447.40576,2,FALSE
+Cefalotina 1gr polvo estéril para reconstituir a solución inyectable,En monitorización,Problemas en la adquisición de materia prima,Enfermedades infecciosas,Otros antibacterianos betalactamicos,,FALSE,Cefalotina,Vial,2172.727273,2332.45897,2500,3,FALSE
+Cefazolina 1gr polvo estéril para reconstituir a solución inyectable,En monitorización,Problemas en la adquisición de materia prima,Enfermedades infecciosas,Otros antibacterianos betalactamicos,,FALSE,Cefazolina,Vial,202.3051182,2150.2731,2496.88716,5,FALSE
+Cefradina solución oral,Desabastecido,Alerta sanitaria / descontinuación del producto,Enfermedades infecciosas,Otros antibacterianos betalactamicos,,FALSE,Cefradina,Capsula,330,936.834816,4070,8,FALSE
+Cefuroxima suspensión oral,No desabastecido,Aumento de la demanda,Enfermedades infecciosas,Otros antibacterianos betalactamicos,,FALSE,Cefuroxima,Vial,2354,4995.6605815,70768.52803,6,TRUE
+Cefuroxima tabletas,En monitorización,Aumento de la demanda,Enfermedades crónicas,Antibacterianos de uso sistemico,,FALSE,Cefuroxima,Tableta,2354,2969.404002,3584.808004,2,TRUE
+Ciclofosfamida 1g Vial,No desabastecido,Ninguna. Medicamento no desabastecido,Cáncer,Agentes alquilantes (antineoplasicos),Cáncer,TRUE,Ciclofosfamida,Vial,31342,36522.57143,36747.2885,3,FALSE
+Ciprofloxacina solución inyectable,En monitorización,Aumento de la demanda,Enfermedades infecciosas,Antibióticos,,FALSE,Ciprofloxacina,Vial,23.58666667,2485.063252,69387.49962,7,FALSE
+Ciprofloxacina tabletas 250mg,Desabastecido,Insuficientes oferentes,Enfermedades infecciosas,Antibióticos,,FALSE,Ciprofloxacina,Tableta,4.66,264.4098361,29645.80892,11,FALSE
+Ciprofloxacina tabletas 500mg,En monitorización,Aumento de la demanda,Enfermedades infecciosas,Antibióticos,,FALSE,Ciprofloxacina,Tableta,4.66,264.4098361,29645.80892,11,FALSE
+Citarabina 500 Mg/10ml solución inyectable,En monitorización,No definida por el invima.,Cáncer,Antineoplasicos,Cáncer,TRUE,Citarabina,Vial,29839,29839,29839,1,TRUE
+Citrato De Clomifeno Tableta,Desabastecido,No definida por el invima.,Salud sexual y reproductiva,Hormonas sexuales y moduladores de aparato genital,,FALSE,Clomifeno,Tableta,3648.389831,3648.389831,3648.389831,1,FALSE
+Claritromicina suspensión oral,En monitorización,Aumento de la demanda,Enfermedades infecciosas,Antibacterianos de uso sistemico,,FALSE,Claritromicina,Tableta,12.942,4651.457617,107889.3927,23,FALSE
+Claritromicina tabletas,En monitorización,Aumento de la demanda,Enfermedades infecciosas,Macrolidos y lincosamidas (antiinfecc. Sistemicos),,FALSE,Claritromicina,Tableta,12.942,1481,7939.230916,11,FALSE
+Cloroquina Solución Oral,En monitorización,Insuficientes oferentes,Enfermedades infecciosas,Antimalaricos,,FALSE,Cloroquina,Tableta,127.4573436,127.4573436,127.4573436,1,FALSE
+Cloroquina tabletas,Desabastecido,Insuficientes oferentes,Enfermedades infecciosas,Antimalaricos,,FALSE,Cloroquina,Tableta,127.4573436,127.4573436,127.4573436,1,FALSE
+Cloruro de potasio,En monitorización,Aumento de la demanda,Líquidos y electrolitos,Soluciones intravenosas aditivas,,FALSE,Cloruro De Potasio,Ampolla,3.821615799,815.209828855,2311.578947,4,FALSE
+Clozapina tableta,En monitorización,Restricción o dificultades con cupo api,Salud mental,Antipsicoticos,,FALSE,Clozapina,Tableta,71.53978495,127.18072305000001,4635.179724,6,FALSE
+Colistimetato sódico polvo para inhalar,En monitorización,Insuficientes oferentes,Enfermedades infecciosas,Otros antibacterianos (antiinfecciosos sistemicos),,FALSE,Colistina,Vial,23286.01333,37839.773905,52393.53448,2,FALSE
+Cromoglicato sódico 2% y 4% Solución oftálmica,En monitorización,Problemas de manufactura,Enfermedades crónicas,Descongestionantes y antialergicos (oftalmicos),,FALSE,Cromoglicato De Sodio,Frasco,2320,3955.2481605000003,25373.70833,4,FALSE
+Dalteparina Sódica Sl. Inyectable,Desabastecido,Aumento de la demanda,Enfermedades crónicas,Antitromboticos,,FALSE,Dalteparina,Jeringa Prellenada,6315.728671,14701.671805000002,23209.42973,4,FALSE
+Dantroleno sódico,En monitorización,Insuficientes oferentes,Enfermedades crónicas,Sistema musculo-esqueletico,,FALSE,,,,,,0,FALSE
+Darunavir Tabletas,En monitorización,No definida por el invima.,Enfermedades infecciosas,Antivirales de uso sistemico,VIH,TRUE,Darunavir,Tableta,3072.826087,3457.351399,4682.027653,7,TRUE
+Daunorrubicina x 20 mg,En monitorización,Problemas en la adquisición de materia prima,Cáncer,Antibioticos citotoxicos y sust.relac.(Antineopla),Cáncer,TRUE,Daunorrubicina,Vial,46605.904,47904.36998,49202.83596,2,FALSE
+Deflazacort tabletas x 6 y 30 mg,En monitorización,Insuficientes oferentes,Enfermedades crónicas,"Corticosteroides de uso sistemico, solos",,FALSE,Deflazacort,Tableta,192.3168605,683.63537905,3420.923077,14,TRUE
+Desatinib tableta,En monitorización,No definida por el invima.,Cáncer,Otros antineoplasicos,Cáncer,TRUE,,,,,,0,FALSE
+Desloratadina jarabe,En monitorización,Aumento de la demanda,Enfermedades infecciosas,Antihistaminicos de uso sistemico,,FALSE,Desloratadina,Frasco,174.2311185,4570.144427,64900,29,FALSE
+Desloratadina tableta,En monitorización,Aumento de la demanda,Enfermedades infecciosas,Antihistaminicos de uso sistemico,,FALSE,Desloratadina,Tableta,174.2311185,1128.315552,6380,13,FALSE
+Desmopresina Spay Nasal Y Oral,En monitorización,Modificaciones de registro sanitario pendientes,Enfermedades crónicas,Hormonas del lobulo posterior de la hipofisis,,FALSE,Desmopresina,Frasco,4055.213515,80001.233205,225000,4,TRUE
+Desvenlafaxina,En monitorización,No definida por el invima.,Salud mental,Antidepresivos,,FALSE,Desvenlafaxina,Tableta,1111,1131.462295,2397.222958,3,TRUE
+Dexametasona ampolla de 4 y 8mg,No desabastecido,Ninguna. Medicamento no desabastecido,Enfermedades crónicas,"Corticosteroides de uso sistemico, solos",,FALSE,Dexametasona,Ampolla,4.035476839,687.27272725,22970,16,TRUE
+Dextrosa en agua destilada al 5%,En monitorización,Aumento de la demanda,Líquidos y electrolitos,Soluciones intravenosas,,FALSE,Dextrosa,Bolsa,1404,1984,5453.5,13,FALSE
+Dienogest tabletas,En monitorización,Aumento de la demanda,Salud sexual y reproductiva,Hormonas sexuales y moduladores de aparato genital,,FALSE,Dienogest,Tableta,914.5818514,2033.9613425,32966.2399,4,TRUE
+Dienogest+Estardiol tabletas,No desabastecido,Aumento de la demanda,Salud sexual y reproductiva,Hormonas sexuales y moduladores de aparato genital,,FALSE,Dienogest,Tableta,914.5818514,2033.9613425,32966.2399,4,TRUE
+Dinitrato de isosorbida 5 mg Tableta sublingual,En monitorización,Aumento de la demanda,Vasoactivo / inotrópicos,Vasodilatadores usados en cardioterapia,,FALSE,Dinitrato De Isosorbide,Tableta,40.03877335,40.03877335,40.03877335,1,FALSE
+Dipirona ampolla de 1gr y 2.5gr,En monitorización,Aumento de la demanda,Enfermedades infecciosas,Otros analgesicos y antipireticos,,FALSE,Dipirona,Ampolla,27.98857143,455.6916691,5245.677596,5,FALSE
+Dobutamina solución inyectable,No desabastecido,Problemas en la adquisición de materia prima,Vasoactivo / inotrópicos,"Estimulantes cardiacos, excluidos glicosidos card.",,FALSE,Dobutamina,Ampolla,51.66832061,3542.857143,6170.382166,4,FALSE
+Doxiciclina 100mg Tableta Oral,En monitorización,Aumento de la demanda,Enfermedades infecciosas,Antibióticos,,FALSE,Doxiciclina,Capsula,110.7234784,192.2763962,3020.055963,5,FALSE
+Drospirenona Etinilestradiol Fuerte,No desabastecido,Ninguna. Medicamento no desabastecido,Salud sexual y reproductiva,Hormonas anticonceptivas de uso sistemico,,FALSE,Drospirenona Y Etinilestradiol,Tableta,497.2462194,608.3061947,1185,7,FALSE
+Drospirenona Etinilestradiol Suave,No desabastecido,Ninguna. Medicamento no desabastecido,Salud sexual y reproductiva,Hormonas anticonceptivas de uso sistemico,,FALSE,Drospirenona Y Etinilestradiol,Tableta,497.2462194,608.3061947,1185,7,FALSE
+Dulaglutida sol. Inyectable,En riesgo de desabastecimiento,Aumento de la demanda,Enfermedades crónicas,"Antidiabeticos orales, excl. Insulinas",,FALSE,Dulaglutida,Jeringa Prellenada,54163,71098.801805,88034.60361,2,TRUE
+Efavirez tableta,En monitorización,Aumento de la demanda,Enfermedades infecciosas,Antivirales de uso sistemico,,FALSE,Efavirenz,Tableta,387.1058039,403.5296889,1183.374683,4,TRUE
+Enalapril tabletas de 5mg y 20mg,En monitorización,Aumento de la demanda,Enfermedades crónicas,Inhibidores enzima convertasa angiotensina -ieca-,,FALSE,Enalapril,Tableta,30.08873272,64.88361336,5090.070822,10,FALSE
+Enantato De Noretisterona 50mg + Valerato De Estradiol 5mg solución inyectable,Desabastecido,Aumento de la demanda,Salud sexual y reproductiva,Progestagenos y estrogenos en asociacion,,FALSE,Noretisterona Y Estradiol Valerato,Ampolla,325.8666667,2226.60598785,4127.345309,2,FALSE
+Enoxaparina Sódica Sl. Inyectable en susu diferentes concentraciones.,En monitorización,Aumento de la demanda,Enfermedades crónicas,Antitromboticos,,FALSE,Enoxaparina,Jeringa Prellenada,5881.259669,12204.23543,24178,12,FALSE
+Eritromicina Tabletas 500mg,En monitorización,Problemas en la adquisición de materia prima,Enfermedades infecciosas,Macrolidos y lincosamidas (antiinfecc. Sistemicos),,FALSE,Eritromicina,Tableta,348.6108844,438.3962264,825.5741935,3,FALSE
+Eritropoyetina recombinante humana solución inyectable,No desabastecido,Ninguna. Medicamento no desabastecido,Enfermedades crónicas,Antianemicos,,FALSE,Eritropoyetina,Jeringa Prellenada,229.1694118,7836.058457,322955.1648,7,TRUE
+Eritropoyetina polvo estéril para reconstituir a suspensión inyectable,En riesgo de desabastecimiento,No definida por el invima.,Enfermedades crónicas,Antianemicos,,FALSE,Eritropoyetina,Jeringa Prellenada,229.1694118,7836.058457,322955.1648,7,TRUE
+Escitalopram tabletas,En monitorización,No definida por el invima.,Salud mental,Antidepresivos,,FALSE,Escitalopram,Tableta,116.3754188,348.5718055,3811.76002,28,FALSE
+Esomeprazol capsulas y tabletas,En monitorización,Problemas en la adquisición de materia prima,Enfermedades crónicas,Medicamentos para ulcera peptica y reflujo,,FALSE,Esomeprazol,Tableta,70.87653675,1138.2607575,6671.481481,24,TRUE
+"Estradiol gel tópico 0,06 g / 100 g.",Desabastecido,Insuficientes oferentes,Salud sexual y reproductiva,Estrogenos,,FALSE,Estradiol,Ampolla,4307,16054,20974.57895,3,TRUE
+"Estrógenos Conjugados 0,625mg/g Crema Vaginal",Desabastecido,Insuficientes oferentes,Salud sexual y reproductiva,Progestagenos y estrogenos en asociacion,,FALSE,Estrogenos Conjugados,Tableta,471.3378597,11760.1393888,27974.5927,4,TRUE
+Eszopiclona tableta,En monitorización,No definida por el invima.,Salud mental,Hipnoticos y sedantes,,FALSE,Eszopiclona,Tableta,281.0084912,604.15799275,1455.765142,14,TRUE
+Etinilestradiol tabletas,En monitorización,Riesgo de abastecimiento de pvc,Salud sexual y reproductiva,Progestagenos y estrogenos en asociacion,,FALSE,,,,,,0,FALSE
+Exenatida sol. Inyectable,En monitorización,No definida por el invima.,Enfermedades crónicas,Antidiabeticos,,FALSE,Exenatida,Pluma,70743,70743,70743,1,TRUE
+Extracto de surfactante pulmonar bovino 3ml,En monitorización,En revisión sala especializada de medicamentos sem,Salud sexual y reproductiva,Tratamiento neonatos,,FALSE,,,,,,0,FALSE
+"Fenilbutirato x 48,3 G gránulos",No desabastecido,Insuficientes oferentes,Enfermedades crónicas,Otros preparados aparato digestivo y metabolismo,,FALSE,Fenilbutirato De Sodio,Frasco,1546610.211,1546610.211,1546610.211,1,FALSE
+Fenitoína 100 mg Capsulas,En monitorización,Problemas de manufactura,Enfermedades crónicas,Antiepilepticos,,FALSE,Fenitoina,Capsula,289.2173266,314.1527721,14000,3,FALSE
+"Fenobarbital tabletas 10, 50 y 100 mg",En monitorización,Problemas de manufactura,Enfermedades crónicas,Antiepilepticos,,FALSE,Fenobarbital,Tableta,119.2436242,152.5333333,626.6666667,3,FALSE
+"Fenoterol/ Bromuro de ipratropio 0,5 mg/ml 0,25 mg/ml Solución inhalación",No desabastecido,Problemas en la adquisición de materia prima,Enfermedades crónicas,Adrenergicos inhalados (antiasmaticos),,FALSE,Fenoterol Y Bromuro De Ipratropio,Inhalador,26147.65138,26147.65138,26147.65138,1,FALSE
+Fentanilo Citrato Sl. Inyectable,En monitorización,Aumento de la demanda,Uso anestésico,Anestesicos,,FALSE,Fentanilo,Ampolla,15.11784956,1266.666667,3572.232704,11,TRUE
+Fibrinogeno Humano Solución inyectable.,En monitorización,No definida por el invima.,Enfermedades crónicas,Antifibrinoliticos,,FALSE,Fibrinogeno Humano,Jeringa Prellenada,231500,2315000,2743204,5,FALSE
+Fluconazol tabletas,En monitorización,No definida por el invima.,Enfermedades infecciosas,Antimicoticos de uso sistemico,,FALSE,Fluconazol,Capsula,256.0396993,1236.837611,44329.09091,14,FALSE
+"Fludrocortisona 0,1 mg Tableta",No desabastecido,Problemas en la adquisición de materia prima,Enfermedades crónicas,"Corticosteroides de uso sistemico, solos",,FALSE,Fludrocortisona,Tableta,1409.496999,1439.7484995,1470,2,FALSE
+Fluorouracilo solución inyectable,En monitorización,Problemas de manufactura,Cáncer,Antineoplasicos,Cáncer,TRUE,Fluorouracilo,Vial,475.3,2085.4,5292.544199,3,FALSE
+"Fluoxetina tableta, jarabe y capsula",En monitorización,No definida por el invima.,Salud mental,Antidepresivos,,FALSE,Fluoxetina,Capsula,41.04550549,170.6414868,7750,7,FALSE
+Fosfomicina 4g Inyectables,En monitorización,Problemas en la adquisición de materia prima,Enfermedades infecciosas,Otros antibacterianos (antiinfecciosos sistemicos),,FALSE,Fosfomicina,Sobre,1838.648869,15687.52637,16195,6,TRUE
+Glibenclamida tabletas,En monitorización,No definida por el invima.,Enfermedades crónicas,Antidiabeticos,,FALSE,Glibenclamida,Tableta,14.3,46.912849550000004,103.5510204,6,FALSE
+Glimepirida tableta,En monitorización,No definida por el invima.,Enfermedades crónicas,Antidiabeticos,,FALSE,Glimepirida,Tableta,189.9693361,276.03670545,3956.746415,4,FALSE
+Gluconato De Calcio al 10% Sl. Inyectable en sus diferentes concentraciones,En monitorización,Aumento de la demanda,Líquidos y electrolitos,Calcio,,FALSE,Calcio Gluconato,Ampolla,15.30842105,491.960752575,968.6130841,2,FALSE
+Gonadotropina Coriónica Humana,En monitorización,Restricción o dificultades con cupo api,Salud sexual y reproductiva,Gonadotropinas y otros estimulantes de ovulacion,,FALSE,Gonadotropina Humana,Vial,80844.66667,80844.66667,80844.66667,1,FALSE
+Haloperidol tableta y solución inyectable.,En monitorización,Baja rentabilidad,Salud mental,Antipsicoticos,,FALSE,Haloperidol,Tableta,2.8,45.18038814649999,125.1004349,4,FALSE
+Heparina sódica Sl. Inyectable en sus diferentes concentraciones,En monitorización,Problemas en la adquisición de materia prima,Enfermedades crónicas,Antitromboticos,,FALSE,Heparina,Ampolla,373.5898935,12224.33593175,24075.08197,2,FALSE
+Heparina sódica Sl. Inyectable en sus diferentes concentraciones,No desabastecido,Ninguna. Medicamento no desabastecido,Enfermedades crónicas,Antitromboticos,,FALSE,Heparina,Ampolla,373.5898935,12224.33593175,24075.08197,2,FALSE
+Hidralazina ampolla y tableta,Desabastecido,Insuficientes oferentes,Enfermedades crónicas,Antihipertensivos,,FALSE,,,,,,0,FALSE
+Hidrocortisona tableta,En monitorización,Aumento de la demanda,Enfermedades crónicas,"Corticosteroides de uso sistemico, solos",,FALSE,Hidrocortisona,Tableta,967.2216867,1383.6108433499999,1800,2,FALSE
+"Hidromorfona tabletas 2mg, 2,5mg y 5 mg",En monitorización,Problemas de manufactura,Enfermedades crónicas,Analgesicos opiaceos,,FALSE,Hidromorfona,Tableta,600,600,600,1,FALSE
+Hidroxicloroquina tabletas,En monitorización,Aumento de la demanda,Enfermedades infecciosas,Antimalaricos,,FALSE,Hidroxicarbamida,Capsula,14.01991512,14.01991512,14.01991512,1,FALSE
+Hierro polimaltosado+acido fólica tableta,En monitorización,Aumento de la demanda,Enfermedades crónicas,Preparados de hierro (antianemicos),,FALSE,Hierro,Tableta,76.40291262,76.40291262,76.40291262,1,FALSE
+Idarubicina,No desabastecido,No definida por el invima.,Cáncer,Antibioticos citotoxicos y sust.relac.(Antineopla),Cáncer,TRUE,,,,,,0,FALSE
+Iloprost suspensión para inhalar de 10mcg y 20mcg,En monitorización,Aumento de la demanda,Enfermedades crónicas,Antitromboticos,,FALSE,Iloprost,Ampolla,57992,57992,57992,2,TRUE
+Imatinib tableta,En monitorización,No definida por el invima.,Cáncer,Antineoplasicos,Cáncer,TRUE,Imatinib,Tableta,7747.871512,11046.01954,77201,7,TRUE
+Imipramina tableta,En monitorización,Aumento de la demanda,Enfermedades crónicas,Antidepresivos,,FALSE,Imipramina,Tableta,61.73198533,76.330526315,287.7166055,4,FALSE
+Inmunoglobulina AntiD - Rh 300 mcg Inyectables,No desabastecido,Problemas en la adquisición de materia prima,Enfermedades infecciosas,Inmunoglobulinas,Biológicos e inmunosupresores,TRUE,,,,,,0,FALSE
+Inmunoglobulina humana normal solución inyectable 5% (50mg/1ml),En riesgo de desabastecimiento,Desabastecimiento de activo,Enfermedades infecciosas,Inmunoglobulinas,Biológicos e inmunosupresores,TRUE,Inmunoglobulina Humana Normal,Vial,51297,936767.5,2077770,6,FALSE
+"Inmunoglobulinas específicas neutralizantes del veneno de las especies Micrurus dumerilii, micrurus mipartitus, micrurus isozonus y micrurus surinamensis.",En monitorización,Insuficientes oferentes,Enfermedades infecciosas,Sueros inmunologicos e inmunoglobulinas,Biológicos e inmunosupresores,TRUE,,,,,,0,FALSE
+Insulina Lispro Sol. Intecyable,En monitorización,No definida por el invima.,Enfermedades crónicas,Antidiabeticos,,FALSE,Insulina Lispro,Cartucho,17665,17665,58641.16634,3,TRUE
+Iobitridol solución inyectable,En riesgo de desabastecimiento,Aumento de la demanda,Medicamento uso diagnóstico,Medios de contraste radiologicos iodados,,FALSE,,,,,,0,FALSE
+Ioduro Sódico (I -131),En riesgo de desabastecimiento,Aumento de la demanda,Medicamento uso diagnóstico,Varios,,FALSE,,,,,,0,FALSE
+Iopramida solución inyectable,En monitorización,No definida por el invima.,Medicamento uso diagnóstico,Medios de contraste radiologicos iodados,,FALSE,,,,,,0,FALSE
+Ioversol solución inyectable,En riesgo de desabastecimiento,Baja rentabilidad,Medicamento uso diagnóstico,Medios de contraste,,FALSE,,,,,,0,FALSE
+Ipilimumab solución inyectable,En riesgo de desabastecimiento,Estudio respuesta a auto pendientes,Cáncer,Otros antineoplásicos,Cáncer,TRUE,Ipilimumab,Vial,14508600,14508600,14508600,1,TRUE
+"Isoproterenol 0,2 mg/ml Inyectables",En monitorización,Problemas de manufactura,Vasoactivo / inotrópicos,"Estimulantes cardiacos, excluidos glicosidos card.",,FALSE,,,,,,0,FALSE
+R-L- Asparaginasa (Aislada de E- Coli) RECOMBINANTE- Polvo liofilizado para reconstituir a solución inyectable,En monitorización,Baja rentabilidad,Enfermedades crónicas,Otros antineoplasicos,,FALSE,Asparaginasa,Vial,234100,234100,234100,1,TRUE
+Lamivudina tabletas y Sl. oral,En monitorización,Dificultades logísticas,Enfermedades infecciosas,Agentes de accion directa contra el virus (sistem),VIH,TRUE,Lamivudina,Tableta,828.0529801,828.0529801,828.0529801,1,FALSE
+Lamivudina y Abacavir tabletas,En monitorización,No definida por el invima.,Enfermedades infecciosas,Antivirales de uso sistemico,VIH,TRUE,Abacavir + Lamivudina,Tableta,1317.120376,1317.120376,1317.120376,1,TRUE
+Lamivudina+Lidovudin a+Nevirapina tabletas,Desabastecido,No definida por el invima.,Enfermedades infecciosas,Antivirales de uso sistemico,VIH,TRUE,Lamivudina,Tableta,828.0529801,828.0529801,828.0529801,1,FALSE
+Lamivudina+Tenofovir +Efavires tabletas,En monitorización,No definida por el invima.,Enfermedades infecciosas,Antivirales de uso sistemico,VIH,TRUE,Efavirenz + Lamivudina + Tenofovir,Tableta,2020.512821,2020.512821,2020.512821,1,FALSE
+Lamivudina+Zidovudi na,En monitorización,No definida por el invima.,Enfermedades infecciosas,Antivirales de uso sistemico,VIH,TRUE,Lamivudina Y Zidovudina,Tableta,395.1522248,403.671557,412.1908892,2,FALSE
+Lamivudina+zidovudin a+Abacavir tabletas,Desabastecido,No definida por el invima.,Enfermedades infecciosas,Antivirales de uso sistemico,VIH,TRUE,Lamivudina Y Zidovudina,Tableta,395.1522248,403.671557,412.1908892,2,FALSE
+Lapinovir y Ritonavir tableta recubierta y cápsula dura.,En monitorización,Baja rentabilidad,Enfermedades infecciosas,Antivirales de uso sistemico,VIH,TRUE,Ritonavir,Tableta,687.9617834,732.5224406,777.0830978,2,TRUE
+Levodopa + Benserazida Tableta 250mg/50mg,Desabastecido,Modificaciones de registro sanitario pendientes,Enfermedades crónicas,Dopaminergicos (antiparkinsonianos),,FALSE,,,,,,0,FALSE
+Carbidopa-Levodopa tabletas,En monitorización,Demora en proceso de importación,Enfermedades crónicas,Dopaminergicos (antiparkinsonianos),,FALSE,Levodopa Y Carbidopa,Tableta,216.9904138,258.49520689999997,300,2,FALSE
+Levomepromazina tableta,En monitorización,No definida por el invima.,Salud mental,Antipsicoticos,,FALSE,Levomepromazina,Tableta,8.134628099,160.1916726,1220.75817,5,FALSE
+Levonorgestrel tableta 0.03mg,Desabastecido,Insuficientes oferentes,Salud sexual y reproductiva,Hormonas anticonceptivas de uso sistemico,,FALSE,Levonorgestrel,Tableta,1100,2257,2500,5,TRUE
+"Levonorgestrel tabletas 0,03 mg",Desabastecido,Aumento de la demanda,Salud sexual y reproductiva,Hormonas anticonceptivas de uso sistemico,,FALSE,Levonorgestrel,Tableta,1100,2257,2500,5,TRUE
+Levosimendan solución inyectables,En monitorización,Aumento de la demanda,Enfermedades crónicas,"Estimulantes cardiacos, excluidos glicosidos card.",,FALSE,Levosimendan,Vial,772558.8235,1033312,1614836.99,3,TRUE
+"Levotiroxina tabletas 50mcg,75mcg,100mc g,150mcg, 135mcg y 200mcg",En riesgo de desabastecimiento,Aumento de la demanda,Enfermedades crónicas,Preparados tirodeos,,FALSE,Levotiroxina Sodica,Tableta,8.999203724,357.3142857,1238.22029,37,FALSE
+Lidocaína Sin Epinefrina Solución Inyectable 1 %/10 Ml - 1 %/20 Ml - 1 %/50 Ml - 2 %/1.8 Ml - 2 %/10 Ml - 2 %/20 Ml - 2 %/50 Ml,En monitorización,Aumento de la demanda,Uso anestésico,Antestesicos locales,,FALSE,Epinefrina Y Lidocaina,Frasco,19212.70282,19212.70282,19212.70282,1,FALSE
+Lisdexanfetamina Dimesilato,En riesgo de desabastecimiento,Aumento de la demanda,Salud mental,"Psicoestimulantes, medic. Para adhd y nootropicos",,FALSE,Lisdexanfetamina,Capsula,4896.489607,4896.489607,4896.489607,1,TRUE
+Loratadina solución oral,En monitorización,Aumento de la demanda,Enfermedades infecciosas,Antihistaminicos de uso sistemico,,FALSE,Loratadina,Tableta,30,196.40777905,5200,14,FALSE
+Lorazepam tableta,En monitorización,No definida por el invima.,Salud mental,Ansioliticos,,FALSE,Lorazepam,Tableta,30.86975837,208.02869744499998,586.8670213,4,FALSE
+Losartan tabletas,En monitorización,Aumento de la demanda,Enfermedades crónicas,Antagonistas angiotensina ii,,FALSE,Losartan,Tableta,0.7169502199,109.5,4497.143791,22,FALSE
+Medroxiprogesterona ampolla,No desabastecido,Ninguna. Medicamento no desabastecido,Salud sexual y reproductiva,Terapia endocrina,,FALSE,Medroxiprogesterona,Ampolla,445.1130952,5090.5565476,9736,2,FALSE
+Medroxiprogesterona + Cipionato de Estradiol 50 mg + 10mg/1mL solución inyectable,En monitorización,Problemas de manufactura,Salud sexual y reproductiva,Hormonas sexuales y moduladores de aparato genital,,FALSE,Medroxiprogesterona Y Estradiol,Ampolla,233.5242105,233.5242105,233.5242105,1,FALSE
+"Melfalán tabletas, solución inyectable y polvo para reconstruir.",En monitorización,Problemas de manufactura,Cáncer,Agentes alquilantes (antineoplasicos),Cáncer,TRUE,Melfalan,Tableta,5760.614,5760.614,5760.614,1,TRUE
+Mepivacaina Varias Inyectables,No desabastecido,Aumento de la demanda,Uso anestésico,Antestesicos locales,,FALSE,,,,,,0,FALSE
+Mesna 400 mg solución inyectable,En riesgo de desabastecimiento,No definida por el invima.,Enfermedades crónicas,Todos los demas productos terapeuticos,,FALSE,Mesna,Ampolla,992.2509804,1763.6969187,2535.142857,2,FALSE
+Metformina + Glibenclamida tabletas,Desabastecido,No definida por el invima.,Enfermedades crónicas,Antidiabeticos,,FALSE,Metformina,Tableta,49.74509557,290,2039.61115,21,FALSE
+Metformina tableta de 500mg - 850mg y 1000mg,En monitorización,No definida por el invima.,Enfermedades crónicas,Antidiabeticos,,FALSE,Metformina,Tableta,49.74509557,290,2039.61115,21,FALSE
+Metformina +Glimepirida tabletas,En monitorización,No definida por el invima.,Enfermedades crónicas,Antidiabeticos,,FALSE,Metformina Y Glimepirida,Tableta,861.861244,861.861244,861.861244,1,FALSE
+Metformina +Saxagliptina tableta,Desabastecido,No definida por el invima.,Enfermedades crónicas,Antidiabeticos,,FALSE,Metformina Y Saxagliptina,Tableta,3027,3027,3027,1,FALSE
+Metoprolol Succinato tabletas 25 y 100mg,En riesgo de desabastecimiento,Aumento de la demanda,Enfermedades crónicas,Betabloqueantes,,FALSE,Metoprolol,Tableta,11.480851060000001,189.97871775,2005.287356,8,TRUE
+Metoprolol Succinato tabletas 50 y 200mg,Desabastecido,Aumento de la demanda,Enfermedades crónicas,Betabloqueantes solos,,FALSE,Metoprolol,Tableta,11.480851060000001,189.97871775,2005.287356,8,TRUE
+"Metotrexato 2,5 mg Tableta",Desabastecido,Problemas en la adquisición de materia prima,Cáncer,Antimetabolitos (antineoplasicos),Cáncer,TRUE,Metotrexato,Tableta,6.7,220.7796795,487.9744898,3,TRUE
+Metronidazol suspensión oral,En monitorización,Aumento de la demanda,Enfermedades infecciosas,Amebicidas y otros antiprotozoarios,,FALSE,Metronidazol,Frasco,1.442061069,1835.833333,30017.24602,25,FALSE
+Metrotrexate solución inyectable.,No desabastecido,Ninguna. Medicamento no desabastecido,Cáncer,Antineoplasicos,Cáncer,TRUE,,,,,,0,FALSE
+Midazolam solución inyectable en sus diferentes presentaciones,En monitorización,Aumento de la demanda,Uso anestésico,Hipnoticos y sedantes,,FALSE,Midazolam,Ampolla,34.89564286,2105.1429175000003,36482,14,FALSE
+Mifepristona tabletas,No desabastecido,Ninguna. Medicamento no desabastecido,Salud sexual y reproductiva,Antiprogestágenos,,FALSE,,,,,,0,FALSE
+Mirtazapina tableta de 15 mg y 30mg,En monitorización,Insuficientes oferentes,Enfermedades crónicas,Antidepresivos,,FALSE,Mirtazapina,Tableta,270.9738873,323.8963096,361.9322779,4,TRUE
+Misoprostol 200mcg oral y 50mcg vaginal,En monitorización,Problemas en la adquisición de materia prima,Enfermedades crónicas,Medicamentos para ulcera peptica y reflujo,,FALSE,Misoprostol,Tableta Vaginal,1714.827397,1762.082557,2168.817223,3,FALSE
+Molnupiravir tabletas 200mg,No desabastecido,No definida por el invima.,Enfermedades infecciosas,Agentes de accion directa contra el virus (sistem),,FALSE,,,,,,0,FALSE
+Montelukast Capsulas/Tabletas,En monitorización,No definida por el invima.,Enfermedades crónicas,"Otros para obstruccion de vias respiratorias, uso sistemico",,FALSE,Montelukast,Tableta,199.9621672,675.0625,2065,12,TRUE
+Morfina 10 mg/ml Solución Inyectable,En monitorización,Problemas de manufactura,Enfermedades crónicas,Analgesicos opiaceos,,FALSE,Morfina,Ampolla,1845,1845,1845,1,FALSE
+Naproxeno tableta 250mg y 500mg,En monitorización,Aumento de la demanda,Enfermedades infecciosas,Antiinflamatorios y antireumaticos no esteroideos,,FALSE,Naproxeno,Tableta,66.81764567,296.59284115,1130.067114,12,FALSE
+Neostigmina Solución Inyectable,En monitorización,Aumento de la demanda,Enfermedades crónicas,Parasimpaticomimeticos (otros medic.accion snc),,FALSE,Neostigmina,Ampolla,6.305414847,250,1953.830769,5,FALSE
+Nevirapina Suspensión Oral 5mL.,No desabastecido,No definida por el invima.,Enfermedades infecciosas,Agentes de accion directa contra el virus (sistem),VIH,TRUE,Nevirapina,Tableta,193.7068376,217.79277355,86222,4,TRUE
+Nifedipina tabletas 10mg,Desabastecido,Aumento de la demanda,Enfermedades crónicas,Bloq. Canales calcio selectivos efecto vascular,,FALSE,Nifedipino,Capsula,158.0697797,880.322343,2003.489752,4,FALSE
+Nitroprusiato de sodio solución Inyectable,En monitorización,Insuficientes oferentes,Enfermedades crónicas,Antihipertensivos accion musculo liso arteriolas,,FALSE,Nitroprusiato De Sodio,Ampolla,29278.13748,29278.13748,29278.13748,1,FALSE
+Norepinefrina solución inyectable 1mg/1mL,En monitorización,Problemas de manufactura,Vasoactivo / inotrópicos,"Estimulantes cardiacos, excluidos glicosidos card.",,FALSE,Norepinefrina,Ampolla,2003.884539,2092.459511,2181.034483,2,FALSE
+Olanzapina tabletas,En monitorización,No definida por el invima.,Salud mental,Psicolepticos,,FALSE,Olanzapina,Tableta,116.0883398,991.4883379500001,3980.142857,8,TRUE
+Omeprazol Sódico Polvo Liofilizado Para Reconstituir A Solución Inyectable,En monitorización,Aumento de la demanda,Enfermedades crónicas,Medicamentos para ulcera peptica y reflujo,,FALSE,Omeprazol,Vial,43.6409375,2347.826087,10729.37137,5,TRUE
+Ondansetrón Clorhidrato Solución Inyectable y tabletas,En monitorización,No definida por el invima.,Enfermedades crónicas,Antiemeticos y antinauseantes,,FALSE,Ondansetron,Tableta,426.6629364,677.66486485,4859,6,FALSE
+Oseltamivir tabletas,En monitorización,No definida por el invima.,Enfermedades infecciosas,Antivirales de uso sistemico,,FALSE,Oseltamivir,Capsula,8932,8932,8932,1,FALSE
+Oxicodona tableta y solución inyectable.,Desabastecido,Aumento de la demanda,Enfermedades crónicas,Analgesicos opiaceos,,FALSE,Oxicodona,Tableta,326.7721877,326.7721877,326.7721877,1,FALSE
+Oxigeno GAS,En monitorización,Aumento de la demanda,Enfermedades crónicas,Todos los demas productos terapeuticos,,FALSE,Oxigeno,Cilindro,2500,16511,100624,12,FALSE
+Oxitocina solución inyectable 5 UI,En monitorización,Problemas de manufactura,Salud sexual y reproductiva,Hormonas del lobulo posterior de la hipofisis,,FALSE,Oxitocina,Ampolla,12.6440407,204.0740741,1616.242015,3,FALSE
+Paclitaxel solución inyectable,En monitorización,Baja rentabilidad,Cáncer,Antineoplasicos,Cáncer,TRUE,Paclitaxel,Vial,14500,47409.00127,967700,13,TRUE
+"Pancreatina Capsula Dura Correspondiente A: 18,000 U De Amilasa, 25.000 U De Lipasa, 1000 U De Proteasas Totales (CREON 25.000 - 300MG)",En monitorización,Aumento de la demanda,Enfermedades crónicas,"Digestivos, incluidos enzimas",,FALSE,Pancreatina,Frasco,115396,115396,115396,1,FALSE
+"Pancreatina Capsula Dura Correspondiente A: 8,000 U De Amilasa, 10.000 U De Lipasa, 600 U De Proteasas Totales (CREON 10.000 - 150MG)",En monitorización,Aumento de la demanda,Enfermedades crónicas,"Digestivos, incluidos enzimas",,FALSE,Pancreatina,Frasco,115396,115396,115396,1,FALSE
+Pancreatina en gránulos equivalente a: 5000 unidades PH EUR. Lipasa 3600 unidades PH EUR. Amilasa 200 unidades PH EUR. Proteasa,Desabastecido,Pendiente liberación de lote,Enfermedades crónicas,"Digestivos, incluidos enzimas",,FALSE,Pancreatina,Frasco,115396,115396,115396,1,FALSE
+Paracetamol (acetaminofén) 1G/100ml solución inyectable parainfusión,En monitorización,Aumento de la demanda,Enfermedades infecciosas,Otros analgesicos y antipireticos,,FALSE,Acetaminofen,Bolsa,366.6291954,7148.014652,8983.333333,3,FALSE
+Paracetamol (acetaminofén) solución oral,En riesgo de desabastecimiento,Aumento de la demanda,Enfermedades infecciosas,Otros analgesicos y antipireticos,,FALSE,Acetaminofen,Frasco,0.4886178862,1749.5,75557.39972,47,FALSE
+Paracetamol (acetaminofén) tabletas,En monitorización,Baja rentabilidad,Enfermedades infecciosas,Analgesicos,,FALSE,Acetaminofen,Tableta,0.4886178862,201.2041755,1599.107592,19,FALSE
+Pemetrexed 500MG solución inyectable,En monitorización,Baja rentabilidad,Cáncer,Antineoplasicos,Cáncer,TRUE,Pemetrexed,Vial,95426.46696,275287.0865,1759842.414,11,TRUE
+Pipotiazina 25 mg sl. Inyectables,En monitorización,Problemas de manufactura,Salud mental,Antipsicoticos,,FALSE,Pipotiazina,Ampolla,3891.380113,3891.380113,3891.380113,1,FALSE
+Pirimetamina x 25 mg Sulfadoxima 500 mg+ pirimetamina x 25 mg Espiramicina x 3 mUI,En monitorización,Insuficientes oferentes,Enfermedades infecciosas,Antimalaricos,,FALSE,Sulfadoxina Y Pirimetamina,Tableta,3643.197991,3643.197991,3643.197991,1,FALSE
+Plerixafor solución inyectable,No desabastecido,Ninguna. Medicamento no desabastecido,Cáncer,Citokinas e inmunomoduladores,Cáncer,TRUE,Plerixafor,Vial,17938868.31,17938868.31,17938868.31,1,TRUE
+Pregabalina tabletas,En monitorización,Problemas de manufactura,Enfermedades crónicas,Antiepilepticos,,FALSE,Pregabalina,Capsula,116.6220998,400,3368.865672,31,TRUE
+Propafenona tableta 150mg,No desabastecido,Aumento de la demanda,Vasoactivo / inotrópicos,Antiarritmicos,,FALSE,Propafenona,Tableta,505.8633137,3414.823867,6135.616438,3,FALSE
+Protamina Solución Inyectable,Desabastecido,Modificaciones de registro sanitario pendientes,Varios,Antidotos,,FALSE,,,,,,0,FALSE
+Quetiapina tableta,En riesgo de desabastecimiento,Aumento de la demanda,Salud mental,Antipsicoticos,,FALSE,Quetiapina,Tableta,100.6618436,440.98682514999996,5453.2,32,TRUE
+Ranitidina en todas sus presentaciones orales.,Desabastecido,Alerta sanitaria / descontinuación del producto,Enfermedades crónicas,Medicamentos para trastornos por la secrecion gastrica,,FALSE,,,,,,0,FALSE
+Ranitidina solución inyectable,Desabastecido,Alerta sanitaria / descontinuación del producto,Enfermedades crónicas,Medicamentos para ulcera peptica y reflujo,,FALSE,,,,,,0,FALSE
+Rifaximina tabletas,En monitorización,Problemas en la adquisición de materia prima,Enfermedades infecciosas,Antiinfecciosos intestinales,,FALSE,Rifaximina,Tableta,752,2129.345508,3120,9,FALSE
+Risankizumab 90 mg/ml,Desabastecido,Alerta sanitaria / descontinuación del producto,Cáncer,Otros antineoplásicos,Cáncer,TRUE,Risankizumab,Jeringa Prellenada,7366807.569,7366807.569,7366807.569,1,TRUE
+Risperidona Tableta,En monitorización,Aumento de la demanda,Salud mental,Antipsicoticos,,FALSE,Risperidona,Tableta,124.0415893,325.89990815,20173.71737,12,TRUE
+Ritonavir 100 mg Tableta,En monitorización,Insuficientes oferentes,Enfermedades infecciosas,Agentes de accion directa contra el virus (sistem),VIH,TRUE,Ritonavir,Tableta,687.9617834,732.5224406,777.0830978,2,TRUE
+Ritonavir-Lopinavir Solución oral,Desabastecido,Insuficientes oferentes,Enfermedades infecciosas,Agentes de accion directa contra el virus (sistem),VIH,TRUE,Lopinavir Y Ritonavir,Tableta,663.5531136,729.0086207,741.2265512,3,FALSE
+Rosuvastatina + Ezetimibe tabletas,En monitorización,Aumento de la demanda,Enfermedades crónicas,Modificadores de los lipidos solos,,FALSE,Rosuvastatina Y Ezetimiba,Tableta,1205.481481,1494.92192,2901.180305,5,FALSE
+Rosuvastatina tabletas,En monitorización,Aumento de la demanda,Enfermedades crónicas,Modificadores de los lipidos solos,,FALSE,Rosuvastatina,Tableta,109.3464567,283.7132332,56805.29012,39,FALSE
+Rosuvastatina Y Fenofibrato tabletas,En monitorización,Aumento de la demanda,Enfermedades crónicas,Modificadores de los lipidos solos,,FALSE,Rosuvastatina,Tableta,109.3464567,283.7132332,56805.29012,39,FALSE
+Sacarato de Hierro III 20mg/ ml,En monitorización,No definida por el invima.,Enfermedades crónicas,Antianemicos,,FALSE,Hierro,Frasco,76.40291262,12050.987447,26008.71467,6,FALSE
+Sertralina tableta 50mg,En monitorización,Aumento de la demanda,Salud mental,Antidepresivos,,FALSE,Sertralina,Tableta,69.20143598,446.664,7830.839206,17,FALSE
+Somatropina 6mg y 20mg,No desabastecido,Modificaciones de registro sanitario pendientes,Enfermedades crónicas,Hormonas del lobulo anterior hipofisis y analogos,,FALSE,Somatropina,Jeringa Prellenada,128900,238961.9923,659073.7926,9,TRUE
+Sulfato de Magnesio al 20%,En monitorización,Aumento de la demanda,Salud sexual y reproductiva,Sustitutos de la sangre y soluc. Para perfusion,,FALSE,Sulfato De Magnesio,Ampolla,1513.663366,1681.8316829999999,1850,2,FALSE
+Sulfato Ferroso 25mg/1ml Sol Oral,En monitorización,Problemas en la adquisición de materia prima,Enfermedades crónicas,Preparados de hierro (antianemicos),,FALSE,Sulfato Ferroso,Frasco,38.60301508,749.8481325800001,2385.257143,4,FALSE
+Tacrolimus5 mg/inyectables,No desabastecido,Modificaciones de registro sanitario pendientes,Enfermedades crónicas,Inmunosupresores,Biológicos e inmunosupresores,TRUE,Tacrolimus,Ampolla,477047.2,477047.2,477047.2,1,TRUE
+Tadafilo tabletas 5mg,En monitorización,Aumento de la demanda,Enfermedades crónicas,"Otros preparados urologicos, incl.antiespasmodicos",,FALSE,,,,,,0,FALSE
+Tamoxifeno tableta 10 mg,Desabastecido,Problemas de manufactura,Cáncer,Antagonistas hormonales y sustancias relacionadas,Cáncer,TRUE,Tamoxifeno,Tableta,187.0711538,906.6305829,1626.190012,2,FALSE
+Tamoxifeno tableta 20 mg,En monitorización,Problemas de manufactura,Cáncer,Antagonistas hormonales y sustancias relacionadas,Cáncer,TRUE,Tamoxifeno,Tableta,187.0711538,906.6305829,1626.190012,2,FALSE
+"Tamsulosina tableta 0,4mg",No desabastecido,No definida por el invima.,Enfermedades crónicas,Medicamentosos urologicos,,FALSE,Tamsulosina,Capsula,280.5564947,653.07793575,1749.474525,8,FALSE
+Tecnecio 99,En riesgo de desabastecimiento,Desabastecimiento mundial de molibdeno,Medicamento uso diagnóstico,Varios,,FALSE,,,,,,0,FALSE
+Tenecteplase (activador tisular del plasminógeno humano) (10000u) polvo para reconstituir a sol. Iny. 50 mg,No desabastecido,Aumento de la demanda,Enfermedades crónicas,Antitromboticos,,FALSE,Tenecteplasa,Vial,2856140.561,2856140.561,2856140.561,1,TRUE
+Tenofovir Disoproxil y Emtricitabina Tabletas y Sl. Oral,En monitorización,Problemas en la adquisición de materia prima,Enfermedades infecciosas,Antivirales de uso sistemico,VIH,TRUE,Tenofovir Disoproxil Y Emtricitabina,Tableta,1400.503257,7167.7285935,12934.95393,2,FALSE
+Trazodona tableta,En monitorización,No definida por el invima.,Salud mental,Antidepresivos,,FALSE,Trazodona,Tableta,66.08738859,316.12592025000004,2980.26081,6,FALSE
+Trimebutina tabletas,En monitorización,No definida por el invima.,Enfermedades crónicas,"Digestivos, incluidos enzimas",,FALSE,Trimebutina,Tableta,146.6990291,505.71892655,904.1376012,10,FALSE
+Trimetoprim/sulfamet oxazol tabletas,En monitorización,Problemas en la adquisición de materia prima,Enfermedades infecciosas,Antibióticos,,FALSE,Sulfametoxazol Y Trimetoprim,Tableta,124.6411968,200,2920.787659,9,FALSE
+Valsartán tabletas,En monitorización,Aumento de la demanda,Enfermedades crónicas,Antagonistas angiotensina ii,,FALSE,Valsartan,Tableta,187.7469923,550.2159584999999,4921,18,TRUE
+Vancomicina solución inyectable,En monitorización,No definida por el invima.,Enfermedades infecciosas,Antibacterianos de uso sistemico,,FALSE,Vancomicina,Vial,272.129637,6241.066679,22000,6,FALSE
+Vildagliptina + metformina clorhidrato tableta,No desabastecido,No definida por el invima.,Enfermedades crónicas,Antidiabeticos,,FALSE,Metformina Y Vildagliptina,Tableta,443.8214286,739.2232143,763.1071429,4,FALSE
+Vildagliptina tableta,En monitorización,No definida por el invima.,Enfermedades crónicas,Hipoglicemiantes orales,,FALSE,Vildagliptina,Tableta,694.0521542,744.54393425,795.0357143,2,TRUE
+Vinblastina1mg/1ml solución Inyectable,En monitorización,Problemas de manufactura,Cáncer,Alcaloides vegetales y prod. Naturales (antineopl),Cáncer,TRUE,Vinblastina,Vial,33744.12264,34391.918465,35039.71429,2,FALSE
+Vincristina 1 mg Inyectables,En monitorización,Problemas de manufactura,Cáncer,Alcaloides vegetales y prod. Naturales (antineopl),Cáncer,TRUE,Vincristina,Vial,16417.30141,16978.412734999998,17539.52406,2,FALSE
+Warfarina 5 mg Tableta,En monitorización,Problemas de manufactura,Enfermedades crónicas,Antitromboticos,,FALSE,Warfarina,Tableta,108.0914194,118.9216301,172.7039318,3,FALSE

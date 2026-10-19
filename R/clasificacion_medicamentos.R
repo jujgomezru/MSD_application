@@ -81,3 +81,82 @@ grupo_medicamento <- function(nombre, prioridad, grupo_terapeutico) {
     .default = NA_character_
   )
 }
+
+# Texto normalizado para comparar nombres de medicamentos (sin tildes ni signos).
+normalizar_texto <- function(x) {
+  x <- tolower(stringi::stri_trans_general(x, "Latin-ASCII"))
+  stringr::str_squish(gsub("[^a-z0-9 ]", " ", x))
+}
+
+palabras_sal <- c("de", "acetato", "clorhidrato", "diclorhidrato", "sodico", "sodica", "sodio", "potasico",
+                  "mesilato", "maleato", "fumarato", "citrato", "sulfato", "fosfato", "mofetilo", "disoproxil",
+                  "monohidrato", "trihidrato", "bromuro", "succinato", "tartrato", "besilato")
+
+# Asigna cada texto (p. ej. un principio activo importado) al medicamento de
+# referencia más específico que contiene: "trastuzumab deruxtecan" va a
+# trastuzumab deruxtecán y no a trastuzumab. Devuelve la clave asignada o NA.
+asignar_mas_especifico <- function(textos, claves) {
+  claves <- claves[order(-nchar(claves))]
+  purrr::map_chr(textos, \(t) {
+    k <- claves[stringr::str_detect(t, stringr::fixed(claves))]
+    if (length(k) == 0) NA_character_ else k[1]
+  })
+}
+
+# Precio institucional (Termómetro de Precios del Minsalud, 2024) de los
+# medicamentos de un listado con nombres en texto libre. Para cada nombre busca
+# el principio activo más específico cuyos componentes aparecen todos en el
+# nombre y, si el nombre indica la forma farmacéutica, se queda con las
+# presentaciones de esa forma. Devuelve una fila por nombre con el principio
+# activo encontrado, la unidad y el precio mínimo, mediano y máximo por unidad.
+precio_institucional <- function(nombres, termometro) {
+  precios <- termometro |>
+    dplyr::filter(canal == "Institucional", precio_por_tableta > 0) |>
+    dplyr::mutate(
+      principio = normalizar_texto(principio_activo),
+      # Las sales y palabras de enlace no cuentan como componentes
+      # ("Leuprolida acetato", "Micofenolato de mofetilo").
+      componentes = purrr::map(strsplit(gsub(" y | mas ", " ", principio), " "), \(cs) setdiff(cs, palabras_sal)),
+      forma = dplyr::case_when(
+        unidad_de_dispensacion %in% c("Tableta", "Capsula") ~ "oral solida",
+        unidad_de_dispensacion %in% c("Vial", "Ampolla", "Jeringa Prellenada", "Pluma", "Bolsa") ~ "inyectable",
+        .default = "otra"
+      )
+    )
+  # Un principio formado solo por palabras de sal (p. ej. "Bicarbonato de
+  # sodio" queda en "bicarbonato", pero "Sulfato" a secas quedaría vacío) se
+  # descarta: sin componentes coincidiría con cualquier nombre.
+  principios <- dplyr::distinct(precios, principio, componentes) |>
+    dplyr::filter(lengths(componentes) > 0)
+
+  purrr::map(nombres, \(nombre) {
+    n <- normalizar_texto(nombre)
+    palabras <- strsplit(n, " ")[[1]]
+    # Principios cuyos componentes están todos en el nombre (por los primeros 7
+    # caracteres, para tolerar plurales y errores como "zidovudin a" sin
+    # confundir "eritromicina" con "eritropoyetina").
+    coincide <- purrr::map_lgl(principios$componentes, \(cs) all(purrr::map_lgl(cs, \(c) any(startsWith(palabras, substr(c, 1, 7))))))
+    candidatos <- principios[coincide, ]
+    vacio <- tibble::tibble(nombre = nombre, principio_activo = NA_character_, unidad = NA_character_,
+                            precio_min = NA_real_, precio_mediana = NA_real_, precio_max = NA_real_, presentaciones = 0L)
+    if (nrow(candidatos) == 0) return(vacio)
+    elegido <- candidatos$principio[which.max(lengths(candidatos$componentes))]
+    filas <- dplyr::filter(precios, principio == elegido)
+    forma <- dplyr::case_when(
+      stringr::str_detect(n, "tablet|capsul") ~ "oral solida",
+      stringr::str_detect(n, "inyect|vial|ampol|polvo") ~ "inyectable",
+      .default = NA_character_
+    )
+    if (!is.na(forma) && any(filas$forma == forma)) filas <- dplyr::filter(filas, forma == !!forma)
+    tibble::tibble(
+      nombre = nombre,
+      principio_activo = filas$principio_activo[1],
+      unidad = names(sort(table(filas$unidad_de_dispensacion), decreasing = TRUE))[1],
+      precio_min = min(filas$precio_por_tableta),
+      precio_mediana = stats::median(filas$precio_por_tableta),
+      precio_max = max(filas$precio_por_tableta),
+      presentaciones = nrow(filas)
+    )
+  }) |>
+    purrr::list_rbind()
+}

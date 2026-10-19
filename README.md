@@ -22,6 +22,7 @@ forma interactiva.
 │   ├── poblacion.R        # proyecciones de población del DANE
 │   ├── supersalud.R       # descarga y lectura por bloques de los reclamos en salud
 │   ├── medicamentos.R     # descarga de fuentes del Invima y la CNPMDM
+│   ├── afiliados.R        # afiliados por EPS (BDUA, ADRES) y tasas por 10.000 afiliados
 │   └── clasificacion_medicamentos.R  # criterio de alto costo y categorías de motivo
 ├── scripts/
 │   ├── 00_instalar_paquetes.R
@@ -35,10 +36,12 @@ forma interactiva.
 │   ├── 09_procesar_reclamos_medicamentos.R  # agregados de reclamos para medicamentos
 │   ├── 10_descargar_medicamentos.R     # Invima (vitales, desabastecimiento) y CNPMDM
 │   ├── 11_preparar_medicamentos.R      # datos de medicamentos.qmd
-│   └── 12_preparar_reclamos_citas.R    # datos de la sección de reclamos de index.qmd
+│   ├── 12_preparar_reclamos_citas.R    # datos de la sección de reclamos de index.qmd
+│   └── 13_preparar_medicamentos_enfermedad.R  # cuello de botella por enfermedad
 ├── data/
 │   ├── fuentes.csv        # catálogo de fuentes
 │   ├── geo/               # límites departamentales (DANE, MGN 2025)
+│   ├── referencia/        # listas curadas (medicamentos de alto costo por enfermedad)
 │   ├── raw/               # datos crudos (no se versionan)
 │   └── processed/         # datos limpios
 └── figures/               # gráficas exportadas (SVG y PNG)
@@ -68,6 +71,7 @@ source("scripts/09_procesar_reclamos_medicamentos.R")  # ~7 min
 source("scripts/10_descargar_medicamentos.R")
 source("scripts/11_preparar_medicamentos.R")
 source("scripts/12_preparar_reclamos_citas.R")
+source("scripts/13_preparar_medicamentos_enfermedad.R")
 ```
 
 Los reclamos cambiaron de clasificación de motivos el 1 de julio de 2023 (la Supersalud advierte que

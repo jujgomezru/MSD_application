@@ -116,7 +116,7 @@ P.plot({
 //| echo: false
 motivos = leer(FileAttachment("data/processed/med_alto_costo_motivo.csv"), ["n"])
 patologias = leer(FileAttachment("data/processed/med_alto_costo_patologia.csv"), ["n"])
-eps = leer(FileAttachment("data/processed/med_alto_costo_eps.csv"), ["alto_costo", "medicamentos", "participacion_alto_costo"])
+eps = leer(FileAttachment("data/processed/med_alto_costo_eps.csv"), ["afiliados", "alto_costo", "medicamentos", "alto_costo_10k", "medicamentos_10k"])
 
 viewof corteAlto = Inputs.radio(cortes, {label: "Periodo", value: "post"})
 ```
@@ -175,22 +175,31 @@ P.plot({
 
 ### EPS con más reclamos de alto costo
 
+Reclamos por medicamentos presentados en 2025, en total y por cada 10.000 afiliados. La tasa permite
+comparar EPS de distinto tamaño. Ordenadas por la tasa de reclamos de alto costo.
+
 ```{ojs}
 //| echo: false
+dec1 = x => x.toLocaleString("es-CO", {minimumFractionDigits: 1, maximumFractionDigits: 1})
+
 tabla(
-  eps.filter(d => d.corte === corteAlto).slice(0, 15).map(d => ({
+  eps.filter(d => d.afiliados >= 200000).map(d => ({
     EPS: d.eps,
-    "Reclamos de alto costo": fmt(d.alto_costo),
-    "Reclamos por medicamentos": fmt(d.medicamentos),
-    "% de alto costo": pct(d.participacion_alto_costo)
+    "Afiliados": fmt(d.afiliados),
+    "Alto costo": fmt(d.alto_costo),
+    "Alto costo por 10.000": dec1(d.alto_costo_10k),
+    "Todos los medicamentos": fmt(d.medicamentos),
+    "Medicamentos por 10.000": dec1(d.medicamentos_10k)
   })),
-  ["Reclamos de alto costo", "Reclamos por medicamentos", "% de alto costo"]
+  ["Afiliados", "Alto costo", "Alto costo por 10.000", "Todos los medicamentos", "Medicamentos por 10.000"]
 )
 ```
 
-<p class="nota-fuente">Fuente: Superintendencia Nacional de Salud, base de reclamos en salud. Solo EPS
-de los regímenes contributivo y subsidiado. Las cifras son absolutas: las EPS con más afiliados tienden
-a acumular más reclamos.</p>
+<p class="nota-fuente">Fuente: Superintendencia Nacional de Salud, reclamos en salud de 2025; afiliados:
+ADRES, Base de Datos Única de Afiliados (BDUA), regímenes contributivo y subsidiado, corte de octubre de
+2026. Se agrupan los códigos de cada EPS (régimen y movilidad). Solo EPS con al menos 200.000 afiliados.
+La tasa usa los afiliados actuales; las EPS que cambiaron de tamaño en el periodo pueden quedar sobre o
+subestimadas.</p>
 
 ## Desabastecimiento de medicamentos
 
@@ -223,21 +232,97 @@ P.plot({
 ```
 
 **Medicamentos de alto costo con problemas de abastecimiento** (desabastecidos, en riesgo o en
-monitorización):
+monitorización), con su precio de compra institucional por unidad (mediana y, debajo, rango entre
+presentaciones):
 
 ```{ojs}
 //| echo: false
+//| column: page
+pesos = x => x == null ? "Sin dato" : "$" + x.toLocaleString("es-CO", {maximumFractionDigits: 0})
+
 tabla(
   desabastecimiento
     .filter(d => d.alto_costo === "TRUE" && d.estado !== "No desabastecido")
-    .sort((a, b) => ordenEstados.indexOf(a.estado) - ordenEstados.indexOf(b.estado))
-    .map(d => ({Medicamento: d.medicamento, Grupo: d.grupo_alto_costo, Estado: d.estado, Causa: d.causa}))
+    .sort((a, b) => ordenEstados.indexOf(a.estado) - ordenEstados.indexOf(b.estado) || (+b.precio_mediana || 0) - (+a.precio_mediana || 0))
+    .map(d => ({
+      Medicamento: d.medicamento,
+      Grupo: d.grupo_alto_costo,
+      Estado: d.estado,
+      Causa: d.causa,
+      "Precio por unidad": d.precio_mediana === ""
+        ? "Sin dato"
+        : html`${pesos(+d.precio_mediana)} por ${d.unidad.toLowerCase()}<br><small class="text-muted">${pesos(+d.precio_min)} – ${pesos(+d.precio_max)}</small>`,
+      "Regulado": d.precio_regulado === "TRUE" ? "Sí" : "No"
+    })),
+  ["Precio por unidad"]
 )
 ```
 
 <p class="nota-fuente">Fuente: Invima, listado de abastecimiento y desabastecimiento de medicamentos de
 agosto de 2026, en la versión tabulada de la Secretaría Distrital de Salud de Bogotá (datos abiertos),
-que agrega grupo terapéutico y prioridad en salud.</p>
+que agrega grupo terapéutico y prioridad en salud. Precios: Minsalud, Termómetro de Precios de
+Medicamentos 2024 (canal institucional, construido a partir del SISMED), por unidad de dispensación; el
+cruce es por principio activo y forma farmacéutica, así que el precio corresponde a las presentaciones
+de ese principio activo, no necesariamente a la concentración exacta del listado. "Precio regulado"
+indica si el principio activo tiene precio máximo de venta fijado por la CNPMDM.</p>
+
+## Cuello de botella por enfermedad
+
+Para las enfermedades de alto costo con más reclamos se identificó el medicamento que es mayor cuello
+de botella entre sus tratamientos de referencia. Los reclamos de la Supersalud registran la
+enfermedad, no el medicamento, por lo que el cuello de botella se define con datos de disponibilidad y
+precio: primero un problema de abastecimiento (desabastecido, en riesgo, importación como vital no
+disponible o en monitorización) y, si ninguno lo tiene, el de mayor precio por unidad.
+
+```{ojs}
+//| echo: false
+resumenEnf = leer(FileAttachment("data/processed/med_enfermedad_resumen.csv"), ["reclamos", "pct_negacion", "vitales_desde_2023", "precio_mediana"])
+medsEnf = leer(FileAttachment("data/processed/med_enfermedad_medicamentos.csv"), ["vitales_desde_2023", "precio_mediana", "precio_min", "precio_max"])
+
+tabla(
+  resumenEnf.map(d => ({
+    "Enfermedad": d.enfermedad,
+    "Reclamos (jul 2023 a dic 2025)": fmt(d.reclamos),
+    "% por negación": pct(d.pct_negacion),
+    "Cuello de botella": html`<strong>${d.medicamento}</strong><br><small class="text-muted">${d.tipo}</small>`,
+    "Motivo": d.motivo_cuello
+  })),
+  ["Reclamos (jul 2023 a dic 2025)", "% por negación"]
+)
+```
+
+```{ojs}
+//| echo: false
+viewof enfermedadSel = Inputs.select(resumenEnf.map(d => d.enfermedad), {label: "Enfermedad", width: 320})
+```
+
+```{ojs}
+//| echo: false
+//| column: page
+pesosEnf = x => x == null ? "Sin dato" : "$" + x.toLocaleString("es-CO", {maximumFractionDigits: 0})
+
+tabla(
+  medsEnf.filter(d => d.enfermedad === enfermedadSel).map(d => ({
+    "Medicamento": d.cuello_botella === "TRUE" ? html`<strong>${d.medicamento}</strong> ⚠` : d.medicamento,
+    "Tipo": d.tipo,
+    "Abastecimiento": d.estado,
+    "Importaciones": fmt(d.vitales_desde_2023),
+    "Precio por unidad": d.precio_mediana == null ? "Sin dato" : `${pesosEnf(d.precio_mediana)} por ${d.unidad.toLowerCase()}`,
+    "Regulado": d.precio_regulado === "TRUE" ? "Sí" : "No"
+  })),
+  ["Importaciones", "Precio por unidad"]
+)
+```
+
+<p class="nota-fuente">Lista de medicamentos de referencia: tratamientos estándar de cada enfermedad
+(<code>data/referencia/medicamentos_alto_costo_enfermedad.csv</code>), pendiente de validación clínica.
+Fuentes: Supersalud (reclamos por medicamentos según la patología del afectado); Invima (listado de
+desabastecimiento de agosto de 2026 y autorizaciones de medicamentos vitales no disponibles); Minsalud,
+Termómetro de Precios 2024 (canal institucional); CNPMDM (precio regulado). Los precios por unidad no
+son comparables entre formas farmacéuticas (vial frente a tableta) ni equivalen al costo del
+tratamiento. "Abastecimiento": estado en el listado del Invima de agosto de 2026 ("Sin reporte" si el
+medicamento no está en seguimiento). "Importaciones": autorizaciones como vital no disponible de 2023 a
+septiembre de 2026. ⚠ marca el cuello de botella.</p>
 
 ## Medicamentos vitales no disponibles
 

@@ -400,6 +400,27 @@ P.plot({
 departamento del afectado); Minsalud, Observatorio Nacional de Calidad en Salud; población: DANE. Los
 departamentos con pocos reclamos pueden reflejar menor uso del canal de quejas y no menos barreras.</p>
 
+### Reclamos por citas según EPS
+
+```{ojs}
+//| echo: false
+reclamosEps = FileAttachment("data/processed/citas_reclamos_eps.csv").csv()
+  .then(filas => filas.map(d => ({...d, afiliados: +d.afiliados, negacion: +d.negacion, demora: +d.demora, total: +d.total, total_10k: +d.total_10k, negacion_10k: +d.negacion_10k, pct_negacion: +d.pct_negacion})))
+
+numCO = x => Math.round(x).toLocaleString("es-CO")
+dec1CO = x => x.toLocaleString("es-CO", {minimumFractionDigits: 1, maximumFractionDigits: 1})
+
+html`<p>Reclamos por negación o demora de citas con especialista en 2025, en total y por cada 10.000
+afiliados. Ordenadas por la tasa total.</p>
+<table class="table table-sm tabla-datos">
+<thead><tr><th>EPS</th><th class="num">Afiliados</th><th class="num">Reclamos</th><th class="num">Por 10.000 afiliados</th><th class="num">Negaciones por 10.000</th><th class="num">% por negación</th></tr></thead>
+<tbody>${reclamosEps.filter(d => d.afiliados >= 200000).map(d => html`<tr><td>${d.eps}</td><td class="num">${numCO(d.afiliados)}</td><td class="num">${numCO(d.total)}</td><td class="num">${dec1CO(d.total_10k)}</td><td class="num">${dec1CO(d.negacion_10k)}</td><td class="num">${Math.round(d.pct_negacion * 100)} %</td></tr>`)}</tbody>
+</table>`
+```
+
+<p class="nota-fuente">Fuente: Superintendencia Nacional de Salud, reclamos en salud de 2025; afiliados:
+ADRES, BDUA, corte de octubre de 2026. Solo EPS con al menos 200.000 afiliados.</p>
+
 ## Espera nacional por especialidad
 
 ![](figures/espera_nacional_linea.svg)

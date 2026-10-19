@@ -10,6 +10,7 @@
 
 source(here::here("R", "setup.R"))
 source(here("R", "clasificacion_medicamentos.R"))
+source(here("R", "afiliados.R"))
 
 # Reclamos por medicamentos ------------------------------------------------------
 
@@ -56,28 +57,27 @@ alto |>
   slice_max(n, n = 20, by = corte) |>
   write_csv(here("data", "processed", "med_alto_costo_patologia.csv"))
 
-# EPS: reclamos de alto costo y su peso dentro de los reclamos por medicamentos
-# de cada EPS. Solo EPS (no entes territoriales ni regímenes especiales).
+# EPS: reclamos por medicamentos y de alto costo en 2025, totales y por 10.000
+# afiliados (BDUA de la ADRES, último corte). Solo EPS de los regímenes
+# contributivo y subsidiado con al menos 50.000 afiliados.
 reclamos |>
-  filter(str_detect(coalesce(tipo_entidad, ""), "RÉGIMEN (CONTRIBUTIVO|SUBSIDIADO)")) |>
-  # Una EPS puede tener un código por régimen (p. ej. EPS037 y EPSS37 para la
-  # Nueva EPS): se agrupa por nombre.
+  filter(anio == "2025", str_detect(coalesce(tipo_entidad, ""), "RÉGIMEN (CONTRIBUTIVO|SUBSIDIADO)")) |>
   mutate(eps = str_squish(toupper(eps))) |>
   summarise(
     alto_costo = sum(n[alto_costo]),
     medicamentos = sum(n),
-    .by = c(corte, eps)
+    .by = c(eps_codigo, eps)
   ) |>
-  mutate(participacion_alto_costo = alto_costo / medicamentos) |>
-  arrange(corte, desc(alto_costo)) |>
+  reclamos_por_afiliados(c("alto_costo", "medicamentos")) |>
+  arrange(desc(alto_costo_10k)) |>
   write_csv(here("data", "processed", "med_alto_costo_eps.csv"))
 
 # Desabastecimiento (Invima, listado de agosto de 2026) ---------------------------
 # Tomado del conjunto de datos de la Secretaría Distrital de Salud de Bogotá,
 # que transcribe el listado del Invima y agrega grupo terapéutico y prioridad.
 
-read_delim(here("data", "raw", "invima", "desabastecimiento_saludata.csv"),
-           delim = ";", show_col_types = FALSE) |>
+desabastecimiento <- read_delim(here("data", "raw", "invima", "desabastecimiento_saludata.csv"),
+                                delim = ";", show_col_types = FALSE) |>
   janitor::clean_names() |>
   transmute(
     medicamento = str_squish(nombre_del_farmaco),
@@ -92,7 +92,25 @@ read_delim(here("data", "raw", "invima", "desabastecimiento_saludata.csv"),
     grupo_terapeutico = str_to_sentence(str_squish(indicaciony_o_tratamiento)),
     grupo_alto_costo = grupo_medicamento(medicamento, prioridad_en_salud, indicaciony_o_tratamiento),
     alto_costo = !is.na(grupo_alto_costo)
-  ) |>
+  )
+
+# Precio de compra institucional (lo que pagan IPS y EPS): Termómetro de Precios
+# del Minsalud, 2024, construido a partir del SISMED. El SISMED de datos abiertos
+# solo llega a 2019. El precio es por unidad de dispensación (tableta, vial...).
+termometro <- read_csv(here("data", "raw", "minsalud", "termometro_precios_2024.csv"), show_col_types = FALSE)
+precios <- precio_institucional(unique(desabastecimiento$medicamento), termometro)
+
+# Precio máximo regulado por la CNPMDM: si el principio activo está en algún
+# mercado relevante con precio máximo de venta.
+regulados <- read_csv(here("data", "raw", "cnpmdm", "precio_maximo_venta.csv"), show_col_types = FALSE) |>
+  pull(mercado_relevante) |>
+  str_remove(" - .*$") |>
+  normalizar_texto() |>
+  unique()
+
+desabastecimiento |>
+  left_join(precios, by = c("medicamento" = "nombre")) |>
+  mutate(precio_regulado = !is.na(principio_activo) & normalizar_texto(principio_activo) %in% regulados) |>
   write_csv(here("data", "processed", "med_desabastecimiento.csv"), na = "")
 
 # Medicamentos vitales no disponibles (Invima) ---------------------------------------
