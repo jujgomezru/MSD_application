@@ -110,7 +110,10 @@ regulados <- read_csv(here("data", "raw", "cnpmdm", "precio_maximo_venta.csv"), 
 
 desabastecimiento |>
   left_join(precios, by = c("medicamento" = "nombre")) |>
-  mutate(precio_regulado = !is.na(principio_activo) & normalizar_texto(principio_activo) %in% regulados) |>
+  mutate(
+    precio_regulado = !is.na(principio_activo) & normalizar_texto(principio_activo) %in% regulados,
+    caro = !is.na(precio_mediana) & precio_mediana >= umbral_caro
+  ) |>
   write_csv(here("data", "processed", "med_desabastecimiento.csv"), na = "")
 
 # Medicamentos vitales no disponibles (Invima) ---------------------------------------

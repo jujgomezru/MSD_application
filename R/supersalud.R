@@ -130,3 +130,32 @@ supersalud_descargar <- function(carpeta = here::here("data", "raw", "supersalud
     file.rename(temporal, destino)
   }
 }
+
+# Catálogo de información financiera de las EPS (formato FT001) en el portal de
+# datos abiertos de la Supersalud: cortes de junio y diciembre. El de diciembre
+# de 2023 viene en formato Excel antiguo (.xls).
+supersalud_financiera <- tibble::tribble(
+  ~archivo,            ~id,
+  "eps_2021_12.xlsx",  "bad69a1516e7463ab03db489e4a3626e",
+  "eps_2022_12.xlsx",  "e7ed3d68a99443809eb8ba5e80c99cf0",
+  "eps_2023_06.xlsx",  "4f02a1c38dfc420c87ce4e47d3c3e0b2",
+  "eps_2023_12.xls",   "d4fd8b5f108c498cae416285b19edcd7",
+  "eps_2024_06.xlsx",  "790b0f9af867459cb764efc3a8937a90",
+  "eps_2024_12.xlsx",  "f418981f965544a5a11beb7bbb4d6a26",
+  "eps_2025_06.xlsx",  "2e0d794b486742a380113544c30aa259",
+  "eps_2025_12.xlsx",  "760d95890d79460da9715b83b9d27933",
+  "eps_2026_06.xlsx",  "0ea48cd7cef64d75acbaedbdc8539785"
+)
+
+supersalud_descargar_financiera <- function(carpeta = here::here("data", "raw", "supersalud_financiera")) {
+  dir.create(carpeta, recursive = TRUE, showWarnings = FALSE)
+  for (i in seq_len(nrow(supersalud_financiera))) {
+    destino <- file.path(carpeta, supersalud_financiera$archivo[i])
+    if (file.exists(destino)) next
+    httr2::request("https://mapas.supersalud.gov.co/arcgisportal/sharing/rest/content/items") |>
+      httr2::req_url_path_append(supersalud_financiera$id[i], "data") |>
+      httr2::req_timeout(600) |>
+      httr2::req_retry(max_tries = 3) |>
+      httr2::req_perform(path = destino)
+  }
+}

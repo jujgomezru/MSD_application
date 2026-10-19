@@ -10,6 +10,7 @@ project:
     - data/processed/mapa_especialistas_departamentos.csv
     - data/processed/citas_per_capita_departamentos.csv
     - data/processed/med_*.csv
+    - data/processed/medh_*.csv
     - data/processed/citas_reclamos_*.csv
     - data/processed/neg_*.csv
     - data/processed/eps_*.csv

@@ -1,0 +1,26 @@
+dimension,valor,reclamos,negacion_entrega,pct_negacion_entrega
+Edad,De 13 a 17 años,1713,768,0.44833625218914186
+Edad,De 25 a 29 años,3425,1849,0.5398540145985401
+Edad,De 18 a 24 años,2824,1381,0.4890226628895184
+Edad,De 38 a 49 años,15020,8084,0.5382157123834886
+Edad,De 50 a 62 años,25886,14579,0.5632001854284169
+Edad,De 6 a 12 años,2064,926,0.4486434108527132
+Edad,De 0 a 5 años,1034,451,0.43617021276595747
+Edad,Mayor de 63 años,46508,27017,0.5809108110432614
+Edad,De 30 a 37 años,7809,4063,0.5202970930977078
+Sexo,Hombre,48197,26973,0.5596406415337054
+Sexo,Mujer,58086,32145,0.5534035740109493
+Nivel educativo,Secundaria incompleta,3148,2043,0.6489834815756036
+Nivel educativo,Universitario incompleto,3102,1887,0.6083172147001934
+Nivel educativo,Secundaria,12298,7967,0.6478289152707757
+Nivel educativo,Ninguno,4499,2391,0.5314514336519226
+Nivel educativo,Posgrado,615,375,0.6097560975609756
+Nivel educativo,Primaria,9906,6723,0.678679588128407
+Nivel educativo,Primaria incompleta,4206,2819,0.6702330004755112
+Nivel educativo,Universitario,4909,3000,0.6111224281931147
+Grupo étnico,Afrocolombiano o afrodescendiente,3007,1741,0.5789823744595943
+Grupo étnico,Indígena,1147,636,0.5544899738448126
+Grupo étnico,Mulato,1182,635,0.5372250423011844
+Población especial,Persona con discapacidad,9390,5240,0.5580404685835996
+Población especial,Desplazado,4219,2613,0.6193410760843802
+Población especial,Víctima del conflicto armado,995,597,0.6

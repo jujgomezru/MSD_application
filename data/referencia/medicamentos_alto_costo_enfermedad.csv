@@ -1,0 +1,54 @@
+enfermedad,medicamento,tipo
+Artritis reumatoide,Adalimumab,Biológico anti-TNF
+Artritis reumatoide,Etanercept,Biológico anti-TNF
+Artritis reumatoide,Tocilizumab,Biológico anti-IL-6
+Artritis reumatoide,Abatacept,Biológico
+Artritis reumatoide,Rituximab,Biológico anti-CD20
+Artritis reumatoide,Tofacitinib,Inhibidor de JAK
+Artritis reumatoide,Upadacitinib,Inhibidor de JAK
+Enfermedad renal y trasplante,Eritropoyetina (epoetina alfa),Agente estimulante de eritropoyesis
+Enfermedad renal y trasplante,Darbepoetina alfa,Agente estimulante de eritropoyesis
+Enfermedad renal y trasplante,Cinacalcet,Calcimimético
+Enfermedad renal y trasplante,Tacrolimus,Inmunosupresor (trasplante)
+Enfermedad renal y trasplante,Micofenolato,Inmunosupresor (trasplante)
+Enfermedad renal y trasplante,Everolimus,Inmunosupresor (trasplante)
+Enfermedad renal y trasplante,Basiliximab,Inducción (trasplante)
+Cáncer de mama,Trastuzumab,Anti-HER2
+Cáncer de mama,Pertuzumab,Anti-HER2
+Cáncer de mama,Trastuzumab emtansina,Anti-HER2 conjugado
+Cáncer de mama,Trastuzumab deruxtecán,Anti-HER2 conjugado
+Cáncer de mama,Palbociclib,Inhibidor de CDK4/6
+Cáncer de mama,Ribociclib,Inhibidor de CDK4/6
+Cáncer de mama,Abemaciclib,Inhibidor de CDK4/6
+Cáncer de mama,Fulvestrant,Hormonoterapia
+VIH,Dolutegravir,Antirretroviral (inhibidor de integrasa)
+VIH,Bictegravir + emtricitabina + tenofovir alafenamida,Antirretroviral (inhibidor de integrasa)
+VIH,Raltegravir,Antirretroviral (inhibidor de integrasa)
+VIH,Darunavir,Antirretroviral (inhibidor de proteasa)
+VIH,Tenofovir alafenamida,Antirretroviral
+VIH,Efavirenz,Antirretroviral
+Cáncer de próstata,Enzalutamida,Antiandrógeno de nueva generación
+Cáncer de próstata,Abiraterona,Inhibidor de síntesis de andrógenos
+Cáncer de próstata,Apalutamida,Antiandrógeno de nueva generación
+Cáncer de próstata,Darolutamida,Antiandrógeno de nueva generación
+Cáncer de próstata,Docetaxel,Quimioterapia
+Cáncer de próstata,Leuprolida,Hormonoterapia (agonista GnRH)
+Leucemias,Imatinib,Inhibidor de tirosina quinasa
+Leucemias,Dasatinib,Inhibidor de tirosina quinasa
+Leucemias,Nilotinib,Inhibidor de tirosina quinasa
+Leucemias,Blinatumomab,Biológico biespecífico
+Leucemias,Venetoclax,Inhibidor de BCL-2
+Leucemias,Azacitidina,Hipometilante
+Leucemias,Citarabina,Quimioterapia
+Cáncer de pulmón,Osimertinib,Inhibidor de EGFR
+Cáncer de pulmón,Pembrolizumab,Inmunoterapia (anti-PD-1)
+Cáncer de pulmón,Nivolumab,Inmunoterapia (anti-PD-1)
+Cáncer de pulmón,Atezolizumab,Inmunoterapia (anti-PD-L1)
+Cáncer de pulmón,Pemetrexed,Quimioterapia
+Cáncer de pulmón,Alectinib,Inhibidor de ALK
+Cáncer colorrectal,Bevacizumab,Anti-VEGF
+Cáncer colorrectal,Cetuximab,Anti-EGFR
+Cáncer colorrectal,Panitumumab,Anti-EGFR
+Cáncer colorrectal,Oxaliplatino,Quimioterapia
+Cáncer colorrectal,Capecitabina,Quimioterapia
+Cáncer colorrectal,Regorafenib,Inhibidor multiquinasa

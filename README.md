@@ -23,7 +23,8 @@ forma interactiva.
 │   ├── supersalud.R       # descarga y lectura por bloques de los reclamos en salud
 │   ├── medicamentos.R     # descarga de fuentes del Invima y la CNPMDM
 │   ├── afiliados.R        # afiliados por EPS (BDUA, ADRES) y tasas por 10.000 afiliados
-│   └── clasificacion_medicamentos.R  # criterio de alto costo y categorías de motivo
+│   ├── clasificacion_medicamentos.R  # criterio de alto costo y categorías de motivo
+│   └── eps.R              # nombre canónico de cada EPS y fechas de intervención
 ├── scripts/
 │   ├── 00_instalar_paquetes.R
 │   ├── 02_descargar_moca.R  # tiempos de espera por especialidad y departamento
@@ -37,7 +38,13 @@ forma interactiva.
 │   ├── 10_descargar_medicamentos.R     # Invima (vitales, desabastecimiento) y CNPMDM
 │   ├── 11_preparar_medicamentos.R      # datos de medicamentos.qmd
 │   ├── 12_preparar_reclamos_citas.R    # datos de la sección de reclamos de index.qmd
-│   └── 13_preparar_medicamentos_enfermedad.R  # cuello de botella por enfermedad
+│   ├── 13_preparar_medicamentos_enfermedad.R  # cuello de botella por enfermedad
+│   ├── 14_procesar_negacion_especialistas.R   # perfil de la negación de citas (reclamos)
+│   ├── 15_preparar_negacion_especialistas.R   # datos de la sección de negación
+│   ├── 16_procesar_finanzas_eps.R             # estados financieros de las EPS (Supersalud)
+│   ├── 17_analizar_hipotesis_eps.R            # finanzas frente a negación y estudio de evento
+│   ├── 18_procesar_perfil_medicamentos.R      # perfil de los reclamos por medicamentos
+│   └── 19_preparar_hipotesis_medicamentos.R   # hipótesis sobre el acceso a medicamentos
 ├── data/
 │   ├── fuentes.csv        # catálogo de fuentes
 │   ├── geo/               # límites departamentales (DANE, MGN 2025)
@@ -72,6 +79,14 @@ source("scripts/10_descargar_medicamentos.R")
 source("scripts/11_preparar_medicamentos.R")
 source("scripts/12_preparar_reclamos_citas.R")
 source("scripts/13_preparar_medicamentos_enfermedad.R")
+
+# 5. Hipótesis (el script 16 descarga los estados financieros de las EPS)
+source("scripts/14_procesar_negacion_especialistas.R")
+source("scripts/15_preparar_negacion_especialistas.R")
+source("scripts/16_procesar_finanzas_eps.R")
+source("scripts/17_analizar_hipotesis_eps.R")
+source("scripts/18_procesar_perfil_medicamentos.R")
+source("scripts/19_preparar_hipotesis_medicamentos.R")
 ```
 
 Los reclamos cambiaron de clasificación de motivos el 1 de julio de 2023 (la Supersalud advierte que

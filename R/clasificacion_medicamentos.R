@@ -122,7 +122,19 @@ precio_institucional <- function(nombres, termometro) {
         unidad_de_dispensacion %in% c("Vial", "Ampolla", "Jeringa Prellenada", "Pluma", "Bolsa") ~ "inyectable",
         .default = "otra"
       )
-    )
+    ) |>
+    # Precios atípicos: más de 10 veces la mediana de las demás presentaciones
+    # de su familia (primer componente del principio activo), cuando la familia
+    # tiene al menos tres presentaciones. Detecta errores de registro, como una
+    # bupivacaína con epinefrina a $151.000 por ampolla frente a menos de
+    # $30.000 de las demás bupivacaínas.
+    dplyr::mutate(familia = purrr::map_chr(componentes, \(cs) if (length(cs) == 0) "" else cs[1])) |>
+    dplyr::mutate(
+      mediana_resto = purrr::map_dbl(dplyr::row_number(), \(i) if (dplyr::n() < 3) NA_real_ else stats::median(precio_por_tableta[-i])),
+      .by = familia
+    ) |>
+    dplyr::filter(is.na(mediana_resto) | precio_por_tableta <= 10 * mediana_resto) |>
+    dplyr::select(-mediana_resto)
   # Un principio formado solo por palabras de sal (p. ej. "Bicarbonato de
   # sodio" queda en "bicarbonato", pero "Sulfato" a secas quedaría vacío) se
   # descarta: sin componentes coincidiría con cualquier nombre.
@@ -130,7 +142,8 @@ precio_institucional <- function(nombres, termometro) {
     dplyr::filter(lengths(componentes) > 0)
 
   purrr::map(nombres, \(nombre) {
-    n <- normalizar_texto(nombre)
+    # "Bupivacaína sin epinefrina" no debe cruzarse con "bupivacaína y epinefrina".
+    n <- stringr::str_squish(gsub("\\bsin [a-z]+", "", normalizar_texto(nombre)))
     palabras <- strsplit(n, " ")[[1]]
     # Principios cuyos componentes están todos en el nombre (por los primeros 7
     # caracteres, para tolerar plurales y errores como "zidovudin a" sin
@@ -160,3 +173,8 @@ precio_institucional <- function(nombres, termometro) {
   }) |>
     purrr::list_rbind()
 }
+
+# Medicamento caro: precio institucional de al menos $100.000 por unidad de
+# dispensación (Termómetro de Precios 2024), aproximadamente el 12 % más costoso
+# de las presentaciones. Es independiente de la enfermedad que trata.
+umbral_caro <- 1e5

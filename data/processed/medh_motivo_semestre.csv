@@ -1,0 +1,31 @@
+semestre,motivo,n,participacion
+2023-II,Demora en la autorización,14260,0.13750012052955868
+2023-II,Demora o entrega incompleta,30142,0.2906401565920026
+2023-II,Fallas en la dispensación,134,0.0012920768689313367
+2023-II,Negación de la autorización,4305,0.041510380005592575
+2023-II,Negación de la entrega,54487,0.5253835250556846
+2023-II,Reembolsos,381,0.003673740948230144
+2024-I,Demora en la autorización,16890,0.1271062078099954
+2024-I,Demora o entrega incompleta,34418,0.25901370399078877
+2024-I,Fallas en la dispensación,96,7.224509147282155e-4
+2024-I,Negación de la autorización,3256,0.024503126857865307
+2024-I,Negación de la entrega,77808,0.5855464663872186
+2024-I,Reembolsos,413,0.003108044039403677
+2024-II,Demora en la autorización,19610,0.09606529108615994
+2024-II,Demora o entrega incompleta,68593,0.33602276958046756
+2024-II,Fallas en la dispensación,125,6.123488722983168e-4
+2024-II,Negación de la autorización,3203,0.01569082750377207
+2024-II,Negación de la entrega,112048,0.5488997315462544
+2024-II,Reembolsos,553,0.0027090314110477533
+2025-I,Demora en la autorización,21778,0.07429493499449048
+2025-I,Demora o entrega incompleta,95770,0.3267162239150681
+2025-I,Fallas en la dispensación,81,2.763288518024487e-4
+2025-I,Negación de la autorización,3146,0.010732476145314862
+2025-I,Negación de la entrega,171503,0.5850768774157453
+2025-I,Reembolsos,851,0.0029031586775788132
+2025-II,Demora en la autorización,27348,0.09900051042386901
+2025-II,Demora o entrega incompleta,73325,0.26543851202392116
+2025-II,Fallas en la dispensación,92,3.330425244623354e-4
+2025-II,Negación de la autorización,3233,0.011703548712899244
+2025-II,Negación de la entrega,171333,0.6202301613446229
+2025-II,Reembolsos,910,0.0032942249702252744
