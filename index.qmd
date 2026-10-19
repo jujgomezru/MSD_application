@@ -421,6 +421,297 @@ afiliados. Ordenadas por la tasa total.</p>
 <p class="nota-fuente">Fuente: Superintendencia Nacional de Salud, reclamos en salud de 2025; afiliados:
 ADRES, BDUA, corte de octubre de 2026. Solo EPS con al menos 200.000 afiliados.</p>
 
+## Perfil de la negación de citas con especialistas
+
+Reclamos ante la Supersalud por **negación** de citas con especialista (de julio de 2023 a diciembre
+de 2025). Para comparar grupos se usa la proporción de negación: negaciones sobre el total de reclamos
+por negación o demora de esas citas.
+
+### Negaciones por departamento (2025)
+
+```{ojs}
+//| echo: false
+negDep = FileAttachment("data/processed/neg_departamento.csv").csv()
+  .then(filas => filas.map(d => ({...d, negaciones: +d.negaciones, poblacion: +d.poblacion, por_100k: +d.por_100k, tasa_nacional: +d.tasa_nacional})))
+
+tasaNegNac = negDep[0].tasa_nacional
+negPorCodigo = new Map(negDep.map(d => [d.cod_depto, d]))
+dominioNeg = [Math.min(...negDep.map(d => d.por_100k), tasaNegNac - 0.01), tasaNegNac, Math.max(...negDep.map(d => d.por_100k), tasaNegNac + 0.01)]
+
+md`Tasa nacional: **${Math.round(tasaNegNac).toLocaleString("es-CO")} negaciones por cada 100.000
+habitantes**. En verde, los departamentos por debajo de la tasa nacional; en rojo, los que están por encima.`
+```
+
+```{ojs}
+//| echo: false
+mapaNeg = P.plot({
+  width: 640,
+  projection: {type: "mercator", domain: geo},
+  color: {type: "linear", domain: dominioNeg, range: ["#1b7837", "#f0efec", "#b2182b"], label: "Negaciones por 100.000 habitantes", tickFormat: d => Math.round(d).toLocaleString("es-CO")},
+  marks: [
+    P.geo(geo, P.centroid({
+      fill: f => negPorCodigo.get(f.properties.DPTO_CCDGO)?.por_100k,
+      stroke: "#fcfcfb", strokeWidth: 0.8,
+      title: f => {
+        const d = negPorCodigo.get(f.properties.DPTO_CCDGO);
+        if (!d) return null;
+        return `${d.departamento}\n${Math.round(d.por_100k).toLocaleString("es-CO")} negaciones por 100.000 hab.\n${d.negaciones.toLocaleString("es-CO")} negaciones en 2025`;
+      },
+      tip: true
+    }))
+  ]
+})
+
+html`${mapaNeg.legend("color", {marginLeft: 16, width: 360, tickFormat: d => Math.round(d).toLocaleString("es-CO")})}${mapaNeg}`
+```
+
+<p class="nota-fuente">Fuente: Superintendencia Nacional de Salud, reclamos en salud de 2025 por
+departamento del afectado; población: DANE, proyecciones 2025. Las tasas bajas pueden reflejar menor
+uso del canal de quejas y no menos negaciones.</p>
+
+### Régimen y gravedad
+
+```{ojs}
+//| echo: false
+negRegimen = FileAttachment("data/processed/neg_regimen.csv").csv()
+negRiesgo = FileAttachment("data/processed/neg_riesgo.csv").csv()
+negPriorizados = FileAttachment("data/processed/neg_priorizados_especialidad.csv").csv().then(f => f.map(d => ({...d, negaciones: +d.negaciones})))
+pctNeg = x => Math.round(+x * 100) + " %"
+
+html`<div class="row">
+<div class="col-md-6">
+<table class="table table-sm tabla-datos">
+<thead><tr><th>Régimen</th><th class="num">Negaciones</th><th class="num">% negación</th><th class="num">Por 10.000 afiliados (2025)</th></tr></thead>
+<tbody>${negRegimen.map(d => html`<tr><td>${d.regimen}</td><td class="num">${(+d.negaciones).toLocaleString("es-CO")}</td><td class="num">${pctNeg(d.pct_negacion)}</td><td class="num">${d.por_10k_2025 === "" ? "—" : (+d.por_10k_2025).toLocaleString("es-CO", {maximumFractionDigits: 1})}</td></tr>`)}</tbody>
+</table></div>
+<div class="col-md-6">
+<table class="table table-sm tabla-datos">
+<thead><tr><th>Clasificación de riesgo</th><th class="num">Negaciones</th><th class="num">% negación</th></tr></thead>
+<tbody>${negRiesgo.map(d => html`<tr><td>${d.riesgo}</td><td class="num">${(+d.negaciones).toLocaleString("es-CO")}</td><td class="num">${pctNeg(d.pct_negacion)}</td></tr>`)}</tbody>
+</table></div></div>`
+```
+
+**Especialidades con más negaciones de casos priorizados o de riesgo vital:**
+
+```{ojs}
+//| echo: false
+P.plot({
+  width: 760,
+  marginLeft: 260,
+  marginRight: 60,
+  x: {label: "Negaciones (julio de 2023 a diciembre de 2025)", grid: true, tickFormat: d => d.toLocaleString("es-CO")},
+  y: {label: null},
+  marks: [
+    P.barX(negPriorizados, {x: "negaciones", y: "especialidad", fill: "#2a78d6", sort: {y: "-x"}}),
+    P.text(negPriorizados, {x: "negaciones", y: "especialidad", text: d => d.negaciones.toLocaleString("es-CO"), dx: 4, textAnchor: "start", fill: "#52514e", fontSize: 11})
+  ]
+})
+```
+
+### Enfermedad del afectado
+
+```{ojs}
+//| echo: false
+negEnf = FileAttachment("data/processed/neg_enfermedad.csv").csv()
+  .then(f => f.map(d => ({...d, negaciones: +d.negaciones, pct_negacion: +d.pct_negacion, alto: d.alto_costo === "TRUE"})))
+
+P.plot({
+  width: 760,
+  marginLeft: 230,
+  marginRight: 110,
+  x: {label: "Negaciones (julio de 2023 a diciembre de 2025)", grid: true, tickFormat: d => d.toLocaleString("es-CO")},
+  y: {label: null},
+  color: {domain: ["Alto costo", "Otras"], range: ["#2a78d6", "#c3c2b7"], legend: true},
+  marks: [
+    P.barX(negEnf, {x: "negaciones", y: "grupo", fill: d => d.alto ? "Alto costo" : "Otras", sort: {y: "-x"}}),
+    P.text(negEnf, {x: "negaciones", y: "grupo", text: d => `${d.negaciones.toLocaleString("es-CO")} (${Math.round(d.pct_negacion * 100)} %)`, dx: 4, textAnchor: "start", fill: "#52514e", fontSize: 11})
+  ]
+})
+```
+
+<p class="nota-fuente">Entre paréntesis, la proporción de negación de cada grupo. Se excluyen los
+reclamos sin patología especificada (unos 510.000).</p>
+
+### Población vulnerable y características del afectado
+
+```{ojs}
+//| echo: false
+negPob = FileAttachment("data/processed/neg_poblacion.csv").csv()
+  .then(f => f.map(d => ({...d, negaciones: +d.negaciones, total: +d.total, pct_negacion: +d.pct_negacion, pct_general: +d.pct_general})))
+
+viewof dimNeg = Inputs.radio(["Nivel educativo", "Edad", "Población especial", "Grupo étnico", "Sexo"], {label: "Ver por", value: "Nivel educativo"})
+```
+
+```{ojs}
+//| echo: false
+negPobSel = negPob.filter(d => d.dimension === dimNeg)
+// Promedio ponderado de las categorías mostradas (sin "No aplica").
+promNeg = d3.sum(negPobSel, d => d.negaciones) / d3.sum(negPobSel, d => d.total)
+
+P.plot({
+  width: 760,
+  marginLeft: 260,
+  marginRight: 60,
+  x: {label: "Proporción de negación", domain: [0.3, 0.8], tickFormat: d => Math.round(d * 100) + " %", grid: true},
+  y: {label: null},
+  marks: [
+    P.ruleX([promNeg], {stroke: "#898781", strokeDasharray: "4,3"}),
+    P.text([promNeg], {x: d => d, frameAnchor: "top", dy: -6, text: [`Promedio (${Math.round(promNeg * 100)} %)`], fill: "#52514e", fontSize: 11}),
+    P.ruleY(negPobSel, {x1: 0.3, x2: "pct_negacion", y: "valor", stroke: "#c3c2b7"}),
+    P.dot(negPobSel, {x: "pct_negacion", y: "valor", r: 6, fill: "#2a78d6", sort: {y: "-x"},
+      title: d => `${d.valor}\n${Math.round(d.pct_negacion * 100)} % de negación\n${d.total.toLocaleString("es-CO")} reclamos`, tip: true}),
+    P.text(negPobSel, {x: "pct_negacion", y: "valor", text: d => Math.round(d.pct_negacion * 100) + " %", dx: 12, textAnchor: "start", fill: "#52514e", fontSize: 11})
+  ]
+})
+```
+
+<p class="nota-fuente">Fuente: Superintendencia Nacional de Salud, reclamos en salud de julio de 2023
+a diciembre de 2025. Se excluyen las categorías "No aplica" y las de menos de 300 reclamos. La
+Supersalud advierte que las variables de caracterización del afectado (sexo, edad, educación) pueden
+tener errores de captura.</p>
+
+## Situación de las EPS y negación de citas
+
+¿Niegan más citas las EPS con peor situación financiera? Se cruzan los estados financieros que las
+EPS reportan a la Supersalud con los reclamos por citas con especialista de 2025.
+
+### Finanzas de las EPS frente a reclamos por citas
+
+```{ojs}
+//| echo: false
+epsHip = FileAttachment("data/processed/eps_hipotesis_2025.csv").csv()
+  .then(f => f.map(d => ({...d, afiliados: +d.afiliados, negacion_10k: +d.negacion_10k, demora_10k: +d.demora_10k,
+    siniestralidad: +d.siniestralidad, patrimonio_por_afiliado: +d.patrimonio_por_afiliado, meses_deuda: +d.meses_deuda})))
+  .then(f => f.filter(d => d.afiliados >= 200000))
+
+pesosSigno = d => (d < 0 ? "−$" : "$") + Math.abs(Math.round(d)).toLocaleString("es-CO")
+
+indicadoresFin = new Map([
+  ["Meses de costo adeudados a prestadores", {campo: "meses_deuda", formato: d => d.toLocaleString("es-CO", {maximumFractionDigits: 1}) + " meses", eje: d => d.toLocaleString("es-CO"), soloNiif: true}],
+  ["Siniestralidad (costos en salud / ingresos)", {campo: "siniestralidad", formato: d => Math.round(d * 100) + " %", eje: d => Math.round(d * 100) + " %", soloNiif: false}],
+  ["Patrimonio por afiliado", {campo: "patrimonio_por_afiliado", formato: pesosSigno, eje: d => (d < 0 ? "−" : "") + "$" + Math.abs(d / 1e6).toLocaleString("es-CO") + " M", soloNiif: false}]
+])
+reclamosY = new Map([
+  ["Negaciones por 10.000 afiliados", "negacion_10k"],
+  ["Demoras por 10.000 afiliados", "demora_10k"]
+])
+
+viewof indFin = Inputs.select(indicadoresFin, {label: "Indicador (dic. 2025)", width: 360})
+viewof campoY = Inputs.radio(reclamosY, {label: "Reclamos (2025)", value: "negacion_10k"})
+```
+
+```{ojs}
+//| echo: false
+// Correlación de Spearman: correlación de Pearson entre los rangos.
+rangos = v => { const o = v.map((x, i) => [x, i]).sort((a, b) => a[0] - b[0]); const r = Array(v.length); o.forEach(([x, i], k) => r[i] = k + 1); return r; }
+spearman = (a, b) => { const ra = rangos(a), rb = rangos(b), ma = d3.mean(ra), mb = d3.mean(rb);
+  return d3.sum(ra, (x, i) => (x - ma) * (rb[i] - mb)) / Math.sqrt(d3.sum(ra, x => (x - ma) ** 2) * d3.sum(rb, x => (x - mb) ** 2)); }
+
+datosDisp = epsHip.filter(d => !indFin.soloNiif || d.formato === "niif")
+rho = spearman(datosDisp.map(d => d[indFin.campo]), datosDisp.map(d => d[campoY]))
+
+md`Correlación de rangos (Spearman): **${rho.toLocaleString("es-CO", {maximumFractionDigits: 2})}** con
+${datosDisp.length} EPS. Valores cercanos a 1 indican que las EPS con más ${indFin.campo === "patrimonio_por_afiliado" ? "patrimonio" : "deuda o siniestralidad"}
+tienen más reclamos; cercanos a 0, que no hay relación.${indFin.soloNiif ? " La deuda solo se compara entre EPS que reportan en formato NIIF; en las públicas e indígenas no es equivalente." : ""}`
+```
+
+```{ojs}
+//| echo: false
+P.plot({
+  width: 720,
+  height: 460,
+  grid: true,
+  marginRight: 30,
+  x: {label: [...indicadoresFin].find(([k, v]) => v === indFin)[0] + " →", tickFormat: indFin.eje},
+  y: {label: "↑ " + [...reclamosY].find(([k, v]) => v === campoY)[0], zero: true},
+  r: {range: [4, 24]},
+  marks: [
+    P.dot(datosDisp, {
+      x: indFin.campo, y: campoY, r: "afiliados", fill: "#2a78d6", fillOpacity: 0.7, stroke: "#fcfcfb",
+      title: d => `${d.eps}\n${indFin.formato(d[indFin.campo])}\n${d[campoY].toLocaleString("es-CO", {maximumFractionDigits: 1})} reclamos por 10.000 afiliados\n${d.afiliados.toLocaleString("es-CO")} afiliados`,
+      tip: true
+    }),
+    P.text(datosDisp, {x: indFin.campo, y: campoY, text: "eps", dy: -14, fontSize: 10, fill: "#0b0b0b"})
+  ]
+})
+```
+
+<p class="nota-fuente">Fuente: Supersalud, catálogo de información financiera de las EPS (diciembre de
+2025) y reclamos en salud de 2025; afiliados: ADRES, BDUA. EPS con al menos 200.000 afiliados. La
+Nueva EPS no aparece porque no publica estados financieros desde junio de 2024. Deuda con prestadores:
+cuentas por pagar a prestadores de servicios de salud, reservas técnicas liquidadas pendientes de pago,
+obligaciones conocidas no liquidadas y glosas, expresada en meses de costo en salud. Es una asociación
+entre EPS, no una relación causal.</p>
+
+### Situación financiera de cada EPS (diciembre de 2025)
+
+```{ojs}
+//| echo: false
+html`<table class="table table-sm tabla-datos">
+<thead><tr><th>EPS</th><th class="num">Afiliados</th><th class="num">Siniestra&shy;lidad</th><th class="num">Patrimonio por afiliado</th><th class="num">Meses de deuda con prestadores</th><th class="num">Negaciones por 10.000 afiliados</th></tr></thead>
+<tbody>${[...epsHip].sort((a, b) => b.negacion_10k - a.negacion_10k).map(d => html`<tr>
+<td>${d.eps}</td><td class="num">${d.afiliados.toLocaleString("es-CO")}</td>
+<td class="num">${Math.round(d.siniestralidad * 100)} %</td>
+<td class="num">${pesosSigno(d.patrimonio_por_afiliado)}</td>
+<td class="num">${d.formato === "niif" ? d.meses_deuda.toLocaleString("es-CO", {maximumFractionDigits: 1}) : "—"}</td>
+<td class="num">${d.negacion_10k.toLocaleString("es-CO", {maximumFractionDigits: 1})}</td></tr>`)}</tbody>
+</table>`
+```
+
+<p class="nota-fuente">Siniestralidad mayor a 100 %: la EPS gastó en salud más de lo que recibió.
+Patrimonio negativo: sus deudas superan sus activos. "—": EPS que reportan en formato del sector público,
+cuya deuda no es comparable.</p>
+
+### ¿Cambió la negación después de intervenir las EPS?
+
+```{ojs}
+//| echo: false
+evento = FileAttachment("data/processed/eps_evento_intervencion.csv").csv()
+  .then(f => f.map(d => ({...d, indice: +d.indice, indice_control: +d.indice_control, mes_relativo: +d.mes_relativo})))
+eventoResumen = FileAttachment("data/processed/eps_evento_resumen.csv").csv()
+
+viewof epsEvento = Inputs.select([...new Set(evento.map(d => d.eps))], {label: "EPS intervenida", value: "Nueva EPS"})
+```
+
+```{ojs}
+//| echo: false
+eventoSel = evento.filter(d => d.eps === epsEvento)
+resSel = eventoResumen.find(d => d.eps === epsEvento)
+eventoLargo = eventoSel.flatMap(d => [
+  {mes: d.mes_relativo, indice: d.indice, serie: epsEvento},
+  {mes: d.mes_relativo, indice: d.indice_control, serie: "EPS no intervenidas (control)"}
+])
+
+md`Negaciones mensuales de citas con especialista, como índice respecto al promedio antes de la
+intervención (= 1). En los 12 meses siguientes, ${epsEvento} promedió **${(+resSel.indice_despues).toLocaleString("es-CO", {maximumFractionDigits: 2})}**
+y el grupo de control **${(+resSel.indice_control_despues).toLocaleString("es-CO", {maximumFractionDigits: 2})}**.`
+```
+
+```{ojs}
+//| echo: false
+P.plot({
+  width: 760,
+  height: 360,
+  grid: true,
+  x: {label: "Meses desde la intervención →"},
+  y: {label: "↑ Índice de negaciones (antes = 1)", zero: true},
+  color: {domain: [epsEvento, "EPS no intervenidas (control)"], range: ["#2a78d6", "#898781"], legend: true},
+  marks: [
+    P.ruleX([0], {stroke: "#0b0b0b", strokeDasharray: "4,3"}),
+    P.ruleY([1], {stroke: "#c3c2b7"}),
+    P.text([0], {x: d => d, frameAnchor: "top", dx: 6, dy: 4, textAnchor: "start", text: ["Intervención"], fill: "#52514e", fontSize: 11}),
+    P.lineY(eventoLargo, {x: "mes", y: "indice", stroke: "serie", strokeWidth: 2}),
+    P.tip(eventoLargo, P.pointerX({x: "mes", y: "indice", stroke: "serie", title: d => `${d.serie}\nMes ${d.mes}: ${d.indice.toLocaleString("es-CO", {maximumFractionDigits: 2})}`}))
+  ]
+})
+```
+
+<p class="nota-fuente">Fuente: Supersalud, reclamos en salud de julio de 2023 a diciembre de 2025;
+fechas de intervención según las resoluciones de la Supersalud (SOS y Famisanar, solo mes). Control:
+Sura, Salud Total, Compensar, Mutual Ser, Cajacopi, Capital Salud, Comfenalco Valle y Aliansalud, EPS
+no intervenidas en el periodo. Si la línea de la EPS queda por encima de la del control después de la
+intervención, sus negaciones crecieron más que en el resto del sistema.</p>
+
 ## Espera nacional por especialidad
 
 ![](figures/espera_nacional_linea.svg)

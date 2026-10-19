@@ -11,6 +11,8 @@ project:
     - data/processed/citas_per_capita_departamentos.csv
     - data/processed/med_*.csv
     - data/processed/citas_reclamos_*.csv
+    - data/processed/neg_*.csv
+    - data/processed/eps_*.csv
 
 lang: es
 
