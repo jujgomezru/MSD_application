@@ -65,10 +65,20 @@ read_csv(here("data", "processed", "negacion_riesgo_especialidad.csv.gz"),
   slice_max(negaciones, n = 15) |>
   write_csv(here("data", "processed", "neg_priorizados_especialidad.csv"))
 
-# Enfermedad del afectado, agrupada como en medicamentos.
+# Enfermedad del afectado, agrupada como en medicamentos, pero separando las
+# cardiovasculares de las metabólicas (diabetes, obesidad y sobrepeso). La
+# medición de factores de riesgo no es una enfermedad y queda aparte.
 perfil |>
   filter(dimension == "patologia_tipo") |>
-  mutate(valor = grupo_patologia(valor)) |>
+  mutate(
+    grupo = grupo_patologia(valor),
+    valor = case_when(
+      grupo != "Cardiovasculares y metabólicas" ~ grupo,
+      str_detect(toupper(valor), "FACTORES DE RIESGO") ~ "Medición de factores de riesgo",
+      str_detect(toupper(valor), "^DIABETES|OBESIDAD|SOBREPESO") ~ "Metabólicas",
+      .default = "Cardiovasculares"
+    )
+  ) |>
   proporcion() |>
   filter(valor != "Sin patología especificada") |>
   transmute(grupo = valor, alto_costo = grupo %in% grupos_alto_costo, negaciones, total, pct_negacion) |>
@@ -90,3 +100,30 @@ perfil |>
   ) |>
   arrange(dimension, desc(pct_negacion)) |>
   write_csv(here("data", "processed", "neg_poblacion.csv"))
+
+# Pacientes crónicos (Cuenta de Alto Costo): reclamos de julio de 2024 a junio
+# de 2025 por cada 10.000 pacientes de cada enfermedad. Los cortes de la CAC van
+# de julio de 2024 a enero de 2026 según la enfermedad (ver
+# data/referencia/cac_pacientes.csv). Como referencia, los reclamos con alguna patología
+# especificada por cada 10.000 afiliados (BDUA). Cerca del 70 % de los reclamos
+# no especifica patología, así que las tasas son un piso; sirven para comparar
+# enfermedades entre sí.
+cac <- read_csv(here("data", "referencia", "cac_pacientes.csv"), show_col_types = FALSE)
+patologia_cac <- perfil |>
+  filter(dimension == "patologia_tipo", periodo %in% c("2024-2", "2025-1"))
+sin_patologia <- c("OTROS", "PROBLEMAS RELACIONADOS CON FACILIDADES DE ATENCIÓN MÉDICA U OTROS SERVICIOS DE SALUD")
+referencia_cac <- patologia_cac |>
+  filter(!valor %in% sin_patologia, !is.na(valor)) |>
+  summarise(enfermedad = "Afiliados en general",
+            negaciones = sum(n[tipo == "Negación"]), total = sum(n), pacientes = sum(adres_afiliados()$afiliados))
+map(seq_len(nrow(cac)), \(i) {
+  r <- filter(patologia_cac, str_detect(toupper(valor), cac$patron[i]))
+  tibble(enfermedad = cac$enfermedad[i], negaciones = sum(r$n[r$tipo == "Negación"]), total = sum(r$n),
+         pacientes = cac$pacientes[i])
+}) |>
+  list_rbind() |>
+  bind_rows(referencia_cac) |>
+  mutate(por_10k = total / pacientes * 1e4, negaciones_10k = negaciones / pacientes * 1e4,
+         pct_negacion = negaciones / total, referencia = str_starts(enfermedad, "Afiliados")) |>
+  arrange(referencia, desc(por_10k)) |>
+  write_csv(here("data", "processed", "neg_cronicos_cac.csv"))

@@ -40,15 +40,16 @@ forma interactiva.
 │   ├── 12_preparar_reclamos_citas.R    # datos de la sección de reclamos de index.qmd
 │   ├── 13_preparar_medicamentos_enfermedad.R  # cuello de botella por enfermedad
 │   ├── 14_procesar_negacion_especialistas.R   # perfil de la negación de citas (reclamos)
-│   ├── 15_preparar_negacion_especialistas.R   # datos de la sección de negación
+│   ├── 15_preparar_negacion_especialistas.R   # datos de la sección de negación y pacientes crónicos
 │   ├── 16_procesar_finanzas_eps.R             # estados financieros de las EPS (Supersalud)
-│   ├── 17_analizar_hipotesis_eps.R            # finanzas frente a negación y estudio de evento
+│   ├── 17_analizar_hipotesis_eps.R            # finanzas frente a negación, panel semestral y estudio de evento
 │   ├── 18_procesar_perfil_medicamentos.R      # perfil de los reclamos por medicamentos
-│   └── 19_preparar_hipotesis_medicamentos.R   # hipótesis sobre el acceso a medicamentos
+│   ├── 19_preparar_hipotesis_medicamentos.R   # hipótesis sobre el acceso a medicamentos
+│   └── 20_procesar_desabastecimiento_historico.R  # listados mensuales del Invima (PDF)
 ├── data/
 │   ├── fuentes.csv        # catálogo de fuentes
 │   ├── geo/               # límites departamentales (DANE, MGN 2025)
-│   ├── referencia/        # listas curadas (medicamentos de alto costo por enfermedad)
+│   ├── referencia/        # listas curadas (medicamentos de alto costo, pacientes de la CAC)
 │   ├── raw/               # datos crudos (no se versionan)
 │   └── processed/         # datos limpios
 └── figures/               # gráficas exportadas (SVG y PNG)
@@ -86,6 +87,7 @@ source("scripts/15_preparar_negacion_especialistas.R")
 source("scripts/16_procesar_finanzas_eps.R")
 source("scripts/17_analizar_hipotesis_eps.R")
 source("scripts/18_procesar_perfil_medicamentos.R")
+source("scripts/20_procesar_desabastecimiento_historico.R")
 source("scripts/19_preparar_hipotesis_medicamentos.R")
 ```
 

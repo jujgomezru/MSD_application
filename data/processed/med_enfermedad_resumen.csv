@@ -1,9 +1,9 @@
 enfermedad,medicamento,tipo,motivo_cuello,estado,vitales_desde_2023,unidad,precio_mediana,reclamos,pct_negacion
 Enfermedad renal y trasplante,Eritropoyetina (epoetina alfa),Agente estimulante de eritropoyesis,En riesgo de desabastecimiento (Invima),En riesgo de desabastecimiento,0,Vial,6460.1323215,17945,0.6298133184731123
-Artritis reumatoide,Rituximab,Biológico anti-CD20,Mayor precio por unidad entre los de la enfermedad,Sin reporte,0,Vial,1161611.5085,16275,0.570199692780338
-Cáncer de mama,Trastuzumab deruxtecán,Anti-HER2 conjugado,37 importaciones como vital no disponible desde 2023,Sin reporte,37,,,10992,0.5956149927219796
-VIH,Darunavir,Antirretroviral (inhibidor de proteasa),En monitorización por riesgo de abastecimiento (Invima),En monitorización,0,Tableta,3457.351399,10131,0.6030993978876715
-Cáncer de próstata,Leuprolida,Hormonoterapia (agonista GnRH),Mayor precio por unidad entre los de la enfermedad,Sin reporte,0,Vial,783272.7273,9315,0.5907675791733763
-Leucemias,Citarabina,Quimioterapia,29 importaciones como vital no disponible desde 2023,En monitorización,29,Frasco,27206.88552,4215,0.5316725978647687
-Cáncer colorrectal,Panitumumab,Anti-EGFR,Mayor precio por unidad entre los de la enfermedad,Sin reporte,0,Vial,1358843.919,2244,0.5762032085561497
+Artritis reumatoide,Metotrexato,FAME convencional,Desabastecido (Invima),Desabastecido,81,Jeringa Prellenada,33280,16275,0.570199692780338
+Cáncer de mama,Tamoxifeno,Hormonoterapia (modulador del receptor de estrógeno),Desabastecido (Invima),Desabastecido,0,Tableta,906.6305829,10992,0.5956149927219796
+VIH,Lamivudina,Antirretroviral (inhibidor de la transcriptasa inversa),Desabastecido (Invima),Desabastecido,0,Tableta,828.0529801,10131,0.6030993978876715
+Cáncer de próstata,Bicalutamida,Antiandrógeno,En monitorización por riesgo de abastecimiento (Invima),En monitorización,0,Tableta,2162.17086,9315,0.5907675791733763
+Leucemias,Metotrexato,Quimioterapia,Desabastecido (Invima),Desabastecido,81,Jeringa Prellenada,33280,4215,0.5316725978647687
+Cáncer colorrectal,Fluorouracilo,Quimioterapia,En monitorización por riesgo de abastecimiento (Invima),En monitorización,0,Vial,5292.544199,2244,0.5762032085561497
 Cáncer de pulmón,Pemetrexed,Quimioterapia,En monitorización por riesgo de abastecimiento (Invima),En monitorización,0,Vial,275287.0865,2058,0.5626822157434402

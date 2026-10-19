@@ -1,0 +1,892 @@
+enfermedad,medicamento,tipo,fecha,estado,problemas
+Artritis reumatoide,Leflunomida,FAME convencional,2023-06-01,Sin reporte,0
+Artritis reumatoide,Leflunomida,FAME convencional,2023-07-01,Sin reporte,0
+Artritis reumatoide,Leflunomida,FAME convencional,2023-10-01,Sin reporte,0
+Artritis reumatoide,Leflunomida,FAME convencional,2023-11-01,Sin reporte,0
+Artritis reumatoide,Leflunomida,FAME convencional,2023-12-01,Sin reporte,0
+Artritis reumatoide,Leflunomida,FAME convencional,2024-01-01,Sin reporte,0
+Artritis reumatoide,Leflunomida,FAME convencional,2024-02-01,Sin reporte,0
+Artritis reumatoide,Leflunomida,FAME convencional,2024-03-01,Sin reporte,0
+Artritis reumatoide,Leflunomida,FAME convencional,2024-04-01,Sin reporte,0
+Artritis reumatoide,Leflunomida,FAME convencional,2024-05-01,Sin reporte,0
+Artritis reumatoide,Leflunomida,FAME convencional,2024-06-01,Sin reporte,0
+Artritis reumatoide,Leflunomida,FAME convencional,2024-07-01,Sin reporte,0
+Artritis reumatoide,Leflunomida,FAME convencional,2024-08-01,Sin reporte,0
+Artritis reumatoide,Leflunomida,FAME convencional,2024-09-01,Sin reporte,0
+Artritis reumatoide,Leflunomida,FAME convencional,2024-10-01,Sin reporte,0
+Artritis reumatoide,Leflunomida,FAME convencional,2024-11-01,Sin reporte,0
+Artritis reumatoide,Leflunomida,FAME convencional,2024-12-01,Sin reporte,0
+Artritis reumatoide,Leflunomida,FAME convencional,2025-01-01,Sin reporte,0
+Artritis reumatoide,Leflunomida,FAME convencional,2025-02-01,Sin reporte,0
+Artritis reumatoide,Leflunomida,FAME convencional,2025-03-01,Sin reporte,0
+Artritis reumatoide,Leflunomida,FAME convencional,2025-04-01,Sin reporte,0
+Artritis reumatoide,Leflunomida,FAME convencional,2025-05-01,En monitorización,0
+Artritis reumatoide,Leflunomida,FAME convencional,2025-06-01,En monitorización,0
+Artritis reumatoide,Leflunomida,FAME convencional,2025-07-01,En monitorización,0
+Artritis reumatoide,Leflunomida,FAME convencional,2025-08-01,En monitorización,0
+Artritis reumatoide,Leflunomida,FAME convencional,2025-09-01,En monitorización,0
+Artritis reumatoide,Leflunomida,FAME convencional,2026-01-01,En monitorización,0
+Artritis reumatoide,Metotrexato,FAME convencional,2023-06-01,Desabastecido,2
+Artritis reumatoide,Metotrexato,FAME convencional,2023-07-01,Sin reporte,2
+Artritis reumatoide,Metotrexato,FAME convencional,2023-10-01,Sin reporte,2
+Artritis reumatoide,Metotrexato,FAME convencional,2023-11-01,Sin reporte,2
+Artritis reumatoide,Metotrexato,FAME convencional,2023-12-01,Sin reporte,2
+Artritis reumatoide,Metotrexato,FAME convencional,2024-01-01,Sin reporte,2
+Artritis reumatoide,Metotrexato,FAME convencional,2024-02-01,Sin reporte,2
+Artritis reumatoide,Metotrexato,FAME convencional,2024-03-01,Sin reporte,2
+Artritis reumatoide,Metotrexato,FAME convencional,2024-04-01,Sin reporte,2
+Artritis reumatoide,Metotrexato,FAME convencional,2024-05-01,Sin reporte,2
+Artritis reumatoide,Metotrexato,FAME convencional,2024-06-01,Sin reporte,2
+Artritis reumatoide,Metotrexato,FAME convencional,2024-07-01,En riesgo de desabastecimiento,2
+Artritis reumatoide,Metotrexato,FAME convencional,2024-08-01,Sin reporte,2
+Artritis reumatoide,Metotrexato,FAME convencional,2024-09-01,Sin reporte,2
+Artritis reumatoide,Metotrexato,FAME convencional,2024-10-01,Sin reporte,2
+Artritis reumatoide,Metotrexato,FAME convencional,2024-11-01,Sin reporte,2
+Artritis reumatoide,Metotrexato,FAME convencional,2024-12-01,Sin reporte,2
+Artritis reumatoide,Metotrexato,FAME convencional,2025-01-01,Sin reporte,2
+Artritis reumatoide,Metotrexato,FAME convencional,2025-02-01,Sin reporte,2
+Artritis reumatoide,Metotrexato,FAME convencional,2025-03-01,Sin reporte,2
+Artritis reumatoide,Metotrexato,FAME convencional,2025-04-01,Sin reporte,2
+Artritis reumatoide,Metotrexato,FAME convencional,2025-05-01,Sin reporte,2
+Artritis reumatoide,Metotrexato,FAME convencional,2025-06-01,Sin reporte,2
+Artritis reumatoide,Metotrexato,FAME convencional,2025-07-01,Sin reporte,2
+Artritis reumatoide,Metotrexato,FAME convencional,2025-08-01,En monitorización,2
+Artritis reumatoide,Metotrexato,FAME convencional,2025-09-01,En monitorización,2
+Artritis reumatoide,Metotrexato,FAME convencional,2026-01-01,En monitorización,2
+Cáncer colorrectal,Capecitabina,Quimioterapia,2023-06-01,Sin reporte,0
+Cáncer colorrectal,Capecitabina,Quimioterapia,2023-07-01,Sin reporte,0
+Cáncer colorrectal,Capecitabina,Quimioterapia,2023-10-01,Sin reporte,0
+Cáncer colorrectal,Capecitabina,Quimioterapia,2023-11-01,Sin reporte,0
+Cáncer colorrectal,Capecitabina,Quimioterapia,2023-12-01,Sin reporte,0
+Cáncer colorrectal,Capecitabina,Quimioterapia,2024-01-01,Sin reporte,0
+Cáncer colorrectal,Capecitabina,Quimioterapia,2024-02-01,Sin reporte,0
+Cáncer colorrectal,Capecitabina,Quimioterapia,2024-03-01,Sin reporte,0
+Cáncer colorrectal,Capecitabina,Quimioterapia,2024-04-01,Sin reporte,0
+Cáncer colorrectal,Capecitabina,Quimioterapia,2024-05-01,Sin reporte,0
+Cáncer colorrectal,Capecitabina,Quimioterapia,2024-06-01,Sin reporte,0
+Cáncer colorrectal,Capecitabina,Quimioterapia,2024-07-01,Sin reporte,0
+Cáncer colorrectal,Capecitabina,Quimioterapia,2024-08-01,Sin reporte,0
+Cáncer colorrectal,Capecitabina,Quimioterapia,2024-09-01,Sin reporte,0
+Cáncer colorrectal,Capecitabina,Quimioterapia,2024-10-01,Sin reporte,0
+Cáncer colorrectal,Capecitabina,Quimioterapia,2024-11-01,Sin reporte,0
+Cáncer colorrectal,Capecitabina,Quimioterapia,2024-12-01,Sin reporte,0
+Cáncer colorrectal,Capecitabina,Quimioterapia,2025-01-01,Sin reporte,0
+Cáncer colorrectal,Capecitabina,Quimioterapia,2025-02-01,Sin reporte,0
+Cáncer colorrectal,Capecitabina,Quimioterapia,2025-03-01,No desabastecido,0
+Cáncer colorrectal,Capecitabina,Quimioterapia,2025-04-01,No desabastecido,0
+Cáncer colorrectal,Capecitabina,Quimioterapia,2025-05-01,No desabastecido,0
+Cáncer colorrectal,Capecitabina,Quimioterapia,2025-06-01,No desabastecido,0
+Cáncer colorrectal,Capecitabina,Quimioterapia,2025-07-01,No desabastecido,0
+Cáncer colorrectal,Capecitabina,Quimioterapia,2025-08-01,No desabastecido,0
+Cáncer colorrectal,Capecitabina,Quimioterapia,2025-09-01,No desabastecido,0
+Cáncer colorrectal,Capecitabina,Quimioterapia,2026-01-01,Sin reporte,0
+Cáncer colorrectal,Fluorouracilo,Quimioterapia,2023-06-01,En monitorización,0
+Cáncer colorrectal,Fluorouracilo,Quimioterapia,2023-07-01,En monitorización,0
+Cáncer colorrectal,Fluorouracilo,Quimioterapia,2023-10-01,En monitorización,0
+Cáncer colorrectal,Fluorouracilo,Quimioterapia,2023-11-01,En monitorización,0
+Cáncer colorrectal,Fluorouracilo,Quimioterapia,2023-12-01,En monitorización,0
+Cáncer colorrectal,Fluorouracilo,Quimioterapia,2024-01-01,En monitorización,0
+Cáncer colorrectal,Fluorouracilo,Quimioterapia,2024-02-01,En monitorización,0
+Cáncer colorrectal,Fluorouracilo,Quimioterapia,2024-03-01,En monitorización,0
+Cáncer colorrectal,Fluorouracilo,Quimioterapia,2024-04-01,En monitorización,0
+Cáncer colorrectal,Fluorouracilo,Quimioterapia,2024-05-01,En monitorización,0
+Cáncer colorrectal,Fluorouracilo,Quimioterapia,2024-06-01,No desabastecido,0
+Cáncer colorrectal,Fluorouracilo,Quimioterapia,2024-07-01,No desabastecido,0
+Cáncer colorrectal,Fluorouracilo,Quimioterapia,2024-08-01,No desabastecido,0
+Cáncer colorrectal,Fluorouracilo,Quimioterapia,2024-09-01,No desabastecido,0
+Cáncer colorrectal,Fluorouracilo,Quimioterapia,2024-10-01,No desabastecido,0
+Cáncer colorrectal,Fluorouracilo,Quimioterapia,2024-11-01,No desabastecido,0
+Cáncer colorrectal,Fluorouracilo,Quimioterapia,2024-12-01,No desabastecido,0
+Cáncer colorrectal,Fluorouracilo,Quimioterapia,2025-01-01,No desabastecido,0
+Cáncer colorrectal,Fluorouracilo,Quimioterapia,2025-02-01,No desabastecido,0
+Cáncer colorrectal,Fluorouracilo,Quimioterapia,2025-03-01,No desabastecido,0
+Cáncer colorrectal,Fluorouracilo,Quimioterapia,2025-04-01,No desabastecido,0
+Cáncer colorrectal,Fluorouracilo,Quimioterapia,2025-05-01,No desabastecido,0
+Cáncer colorrectal,Fluorouracilo,Quimioterapia,2025-06-01,No desabastecido,0
+Cáncer colorrectal,Fluorouracilo,Quimioterapia,2025-07-01,No desabastecido,0
+Cáncer colorrectal,Fluorouracilo,Quimioterapia,2025-08-01,No desabastecido,0
+Cáncer colorrectal,Fluorouracilo,Quimioterapia,2025-09-01,No desabastecido,0
+Cáncer colorrectal,Fluorouracilo,Quimioterapia,2026-01-01,Sin reporte,0
+Cáncer colorrectal,Folinato (leucovorina),Modulador de quimioterapia,2023-06-01,Sin reporte,0
+Cáncer colorrectal,Folinato (leucovorina),Modulador de quimioterapia,2023-07-01,En monitorización,0
+Cáncer colorrectal,Folinato (leucovorina),Modulador de quimioterapia,2023-10-01,En monitorización,0
+Cáncer colorrectal,Folinato (leucovorina),Modulador de quimioterapia,2023-11-01,En monitorización,0
+Cáncer colorrectal,Folinato (leucovorina),Modulador de quimioterapia,2023-12-01,En monitorización,0
+Cáncer colorrectal,Folinato (leucovorina),Modulador de quimioterapia,2024-01-01,En monitorización,0
+Cáncer colorrectal,Folinato (leucovorina),Modulador de quimioterapia,2024-02-01,En monitorización,0
+Cáncer colorrectal,Folinato (leucovorina),Modulador de quimioterapia,2024-03-01,En monitorización,0
+Cáncer colorrectal,Folinato (leucovorina),Modulador de quimioterapia,2024-04-01,En monitorización,0
+Cáncer colorrectal,Folinato (leucovorina),Modulador de quimioterapia,2024-05-01,En monitorización,0
+Cáncer colorrectal,Folinato (leucovorina),Modulador de quimioterapia,2024-06-01,En monitorización,0
+Cáncer colorrectal,Folinato (leucovorina),Modulador de quimioterapia,2024-07-01,En monitorización,0
+Cáncer colorrectal,Folinato (leucovorina),Modulador de quimioterapia,2024-08-01,En monitorización,0
+Cáncer colorrectal,Folinato (leucovorina),Modulador de quimioterapia,2024-09-01,En monitorización,0
+Cáncer colorrectal,Folinato (leucovorina),Modulador de quimioterapia,2024-10-01,En monitorización,0
+Cáncer colorrectal,Folinato (leucovorina),Modulador de quimioterapia,2024-11-01,En monitorización,0
+Cáncer colorrectal,Folinato (leucovorina),Modulador de quimioterapia,2024-12-01,En monitorización,0
+Cáncer colorrectal,Folinato (leucovorina),Modulador de quimioterapia,2025-01-01,En monitorización,0
+Cáncer colorrectal,Folinato (leucovorina),Modulador de quimioterapia,2025-02-01,No desabastecido,0
+Cáncer colorrectal,Folinato (leucovorina),Modulador de quimioterapia,2025-03-01,No desabastecido,0
+Cáncer colorrectal,Folinato (leucovorina),Modulador de quimioterapia,2025-04-01,En monitorización,0
+Cáncer colorrectal,Folinato (leucovorina),Modulador de quimioterapia,2025-05-01,En monitorización,0
+Cáncer colorrectal,Folinato (leucovorina),Modulador de quimioterapia,2025-06-01,En monitorización,0
+Cáncer colorrectal,Folinato (leucovorina),Modulador de quimioterapia,2025-07-01,En monitorización,0
+Cáncer colorrectal,Folinato (leucovorina),Modulador de quimioterapia,2025-08-01,En monitorización,0
+Cáncer colorrectal,Folinato (leucovorina),Modulador de quimioterapia,2025-09-01,En monitorización,0
+Cáncer colorrectal,Folinato (leucovorina),Modulador de quimioterapia,2026-01-01,En monitorización,0
+Cáncer de mama,Anastrozol,Hormonoterapia (inhibidor de aromatasa),2023-06-01,Sin reporte,0
+Cáncer de mama,Anastrozol,Hormonoterapia (inhibidor de aromatasa),2023-07-01,Sin reporte,0
+Cáncer de mama,Anastrozol,Hormonoterapia (inhibidor de aromatasa),2023-10-01,Sin reporte,0
+Cáncer de mama,Anastrozol,Hormonoterapia (inhibidor de aromatasa),2023-11-01,Sin reporte,0
+Cáncer de mama,Anastrozol,Hormonoterapia (inhibidor de aromatasa),2023-12-01,Sin reporte,0
+Cáncer de mama,Anastrozol,Hormonoterapia (inhibidor de aromatasa),2024-01-01,Sin reporte,0
+Cáncer de mama,Anastrozol,Hormonoterapia (inhibidor de aromatasa),2024-02-01,Sin reporte,0
+Cáncer de mama,Anastrozol,Hormonoterapia (inhibidor de aromatasa),2024-03-01,Sin reporte,0
+Cáncer de mama,Anastrozol,Hormonoterapia (inhibidor de aromatasa),2024-04-01,Sin reporte,0
+Cáncer de mama,Anastrozol,Hormonoterapia (inhibidor de aromatasa),2024-05-01,Sin reporte,0
+Cáncer de mama,Anastrozol,Hormonoterapia (inhibidor de aromatasa),2024-06-01,Sin reporte,0
+Cáncer de mama,Anastrozol,Hormonoterapia (inhibidor de aromatasa),2024-07-01,Sin reporte,0
+Cáncer de mama,Anastrozol,Hormonoterapia (inhibidor de aromatasa),2024-08-01,Sin reporte,0
+Cáncer de mama,Anastrozol,Hormonoterapia (inhibidor de aromatasa),2024-09-01,Sin reporte,0
+Cáncer de mama,Anastrozol,Hormonoterapia (inhibidor de aromatasa),2024-10-01,Sin reporte,0
+Cáncer de mama,Anastrozol,Hormonoterapia (inhibidor de aromatasa),2024-11-01,Sin reporte,0
+Cáncer de mama,Anastrozol,Hormonoterapia (inhibidor de aromatasa),2024-12-01,Sin reporte,0
+Cáncer de mama,Anastrozol,Hormonoterapia (inhibidor de aromatasa),2025-01-01,Sin reporte,0
+Cáncer de mama,Anastrozol,Hormonoterapia (inhibidor de aromatasa),2025-02-01,Sin reporte,0
+Cáncer de mama,Anastrozol,Hormonoterapia (inhibidor de aromatasa),2025-03-01,Sin reporte,0
+Cáncer de mama,Anastrozol,Hormonoterapia (inhibidor de aromatasa),2025-04-01,Sin reporte,0
+Cáncer de mama,Anastrozol,Hormonoterapia (inhibidor de aromatasa),2025-05-01,En monitorización,0
+Cáncer de mama,Anastrozol,Hormonoterapia (inhibidor de aromatasa),2025-06-01,En monitorización,0
+Cáncer de mama,Anastrozol,Hormonoterapia (inhibidor de aromatasa),2025-07-01,En monitorización,0
+Cáncer de mama,Anastrozol,Hormonoterapia (inhibidor de aromatasa),2025-08-01,En monitorización,0
+Cáncer de mama,Anastrozol,Hormonoterapia (inhibidor de aromatasa),2025-09-01,En monitorización,0
+Cáncer de mama,Anastrozol,Hormonoterapia (inhibidor de aromatasa),2026-01-01,Sin reporte,0
+Cáncer de mama,Ciclofosfamida,Quimioterapia,2023-06-01,No desabastecido,0
+Cáncer de mama,Ciclofosfamida,Quimioterapia,2023-07-01,No desabastecido,0
+Cáncer de mama,Ciclofosfamida,Quimioterapia,2023-10-01,No desabastecido,0
+Cáncer de mama,Ciclofosfamida,Quimioterapia,2023-11-01,No desabastecido,0
+Cáncer de mama,Ciclofosfamida,Quimioterapia,2023-12-01,No desabastecido,0
+Cáncer de mama,Ciclofosfamida,Quimioterapia,2024-01-01,No desabastecido,0
+Cáncer de mama,Ciclofosfamida,Quimioterapia,2024-02-01,No desabastecido,0
+Cáncer de mama,Ciclofosfamida,Quimioterapia,2024-03-01,No desabastecido,0
+Cáncer de mama,Ciclofosfamida,Quimioterapia,2024-04-01,No desabastecido,0
+Cáncer de mama,Ciclofosfamida,Quimioterapia,2024-05-01,No desabastecido,0
+Cáncer de mama,Ciclofosfamida,Quimioterapia,2024-06-01,No desabastecido,0
+Cáncer de mama,Ciclofosfamida,Quimioterapia,2024-07-01,No desabastecido,0
+Cáncer de mama,Ciclofosfamida,Quimioterapia,2024-08-01,No desabastecido,0
+Cáncer de mama,Ciclofosfamida,Quimioterapia,2024-09-01,No desabastecido,0
+Cáncer de mama,Ciclofosfamida,Quimioterapia,2024-10-01,No desabastecido,0
+Cáncer de mama,Ciclofosfamida,Quimioterapia,2024-11-01,No desabastecido,0
+Cáncer de mama,Ciclofosfamida,Quimioterapia,2024-12-01,No desabastecido,0
+Cáncer de mama,Ciclofosfamida,Quimioterapia,2025-01-01,No desabastecido,0
+Cáncer de mama,Ciclofosfamida,Quimioterapia,2025-02-01,No desabastecido,0
+Cáncer de mama,Ciclofosfamida,Quimioterapia,2025-03-01,No desabastecido,0
+Cáncer de mama,Ciclofosfamida,Quimioterapia,2025-04-01,No desabastecido,0
+Cáncer de mama,Ciclofosfamida,Quimioterapia,2025-05-01,No desabastecido,0
+Cáncer de mama,Ciclofosfamida,Quimioterapia,2025-06-01,No desabastecido,0
+Cáncer de mama,Ciclofosfamida,Quimioterapia,2025-07-01,No desabastecido,0
+Cáncer de mama,Ciclofosfamida,Quimioterapia,2025-08-01,No desabastecido,0
+Cáncer de mama,Ciclofosfamida,Quimioterapia,2025-09-01,No desabastecido,0
+Cáncer de mama,Ciclofosfamida,Quimioterapia,2026-01-01,En monitorización,0
+Cáncer de mama,Doxorrubicina,Quimioterapia,2023-06-01,Sin reporte,0
+Cáncer de mama,Doxorrubicina,Quimioterapia,2023-07-01,Sin reporte,0
+Cáncer de mama,Doxorrubicina,Quimioterapia,2023-10-01,Sin reporte,0
+Cáncer de mama,Doxorrubicina,Quimioterapia,2023-11-01,Sin reporte,0
+Cáncer de mama,Doxorrubicina,Quimioterapia,2023-12-01,Sin reporte,0
+Cáncer de mama,Doxorrubicina,Quimioterapia,2024-01-01,Sin reporte,0
+Cáncer de mama,Doxorrubicina,Quimioterapia,2024-02-01,Sin reporte,0
+Cáncer de mama,Doxorrubicina,Quimioterapia,2024-03-01,Sin reporte,0
+Cáncer de mama,Doxorrubicina,Quimioterapia,2024-04-01,Sin reporte,0
+Cáncer de mama,Doxorrubicina,Quimioterapia,2024-05-01,Sin reporte,0
+Cáncer de mama,Doxorrubicina,Quimioterapia,2024-06-01,Sin reporte,0
+Cáncer de mama,Doxorrubicina,Quimioterapia,2024-07-01,Sin reporte,0
+Cáncer de mama,Doxorrubicina,Quimioterapia,2024-08-01,Sin reporte,0
+Cáncer de mama,Doxorrubicina,Quimioterapia,2024-09-01,Sin reporte,0
+Cáncer de mama,Doxorrubicina,Quimioterapia,2024-10-01,Sin reporte,0
+Cáncer de mama,Doxorrubicina,Quimioterapia,2024-11-01,Sin reporte,0
+Cáncer de mama,Doxorrubicina,Quimioterapia,2024-12-01,Sin reporte,0
+Cáncer de mama,Doxorrubicina,Quimioterapia,2025-01-01,Sin reporte,0
+Cáncer de mama,Doxorrubicina,Quimioterapia,2025-02-01,Sin reporte,0
+Cáncer de mama,Doxorrubicina,Quimioterapia,2025-03-01,Sin reporte,0
+Cáncer de mama,Doxorrubicina,Quimioterapia,2025-04-01,En monitorización,0
+Cáncer de mama,Doxorrubicina,Quimioterapia,2025-05-01,En monitorización,0
+Cáncer de mama,Doxorrubicina,Quimioterapia,2025-06-01,En monitorización,0
+Cáncer de mama,Doxorrubicina,Quimioterapia,2025-07-01,En monitorización,0
+Cáncer de mama,Doxorrubicina,Quimioterapia,2025-08-01,En monitorización,0
+Cáncer de mama,Doxorrubicina,Quimioterapia,2025-09-01,En monitorización,0
+Cáncer de mama,Doxorrubicina,Quimioterapia,2026-01-01,En monitorización,0
+Cáncer de mama,Letrozol,Hormonoterapia (inhibidor de aromatasa),2023-06-01,Sin reporte,0
+Cáncer de mama,Letrozol,Hormonoterapia (inhibidor de aromatasa),2023-07-01,Sin reporte,0
+Cáncer de mama,Letrozol,Hormonoterapia (inhibidor de aromatasa),2023-10-01,Sin reporte,0
+Cáncer de mama,Letrozol,Hormonoterapia (inhibidor de aromatasa),2023-11-01,Sin reporte,0
+Cáncer de mama,Letrozol,Hormonoterapia (inhibidor de aromatasa),2023-12-01,Sin reporte,0
+Cáncer de mama,Letrozol,Hormonoterapia (inhibidor de aromatasa),2024-01-01,Sin reporte,0
+Cáncer de mama,Letrozol,Hormonoterapia (inhibidor de aromatasa),2024-02-01,Sin reporte,0
+Cáncer de mama,Letrozol,Hormonoterapia (inhibidor de aromatasa),2024-03-01,Sin reporte,0
+Cáncer de mama,Letrozol,Hormonoterapia (inhibidor de aromatasa),2024-04-01,Sin reporte,0
+Cáncer de mama,Letrozol,Hormonoterapia (inhibidor de aromatasa),2024-05-01,Sin reporte,0
+Cáncer de mama,Letrozol,Hormonoterapia (inhibidor de aromatasa),2024-06-01,Sin reporte,0
+Cáncer de mama,Letrozol,Hormonoterapia (inhibidor de aromatasa),2024-07-01,Sin reporte,0
+Cáncer de mama,Letrozol,Hormonoterapia (inhibidor de aromatasa),2024-08-01,Sin reporte,0
+Cáncer de mama,Letrozol,Hormonoterapia (inhibidor de aromatasa),2024-09-01,Sin reporte,0
+Cáncer de mama,Letrozol,Hormonoterapia (inhibidor de aromatasa),2024-10-01,Sin reporte,0
+Cáncer de mama,Letrozol,Hormonoterapia (inhibidor de aromatasa),2024-11-01,Sin reporte,0
+Cáncer de mama,Letrozol,Hormonoterapia (inhibidor de aromatasa),2024-12-01,Sin reporte,0
+Cáncer de mama,Letrozol,Hormonoterapia (inhibidor de aromatasa),2025-01-01,Sin reporte,0
+Cáncer de mama,Letrozol,Hormonoterapia (inhibidor de aromatasa),2025-02-01,Sin reporte,0
+Cáncer de mama,Letrozol,Hormonoterapia (inhibidor de aromatasa),2025-03-01,Sin reporte,0
+Cáncer de mama,Letrozol,Hormonoterapia (inhibidor de aromatasa),2025-04-01,Sin reporte,0
+Cáncer de mama,Letrozol,Hormonoterapia (inhibidor de aromatasa),2025-05-01,Sin reporte,0
+Cáncer de mama,Letrozol,Hormonoterapia (inhibidor de aromatasa),2025-06-01,Sin reporte,0
+Cáncer de mama,Letrozol,Hormonoterapia (inhibidor de aromatasa),2025-07-01,Sin reporte,0
+Cáncer de mama,Letrozol,Hormonoterapia (inhibidor de aromatasa),2025-08-01,Sin reporte,0
+Cáncer de mama,Letrozol,Hormonoterapia (inhibidor de aromatasa),2025-09-01,En monitorización,0
+Cáncer de mama,Letrozol,Hormonoterapia (inhibidor de aromatasa),2026-01-01,En monitorización,0
+Cáncer de mama,Paclitaxel,Quimioterapia,2023-06-01,En monitorización,0
+Cáncer de mama,Paclitaxel,Quimioterapia,2023-07-01,En monitorización,0
+Cáncer de mama,Paclitaxel,Quimioterapia,2023-10-01,En monitorización,0
+Cáncer de mama,Paclitaxel,Quimioterapia,2023-11-01,En monitorización,0
+Cáncer de mama,Paclitaxel,Quimioterapia,2023-12-01,En monitorización,0
+Cáncer de mama,Paclitaxel,Quimioterapia,2024-01-01,En monitorización,0
+Cáncer de mama,Paclitaxel,Quimioterapia,2024-02-01,En monitorización,0
+Cáncer de mama,Paclitaxel,Quimioterapia,2024-03-01,En monitorización,0
+Cáncer de mama,Paclitaxel,Quimioterapia,2024-04-01,En monitorización,0
+Cáncer de mama,Paclitaxel,Quimioterapia,2024-05-01,En monitorización,0
+Cáncer de mama,Paclitaxel,Quimioterapia,2024-06-01,No desabastecido,0
+Cáncer de mama,Paclitaxel,Quimioterapia,2024-07-01,No desabastecido,0
+Cáncer de mama,Paclitaxel,Quimioterapia,2024-08-01,No desabastecido,0
+Cáncer de mama,Paclitaxel,Quimioterapia,2024-09-01,No desabastecido,0
+Cáncer de mama,Paclitaxel,Quimioterapia,2024-10-01,No desabastecido,0
+Cáncer de mama,Paclitaxel,Quimioterapia,2024-11-01,No desabastecido,0
+Cáncer de mama,Paclitaxel,Quimioterapia,2024-12-01,No desabastecido,0
+Cáncer de mama,Paclitaxel,Quimioterapia,2025-01-01,No desabastecido,0
+Cáncer de mama,Paclitaxel,Quimioterapia,2025-02-01,No desabastecido,0
+Cáncer de mama,Paclitaxel,Quimioterapia,2025-03-01,No desabastecido,0
+Cáncer de mama,Paclitaxel,Quimioterapia,2025-04-01,No desabastecido,0
+Cáncer de mama,Paclitaxel,Quimioterapia,2025-05-01,No desabastecido,0
+Cáncer de mama,Paclitaxel,Quimioterapia,2025-06-01,No desabastecido,0
+Cáncer de mama,Paclitaxel,Quimioterapia,2025-07-01,No desabastecido,0
+Cáncer de mama,Paclitaxel,Quimioterapia,2025-08-01,No desabastecido,0
+Cáncer de mama,Paclitaxel,Quimioterapia,2025-09-01,No desabastecido,0
+Cáncer de mama,Paclitaxel,Quimioterapia,2026-01-01,Sin reporte,0
+Cáncer de mama,Tamoxifeno,Hormonoterapia (modulador del receptor de estrógeno),2023-06-01,En monitorización,0
+Cáncer de mama,Tamoxifeno,Hormonoterapia (modulador del receptor de estrógeno),2023-07-01,En monitorización,0
+Cáncer de mama,Tamoxifeno,Hormonoterapia (modulador del receptor de estrógeno),2023-10-01,En monitorización,0
+Cáncer de mama,Tamoxifeno,Hormonoterapia (modulador del receptor de estrógeno),2023-11-01,En monitorización,0
+Cáncer de mama,Tamoxifeno,Hormonoterapia (modulador del receptor de estrógeno),2023-12-01,En monitorización,0
+Cáncer de mama,Tamoxifeno,Hormonoterapia (modulador del receptor de estrógeno),2024-01-01,En monitorización,0
+Cáncer de mama,Tamoxifeno,Hormonoterapia (modulador del receptor de estrógeno),2024-02-01,En monitorización,0
+Cáncer de mama,Tamoxifeno,Hormonoterapia (modulador del receptor de estrógeno),2024-03-01,En monitorización,0
+Cáncer de mama,Tamoxifeno,Hormonoterapia (modulador del receptor de estrógeno),2024-04-01,En monitorización,0
+Cáncer de mama,Tamoxifeno,Hormonoterapia (modulador del receptor de estrógeno),2024-05-01,En monitorización,0
+Cáncer de mama,Tamoxifeno,Hormonoterapia (modulador del receptor de estrógeno),2024-06-01,En monitorización,0
+Cáncer de mama,Tamoxifeno,Hormonoterapia (modulador del receptor de estrógeno),2024-07-01,En monitorización,0
+Cáncer de mama,Tamoxifeno,Hormonoterapia (modulador del receptor de estrógeno),2024-08-01,No desabastecido,0
+Cáncer de mama,Tamoxifeno,Hormonoterapia (modulador del receptor de estrógeno),2024-09-01,En monitorización,0
+Cáncer de mama,Tamoxifeno,Hormonoterapia (modulador del receptor de estrógeno),2024-10-01,En monitorización,0
+Cáncer de mama,Tamoxifeno,Hormonoterapia (modulador del receptor de estrógeno),2024-11-01,No desabastecido,0
+Cáncer de mama,Tamoxifeno,Hormonoterapia (modulador del receptor de estrógeno),2024-12-01,No desabastecido,0
+Cáncer de mama,Tamoxifeno,Hormonoterapia (modulador del receptor de estrógeno),2025-01-01,No desabastecido,0
+Cáncer de mama,Tamoxifeno,Hormonoterapia (modulador del receptor de estrógeno),2025-02-01,No desabastecido,0
+Cáncer de mama,Tamoxifeno,Hormonoterapia (modulador del receptor de estrógeno),2025-03-01,No desabastecido,0
+Cáncer de mama,Tamoxifeno,Hormonoterapia (modulador del receptor de estrógeno),2025-04-01,No desabastecido,0
+Cáncer de mama,Tamoxifeno,Hormonoterapia (modulador del receptor de estrógeno),2025-05-01,No desabastecido,0
+Cáncer de mama,Tamoxifeno,Hormonoterapia (modulador del receptor de estrógeno),2025-06-01,No desabastecido,0
+Cáncer de mama,Tamoxifeno,Hormonoterapia (modulador del receptor de estrógeno),2025-07-01,No desabastecido,0
+Cáncer de mama,Tamoxifeno,Hormonoterapia (modulador del receptor de estrógeno),2025-08-01,No desabastecido,0
+Cáncer de mama,Tamoxifeno,Hormonoterapia (modulador del receptor de estrógeno),2025-09-01,No desabastecido,0
+Cáncer de mama,Tamoxifeno,Hormonoterapia (modulador del receptor de estrógeno),2026-01-01,Sin reporte,0
+Cáncer de próstata,Apalutamida,Antiandrógeno de nueva generación,2023-06-01,Sin reporte,0
+Cáncer de próstata,Apalutamida,Antiandrógeno de nueva generación,2023-07-01,Sin reporte,0
+Cáncer de próstata,Apalutamida,Antiandrógeno de nueva generación,2023-10-01,Sin reporte,0
+Cáncer de próstata,Apalutamida,Antiandrógeno de nueva generación,2023-11-01,Sin reporte,0
+Cáncer de próstata,Apalutamida,Antiandrógeno de nueva generación,2023-12-01,Sin reporte,0
+Cáncer de próstata,Apalutamida,Antiandrógeno de nueva generación,2024-01-01,Sin reporte,0
+Cáncer de próstata,Apalutamida,Antiandrógeno de nueva generación,2024-02-01,Sin reporte,0
+Cáncer de próstata,Apalutamida,Antiandrógeno de nueva generación,2024-03-01,Sin reporte,0
+Cáncer de próstata,Apalutamida,Antiandrógeno de nueva generación,2024-04-01,Sin reporte,0
+Cáncer de próstata,Apalutamida,Antiandrógeno de nueva generación,2024-05-01,Sin reporte,0
+Cáncer de próstata,Apalutamida,Antiandrógeno de nueva generación,2024-06-01,Sin reporte,0
+Cáncer de próstata,Apalutamida,Antiandrógeno de nueva generación,2024-07-01,Sin reporte,0
+Cáncer de próstata,Apalutamida,Antiandrógeno de nueva generación,2024-08-01,Sin reporte,0
+Cáncer de próstata,Apalutamida,Antiandrógeno de nueva generación,2024-09-01,Sin reporte,0
+Cáncer de próstata,Apalutamida,Antiandrógeno de nueva generación,2024-10-01,Sin reporte,0
+Cáncer de próstata,Apalutamida,Antiandrógeno de nueva generación,2024-11-01,Sin reporte,0
+Cáncer de próstata,Apalutamida,Antiandrógeno de nueva generación,2024-12-01,Sin reporte,0
+Cáncer de próstata,Apalutamida,Antiandrógeno de nueva generación,2025-01-01,Sin reporte,0
+Cáncer de próstata,Apalutamida,Antiandrógeno de nueva generación,2025-02-01,Sin reporte,0
+Cáncer de próstata,Apalutamida,Antiandrógeno de nueva generación,2025-03-01,No desabastecido,0
+Cáncer de próstata,Apalutamida,Antiandrógeno de nueva generación,2025-04-01,No desabastecido,0
+Cáncer de próstata,Apalutamida,Antiandrógeno de nueva generación,2025-05-01,No desabastecido,0
+Cáncer de próstata,Apalutamida,Antiandrógeno de nueva generación,2025-06-01,No desabastecido,0
+Cáncer de próstata,Apalutamida,Antiandrógeno de nueva generación,2025-07-01,No desabastecido,0
+Cáncer de próstata,Apalutamida,Antiandrógeno de nueva generación,2025-08-01,No desabastecido,0
+Cáncer de próstata,Apalutamida,Antiandrógeno de nueva generación,2025-09-01,No desabastecido,0
+Cáncer de próstata,Apalutamida,Antiandrógeno de nueva generación,2026-01-01,Sin reporte,0
+Cáncer de próstata,Bicalutamida,Antiandrógeno,2023-06-01,En monitorización,0
+Cáncer de próstata,Bicalutamida,Antiandrógeno,2023-07-01,En monitorización,0
+Cáncer de próstata,Bicalutamida,Antiandrógeno,2023-10-01,En monitorización,0
+Cáncer de próstata,Bicalutamida,Antiandrógeno,2023-11-01,En monitorización,0
+Cáncer de próstata,Bicalutamida,Antiandrógeno,2023-12-01,En monitorización,0
+Cáncer de próstata,Bicalutamida,Antiandrógeno,2024-01-01,En monitorización,0
+Cáncer de próstata,Bicalutamida,Antiandrógeno,2024-02-01,En monitorización,0
+Cáncer de próstata,Bicalutamida,Antiandrógeno,2024-03-01,En monitorización,0
+Cáncer de próstata,Bicalutamida,Antiandrógeno,2024-04-01,En monitorización,0
+Cáncer de próstata,Bicalutamida,Antiandrógeno,2024-05-01,En monitorización,0
+Cáncer de próstata,Bicalutamida,Antiandrógeno,2024-06-01,En monitorización,0
+Cáncer de próstata,Bicalutamida,Antiandrógeno,2024-07-01,En monitorización,0
+Cáncer de próstata,Bicalutamida,Antiandrógeno,2024-08-01,En monitorización,0
+Cáncer de próstata,Bicalutamida,Antiandrógeno,2024-09-01,En monitorización,0
+Cáncer de próstata,Bicalutamida,Antiandrógeno,2024-10-01,En monitorización,0
+Cáncer de próstata,Bicalutamida,Antiandrógeno,2024-11-01,En monitorización,0
+Cáncer de próstata,Bicalutamida,Antiandrógeno,2024-12-01,En monitorización,0
+Cáncer de próstata,Bicalutamida,Antiandrógeno,2025-01-01,En monitorización,0
+Cáncer de próstata,Bicalutamida,Antiandrógeno,2025-02-01,No desabastecido,0
+Cáncer de próstata,Bicalutamida,Antiandrógeno,2025-03-01,No desabastecido,0
+Cáncer de próstata,Bicalutamida,Antiandrógeno,2025-04-01,No desabastecido,0
+Cáncer de próstata,Bicalutamida,Antiandrógeno,2025-05-01,No desabastecido,0
+Cáncer de próstata,Bicalutamida,Antiandrógeno,2025-06-01,No desabastecido,0
+Cáncer de próstata,Bicalutamida,Antiandrógeno,2025-07-01,No desabastecido,0
+Cáncer de próstata,Bicalutamida,Antiandrógeno,2025-08-01,No desabastecido,0
+Cáncer de próstata,Bicalutamida,Antiandrógeno,2025-09-01,No desabastecido,0
+Cáncer de próstata,Bicalutamida,Antiandrógeno,2026-01-01,Sin reporte,0
+Cáncer de pulmón,Carboplatino,Quimioterapia,2023-06-01,En monitorización,5
+Cáncer de pulmón,Carboplatino,Quimioterapia,2023-07-01,Desabastecido,5
+Cáncer de pulmón,Carboplatino,Quimioterapia,2023-10-01,Desabastecido,5
+Cáncer de pulmón,Carboplatino,Quimioterapia,2023-11-01,Desabastecido,5
+Cáncer de pulmón,Carboplatino,Quimioterapia,2023-12-01,Desabastecido,5
+Cáncer de pulmón,Carboplatino,Quimioterapia,2024-01-01,Desabastecido,5
+Cáncer de pulmón,Carboplatino,Quimioterapia,2024-02-01,Sin reporte,5
+Cáncer de pulmón,Carboplatino,Quimioterapia,2024-03-01,Sin reporte,5
+Cáncer de pulmón,Carboplatino,Quimioterapia,2024-04-01,Sin reporte,5
+Cáncer de pulmón,Carboplatino,Quimioterapia,2024-05-01,Sin reporte,5
+Cáncer de pulmón,Carboplatino,Quimioterapia,2024-06-01,Sin reporte,5
+Cáncer de pulmón,Carboplatino,Quimioterapia,2024-07-01,Sin reporte,5
+Cáncer de pulmón,Carboplatino,Quimioterapia,2024-08-01,Sin reporte,5
+Cáncer de pulmón,Carboplatino,Quimioterapia,2024-09-01,Sin reporte,5
+Cáncer de pulmón,Carboplatino,Quimioterapia,2024-10-01,Sin reporte,5
+Cáncer de pulmón,Carboplatino,Quimioterapia,2024-11-01,Sin reporte,5
+Cáncer de pulmón,Carboplatino,Quimioterapia,2024-12-01,Sin reporte,5
+Cáncer de pulmón,Carboplatino,Quimioterapia,2025-01-01,Sin reporte,5
+Cáncer de pulmón,Carboplatino,Quimioterapia,2025-02-01,Sin reporte,5
+Cáncer de pulmón,Carboplatino,Quimioterapia,2025-03-01,En monitorización,5
+Cáncer de pulmón,Carboplatino,Quimioterapia,2025-04-01,No desabastecido,5
+Cáncer de pulmón,Carboplatino,Quimioterapia,2025-05-01,No desabastecido,5
+Cáncer de pulmón,Carboplatino,Quimioterapia,2025-06-01,No desabastecido,5
+Cáncer de pulmón,Carboplatino,Quimioterapia,2025-07-01,No desabastecido,5
+Cáncer de pulmón,Carboplatino,Quimioterapia,2025-08-01,No desabastecido,5
+Cáncer de pulmón,Carboplatino,Quimioterapia,2025-09-01,No desabastecido,5
+Cáncer de pulmón,Carboplatino,Quimioterapia,2026-01-01,Sin reporte,5
+Cáncer de pulmón,Cisplatino,Quimioterapia,2023-06-01,Sin reporte,0
+Cáncer de pulmón,Cisplatino,Quimioterapia,2023-07-01,No desabastecido,0
+Cáncer de pulmón,Cisplatino,Quimioterapia,2023-10-01,No desabastecido,0
+Cáncer de pulmón,Cisplatino,Quimioterapia,2023-11-01,No desabastecido,0
+Cáncer de pulmón,Cisplatino,Quimioterapia,2023-12-01,No desabastecido,0
+Cáncer de pulmón,Cisplatino,Quimioterapia,2024-01-01,No desabastecido,0
+Cáncer de pulmón,Cisplatino,Quimioterapia,2024-02-01,No desabastecido,0
+Cáncer de pulmón,Cisplatino,Quimioterapia,2024-03-01,No desabastecido,0
+Cáncer de pulmón,Cisplatino,Quimioterapia,2024-04-01,No desabastecido,0
+Cáncer de pulmón,Cisplatino,Quimioterapia,2024-05-01,No desabastecido,0
+Cáncer de pulmón,Cisplatino,Quimioterapia,2024-06-01,No desabastecido,0
+Cáncer de pulmón,Cisplatino,Quimioterapia,2024-07-01,No desabastecido,0
+Cáncer de pulmón,Cisplatino,Quimioterapia,2024-08-01,No desabastecido,0
+Cáncer de pulmón,Cisplatino,Quimioterapia,2024-09-01,No desabastecido,0
+Cáncer de pulmón,Cisplatino,Quimioterapia,2024-10-01,No desabastecido,0
+Cáncer de pulmón,Cisplatino,Quimioterapia,2024-11-01,No desabastecido,0
+Cáncer de pulmón,Cisplatino,Quimioterapia,2024-12-01,No desabastecido,0
+Cáncer de pulmón,Cisplatino,Quimioterapia,2025-01-01,No desabastecido,0
+Cáncer de pulmón,Cisplatino,Quimioterapia,2025-02-01,No desabastecido,0
+Cáncer de pulmón,Cisplatino,Quimioterapia,2025-03-01,No desabastecido,0
+Cáncer de pulmón,Cisplatino,Quimioterapia,2025-04-01,No desabastecido,0
+Cáncer de pulmón,Cisplatino,Quimioterapia,2025-05-01,No desabastecido,0
+Cáncer de pulmón,Cisplatino,Quimioterapia,2025-06-01,No desabastecido,0
+Cáncer de pulmón,Cisplatino,Quimioterapia,2025-07-01,No desabastecido,0
+Cáncer de pulmón,Cisplatino,Quimioterapia,2025-08-01,No desabastecido,0
+Cáncer de pulmón,Cisplatino,Quimioterapia,2025-09-01,No desabastecido,0
+Cáncer de pulmón,Cisplatino,Quimioterapia,2026-01-01,Sin reporte,0
+Cáncer de pulmón,Paclitaxel,Quimioterapia,2023-06-01,En monitorización,0
+Cáncer de pulmón,Paclitaxel,Quimioterapia,2023-07-01,En monitorización,0
+Cáncer de pulmón,Paclitaxel,Quimioterapia,2023-10-01,En monitorización,0
+Cáncer de pulmón,Paclitaxel,Quimioterapia,2023-11-01,En monitorización,0
+Cáncer de pulmón,Paclitaxel,Quimioterapia,2023-12-01,En monitorización,0
+Cáncer de pulmón,Paclitaxel,Quimioterapia,2024-01-01,En monitorización,0
+Cáncer de pulmón,Paclitaxel,Quimioterapia,2024-02-01,En monitorización,0
+Cáncer de pulmón,Paclitaxel,Quimioterapia,2024-03-01,En monitorización,0
+Cáncer de pulmón,Paclitaxel,Quimioterapia,2024-04-01,En monitorización,0
+Cáncer de pulmón,Paclitaxel,Quimioterapia,2024-05-01,En monitorización,0
+Cáncer de pulmón,Paclitaxel,Quimioterapia,2024-06-01,No desabastecido,0
+Cáncer de pulmón,Paclitaxel,Quimioterapia,2024-07-01,No desabastecido,0
+Cáncer de pulmón,Paclitaxel,Quimioterapia,2024-08-01,No desabastecido,0
+Cáncer de pulmón,Paclitaxel,Quimioterapia,2024-09-01,No desabastecido,0
+Cáncer de pulmón,Paclitaxel,Quimioterapia,2024-10-01,No desabastecido,0
+Cáncer de pulmón,Paclitaxel,Quimioterapia,2024-11-01,No desabastecido,0
+Cáncer de pulmón,Paclitaxel,Quimioterapia,2024-12-01,No desabastecido,0
+Cáncer de pulmón,Paclitaxel,Quimioterapia,2025-01-01,No desabastecido,0
+Cáncer de pulmón,Paclitaxel,Quimioterapia,2025-02-01,No desabastecido,0
+Cáncer de pulmón,Paclitaxel,Quimioterapia,2025-03-01,No desabastecido,0
+Cáncer de pulmón,Paclitaxel,Quimioterapia,2025-04-01,No desabastecido,0
+Cáncer de pulmón,Paclitaxel,Quimioterapia,2025-05-01,No desabastecido,0
+Cáncer de pulmón,Paclitaxel,Quimioterapia,2025-06-01,No desabastecido,0
+Cáncer de pulmón,Paclitaxel,Quimioterapia,2025-07-01,No desabastecido,0
+Cáncer de pulmón,Paclitaxel,Quimioterapia,2025-08-01,No desabastecido,0
+Cáncer de pulmón,Paclitaxel,Quimioterapia,2025-09-01,No desabastecido,0
+Cáncer de pulmón,Paclitaxel,Quimioterapia,2026-01-01,Sin reporte,0
+Cáncer de pulmón,Pemetrexed,Quimioterapia,2023-06-01,En monitorización,0
+Cáncer de pulmón,Pemetrexed,Quimioterapia,2023-07-01,En monitorización,0
+Cáncer de pulmón,Pemetrexed,Quimioterapia,2023-10-01,En monitorización,0
+Cáncer de pulmón,Pemetrexed,Quimioterapia,2023-11-01,En monitorización,0
+Cáncer de pulmón,Pemetrexed,Quimioterapia,2023-12-01,En monitorización,0
+Cáncer de pulmón,Pemetrexed,Quimioterapia,2024-01-01,En monitorización,0
+Cáncer de pulmón,Pemetrexed,Quimioterapia,2024-02-01,En monitorización,0
+Cáncer de pulmón,Pemetrexed,Quimioterapia,2024-03-01,En monitorización,0
+Cáncer de pulmón,Pemetrexed,Quimioterapia,2024-04-01,En monitorización,0
+Cáncer de pulmón,Pemetrexed,Quimioterapia,2024-05-01,En monitorización,0
+Cáncer de pulmón,Pemetrexed,Quimioterapia,2024-06-01,En monitorización,0
+Cáncer de pulmón,Pemetrexed,Quimioterapia,2024-07-01,En monitorización,0
+Cáncer de pulmón,Pemetrexed,Quimioterapia,2024-08-01,En monitorización,0
+Cáncer de pulmón,Pemetrexed,Quimioterapia,2024-09-01,En monitorización,0
+Cáncer de pulmón,Pemetrexed,Quimioterapia,2024-10-01,En monitorización,0
+Cáncer de pulmón,Pemetrexed,Quimioterapia,2024-11-01,En monitorización,0
+Cáncer de pulmón,Pemetrexed,Quimioterapia,2024-12-01,En monitorización,0
+Cáncer de pulmón,Pemetrexed,Quimioterapia,2025-01-01,En monitorización,0
+Cáncer de pulmón,Pemetrexed,Quimioterapia,2025-02-01,En monitorización,0
+Cáncer de pulmón,Pemetrexed,Quimioterapia,2025-03-01,En monitorización,0
+Cáncer de pulmón,Pemetrexed,Quimioterapia,2025-04-01,En monitorización,0
+Cáncer de pulmón,Pemetrexed,Quimioterapia,2025-05-01,En monitorización,0
+Cáncer de pulmón,Pemetrexed,Quimioterapia,2025-06-01,En monitorización,0
+Cáncer de pulmón,Pemetrexed,Quimioterapia,2025-07-01,En monitorización,0
+Cáncer de pulmón,Pemetrexed,Quimioterapia,2025-08-01,En monitorización,0
+Cáncer de pulmón,Pemetrexed,Quimioterapia,2025-09-01,En monitorización,0
+Cáncer de pulmón,Pemetrexed,Quimioterapia,2026-01-01,En monitorización,0
+Enfermedad renal y trasplante,Eritropoyetina (epoetina alfa),Agente estimulante de eritropoyesis,2023-06-01,En riesgo de desabastecimiento,6
+Enfermedad renal y trasplante,Eritropoyetina (epoetina alfa),Agente estimulante de eritropoyesis,2023-07-01,En riesgo de desabastecimiento,6
+Enfermedad renal y trasplante,Eritropoyetina (epoetina alfa),Agente estimulante de eritropoyesis,2023-10-01,En riesgo de desabastecimiento,6
+Enfermedad renal y trasplante,Eritropoyetina (epoetina alfa),Agente estimulante de eritropoyesis,2023-11-01,En riesgo de desabastecimiento,6
+Enfermedad renal y trasplante,Eritropoyetina (epoetina alfa),Agente estimulante de eritropoyesis,2023-12-01,En riesgo de desabastecimiento,6
+Enfermedad renal y trasplante,Eritropoyetina (epoetina alfa),Agente estimulante de eritropoyesis,2024-01-01,En riesgo de desabastecimiento,6
+Enfermedad renal y trasplante,Eritropoyetina (epoetina alfa),Agente estimulante de eritropoyesis,2024-02-01,No desabastecido,6
+Enfermedad renal y trasplante,Eritropoyetina (epoetina alfa),Agente estimulante de eritropoyesis,2024-03-01,No desabastecido,6
+Enfermedad renal y trasplante,Eritropoyetina (epoetina alfa),Agente estimulante de eritropoyesis,2024-04-01,No desabastecido,6
+Enfermedad renal y trasplante,Eritropoyetina (epoetina alfa),Agente estimulante de eritropoyesis,2024-05-01,No desabastecido,6
+Enfermedad renal y trasplante,Eritropoyetina (epoetina alfa),Agente estimulante de eritropoyesis,2024-06-01,No desabastecido,6
+Enfermedad renal y trasplante,Eritropoyetina (epoetina alfa),Agente estimulante de eritropoyesis,2024-07-01,No desabastecido,6
+Enfermedad renal y trasplante,Eritropoyetina (epoetina alfa),Agente estimulante de eritropoyesis,2024-08-01,No desabastecido,6
+Enfermedad renal y trasplante,Eritropoyetina (epoetina alfa),Agente estimulante de eritropoyesis,2024-09-01,No desabastecido,6
+Enfermedad renal y trasplante,Eritropoyetina (epoetina alfa),Agente estimulante de eritropoyesis,2024-10-01,No desabastecido,6
+Enfermedad renal y trasplante,Eritropoyetina (epoetina alfa),Agente estimulante de eritropoyesis,2024-11-01,No desabastecido,6
+Enfermedad renal y trasplante,Eritropoyetina (epoetina alfa),Agente estimulante de eritropoyesis,2024-12-01,No desabastecido,6
+Enfermedad renal y trasplante,Eritropoyetina (epoetina alfa),Agente estimulante de eritropoyesis,2025-01-01,No desabastecido,6
+Enfermedad renal y trasplante,Eritropoyetina (epoetina alfa),Agente estimulante de eritropoyesis,2025-02-01,No desabastecido,6
+Enfermedad renal y trasplante,Eritropoyetina (epoetina alfa),Agente estimulante de eritropoyesis,2025-03-01,No desabastecido,6
+Enfermedad renal y trasplante,Eritropoyetina (epoetina alfa),Agente estimulante de eritropoyesis,2025-04-01,No desabastecido,6
+Enfermedad renal y trasplante,Eritropoyetina (epoetina alfa),Agente estimulante de eritropoyesis,2025-05-01,No desabastecido,6
+Enfermedad renal y trasplante,Eritropoyetina (epoetina alfa),Agente estimulante de eritropoyesis,2025-06-01,No desabastecido,6
+Enfermedad renal y trasplante,Eritropoyetina (epoetina alfa),Agente estimulante de eritropoyesis,2025-07-01,No desabastecido,6
+Enfermedad renal y trasplante,Eritropoyetina (epoetina alfa),Agente estimulante de eritropoyesis,2025-08-01,No desabastecido,6
+Enfermedad renal y trasplante,Eritropoyetina (epoetina alfa),Agente estimulante de eritropoyesis,2025-09-01,No desabastecido,6
+Enfermedad renal y trasplante,Eritropoyetina (epoetina alfa),Agente estimulante de eritropoyesis,2026-01-01,Sin reporte,6
+Enfermedad renal y trasplante,Micofenolato,Inmunosupresor (trasplante),2023-06-01,Sin reporte,0
+Enfermedad renal y trasplante,Micofenolato,Inmunosupresor (trasplante),2023-07-01,Sin reporte,0
+Enfermedad renal y trasplante,Micofenolato,Inmunosupresor (trasplante),2023-10-01,Sin reporte,0
+Enfermedad renal y trasplante,Micofenolato,Inmunosupresor (trasplante),2023-11-01,Sin reporte,0
+Enfermedad renal y trasplante,Micofenolato,Inmunosupresor (trasplante),2023-12-01,Sin reporte,0
+Enfermedad renal y trasplante,Micofenolato,Inmunosupresor (trasplante),2024-01-01,Sin reporte,0
+Enfermedad renal y trasplante,Micofenolato,Inmunosupresor (trasplante),2024-02-01,Sin reporte,0
+Enfermedad renal y trasplante,Micofenolato,Inmunosupresor (trasplante),2024-03-01,Sin reporte,0
+Enfermedad renal y trasplante,Micofenolato,Inmunosupresor (trasplante),2024-04-01,Sin reporte,0
+Enfermedad renal y trasplante,Micofenolato,Inmunosupresor (trasplante),2024-05-01,Sin reporte,0
+Enfermedad renal y trasplante,Micofenolato,Inmunosupresor (trasplante),2024-06-01,Sin reporte,0
+Enfermedad renal y trasplante,Micofenolato,Inmunosupresor (trasplante),2024-07-01,Sin reporte,0
+Enfermedad renal y trasplante,Micofenolato,Inmunosupresor (trasplante),2024-08-01,Sin reporte,0
+Enfermedad renal y trasplante,Micofenolato,Inmunosupresor (trasplante),2024-09-01,Sin reporte,0
+Enfermedad renal y trasplante,Micofenolato,Inmunosupresor (trasplante),2024-10-01,Sin reporte,0
+Enfermedad renal y trasplante,Micofenolato,Inmunosupresor (trasplante),2024-11-01,Sin reporte,0
+Enfermedad renal y trasplante,Micofenolato,Inmunosupresor (trasplante),2024-12-01,Sin reporte,0
+Enfermedad renal y trasplante,Micofenolato,Inmunosupresor (trasplante),2025-01-01,Sin reporte,0
+Enfermedad renal y trasplante,Micofenolato,Inmunosupresor (trasplante),2025-02-01,Sin reporte,0
+Enfermedad renal y trasplante,Micofenolato,Inmunosupresor (trasplante),2025-03-01,Sin reporte,0
+Enfermedad renal y trasplante,Micofenolato,Inmunosupresor (trasplante),2025-04-01,Sin reporte,0
+Enfermedad renal y trasplante,Micofenolato,Inmunosupresor (trasplante),2025-05-01,En monitorización,0
+Enfermedad renal y trasplante,Micofenolato,Inmunosupresor (trasplante),2025-06-01,En monitorización,0
+Enfermedad renal y trasplante,Micofenolato,Inmunosupresor (trasplante),2025-07-01,En monitorización,0
+Enfermedad renal y trasplante,Micofenolato,Inmunosupresor (trasplante),2025-08-01,En monitorización,0
+Enfermedad renal y trasplante,Micofenolato,Inmunosupresor (trasplante),2025-09-01,En monitorización,0
+Enfermedad renal y trasplante,Micofenolato,Inmunosupresor (trasplante),2026-01-01,En monitorización,0
+Enfermedad renal y trasplante,Tacrolimus,Inmunosupresor (trasplante),2023-06-01,No desabastecido,0
+Enfermedad renal y trasplante,Tacrolimus,Inmunosupresor (trasplante),2023-07-01,No desabastecido,0
+Enfermedad renal y trasplante,Tacrolimus,Inmunosupresor (trasplante),2023-10-01,No desabastecido,0
+Enfermedad renal y trasplante,Tacrolimus,Inmunosupresor (trasplante),2023-11-01,No desabastecido,0
+Enfermedad renal y trasplante,Tacrolimus,Inmunosupresor (trasplante),2023-12-01,No desabastecido,0
+Enfermedad renal y trasplante,Tacrolimus,Inmunosupresor (trasplante),2024-01-01,No desabastecido,0
+Enfermedad renal y trasplante,Tacrolimus,Inmunosupresor (trasplante),2024-02-01,No desabastecido,0
+Enfermedad renal y trasplante,Tacrolimus,Inmunosupresor (trasplante),2024-03-01,No desabastecido,0
+Enfermedad renal y trasplante,Tacrolimus,Inmunosupresor (trasplante),2024-04-01,No desabastecido,0
+Enfermedad renal y trasplante,Tacrolimus,Inmunosupresor (trasplante),2024-05-01,No desabastecido,0
+Enfermedad renal y trasplante,Tacrolimus,Inmunosupresor (trasplante),2024-06-01,No desabastecido,0
+Enfermedad renal y trasplante,Tacrolimus,Inmunosupresor (trasplante),2024-07-01,No desabastecido,0
+Enfermedad renal y trasplante,Tacrolimus,Inmunosupresor (trasplante),2024-08-01,No desabastecido,0
+Enfermedad renal y trasplante,Tacrolimus,Inmunosupresor (trasplante),2024-09-01,No desabastecido,0
+Enfermedad renal y trasplante,Tacrolimus,Inmunosupresor (trasplante),2024-10-01,No desabastecido,0
+Enfermedad renal y trasplante,Tacrolimus,Inmunosupresor (trasplante),2024-11-01,No desabastecido,0
+Enfermedad renal y trasplante,Tacrolimus,Inmunosupresor (trasplante),2024-12-01,No desabastecido,0
+Enfermedad renal y trasplante,Tacrolimus,Inmunosupresor (trasplante),2025-01-01,No desabastecido,0
+Enfermedad renal y trasplante,Tacrolimus,Inmunosupresor (trasplante),2025-02-01,No desabastecido,0
+Enfermedad renal y trasplante,Tacrolimus,Inmunosupresor (trasplante),2025-03-01,No desabastecido,0
+Enfermedad renal y trasplante,Tacrolimus,Inmunosupresor (trasplante),2025-04-01,No desabastecido,0
+Enfermedad renal y trasplante,Tacrolimus,Inmunosupresor (trasplante),2025-05-01,No desabastecido,0
+Enfermedad renal y trasplante,Tacrolimus,Inmunosupresor (trasplante),2025-06-01,En monitorización,0
+Enfermedad renal y trasplante,Tacrolimus,Inmunosupresor (trasplante),2025-07-01,En monitorización,0
+Enfermedad renal y trasplante,Tacrolimus,Inmunosupresor (trasplante),2025-08-01,En monitorización,0
+Enfermedad renal y trasplante,Tacrolimus,Inmunosupresor (trasplante),2025-09-01,En monitorización,0
+Enfermedad renal y trasplante,Tacrolimus,Inmunosupresor (trasplante),2026-01-01,En monitorización,0
+Leucemias,Citarabina,Quimioterapia,2023-06-01,En monitorización,0
+Leucemias,Citarabina,Quimioterapia,2023-07-01,En monitorización,0
+Leucemias,Citarabina,Quimioterapia,2023-10-01,En monitorización,0
+Leucemias,Citarabina,Quimioterapia,2023-11-01,En monitorización,0
+Leucemias,Citarabina,Quimioterapia,2023-12-01,En monitorización,0
+Leucemias,Citarabina,Quimioterapia,2024-01-01,En monitorización,0
+Leucemias,Citarabina,Quimioterapia,2024-02-01,En monitorización,0
+Leucemias,Citarabina,Quimioterapia,2024-03-01,En monitorización,0
+Leucemias,Citarabina,Quimioterapia,2024-04-01,En monitorización,0
+Leucemias,Citarabina,Quimioterapia,2024-05-01,En monitorización,0
+Leucemias,Citarabina,Quimioterapia,2024-06-01,En monitorización,0
+Leucemias,Citarabina,Quimioterapia,2024-07-01,En monitorización,0
+Leucemias,Citarabina,Quimioterapia,2024-08-01,En monitorización,0
+Leucemias,Citarabina,Quimioterapia,2024-09-01,No desabastecido,0
+Leucemias,Citarabina,Quimioterapia,2024-10-01,No desabastecido,0
+Leucemias,Citarabina,Quimioterapia,2024-11-01,No desabastecido,0
+Leucemias,Citarabina,Quimioterapia,2024-12-01,No desabastecido,0
+Leucemias,Citarabina,Quimioterapia,2025-01-01,No desabastecido,0
+Leucemias,Citarabina,Quimioterapia,2025-02-01,No desabastecido,0
+Leucemias,Citarabina,Quimioterapia,2025-03-01,No desabastecido,0
+Leucemias,Citarabina,Quimioterapia,2025-04-01,No desabastecido,0
+Leucemias,Citarabina,Quimioterapia,2025-05-01,No desabastecido,0
+Leucemias,Citarabina,Quimioterapia,2025-06-01,No desabastecido,0
+Leucemias,Citarabina,Quimioterapia,2025-07-01,No desabastecido,0
+Leucemias,Citarabina,Quimioterapia,2025-08-01,No desabastecido,0
+Leucemias,Citarabina,Quimioterapia,2025-09-01,No desabastecido,0
+Leucemias,Citarabina,Quimioterapia,2026-01-01,Sin reporte,0
+Leucemias,Dasatinib,Inhibidor de tirosina quinasa,2023-06-01,En monitorización,0
+Leucemias,Dasatinib,Inhibidor de tirosina quinasa,2023-07-01,En monitorización,0
+Leucemias,Dasatinib,Inhibidor de tirosina quinasa,2023-10-01,En monitorización,0
+Leucemias,Dasatinib,Inhibidor de tirosina quinasa,2023-11-01,En monitorización,0
+Leucemias,Dasatinib,Inhibidor de tirosina quinasa,2023-12-01,En monitorización,0
+Leucemias,Dasatinib,Inhibidor de tirosina quinasa,2024-01-01,En monitorización,0
+Leucemias,Dasatinib,Inhibidor de tirosina quinasa,2024-02-01,En monitorización,0
+Leucemias,Dasatinib,Inhibidor de tirosina quinasa,2024-03-01,En monitorización,0
+Leucemias,Dasatinib,Inhibidor de tirosina quinasa,2024-04-01,En monitorización,0
+Leucemias,Dasatinib,Inhibidor de tirosina quinasa,2024-05-01,En monitorización,0
+Leucemias,Dasatinib,Inhibidor de tirosina quinasa,2024-06-01,No desabastecido,0
+Leucemias,Dasatinib,Inhibidor de tirosina quinasa,2024-07-01,No desabastecido,0
+Leucemias,Dasatinib,Inhibidor de tirosina quinasa,2024-08-01,No desabastecido,0
+Leucemias,Dasatinib,Inhibidor de tirosina quinasa,2024-09-01,No desabastecido,0
+Leucemias,Dasatinib,Inhibidor de tirosina quinasa,2024-10-01,No desabastecido,0
+Leucemias,Dasatinib,Inhibidor de tirosina quinasa,2024-11-01,No desabastecido,0
+Leucemias,Dasatinib,Inhibidor de tirosina quinasa,2024-12-01,No desabastecido,0
+Leucemias,Dasatinib,Inhibidor de tirosina quinasa,2025-01-01,En monitorización,0
+Leucemias,Dasatinib,Inhibidor de tirosina quinasa,2025-02-01,No desabastecido,0
+Leucemias,Dasatinib,Inhibidor de tirosina quinasa,2025-03-01,En monitorización,0
+Leucemias,Dasatinib,Inhibidor de tirosina quinasa,2025-04-01,En monitorización,0
+Leucemias,Dasatinib,Inhibidor de tirosina quinasa,2025-05-01,En monitorización,0
+Leucemias,Dasatinib,Inhibidor de tirosina quinasa,2025-06-01,En monitorización,0
+Leucemias,Dasatinib,Inhibidor de tirosina quinasa,2025-07-01,En monitorización,0
+Leucemias,Dasatinib,Inhibidor de tirosina quinasa,2025-08-01,En monitorización,0
+Leucemias,Dasatinib,Inhibidor de tirosina quinasa,2025-09-01,En monitorización,0
+Leucemias,Dasatinib,Inhibidor de tirosina quinasa,2026-01-01,En monitorización,0
+Leucemias,Daunorrubicina,Quimioterapia,2023-06-01,En monitorización,0
+Leucemias,Daunorrubicina,Quimioterapia,2023-07-01,En monitorización,0
+Leucemias,Daunorrubicina,Quimioterapia,2023-10-01,En monitorización,0
+Leucemias,Daunorrubicina,Quimioterapia,2023-11-01,En monitorización,0
+Leucemias,Daunorrubicina,Quimioterapia,2023-12-01,En monitorización,0
+Leucemias,Daunorrubicina,Quimioterapia,2024-01-01,En monitorización,0
+Leucemias,Daunorrubicina,Quimioterapia,2024-02-01,En monitorización,0
+Leucemias,Daunorrubicina,Quimioterapia,2024-03-01,En monitorización,0
+Leucemias,Daunorrubicina,Quimioterapia,2024-04-01,En monitorización,0
+Leucemias,Daunorrubicina,Quimioterapia,2024-05-01,En monitorización,0
+Leucemias,Daunorrubicina,Quimioterapia,2024-06-01,En monitorización,0
+Leucemias,Daunorrubicina,Quimioterapia,2024-07-01,No desabastecido,0
+Leucemias,Daunorrubicina,Quimioterapia,2024-08-01,No desabastecido,0
+Leucemias,Daunorrubicina,Quimioterapia,2024-09-01,No desabastecido,0
+Leucemias,Daunorrubicina,Quimioterapia,2024-10-01,No desabastecido,0
+Leucemias,Daunorrubicina,Quimioterapia,2024-11-01,No desabastecido,0
+Leucemias,Daunorrubicina,Quimioterapia,2024-12-01,No desabastecido,0
+Leucemias,Daunorrubicina,Quimioterapia,2025-01-01,No desabastecido,0
+Leucemias,Daunorrubicina,Quimioterapia,2025-02-01,No desabastecido,0
+Leucemias,Daunorrubicina,Quimioterapia,2025-03-01,No desabastecido,0
+Leucemias,Daunorrubicina,Quimioterapia,2025-04-01,No desabastecido,0
+Leucemias,Daunorrubicina,Quimioterapia,2025-05-01,No desabastecido,0
+Leucemias,Daunorrubicina,Quimioterapia,2025-06-01,No desabastecido,0
+Leucemias,Daunorrubicina,Quimioterapia,2025-07-01,No desabastecido,0
+Leucemias,Daunorrubicina,Quimioterapia,2025-08-01,No desabastecido,0
+Leucemias,Daunorrubicina,Quimioterapia,2025-09-01,No desabastecido,0
+Leucemias,Daunorrubicina,Quimioterapia,2026-01-01,Sin reporte,0
+Leucemias,Imatinib,Inhibidor de tirosina quinasa,2023-06-01,En monitorización,0
+Leucemias,Imatinib,Inhibidor de tirosina quinasa,2023-07-01,En monitorización,0
+Leucemias,Imatinib,Inhibidor de tirosina quinasa,2023-10-01,En monitorización,0
+Leucemias,Imatinib,Inhibidor de tirosina quinasa,2023-11-01,En monitorización,0
+Leucemias,Imatinib,Inhibidor de tirosina quinasa,2023-12-01,En monitorización,0
+Leucemias,Imatinib,Inhibidor de tirosina quinasa,2024-01-01,En monitorización,0
+Leucemias,Imatinib,Inhibidor de tirosina quinasa,2024-02-01,En monitorización,0
+Leucemias,Imatinib,Inhibidor de tirosina quinasa,2024-03-01,En monitorización,0
+Leucemias,Imatinib,Inhibidor de tirosina quinasa,2024-04-01,En monitorización,0
+Leucemias,Imatinib,Inhibidor de tirosina quinasa,2024-05-01,En monitorización,0
+Leucemias,Imatinib,Inhibidor de tirosina quinasa,2024-06-01,No desabastecido,0
+Leucemias,Imatinib,Inhibidor de tirosina quinasa,2024-07-01,No desabastecido,0
+Leucemias,Imatinib,Inhibidor de tirosina quinasa,2024-08-01,No desabastecido,0
+Leucemias,Imatinib,Inhibidor de tirosina quinasa,2024-09-01,No desabastecido,0
+Leucemias,Imatinib,Inhibidor de tirosina quinasa,2024-10-01,No desabastecido,0
+Leucemias,Imatinib,Inhibidor de tirosina quinasa,2024-11-01,No desabastecido,0
+Leucemias,Imatinib,Inhibidor de tirosina quinasa,2024-12-01,No desabastecido,0
+Leucemias,Imatinib,Inhibidor de tirosina quinasa,2025-01-01,En monitorización,0
+Leucemias,Imatinib,Inhibidor de tirosina quinasa,2025-02-01,En monitorización,0
+Leucemias,Imatinib,Inhibidor de tirosina quinasa,2025-03-01,En monitorización,0
+Leucemias,Imatinib,Inhibidor de tirosina quinasa,2025-04-01,En monitorización,0
+Leucemias,Imatinib,Inhibidor de tirosina quinasa,2025-05-01,En monitorización,0
+Leucemias,Imatinib,Inhibidor de tirosina quinasa,2025-06-01,En monitorización,0
+Leucemias,Imatinib,Inhibidor de tirosina quinasa,2025-07-01,En monitorización,0
+Leucemias,Imatinib,Inhibidor de tirosina quinasa,2025-08-01,En monitorización,0
+Leucemias,Imatinib,Inhibidor de tirosina quinasa,2025-09-01,En monitorización,0
+Leucemias,Imatinib,Inhibidor de tirosina quinasa,2026-01-01,En monitorización,0
+Leucemias,Metotrexato,Quimioterapia,2023-06-01,Desabastecido,2
+Leucemias,Metotrexato,Quimioterapia,2023-07-01,Sin reporte,2
+Leucemias,Metotrexato,Quimioterapia,2023-10-01,Sin reporte,2
+Leucemias,Metotrexato,Quimioterapia,2023-11-01,Sin reporte,2
+Leucemias,Metotrexato,Quimioterapia,2023-12-01,Sin reporte,2
+Leucemias,Metotrexato,Quimioterapia,2024-01-01,Sin reporte,2
+Leucemias,Metotrexato,Quimioterapia,2024-02-01,Sin reporte,2
+Leucemias,Metotrexato,Quimioterapia,2024-03-01,Sin reporte,2
+Leucemias,Metotrexato,Quimioterapia,2024-04-01,Sin reporte,2
+Leucemias,Metotrexato,Quimioterapia,2024-05-01,Sin reporte,2
+Leucemias,Metotrexato,Quimioterapia,2024-06-01,Sin reporte,2
+Leucemias,Metotrexato,Quimioterapia,2024-07-01,En riesgo de desabastecimiento,2
+Leucemias,Metotrexato,Quimioterapia,2024-08-01,Sin reporte,2
+Leucemias,Metotrexato,Quimioterapia,2024-09-01,Sin reporte,2
+Leucemias,Metotrexato,Quimioterapia,2024-10-01,Sin reporte,2
+Leucemias,Metotrexato,Quimioterapia,2024-11-01,Sin reporte,2
+Leucemias,Metotrexato,Quimioterapia,2024-12-01,Sin reporte,2
+Leucemias,Metotrexato,Quimioterapia,2025-01-01,Sin reporte,2
+Leucemias,Metotrexato,Quimioterapia,2025-02-01,Sin reporte,2
+Leucemias,Metotrexato,Quimioterapia,2025-03-01,Sin reporte,2
+Leucemias,Metotrexato,Quimioterapia,2025-04-01,Sin reporte,2
+Leucemias,Metotrexato,Quimioterapia,2025-05-01,Sin reporte,2
+Leucemias,Metotrexato,Quimioterapia,2025-06-01,Sin reporte,2
+Leucemias,Metotrexato,Quimioterapia,2025-07-01,Sin reporte,2
+Leucemias,Metotrexato,Quimioterapia,2025-08-01,En monitorización,2
+Leucemias,Metotrexato,Quimioterapia,2025-09-01,En monitorización,2
+Leucemias,Metotrexato,Quimioterapia,2026-01-01,En monitorización,2
+Leucemias,Vincristina,Quimioterapia,2023-06-01,En monitorización,2
+Leucemias,Vincristina,Quimioterapia,2023-07-01,Desabastecido,2
+Leucemias,Vincristina,Quimioterapia,2023-10-01,Desabastecido,2
+Leucemias,Vincristina,Quimioterapia,2023-11-01,No desabastecido,2
+Leucemias,Vincristina,Quimioterapia,2023-12-01,No desabastecido,2
+Leucemias,Vincristina,Quimioterapia,2024-01-01,No desabastecido,2
+Leucemias,Vincristina,Quimioterapia,2024-02-01,No desabastecido,2
+Leucemias,Vincristina,Quimioterapia,2024-03-01,No desabastecido,2
+Leucemias,Vincristina,Quimioterapia,2024-04-01,No desabastecido,2
+Leucemias,Vincristina,Quimioterapia,2024-05-01,No desabastecido,2
+Leucemias,Vincristina,Quimioterapia,2024-06-01,No desabastecido,2
+Leucemias,Vincristina,Quimioterapia,2024-07-01,No desabastecido,2
+Leucemias,Vincristina,Quimioterapia,2024-08-01,No desabastecido,2
+Leucemias,Vincristina,Quimioterapia,2024-09-01,No desabastecido,2
+Leucemias,Vincristina,Quimioterapia,2024-10-01,No desabastecido,2
+Leucemias,Vincristina,Quimioterapia,2024-11-01,No desabastecido,2
+Leucemias,Vincristina,Quimioterapia,2024-12-01,No desabastecido,2
+Leucemias,Vincristina,Quimioterapia,2025-01-01,No desabastecido,2
+Leucemias,Vincristina,Quimioterapia,2025-02-01,No desabastecido,2
+Leucemias,Vincristina,Quimioterapia,2025-03-01,No desabastecido,2
+Leucemias,Vincristina,Quimioterapia,2025-04-01,No desabastecido,2
+Leucemias,Vincristina,Quimioterapia,2025-05-01,No desabastecido,2
+Leucemias,Vincristina,Quimioterapia,2025-06-01,No desabastecido,2
+Leucemias,Vincristina,Quimioterapia,2025-07-01,No desabastecido,2
+Leucemias,Vincristina,Quimioterapia,2025-08-01,No desabastecido,2
+Leucemias,Vincristina,Quimioterapia,2025-09-01,No desabastecido,2
+Leucemias,Vincristina,Quimioterapia,2026-01-01,Sin reporte,2
+VIH,Abacavir,Antirretroviral (inhibidor de la transcriptasa inversa),2023-06-01,Desabastecido,4
+VIH,Abacavir,Antirretroviral (inhibidor de la transcriptasa inversa),2023-07-01,Desabastecido,4
+VIH,Abacavir,Antirretroviral (inhibidor de la transcriptasa inversa),2023-10-01,Desabastecido,4
+VIH,Abacavir,Antirretroviral (inhibidor de la transcriptasa inversa),2023-11-01,Desabastecido,4
+VIH,Abacavir,Antirretroviral (inhibidor de la transcriptasa inversa),2023-12-01,En monitorización,4
+VIH,Abacavir,Antirretroviral (inhibidor de la transcriptasa inversa),2024-01-01,En monitorización,4
+VIH,Abacavir,Antirretroviral (inhibidor de la transcriptasa inversa),2024-02-01,En monitorización,4
+VIH,Abacavir,Antirretroviral (inhibidor de la transcriptasa inversa),2024-03-01,En monitorización,4
+VIH,Abacavir,Antirretroviral (inhibidor de la transcriptasa inversa),2024-04-01,En monitorización,4
+VIH,Abacavir,Antirretroviral (inhibidor de la transcriptasa inversa),2024-05-01,En monitorización,4
+VIH,Abacavir,Antirretroviral (inhibidor de la transcriptasa inversa),2024-06-01,En monitorización,4
+VIH,Abacavir,Antirretroviral (inhibidor de la transcriptasa inversa),2024-07-01,En monitorización,4
+VIH,Abacavir,Antirretroviral (inhibidor de la transcriptasa inversa),2024-08-01,En monitorización,4
+VIH,Abacavir,Antirretroviral (inhibidor de la transcriptasa inversa),2024-09-01,En monitorización,4
+VIH,Abacavir,Antirretroviral (inhibidor de la transcriptasa inversa),2024-10-01,En monitorización,4
+VIH,Abacavir,Antirretroviral (inhibidor de la transcriptasa inversa),2024-11-01,En monitorización,4
+VIH,Abacavir,Antirretroviral (inhibidor de la transcriptasa inversa),2024-12-01,En monitorización,4
+VIH,Abacavir,Antirretroviral (inhibidor de la transcriptasa inversa),2025-01-01,En monitorización,4
+VIH,Abacavir,Antirretroviral (inhibidor de la transcriptasa inversa),2025-02-01,En monitorización,4
+VIH,Abacavir,Antirretroviral (inhibidor de la transcriptasa inversa),2025-03-01,En monitorización,4
+VIH,Abacavir,Antirretroviral (inhibidor de la transcriptasa inversa),2025-04-01,No desabastecido,4
+VIH,Abacavir,Antirretroviral (inhibidor de la transcriptasa inversa),2025-05-01,No desabastecido,4
+VIH,Abacavir,Antirretroviral (inhibidor de la transcriptasa inversa),2025-06-01,No desabastecido,4
+VIH,Abacavir,Antirretroviral (inhibidor de la transcriptasa inversa),2025-07-01,No desabastecido,4
+VIH,Abacavir,Antirretroviral (inhibidor de la transcriptasa inversa),2025-08-01,No desabastecido,4
+VIH,Abacavir,Antirretroviral (inhibidor de la transcriptasa inversa),2025-09-01,No desabastecido,4
+VIH,Abacavir,Antirretroviral (inhibidor de la transcriptasa inversa),2026-01-01,En monitorización,4
+VIH,Darunavir,Antirretroviral (inhibidor de proteasa),2023-06-01,En monitorización,0
+VIH,Darunavir,Antirretroviral (inhibidor de proteasa),2023-07-01,En monitorización,0
+VIH,Darunavir,Antirretroviral (inhibidor de proteasa),2023-10-01,En monitorización,0
+VIH,Darunavir,Antirretroviral (inhibidor de proteasa),2023-11-01,En monitorización,0
+VIH,Darunavir,Antirretroviral (inhibidor de proteasa),2023-12-01,En monitorización,0
+VIH,Darunavir,Antirretroviral (inhibidor de proteasa),2024-01-01,En monitorización,0
+VIH,Darunavir,Antirretroviral (inhibidor de proteasa),2024-02-01,En monitorización,0
+VIH,Darunavir,Antirretroviral (inhibidor de proteasa),2024-03-01,En monitorización,0
+VIH,Darunavir,Antirretroviral (inhibidor de proteasa),2024-04-01,En monitorización,0
+VIH,Darunavir,Antirretroviral (inhibidor de proteasa),2024-05-01,En monitorización,0
+VIH,Darunavir,Antirretroviral (inhibidor de proteasa),2024-06-01,En monitorización,0
+VIH,Darunavir,Antirretroviral (inhibidor de proteasa),2024-07-01,En monitorización,0
+VIH,Darunavir,Antirretroviral (inhibidor de proteasa),2024-08-01,En monitorización,0
+VIH,Darunavir,Antirretroviral (inhibidor de proteasa),2024-09-01,En monitorización,0
+VIH,Darunavir,Antirretroviral (inhibidor de proteasa),2024-10-01,No desabastecido,0
+VIH,Darunavir,Antirretroviral (inhibidor de proteasa),2024-11-01,No desabastecido,0
+VIH,Darunavir,Antirretroviral (inhibidor de proteasa),2024-12-01,No desabastecido,0
+VIH,Darunavir,Antirretroviral (inhibidor de proteasa),2025-01-01,No desabastecido,0
+VIH,Darunavir,Antirretroviral (inhibidor de proteasa),2025-02-01,No desabastecido,0
+VIH,Darunavir,Antirretroviral (inhibidor de proteasa),2025-03-01,No desabastecido,0
+VIH,Darunavir,Antirretroviral (inhibidor de proteasa),2025-04-01,No desabastecido,0
+VIH,Darunavir,Antirretroviral (inhibidor de proteasa),2025-05-01,No desabastecido,0
+VIH,Darunavir,Antirretroviral (inhibidor de proteasa),2025-06-01,No desabastecido,0
+VIH,Darunavir,Antirretroviral (inhibidor de proteasa),2025-07-01,No desabastecido,0
+VIH,Darunavir,Antirretroviral (inhibidor de proteasa),2025-08-01,No desabastecido,0
+VIH,Darunavir,Antirretroviral (inhibidor de proteasa),2025-09-01,No desabastecido,0
+VIH,Darunavir,Antirretroviral (inhibidor de proteasa),2026-01-01,Sin reporte,0
+VIH,Dolutegravir,Antirretroviral (inhibidor de integrasa),2023-06-01,Sin reporte,0
+VIH,Dolutegravir,Antirretroviral (inhibidor de integrasa),2023-07-01,Sin reporte,0
+VIH,Dolutegravir,Antirretroviral (inhibidor de integrasa),2023-10-01,Sin reporte,0
+VIH,Dolutegravir,Antirretroviral (inhibidor de integrasa),2023-11-01,Sin reporte,0
+VIH,Dolutegravir,Antirretroviral (inhibidor de integrasa),2023-12-01,Sin reporte,0
+VIH,Dolutegravir,Antirretroviral (inhibidor de integrasa),2024-01-01,Sin reporte,0
+VIH,Dolutegravir,Antirretroviral (inhibidor de integrasa),2024-02-01,Sin reporte,0
+VIH,Dolutegravir,Antirretroviral (inhibidor de integrasa),2024-03-01,Sin reporte,0
+VIH,Dolutegravir,Antirretroviral (inhibidor de integrasa),2024-04-01,Sin reporte,0
+VIH,Dolutegravir,Antirretroviral (inhibidor de integrasa),2024-05-01,Sin reporte,0
+VIH,Dolutegravir,Antirretroviral (inhibidor de integrasa),2024-06-01,Sin reporte,0
+VIH,Dolutegravir,Antirretroviral (inhibidor de integrasa),2024-07-01,Sin reporte,0
+VIH,Dolutegravir,Antirretroviral (inhibidor de integrasa),2024-08-01,En monitorización,0
+VIH,Dolutegravir,Antirretroviral (inhibidor de integrasa),2024-09-01,En monitorización,0
+VIH,Dolutegravir,Antirretroviral (inhibidor de integrasa),2024-10-01,En monitorización,0
+VIH,Dolutegravir,Antirretroviral (inhibidor de integrasa),2024-11-01,En monitorización,0
+VIH,Dolutegravir,Antirretroviral (inhibidor de integrasa),2024-12-01,En monitorización,0
+VIH,Dolutegravir,Antirretroviral (inhibidor de integrasa),2025-01-01,En monitorización,0
+VIH,Dolutegravir,Antirretroviral (inhibidor de integrasa),2025-02-01,En monitorización,0
+VIH,Dolutegravir,Antirretroviral (inhibidor de integrasa),2025-03-01,En monitorización,0
+VIH,Dolutegravir,Antirretroviral (inhibidor de integrasa),2025-04-01,En monitorización,0
+VIH,Dolutegravir,Antirretroviral (inhibidor de integrasa),2025-05-01,En monitorización,0
+VIH,Dolutegravir,Antirretroviral (inhibidor de integrasa),2025-06-01,No desabastecido,0
+VIH,Dolutegravir,Antirretroviral (inhibidor de integrasa),2025-07-01,No desabastecido,0
+VIH,Dolutegravir,Antirretroviral (inhibidor de integrasa),2025-08-01,No desabastecido,0
+VIH,Dolutegravir,Antirretroviral (inhibidor de integrasa),2025-09-01,No desabastecido,0
+VIH,Dolutegravir,Antirretroviral (inhibidor de integrasa),2026-01-01,Sin reporte,0
+VIH,Efavirenz,Antirretroviral,2023-06-01,En monitorización,0
+VIH,Efavirenz,Antirretroviral,2023-07-01,En monitorización,0
+VIH,Efavirenz,Antirretroviral,2023-10-01,En monitorización,0
+VIH,Efavirenz,Antirretroviral,2023-11-01,En monitorización,0
+VIH,Efavirenz,Antirretroviral,2023-12-01,En monitorización,0
+VIH,Efavirenz,Antirretroviral,2024-01-01,En monitorización,0
+VIH,Efavirenz,Antirretroviral,2024-02-01,En monitorización,0
+VIH,Efavirenz,Antirretroviral,2024-03-01,En monitorización,0
+VIH,Efavirenz,Antirretroviral,2024-04-01,En monitorización,0
+VIH,Efavirenz,Antirretroviral,2024-05-01,En monitorización,0
+VIH,Efavirenz,Antirretroviral,2024-06-01,En monitorización,0
+VIH,Efavirenz,Antirretroviral,2024-07-01,En monitorización,0
+VIH,Efavirenz,Antirretroviral,2024-08-01,En monitorización,0
+VIH,Efavirenz,Antirretroviral,2024-09-01,En monitorización,0
+VIH,Efavirenz,Antirretroviral,2024-10-01,En monitorización,0
+VIH,Efavirenz,Antirretroviral,2024-11-01,En monitorización,0
+VIH,Efavirenz,Antirretroviral,2024-12-01,En monitorización,0
+VIH,Efavirenz,Antirretroviral,2025-01-01,En monitorización,0
+VIH,Efavirenz,Antirretroviral,2025-02-01,En monitorización,0
+VIH,Efavirenz,Antirretroviral,2025-03-01,En monitorización,0
+VIH,Efavirenz,Antirretroviral,2025-04-01,En monitorización,0
+VIH,Efavirenz,Antirretroviral,2025-05-01,En monitorización,0
+VIH,Efavirenz,Antirretroviral,2025-06-01,No desabastecido,0
+VIH,Efavirenz,Antirretroviral,2025-07-01,No desabastecido,0
+VIH,Efavirenz,Antirretroviral,2025-08-01,No desabastecido,0
+VIH,Efavirenz,Antirretroviral,2025-09-01,No desabastecido,0
+VIH,Efavirenz,Antirretroviral,2026-01-01,Sin reporte,0
+VIH,Lamivudina,Antirretroviral (inhibidor de la transcriptasa inversa),2023-06-01,Desabastecido,8
+VIH,Lamivudina,Antirretroviral (inhibidor de la transcriptasa inversa),2023-07-01,Desabastecido,8
+VIH,Lamivudina,Antirretroviral (inhibidor de la transcriptasa inversa),2023-10-01,Desabastecido,8
+VIH,Lamivudina,Antirretroviral (inhibidor de la transcriptasa inversa),2023-11-01,Desabastecido,8
+VIH,Lamivudina,Antirretroviral (inhibidor de la transcriptasa inversa),2023-12-01,En monitorización,8
+VIH,Lamivudina,Antirretroviral (inhibidor de la transcriptasa inversa),2024-01-01,En riesgo de desabastecimiento,8
+VIH,Lamivudina,Antirretroviral (inhibidor de la transcriptasa inversa),2024-02-01,En riesgo de desabastecimiento,8
+VIH,Lamivudina,Antirretroviral (inhibidor de la transcriptasa inversa),2024-03-01,En riesgo de desabastecimiento,8
+VIH,Lamivudina,Antirretroviral (inhibidor de la transcriptasa inversa),2024-04-01,En riesgo de desabastecimiento,8
+VIH,Lamivudina,Antirretroviral (inhibidor de la transcriptasa inversa),2024-05-01,En monitorización,8
+VIH,Lamivudina,Antirretroviral (inhibidor de la transcriptasa inversa),2024-06-01,En monitorización,8
+VIH,Lamivudina,Antirretroviral (inhibidor de la transcriptasa inversa),2024-07-01,En monitorización,8
+VIH,Lamivudina,Antirretroviral (inhibidor de la transcriptasa inversa),2024-08-01,En monitorización,8
+VIH,Lamivudina,Antirretroviral (inhibidor de la transcriptasa inversa),2024-09-01,En monitorización,8
+VIH,Lamivudina,Antirretroviral (inhibidor de la transcriptasa inversa),2024-10-01,En monitorización,8
+VIH,Lamivudina,Antirretroviral (inhibidor de la transcriptasa inversa),2024-11-01,En monitorización,8
+VIH,Lamivudina,Antirretroviral (inhibidor de la transcriptasa inversa),2024-12-01,En monitorización,8
+VIH,Lamivudina,Antirretroviral (inhibidor de la transcriptasa inversa),2025-01-01,En monitorización,8
+VIH,Lamivudina,Antirretroviral (inhibidor de la transcriptasa inversa),2025-02-01,En monitorización,8
+VIH,Lamivudina,Antirretroviral (inhibidor de la transcriptasa inversa),2025-03-01,En monitorización,8
+VIH,Lamivudina,Antirretroviral (inhibidor de la transcriptasa inversa),2025-04-01,En monitorización,8
+VIH,Lamivudina,Antirretroviral (inhibidor de la transcriptasa inversa),2025-05-01,En monitorización,8
+VIH,Lamivudina,Antirretroviral (inhibidor de la transcriptasa inversa),2025-06-01,En monitorización,8
+VIH,Lamivudina,Antirretroviral (inhibidor de la transcriptasa inversa),2025-07-01,En monitorización,8
+VIH,Lamivudina,Antirretroviral (inhibidor de la transcriptasa inversa),2025-08-01,En monitorización,8
+VIH,Lamivudina,Antirretroviral (inhibidor de la transcriptasa inversa),2025-09-01,En monitorización,8
+VIH,Lamivudina,Antirretroviral (inhibidor de la transcriptasa inversa),2026-01-01,En monitorización,8
+VIH,Raltegravir,Antirretroviral (inhibidor de integrasa),2023-06-01,Sin reporte,0
+VIH,Raltegravir,Antirretroviral (inhibidor de integrasa),2023-07-01,Sin reporte,0
+VIH,Raltegravir,Antirretroviral (inhibidor de integrasa),2023-10-01,Sin reporte,0
+VIH,Raltegravir,Antirretroviral (inhibidor de integrasa),2023-11-01,Sin reporte,0
+VIH,Raltegravir,Antirretroviral (inhibidor de integrasa),2023-12-01,Sin reporte,0
+VIH,Raltegravir,Antirretroviral (inhibidor de integrasa),2024-01-01,En monitorización,0
+VIH,Raltegravir,Antirretroviral (inhibidor de integrasa),2024-02-01,En monitorización,0
+VIH,Raltegravir,Antirretroviral (inhibidor de integrasa),2024-03-01,En monitorización,0
+VIH,Raltegravir,Antirretroviral (inhibidor de integrasa),2024-04-01,En monitorización,0
+VIH,Raltegravir,Antirretroviral (inhibidor de integrasa),2024-05-01,En monitorización,0
+VIH,Raltegravir,Antirretroviral (inhibidor de integrasa),2024-06-01,En monitorización,0
+VIH,Raltegravir,Antirretroviral (inhibidor de integrasa),2024-07-01,No desabastecido,0
+VIH,Raltegravir,Antirretroviral (inhibidor de integrasa),2024-08-01,No desabastecido,0
+VIH,Raltegravir,Antirretroviral (inhibidor de integrasa),2024-09-01,No desabastecido,0
+VIH,Raltegravir,Antirretroviral (inhibidor de integrasa),2024-10-01,No desabastecido,0
+VIH,Raltegravir,Antirretroviral (inhibidor de integrasa),2024-11-01,No desabastecido,0
+VIH,Raltegravir,Antirretroviral (inhibidor de integrasa),2024-12-01,No desabastecido,0
+VIH,Raltegravir,Antirretroviral (inhibidor de integrasa),2025-01-01,No desabastecido,0
+VIH,Raltegravir,Antirretroviral (inhibidor de integrasa),2025-02-01,No desabastecido,0
+VIH,Raltegravir,Antirretroviral (inhibidor de integrasa),2025-03-01,No desabastecido,0
+VIH,Raltegravir,Antirretroviral (inhibidor de integrasa),2025-04-01,No desabastecido,0
+VIH,Raltegravir,Antirretroviral (inhibidor de integrasa),2025-05-01,No desabastecido,0
+VIH,Raltegravir,Antirretroviral (inhibidor de integrasa),2025-06-01,No desabastecido,0
+VIH,Raltegravir,Antirretroviral (inhibidor de integrasa),2025-07-01,No desabastecido,0
+VIH,Raltegravir,Antirretroviral (inhibidor de integrasa),2025-08-01,No desabastecido,0
+VIH,Raltegravir,Antirretroviral (inhibidor de integrasa),2025-09-01,No desabastecido,0
+VIH,Raltegravir,Antirretroviral (inhibidor de integrasa),2026-01-01,Sin reporte,0
+VIH,Tenofovir disoproxil,Antirretroviral (inhibidor de la transcriptasa inversa),2023-06-01,En monitorización,0
+VIH,Tenofovir disoproxil,Antirretroviral (inhibidor de la transcriptasa inversa),2023-07-01,En monitorización,0
+VIH,Tenofovir disoproxil,Antirretroviral (inhibidor de la transcriptasa inversa),2023-10-01,En monitorización,0
+VIH,Tenofovir disoproxil,Antirretroviral (inhibidor de la transcriptasa inversa),2023-11-01,En monitorización,0
+VIH,Tenofovir disoproxil,Antirretroviral (inhibidor de la transcriptasa inversa),2023-12-01,En monitorización,0
+VIH,Tenofovir disoproxil,Antirretroviral (inhibidor de la transcriptasa inversa),2024-01-01,En monitorización,0
+VIH,Tenofovir disoproxil,Antirretroviral (inhibidor de la transcriptasa inversa),2024-02-01,En monitorización,0
+VIH,Tenofovir disoproxil,Antirretroviral (inhibidor de la transcriptasa inversa),2024-03-01,En monitorización,0
+VIH,Tenofovir disoproxil,Antirretroviral (inhibidor de la transcriptasa inversa),2024-04-01,En monitorización,0
+VIH,Tenofovir disoproxil,Antirretroviral (inhibidor de la transcriptasa inversa),2024-05-01,No desabastecido,0
+VIH,Tenofovir disoproxil,Antirretroviral (inhibidor de la transcriptasa inversa),2024-06-01,No desabastecido,0
+VIH,Tenofovir disoproxil,Antirretroviral (inhibidor de la transcriptasa inversa),2024-07-01,No desabastecido,0
+VIH,Tenofovir disoproxil,Antirretroviral (inhibidor de la transcriptasa inversa),2024-08-01,En monitorización,0
+VIH,Tenofovir disoproxil,Antirretroviral (inhibidor de la transcriptasa inversa),2024-09-01,En monitorización,0
+VIH,Tenofovir disoproxil,Antirretroviral (inhibidor de la transcriptasa inversa),2024-10-01,En monitorización,0
+VIH,Tenofovir disoproxil,Antirretroviral (inhibidor de la transcriptasa inversa),2024-11-01,En monitorización,0
+VIH,Tenofovir disoproxil,Antirretroviral (inhibidor de la transcriptasa inversa),2024-12-01,En monitorización,0
+VIH,Tenofovir disoproxil,Antirretroviral (inhibidor de la transcriptasa inversa),2025-01-01,En monitorización,0
+VIH,Tenofovir disoproxil,Antirretroviral (inhibidor de la transcriptasa inversa),2025-02-01,En monitorización,0
+VIH,Tenofovir disoproxil,Antirretroviral (inhibidor de la transcriptasa inversa),2025-03-01,En monitorización,0
+VIH,Tenofovir disoproxil,Antirretroviral (inhibidor de la transcriptasa inversa),2025-04-01,En monitorización,0
+VIH,Tenofovir disoproxil,Antirretroviral (inhibidor de la transcriptasa inversa),2025-05-01,En monitorización,0
+VIH,Tenofovir disoproxil,Antirretroviral (inhibidor de la transcriptasa inversa),2025-06-01,En monitorización,0
+VIH,Tenofovir disoproxil,Antirretroviral (inhibidor de la transcriptasa inversa),2025-07-01,En monitorización,0
+VIH,Tenofovir disoproxil,Antirretroviral (inhibidor de la transcriptasa inversa),2025-08-01,En monitorización,0
+VIH,Tenofovir disoproxil,Antirretroviral (inhibidor de la transcriptasa inversa),2025-09-01,En monitorización,0
+VIH,Tenofovir disoproxil,Antirretroviral (inhibidor de la transcriptasa inversa),2026-01-01,En monitorización,0

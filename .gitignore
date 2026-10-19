@@ -64,3 +64,6 @@ data/raw/*
 !data/raw/.gitkeep
 
 **/*.quarto_ipynb
+
+# Presentación (archivos locales, no se versionan)
+/presentation/

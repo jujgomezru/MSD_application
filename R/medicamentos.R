@@ -39,3 +39,41 @@ invima_descargar_desabastecimiento <- function(carpeta = here::here("data", "raw
   }
   invisible(urls)
 }
+
+# Lee un listado mensual de abastecimiento del Invima (PDF) y devuelve una fila
+# por registro: fecha del listado (mes que reporta), estado y el texto de la
+# columna del nombre. El formato de las tablas cambia entre 2023 y 2026 y en
+# algunos meses no trae el código ATC, así que cada registro se reconoce por su
+# línea de estado (con una fecha de seguimiento en la misma línea o en una
+# vecina) y su nombre es lo que hay en las primeras columnas desde el registro
+# anterior. Algunos listados tienen una fila por presentación y otros una por
+# principio activo: los conteos totales no son comparables entre meses, pero sí
+# si un principio activo aparece y con qué estado.
+invima_leer_listado <- function(archivo) {
+  paginas <- pdftools::pdf_text(archivo)
+  lineas <- unlist(strsplit(paginas, "\n"))
+  estado_re <- "(?i)\\b(no desabastecido|desabastecido|en riesgo de|en monitorizaci.n)"
+  tiene_fecha <- grepl("\\d{1,2}/\\d{1,2}/\\d{2,4}", lineas)
+  ancla <- which(grepl(estado_re, lineas, perl = TRUE) &
+                   (tiene_fecha | dplyr::lag(tiene_fecha, default = FALSE) | dplyr::lead(tiene_fecha, default = FALSE)))
+  previa <- c(0, utils::head(ancla, -1))
+
+  titulo <- tolower(stringi::stri_trans_general(paste(paginas[1:2], collapse = " "), "Latin-ASCII"))
+  mes <- stringr::str_match(titulo, paste0("desabastecimiento\\s+(?:de\\s+medicamentos\\s+)?(?:de\\s+)?",
+                                           "(enero|febrero|marzo|abril|mayo|junio|julio|agosto|septiembre|octubre|noviembre|diciembre)",
+                                           "\\s+(?:de\\s+)?(20\\d\\d)"))
+  meses <- c("enero", "febrero", "marzo", "abril", "mayo", "junio", "julio", "agosto",
+             "septiembre", "octubre", "noviembre", "diciembre")
+
+  tibble::tibble(
+    fecha = lubridate::make_date(as.integer(mes[3]), match(mes[2], meses), 1),
+    estado = dplyr::case_match(
+      tolower(stringr::str_extract(lineas[ancla], estado_re)),
+      "no desabastecido" ~ "No desabastecido",
+      "desabastecido" ~ "Desabastecido",
+      "en riesgo de" ~ "En riesgo de desabastecimiento",
+      .default = "En monitorización"
+    ),
+    nombre = purrr::map2_chr(previa, ancla, \(a, b) stringr::str_squish(paste(substr(lineas[(a + 1):b], 1, 95), collapse = " ")))
+  )
+}

@@ -1,18 +1,25 @@
 enfermedad,medicamento,tipo,estado,vitales_desde_2023,precio_regulado,principio_activo,unidad,precio_mediana,precio_min,precio_max,caro,problema,motivo_cuello,cuello_botella
-Artritis reumatoide,Rituximab,Biológico anti-CD20,Sin reporte,0,TRUE,Rituximab,Vial,1161611.5085,47398.4,2972940,TRUE,,Mayor precio por unidad entre los de la enfermedad,TRUE
+Artritis reumatoide,Metotrexato,FAME convencional,Desabastecido,81,TRUE,Metotrexato,Jeringa Prellenada,33280,6.7,102300,FALSE,1,Desabastecido (Invima),TRUE
+Artritis reumatoide,Rituximab,Biológico anti-CD20,Sin reporte,0,TRUE,Rituximab,Vial,1161611.5085,47398.4,2972940,TRUE,,Mayor precio por unidad entre los de la enfermedad,FALSE
 Artritis reumatoide,Abatacept,Biológico,Sin reporte,0,TRUE,Abatacept,Jeringa Prellenada,882917.5,619125,1146710,TRUE,,Mayor precio por unidad entre los de la enfermedad,FALSE
 Artritis reumatoide,Tocilizumab,Biológico anti-IL-6,Sin reporte,0,TRUE,Tocilizumab,Vial,670501,331111,827778,TRUE,,Mayor precio por unidad entre los de la enfermedad,FALSE
 Artritis reumatoide,Adalimumab,Biológico anti-TNF,Sin reporte,0,TRUE,Adalimumab,Jeringa Prellenada,450823.5294,189551.5971,1557590,TRUE,,Mayor precio por unidad entre los de la enfermedad,FALSE
 Artritis reumatoide,Etanercept,Biológico anti-TNF,Sin reporte,0,TRUE,Etanercept,Jeringa Prellenada,244890.1842,209174.1016,540444.0931,TRUE,,Mayor precio por unidad entre los de la enfermedad,FALSE
 Artritis reumatoide,Upadacitinib,Inhibidor de JAK,Sin reporte,0,TRUE,Upadacitinib,Tableta,76000,76000,76000,FALSE,,Mayor precio por unidad entre los de la enfermedad,FALSE
 Artritis reumatoide,Tofacitinib,Inhibidor de JAK,Sin reporte,0,TRUE,Tofacitinib,Tableta,44109.19185,29699.6875,58518.6962,FALSE,,Mayor precio por unidad entre los de la enfermedad,FALSE
-Cáncer colorrectal,Panitumumab,Anti-EGFR,Sin reporte,0,TRUE,Panitumumab,Vial,1358843.919,1358843.919,1358843.919,TRUE,,Mayor precio por unidad entre los de la enfermedad,TRUE
+Artritis reumatoide,Leflunomida,FAME convencional,Sin reporte,0,TRUE,Leflunomide,,,,,FALSE,,Mayor precio por unidad entre los de la enfermedad,FALSE
+Cáncer colorrectal,Fluorouracilo,Quimioterapia,En monitorización,0,FALSE,Fluorouracilo,Vial,5292.544199,475.3,10962.95013,FALSE,4,En monitorización por riesgo de abastecimiento (Invima),TRUE
+Cáncer colorrectal,Panitumumab,Anti-EGFR,Sin reporte,0,TRUE,Panitumumab,Vial,1358843.919,1358843.919,1358843.919,TRUE,,Mayor precio por unidad entre los de la enfermedad,FALSE
 Cáncer colorrectal,Bevacizumab,Anti-VEGF,Sin reporte,0,TRUE,Bevacizumab,Vial,773926.6478500001,395901.6393,3485200,TRUE,,Mayor precio por unidad entre los de la enfermedad,FALSE
 Cáncer colorrectal,Cetuximab,Anti-EGFR,Sin reporte,0,TRUE,Cetuximab,Vial,649281.3839,649281.3839,649281.3839,TRUE,,Mayor precio por unidad entre los de la enfermedad,FALSE
 Cáncer colorrectal,Regorafenib,Inhibidor multiquinasa,Sin reporte,0,TRUE,Regorafenib,Tableta,179433.7848,179433.7848,179433.7848,TRUE,,Mayor precio por unidad entre los de la enfermedad,FALSE
 Cáncer colorrectal,Oxaliplatino,Quimioterapia,Sin reporte,0,TRUE,Oxaliplatino,Vial,66890.87810999999,44808.76904,145242.4409,FALSE,,Mayor precio por unidad entre los de la enfermedad,FALSE
+Cáncer colorrectal,Irinotecán,Quimioterapia,Sin reporte,1,TRUE,Irinotecan,Vial,51033.96386,15151.68148,61020,FALSE,,Mayor precio por unidad entre los de la enfermedad,FALSE
 Cáncer colorrectal,Capecitabina,Quimioterapia,Sin reporte,0,TRUE,Capecitabina,Tableta,1779.574306,52.51004016,5178.639144,FALSE,,Mayor precio por unidad entre los de la enfermedad,FALSE
-Cáncer de mama,Trastuzumab deruxtecán,Anti-HER2 conjugado,Sin reporte,37,FALSE,Trastuzumab,,,,,FALSE,3,37 importaciones como vital no disponible desde 2023,TRUE
+Cáncer colorrectal,Folinato (leucovorina),Modulador de quimioterapia,Sin reporte,0,FALSE,,,,,,FALSE,,Mayor precio por unidad entre los de la enfermedad,FALSE
+Cáncer de mama,Tamoxifeno,Hormonoterapia (modulador del receptor de estrógeno),Desabastecido,0,FALSE,Tamoxifeno,Tableta,906.6305829,187.0711538,1626.190012,FALSE,1,Desabastecido (Invima),TRUE
+Cáncer de mama,Trastuzumab deruxtecán,Anti-HER2 conjugado,Sin reporte,37,FALSE,Trastuzumab,,,,,FALSE,3,37 importaciones como vital no disponible desde 2023,FALSE
+Cáncer de mama,Paclitaxel,Quimioterapia,En monitorización,0,TRUE,Paclitaxel,Vial,47131.693615,14500,136380.1604,FALSE,4,En monitorización por riesgo de abastecimiento (Invima),FALSE
 Cáncer de mama,Pertuzumab,Anti-HER2,Sin reporte,0,TRUE,Pertuzumab,Vial,7928017.091,7928017.091,7928017.091,TRUE,,Mayor precio por unidad entre los de la enfermedad,FALSE
 Cáncer de mama,Trastuzumab emtansina,Anti-HER2 conjugado,Sin reporte,0,TRUE,Trastuzumab Emtansina,Vial,7113986.3275,5471951.683,8756020.972,TRUE,,Mayor precio por unidad entre los de la enfermedad,FALSE
 Cáncer de mama,Trastuzumab,Anti-HER2,Sin reporte,1,TRUE,Trastuzumab,Vial,2115928.0575,1213848,3560621,TRUE,,Mayor precio por unidad entre los de la enfermedad,FALSE
@@ -20,16 +27,25 @@ Cáncer de mama,Palbociclib,Inhibidor de CDK4/6,Sin reporte,0,TRUE,Palbociclib,T
 Cáncer de mama,Fulvestrant,Hormonoterapia,Sin reporte,0,TRUE,Fulvestrant,Jeringa Prellenada,296565.9349,79606.25,410661.3524,TRUE,,Mayor precio por unidad entre los de la enfermedad,FALSE
 Cáncer de mama,Ribociclib,Inhibidor de CDK4/6,Sin reporte,0,TRUE,Ribociclib,Tableta,185937,185937,185937,TRUE,,Mayor precio por unidad entre los de la enfermedad,FALSE
 Cáncer de mama,Abemaciclib,Inhibidor de CDK4/6,Sin reporte,0,TRUE,Abemaciclib,Tableta,149278.1327,78382,198793.3057,TRUE,,Mayor precio por unidad entre los de la enfermedad,FALSE
-Cáncer de próstata,Leuprolida,Hormonoterapia (agonista GnRH),Sin reporte,0,FALSE,Leuprolida Acetato,Vial,783272.7273,783272.7273,783272.7273,TRUE,,Mayor precio por unidad entre los de la enfermedad,TRUE
+Cáncer de mama,Ciclofosfamida,Quimioterapia,No desabastecido,0,FALSE,Ciclofosfamida,Vial,33932.285715000005,34.3,36747.2885,FALSE,,Mayor precio por unidad entre los de la enfermedad,FALSE
+Cáncer de mama,Anastrozol,Hormonoterapia (inhibidor de aromatasa),Sin reporte,0,TRUE,Anastrozol,Tableta,677.5603655,483.9790301,5231.448,FALSE,,Mayor precio por unidad entre los de la enfermedad,FALSE
+Cáncer de mama,Letrozol,Hormonoterapia (inhibidor de aromatasa),Sin reporte,0,TRUE,Letrozol,Tableta,512.6104402999999,419.7276697,4202,FALSE,,Mayor precio por unidad entre los de la enfermedad,FALSE
+Cáncer de mama,Doxorrubicina,Quimioterapia,Sin reporte,0,FALSE,,,,,,FALSE,,Mayor precio por unidad entre los de la enfermedad,FALSE
+Cáncer de próstata,Bicalutamida,Antiandrógeno,En monitorización,0,TRUE,Bicalutamida,Tableta,2162.17086,629.3895,2553.858268,FALSE,4,En monitorización por riesgo de abastecimiento (Invima),TRUE
+Cáncer de próstata,Leuprolida,Hormonoterapia (agonista GnRH),Sin reporte,0,FALSE,Leuprolida Acetato,Vial,783272.7273,783272.7273,783272.7273,TRUE,,Mayor precio por unidad entre los de la enfermedad,FALSE
+Cáncer de próstata,Goserelina,Hormonoterapia (agonista GnRH),Sin reporte,0,TRUE,Goserelina,Jeringa Prellenada,538108.3753,264101.2743,812115.4763,TRUE,,Mayor precio por unidad entre los de la enfermedad,FALSE
 Cáncer de próstata,Docetaxel,Quimioterapia,Sin reporte,0,TRUE,Docetaxel,Vial,86715.75,36903.41125,113500,FALSE,,Mayor precio por unidad entre los de la enfermedad,FALSE
 Cáncer de próstata,Apalutamida,Antiandrógeno de nueva generación,Sin reporte,0,TRUE,Apalutamida,Tableta,62842,62842,62842,FALSE,,Mayor precio por unidad entre los de la enfermedad,FALSE
 Cáncer de próstata,Enzalutamida,Antiandrógeno de nueva generación,Sin reporte,0,TRUE,Enzalutamida,Capsula,43525.4674,36359.58333,66344.02712,FALSE,,Mayor precio por unidad entre los de la enfermedad,FALSE
 Cáncer de próstata,Abiraterona,Inhibidor de síntesis de andrógenos,Sin reporte,0,TRUE,Abiraterona,Tableta,10833.333333499999,5374.265954,60406.54717,FALSE,,Mayor precio por unidad entre los de la enfermedad,FALSE
 Cáncer de próstata,Darolutamida,Antiandrógeno de nueva generación,Sin reporte,0,FALSE,,,,,,FALSE,,Mayor precio por unidad entre los de la enfermedad,FALSE
 Cáncer de pulmón,Pemetrexed,Quimioterapia,En monitorización,0,TRUE,Pemetrexed,Vial,275287.0865,95426.46696,1759842.414,TRUE,4,En monitorización por riesgo de abastecimiento (Invima),TRUE
+Cáncer de pulmón,Carboplatino,Quimioterapia,En monitorización,0,FALSE,Carboplatino,Vial,90447.40576,83181.93624,93545.58747,FALSE,4,En monitorización por riesgo de abastecimiento (Invima),FALSE
+Cáncer de pulmón,Paclitaxel,Quimioterapia,En monitorización,0,TRUE,Paclitaxel,Vial,47131.693615,14500,136380.1604,FALSE,4,En monitorización por riesgo de abastecimiento (Invima),FALSE
 Cáncer de pulmón,Pembrolizumab,Inmunoterapia (anti-PD-1),Sin reporte,0,TRUE,Pembrolizumab,Vial,11458000,11458000,11458000,TRUE,,Mayor precio por unidad entre los de la enfermedad,FALSE
 Cáncer de pulmón,Nivolumab,Inmunoterapia (anti-PD-1),Sin reporte,0,TRUE,Nivolumab,Vial,3869460,2211120,5527800,TRUE,,Mayor precio por unidad entre los de la enfermedad,FALSE
 Cáncer de pulmón,Osimertinib,Inhibidor de EGFR,Sin reporte,0,TRUE,Osimertinib,Tableta,514020,342680,685360,TRUE,,Mayor precio por unidad entre los de la enfermedad,FALSE
+Cáncer de pulmón,Cisplatino,Quimioterapia,Sin reporte,0,FALSE,Cisplatino,Vial,24928.9594,20417.09353,66788,FALSE,,Mayor precio por unidad entre los de la enfermedad,FALSE
 Cáncer de pulmón,Atezolizumab,Inmunoterapia (anti-PD-L1),Sin reporte,0,TRUE,,,,,,FALSE,,Mayor precio por unidad entre los de la enfermedad,FALSE
 Cáncer de pulmón,Alectinib,Inhibidor de ALK,Sin reporte,0,TRUE,,,,,,FALSE,,Mayor precio por unidad entre los de la enfermedad,FALSE
 Enfermedad renal y trasplante,Eritropoyetina (epoetina alfa),Agente estimulante de eritropoyesis,En riesgo de desabastecimiento,0,TRUE,Eritropoyetina,Vial,6460.1323215,229.1694118,10526.73675,FALSE,2,En riesgo de desabastecimiento (Invima),TRUE
@@ -38,17 +54,29 @@ Enfermedad renal y trasplante,Darbepoetina alfa,Agente estimulante de eritropoye
 Enfermedad renal y trasplante,Everolimus,Inmunosupresor (trasplante),Sin reporte,0,TRUE,Everolimus,Tableta,84682,11942,338739,FALSE,,Mayor precio por unidad entre los de la enfermedad,FALSE
 Enfermedad renal y trasplante,Tacrolimus,Inmunosupresor (trasplante),No desabastecido,0,TRUE,Tacrolimus,Capsula,13293.72676,1574.941176,29961.84585,FALSE,,Mayor precio por unidad entre los de la enfermedad,FALSE
 Enfermedad renal y trasplante,Cinacalcet,Calcimimético,Sin reporte,0,TRUE,Cinacalcet,Tableta,12000,4000,29146.36257,FALSE,,Mayor precio por unidad entre los de la enfermedad,FALSE
+Enfermedad renal y trasplante,Hierro sacarosa,Hierro parenteral,Sin reporte,0,FALSE,Hierro Sacarosa,Ampolla,11965.749787,4353.723404,19577.77617,FALSE,,Mayor precio por unidad entre los de la enfermedad,FALSE
+Enfermedad renal y trasplante,Ciclosporina,Inmunosupresor (inhibidor de calcineurina),Sin reporte,0,TRUE,Ciclosporina,Capsula,4484.484238,1692,13969.90083,FALSE,,Mayor precio por unidad entre los de la enfermedad,FALSE
 Enfermedad renal y trasplante,Micofenolato,Inmunosupresor (trasplante),Sin reporte,0,FALSE,Micofenolato De Mofetilo,Capsula,4069.5,2713,5426,FALSE,,Mayor precio por unidad entre los de la enfermedad,FALSE
-Leucemias,Citarabina,Quimioterapia,En monitorización,29,TRUE,Citarabina,Frasco,27206.88552,24574.77104,29839,FALSE,3,29 importaciones como vital no disponible desde 2023,TRUE
+Enfermedad renal y trasplante,Sevelamer,Quelante de fósforo,Sin reporte,0,FALSE,Sevelamer,Tableta,2845.282385,2613.700949,3076.863821,FALSE,,Mayor precio por unidad entre los de la enfermedad,FALSE
+Enfermedad renal y trasplante,Calcitriol,Análogo de vitamina D,Sin reporte,0,FALSE,Calcitriol,Capsula,108.51986794999999,101.0242315,116.0155044,FALSE,,Mayor precio por unidad entre los de la enfermedad,FALSE
+Leucemias,Metotrexato,Quimioterapia,Desabastecido,81,TRUE,Metotrexato,Jeringa Prellenada,33280,6.7,102300,FALSE,1,Desabastecido (Invima),TRUE
+Leucemias,Citarabina,Quimioterapia,En monitorización,29,TRUE,Citarabina,Frasco,27206.88552,24574.77104,29839,FALSE,3,29 importaciones como vital no disponible desde 2023,FALSE
+Leucemias,Mercaptopurina,Quimioterapia,Sin reporte,14,TRUE,Mercaptamina,,,,,FALSE,3,14 importaciones como vital no disponible desde 2023,FALSE
+Leucemias,Daunorrubicina,Quimioterapia,En monitorización,0,FALSE,Daunorrubicina,Vial,47904.36998,46605.904,49202.83596,FALSE,4,En monitorización por riesgo de abastecimiento (Invima),FALSE
+Leucemias,Vincristina,Quimioterapia,En monitorización,0,FALSE,Vincristina,Vial,16978.412734999998,16417.30141,17539.52406,FALSE,4,En monitorización por riesgo de abastecimiento (Invima),FALSE
 Leucemias,Imatinib,Inhibidor de tirosina quinasa,En monitorización,0,TRUE,Imatinib,Tableta,11046.01954,7747.871512,77201,FALSE,4,En monitorización por riesgo de abastecimiento (Invima),FALSE
 Leucemias,Blinatumomab,Biológico biespecífico,Sin reporte,0,TRUE,Blinatumomab,Vial,6742987.822,6742987.822,6742987.822,TRUE,,Mayor precio por unidad entre los de la enfermedad,FALSE
 Leucemias,Azacitidina,Hipometilante,Sin reporte,0,TRUE,Azacitidina,Vial,395623.55915,260207.4689,783500,TRUE,,Mayor precio por unidad entre los de la enfermedad,FALSE
 Leucemias,Dasatinib,Inhibidor de tirosina quinasa,Sin reporte,0,TRUE,Dasatinib,Tableta,110766.66665,36000,287584,TRUE,,Mayor precio por unidad entre los de la enfermedad,FALSE
 Leucemias,Venetoclax,Inhibidor de BCL-2,Sin reporte,0,TRUE,Venetoclax,Tableta,78000,15600,156000,FALSE,,Mayor precio por unidad entre los de la enfermedad,FALSE
 Leucemias,Nilotinib,Inhibidor de tirosina quinasa,Sin reporte,0,TRUE,Nilotinib,Capsula,73216.5,62757,83676,FALSE,,Mayor precio por unidad entre los de la enfermedad,FALSE
-VIH,Darunavir,Antirretroviral (inhibidor de proteasa),En monitorización,0,TRUE,Darunavir,Tableta,3457.351399,3072.826087,4682.027653,FALSE,4,En monitorización por riesgo de abastecimiento (Invima),TRUE
+VIH,Lamivudina,Antirretroviral (inhibidor de la transcriptasa inversa),Desabastecido,0,TRUE,Lamivudina,Tableta,828.0529801,828.0529801,828.0529801,FALSE,1,Desabastecido (Invima),TRUE
+VIH,Abacavir,Antirretroviral (inhibidor de la transcriptasa inversa),Desabastecido,0,TRUE,Abacavir,Tableta,696.2441315,696.2441315,696.2441315,FALSE,1,Desabastecido (Invima),FALSE
+VIH,Darunavir,Antirretroviral (inhibidor de proteasa),En monitorización,0,TRUE,Darunavir,Tableta,3457.351399,3072.826087,4682.027653,FALSE,4,En monitorización por riesgo de abastecimiento (Invima),FALSE
+VIH,Tenofovir disoproxil,Antirretroviral (inhibidor de la transcriptasa inversa),En monitorización,0,TRUE,Tenofovir Disoproxil,Tableta,1013.691563,1013.691563,1013.691563,FALSE,4,En monitorización por riesgo de abastecimiento (Invima),FALSE
 VIH,Bictegravir + emtricitabina + tenofovir alafenamida,Antirretroviral (inhibidor de integrasa),Sin reporte,0,FALSE,Bictegravir + Emtricitabina + Tenofovir Alafenamida,Tableta,18564.57143,18564.57143,18564.57143,FALSE,,Mayor precio por unidad entre los de la enfermedad,FALSE
 VIH,Dolutegravir,Antirretroviral (inhibidor de integrasa),Sin reporte,0,TRUE,Dolutegravir,Tableta,12107.34531,12107.34531,12107.34531,FALSE,,Mayor precio por unidad entre los de la enfermedad,FALSE
 VIH,Raltegravir,Antirretroviral (inhibidor de integrasa),Sin reporte,0,TRUE,Raltegravir,Tableta,4913.09009,1150,9368.088113,FALSE,,Mayor precio por unidad entre los de la enfermedad,FALSE
 VIH,Efavirenz,Antirretroviral,Sin reporte,0,TRUE,Efavirenz,Tableta,403.5296889,387.1058039,1183.374683,FALSE,,Mayor precio por unidad entre los de la enfermedad,FALSE
 VIH,Tenofovir alafenamida,Antirretroviral,Sin reporte,0,TRUE,Tenofovir Disoproxil,,,,,FALSE,,Mayor precio por unidad entre los de la enfermedad,FALSE
+VIH,Emtricitabina,Antirretroviral (inhibidor de la transcriptasa inversa),Sin reporte,0,TRUE,,,,,,FALSE,,Mayor precio por unidad entre los de la enfermedad,FALSE

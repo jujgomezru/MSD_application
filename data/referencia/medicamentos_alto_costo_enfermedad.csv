@@ -52,3 +52,31 @@ Cáncer colorrectal,Panitumumab,Anti-EGFR
 Cáncer colorrectal,Oxaliplatino,Quimioterapia
 Cáncer colorrectal,Capecitabina,Quimioterapia
 Cáncer colorrectal,Regorafenib,Inhibidor multiquinasa
+Artritis reumatoide,Metotrexato,FAME convencional
+Artritis reumatoide,Leflunomida,FAME convencional
+Enfermedad renal y trasplante,Hierro sacarosa,Hierro parenteral
+Enfermedad renal y trasplante,Calcitriol,Análogo de vitamina D
+Enfermedad renal y trasplante,Sevelamer,Quelante de fósforo
+Enfermedad renal y trasplante,Ciclosporina,Inmunosupresor (inhibidor de calcineurina)
+Cáncer de mama,Tamoxifeno,Hormonoterapia (modulador del receptor de estrógeno)
+Cáncer de mama,Letrozol,Hormonoterapia (inhibidor de aromatasa)
+Cáncer de mama,Anastrozol,Hormonoterapia (inhibidor de aromatasa)
+Cáncer de mama,Doxorrubicina,Quimioterapia
+Cáncer de mama,Paclitaxel,Quimioterapia
+Cáncer de mama,Ciclofosfamida,Quimioterapia
+VIH,Tenofovir disoproxil,Antirretroviral (inhibidor de la transcriptasa inversa)
+VIH,Emtricitabina,Antirretroviral (inhibidor de la transcriptasa inversa)
+VIH,Lamivudina,Antirretroviral (inhibidor de la transcriptasa inversa)
+VIH,Abacavir,Antirretroviral (inhibidor de la transcriptasa inversa)
+Cáncer de próstata,Goserelina,Hormonoterapia (agonista GnRH)
+Cáncer de próstata,Bicalutamida,Antiandrógeno
+Leucemias,Metotrexato,Quimioterapia
+Leucemias,Vincristina,Quimioterapia
+Leucemias,Mercaptopurina,Quimioterapia
+Leucemias,Daunorrubicina,Quimioterapia
+Cáncer de pulmón,Carboplatino,Quimioterapia
+Cáncer de pulmón,Cisplatino,Quimioterapia
+Cáncer de pulmón,Paclitaxel,Quimioterapia
+Cáncer colorrectal,Fluorouracilo,Quimioterapia
+Cáncer colorrectal,Irinotecán,Quimioterapia
+Cáncer colorrectal,Folinato (leucovorina),Modulador de quimioterapia

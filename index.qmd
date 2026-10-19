@@ -1,12 +1,15 @@
 ---
 title: "Barreras de acceso en salud en Colombia"
-subtitle: "Gráficas de apoyo"
-author: "jujgomezru"
-date: last-modified
+code-tools: false
 ---
 
-Gráficas elaboradas con datos públicos y reportes oficiales. El código fuente está en el
-[repositorio](https://github.com/jujgomezru/MSD_application) y las fuentes, en `data/fuentes.csv`.
+## Espera nacional por especialidad
+
+![](figures/espera_nacional_linea.svg)
+
+![](figures/espera_nacional_barras.svg)
+
+<p class="nota-fuente">Fuente: Minsalud, Observatorio Nacional de Calidad en Salud (Res. 256 de 2016), 2017-2026.</p>
 
 ## Espera por departamento
 
@@ -85,9 +88,7 @@ mapa = P.plot({
 html`${mapa.legend("color", {marginLeft: 16, width: 360, tickFormat: fmt})}${mapa}`
 ```
 
-<p class="nota-fuente">Fuente: Minsalud, Observatorio Nacional de Calidad en Salud (Res. 256 de 2016);
-límites departamentales: DANE, Marco Geoestadístico Nacional 2025. Los departamentos en gris no tienen
-datos para la especialidad. En departamentos con pocas citas el promedio es menos estable.</p>
+<p class="nota-fuente">Fuente: Minsalud, Observatorio Nacional de Calidad en Salud (Res. 256 de 2016); límites departamentales: DANE, Marco Geoestadístico Nacional 2025.</p>
 
 ```{ojs}
 //| echo: false
@@ -176,12 +177,7 @@ mapaEsp = P.plot({
 html`${mapaEsp.legend("color", {marginLeft: 16, width: 360, tickFormat: fmt})}${mapaEsp}`
 ```
 
-<p class="nota-fuente">Fuente: Minsalud, Registro Único Nacional del Talento Humano en Salud (ReTHUS),
-corte 2022, por departamento de residencia; población: DANE, proyecciones 2022. ReTHUS es acumulado:
-incluye profesionales que pudieron retirarse, fallecer o mudarse, así que sirve para comparar
-departamentos, no como conteo exacto. Cundinamarca aparece baja porque muchos profesionales que
-trabajan allí residen en Bogotá. "Médicos (pregrado)" incluye a todos los títulos de medicina, también
-a quienes luego se especializaron.</p>
+<p class="nota-fuente">Fuente: Minsalud, Registro Único Nacional del Talento Humano en Salud (ReTHUS), corte 2022; población: DANE, proyecciones 2022.</p>
 
 ```{ojs}
 //| echo: false
@@ -237,9 +233,7 @@ rotulados = new Set([
 ].map(d => d.departamento))
 
 md`Cada punto es un departamento; su tamaño indica la población. Las líneas marcan los valores
-nacionales: **${fmt(citasNac)} citas por cada 1.000 habitantes** y **${fmt(diasNac)} días** de espera.
-Abajo a la izquierda están los departamentos con pocas citas por habitante y espera corta: allí la
-espera corta puede reflejar poca oferta local y no buen acceso.`
+nacionales: **${fmt(citasNac)} citas por cada 1.000 habitantes** y **${fmt(diasNac)} días** de espera.`
 ```
 
 ```{ojs}
@@ -283,16 +277,12 @@ P.plot({
 })
 ```
 
-<p class="nota-fuente">Fuente: Minsalud, Observatorio Nacional de Calidad en Salud (Res. 256 de 2016),
-julio de 2025 a junio de 2026; población: DANE, proyecciones (promedio 2025-2026). Las citas se cuentan
-en el departamento de la IPS que atiende, no en el de residencia del paciente, y dependen de la
-cobertura del reporte de cada departamento.</p>
+<p class="nota-fuente">Fuente: Minsalud, Observatorio Nacional de Calidad en Salud (Res. 256 de 2016), julio de 2025 a junio de 2026; población: DANE, proyecciones 2025-2026.</p>
 
-## Lo que el indicador no ve: reclamos por citas
+## Reclamos por citas
 
-El indicador del Observatorio solo mide las citas que sí se asignaron. Los reclamos ante la
-Superintendencia Nacional de Salud muestran lo que queda por fuera: las citas negadas y las
-especialidades que el Observatorio no mide.
+Reclamos mensuales ante la Superintendencia Nacional de Salud por citas con especialista, según el
+motivo. La línea punteada marca el cambio de clasificación de motivos de julio de 2023.
 
 ```{ojs}
 //| echo: false
@@ -325,10 +315,7 @@ P.plot({
 })
 ```
 
-<p class="nota-fuente">Fuente: Superintendencia Nacional de Salud, base de reclamos en salud (datos
-abiertos), enero de 2017 a diciembre de 2025. Antes de julio de 2023 la clasificación casi no
-distinguía la negación de la cita, por lo que la comparación entre negación y demora solo es válida
-desde esa fecha.</p>
+<p class="nota-fuente">Fuente: Superintendencia Nacional de Salud, base de reclamos en salud (datos abiertos), enero de 2017 a diciembre de 2025.</p>
 
 ### Especialidades con más reclamos
 
@@ -337,17 +324,17 @@ desde esa fecha.</p>
 reclamosEsp = FileAttachment("data/processed/citas_reclamos_especialidad.csv").csv()
   .then(filas => filas.map(d => ({...d, n: +d.n, medida: d.medida_observatorio === "TRUE"})))
 
-topEsp = {
-  const totales = d3.rollups(reclamosEsp, v => d3.sum(v, d => d.n), d => d.especialidad)
-    .sort((a, b) => b[1] - a[1]).slice(0, 20).map(d => d[0]);
-  return reclamosEsp.filter(d => totales.includes(d.especialidad));
-}
+// Total de reclamos (negación y demora) por especialidad; las 20 con más reclamos.
+topEsp = d3.rollups(reclamosEsp, v => ({n: d3.sum(v, d => d.n), medida: v[0].medida}), d => d.especialidad)
+  .map(([especialidad, r]) => ({especialidad, ...r}))
+  .sort((a, b) => b.n - a.n)
+  .slice(0, 20)
 
 pctMedida = d3.sum(reclamosEsp.filter(d => d.medida), d => d.n) / d3.sum(reclamosEsp, d => d.n)
 
-md`Reclamos por negación o demora de citas con especialista, de julio de 2023 a diciembre de 2025.
-Las especialidades que mide el Observatorio (en azul) concentran solo el
-**${(pctMedida * 100).toLocaleString("es-CO", {maximumFractionDigits: 1})} %** de los reclamos.`
+md`Reclamos por negación o demora de citas con especialista, de julio de 2023 a diciembre de 2025: las
+20 especialidades con más reclamos. En azul, las que mide el Observatorio de Calidad
+(**${(pctMedida * 100).toLocaleString("es-CO", {maximumFractionDigits: 1})} %** de los reclamos).`
 ```
 
 ```{ojs}
@@ -360,13 +347,42 @@ P.plot({
   y: {label: null},
   color: {domain: ["Medida por el Observatorio", "No medida"], range: ["#2a78d6", "#c3c2b7"], legend: true},
   marks: [
-    P.barX(topEsp, P.groupY({x: "sum"}, {
+    P.barX(topEsp, {
       x: "n", y: "especialidad", fill: d => d.medida ? "Medida por el Observatorio" : "No medida",
-      sort: {y: "-x"}, title: d => d.especialidad, tip: true
-    }))
+      sort: {y: "-x"}, title: d => `${d.especialidad} (${d.n.toLocaleString("es-CO")} reclamos)`, tip: true
+    })
   ]
 })
 ```
+
+<p class="nota-fuente">Fuente: Superintendencia Nacional de Salud, reclamos en salud de julio de 2023 a diciembre de 2025; Minsalud, Observatorio Nacional de Calidad en Salud.</p>
+
+### Especialidades con más negaciones de casos priorizados o de riesgo vital
+
+```{ojs}
+//| echo: false
+negPriorizados = FileAttachment("data/processed/neg_priorizados_especialidad.csv").csv().then(f => f.map(d => ({...d, negaciones: +d.negaciones})))
+
+md`Negaciones de citas con especialista en casos clasificados como priorizados o de riesgo vital, de
+julio de 2023 a diciembre de 2025: las 15 especialidades con más negaciones.`
+```
+
+```{ojs}
+//| echo: false
+P.plot({
+  width: 760,
+  marginLeft: 260,
+  marginRight: 60,
+  x: {label: "Negaciones (julio de 2023 a diciembre de 2025)", grid: true, tickFormat: d => d.toLocaleString("es-CO")},
+  y: {label: null},
+  marks: [
+    P.barX(negPriorizados, {x: "negaciones", y: "especialidad", fill: "#2a78d6", sort: {y: "-x"}}),
+    P.text(negPriorizados, {x: "negaciones", y: "especialidad", text: d => d.negaciones.toLocaleString("es-CO"), dx: 4, textAnchor: "start", fill: "#52514e", fontSize: 11})
+  ]
+})
+```
+
+<p class="nota-fuente">Fuente: Superintendencia Nacional de Salud, reclamos en salud de julio de 2023 a diciembre de 2025.</p>
 
 ### Reclamos y espera por departamento
 
@@ -396,9 +412,7 @@ P.plot({
 })
 ```
 
-<p class="nota-fuente">Fuente: Superintendencia Nacional de Salud, base de reclamos en salud (2025, por
-departamento del afectado); Minsalud, Observatorio Nacional de Calidad en Salud; población: DANE. Los
-departamentos con pocos reclamos pueden reflejar menor uso del canal de quejas y no menos barreras.</p>
+<p class="nota-fuente">Fuente: Superintendencia Nacional de Salud, reclamos en salud de 2025; Minsalud, Observatorio Nacional de Calidad en Salud; población: DANE.</p>
 
 ### Reclamos por citas según EPS
 
@@ -418,8 +432,7 @@ afiliados. Ordenadas por la tasa total.</p>
 </table>`
 ```
 
-<p class="nota-fuente">Fuente: Superintendencia Nacional de Salud, reclamos en salud de 2025; afiliados:
-ADRES, BDUA, corte de octubre de 2026. Solo EPS con al menos 200.000 afiliados.</p>
+<p class="nota-fuente">Fuente: Superintendencia Nacional de Salud, reclamos en salud de 2025; afiliados: ADRES, BDUA, corte de octubre de 2026.</p>
 
 ## Perfil de la negación de citas con especialistas
 
@@ -465,9 +478,7 @@ mapaNeg = P.plot({
 html`${mapaNeg.legend("color", {marginLeft: 16, width: 360, tickFormat: d => Math.round(d).toLocaleString("es-CO")})}${mapaNeg}`
 ```
 
-<p class="nota-fuente">Fuente: Superintendencia Nacional de Salud, reclamos en salud de 2025 por
-departamento del afectado; población: DANE, proyecciones 2025. Las tasas bajas pueden reflejar menor
-uso del canal de quejas y no menos negaciones.</p>
+<p class="nota-fuente">Fuente: Superintendencia Nacional de Salud, reclamos en salud de 2025; población: DANE, proyecciones 2025.</p>
 
 ### Régimen y gravedad
 
@@ -475,7 +486,6 @@ uso del canal de quejas y no menos negaciones.</p>
 //| echo: false
 negRegimen = FileAttachment("data/processed/neg_regimen.csv").csv()
 negRiesgo = FileAttachment("data/processed/neg_riesgo.csv").csv()
-negPriorizados = FileAttachment("data/processed/neg_priorizados_especialidad.csv").csv().then(f => f.map(d => ({...d, negaciones: +d.negaciones})))
 pctNeg = x => Math.round(+x * 100) + " %"
 
 html`<div class="row">
@@ -491,24 +501,13 @@ html`<div class="row">
 </table></div></div>`
 ```
 
-**Especialidades con más negaciones de casos priorizados o de riesgo vital:**
-
-```{ojs}
-//| echo: false
-P.plot({
-  width: 760,
-  marginLeft: 260,
-  marginRight: 60,
-  x: {label: "Negaciones (julio de 2023 a diciembre de 2025)", grid: true, tickFormat: d => d.toLocaleString("es-CO")},
-  y: {label: null},
-  marks: [
-    P.barX(negPriorizados, {x: "negaciones", y: "especialidad", fill: "#2a78d6", sort: {y: "-x"}}),
-    P.text(negPriorizados, {x: "negaciones", y: "especialidad", text: d => d.negaciones.toLocaleString("es-CO"), dx: 4, textAnchor: "start", fill: "#52514e", fontSize: 11})
-  ]
-})
-```
+<p class="nota-fuente">Fuente: Superintendencia Nacional de Salud, reclamos en salud de julio de 2023 a diciembre de 2025; afiliados: ADRES, BDUA.</p>
 
 ### Enfermedad del afectado
+
+Negaciones de citas con especialista según el grupo de la enfermedad del afectado, de julio de 2023 a
+diciembre de 2025. Entre paréntesis, la proporción de negación de cada grupo; en azul, los grupos de alto
+costo.
 
 ```{ojs}
 //| echo: false
@@ -529,8 +528,42 @@ P.plot({
 })
 ```
 
-<p class="nota-fuente">Entre paréntesis, la proporción de negación de cada grupo. Se excluyen los
-reclamos sin patología especificada (unos 510.000).</p>
+<p class="nota-fuente">Fuente: Superintendencia Nacional de Salud, reclamos en salud de julio de 2023 a diciembre de 2025.</p>
+
+### Reclamos por cada 10.000 pacientes crónicos
+
+```{ojs}
+//| echo: false
+cronicos = FileAttachment("data/processed/neg_cronicos_cac.csv").csv()
+  .then(f => f.map(d => ({...d, total: +d.total, pacientes: +d.pacientes, por_10k: +d.por_10k, pct_negacion: +d.pct_negacion, referencia: d.referencia === "TRUE"})))
+
+cronMax = cronicos.filter(d => !d.referencia).reduce((a, b) => b.por_10k > a.por_10k ? b : a)
+cronRef = cronicos.find(d => d.referencia)
+
+md`Reclamos por negación o demora de citas con especialista entre julio de 2024 y junio de 2025, por cada
+10.000 pacientes de cada enfermedad registrados en la Cuenta de Alto Costo. El valor más alto es el de
+${cronMax.enfermedad.toLowerCase()}: **${Math.round(cronMax.por_10k).toLocaleString("es-CO")} reclamos por cada 10.000
+pacientes**. En gris, como referencia, los reclamos con alguna patología especificada por cada 10.000
+afiliados: **${Math.round(cronRef.por_10k).toLocaleString("es-CO")}**.`
+```
+
+```{ojs}
+//| echo: false
+P.plot({
+  width: 760,
+  marginLeft: 260,
+  marginRight: 120,
+  x: {label: "Reclamos por cada 10.000 pacientes (julio de 2024 a junio de 2025)", grid: true},
+  y: {label: null, domain: cronicos.map(d => d.enfermedad)},
+  marks: [
+    P.barX(cronicos, {x: "por_10k", y: "enfermedad", fill: d => d.referencia ? "#c3c2b7" : "#2a78d6",
+      title: d => `${d.enfermedad}\n${d.total.toLocaleString("es-CO")} reclamos\n${d.pacientes.toLocaleString("es-CO")} ${d.referencia ? "afiliados" : "pacientes"}`, tip: true}),
+    P.text(cronicos, {x: "por_10k", y: "enfermedad", text: d => `${Math.round(d.por_10k)} (${Math.round(d.pct_negacion * 100)} % negación)`, dx: 4, textAnchor: "start", fill: "#52514e", fontSize: 11})
+  ]
+})
+```
+
+<p class="nota-fuente">Fuente: Superintendencia Nacional de Salud, reclamos en salud de julio de 2024 a junio de 2025; pacientes: Cuenta de Alto Costo, cortes de julio de 2024 a enero de 2026; afiliados: ADRES, BDUA.</p>
 
 ### Población vulnerable y características del afectado
 
@@ -540,11 +573,24 @@ negPob = FileAttachment("data/processed/neg_poblacion.csv").csv()
   .then(f => f.map(d => ({...d, negaciones: +d.negaciones, total: +d.total, pct_negacion: +d.pct_negacion, pct_general: +d.pct_general})))
 
 viewof dimNeg = Inputs.radio(["Nivel educativo", "Edad", "Población especial", "Grupo étnico", "Sexo"], {label: "Ver por", value: "Nivel educativo"})
+
+md`Proporción de negación (negaciones sobre el total de reclamos por negación o demora de citas con
+especialista) en cada categoría, de julio de 2023 a diciembre de 2025. La línea punteada marca el
+promedio de las categorías mostradas.`
 ```
 
 ```{ojs}
 //| echo: false
+// Las categorías se muestran en su orden natural (edad y nivel educativo) o
+// alfabético, no según el resultado.
+ordenCategorias = ({
+  "Edad": ["De 0 a 5 años", "De 6 a 12 años", "De 13 a 17 años", "De 18 a 24 años", "De 25 a 29 años",
+    "De 30 a 37 años", "De 38 a 49 años", "De 50 a 62 años", "Mayor de 63 años"],
+  "Nivel educativo": ["Ninguno", "Primaria incompleta", "Primaria", "Secundaria incompleta", "Secundaria",
+    "Universitario incompleto", "Universitario", "Posgrado"]
+})
 negPobSel = negPob.filter(d => d.dimension === dimNeg)
+dominioPob = ordenCategorias[dimNeg] ?? negPobSel.map(d => d.valor).sort((a, b) => a.localeCompare(b, "es"))
 // Promedio ponderado de las categorías mostradas (sin "No aplica").
 promNeg = d3.sum(negPobSel, d => d.negaciones) / d3.sum(negPobSel, d => d.total)
 
@@ -553,27 +599,23 @@ P.plot({
   marginLeft: 260,
   marginRight: 60,
   x: {label: "Proporción de negación", domain: [0.3, 0.8], tickFormat: d => Math.round(d * 100) + " %", grid: true},
-  y: {label: null},
+  y: {label: null, domain: dominioPob.filter(v => negPobSel.some(d => d.valor === v))},
   marks: [
     P.ruleX([promNeg], {stroke: "#898781", strokeDasharray: "4,3"}),
     P.text([promNeg], {x: d => d, frameAnchor: "top", dy: -6, text: [`Promedio (${Math.round(promNeg * 100)} %)`], fill: "#52514e", fontSize: 11}),
     P.ruleY(negPobSel, {x1: 0.3, x2: "pct_negacion", y: "valor", stroke: "#c3c2b7"}),
-    P.dot(negPobSel, {x: "pct_negacion", y: "valor", r: 6, fill: "#2a78d6", sort: {y: "-x"},
+    P.dot(negPobSel, {x: "pct_negacion", y: "valor", r: 6, fill: "#2a78d6",
       title: d => `${d.valor}\n${Math.round(d.pct_negacion * 100)} % de negación\n${d.total.toLocaleString("es-CO")} reclamos`, tip: true}),
     P.text(negPobSel, {x: "pct_negacion", y: "valor", text: d => Math.round(d.pct_negacion * 100) + " %", dx: 12, textAnchor: "start", fill: "#52514e", fontSize: 11})
   ]
 })
 ```
 
-<p class="nota-fuente">Fuente: Superintendencia Nacional de Salud, reclamos en salud de julio de 2023
-a diciembre de 2025. Se excluyen las categorías "No aplica" y las de menos de 300 reclamos. La
-Supersalud advierte que las variables de caracterización del afectado (sexo, edad, educación) pueden
-tener errores de captura.</p>
+<p class="nota-fuente">Fuente: Superintendencia Nacional de Salud, reclamos en salud de julio de 2023 a diciembre de 2025.</p>
 
 ## Situación de las EPS y negación de citas
 
-¿Niegan más citas las EPS con peor situación financiera? Se cruzan los estados financieros que las
-EPS reportan a la Supersalud con los reclamos por citas con especialista de 2025.
+Estados financieros que las EPS reportan a la Supersalud frente a sus reclamos por citas con especialista.
 
 ### Finanzas de las EPS frente a reclamos por citas
 
@@ -610,9 +652,10 @@ spearman = (a, b) => { const ra = rangos(a), rb = rangos(b), ma = d3.mean(ra), m
 datosDisp = epsHip.filter(d => !indFin.soloNiif || d.formato === "niif")
 rho = spearman(datosDisp.map(d => d[indFin.campo]), datosDisp.map(d => d[campoY]))
 
-md`Correlación de rangos (Spearman): **${rho.toLocaleString("es-CO", {maximumFractionDigits: 2})}** con
-${datosDisp.length} EPS. Valores cercanos a 1 indican que las EPS con más ${indFin.campo === "patrimonio_por_afiliado" ? "patrimonio" : "deuda o siniestralidad"}
-tienen más reclamos; cercanos a 0, que no hay relación.${indFin.soloNiif ? " La deuda solo se compara entre EPS que reportan en formato NIIF; en las públicas e indígenas no es equivalente." : ""}`
+md`Cada punto es una EPS con al menos 200.000 afiliados; su tamaño indica el número de afiliados. El
+selector cambia el indicador financiero (diciembre de 2025) y el tipo de reclamo (2025). Correlación de
+rangos (Spearman): **${rho.toLocaleString("es-CO", {maximumFractionDigits: 2})}** con **${datosDisp.length} EPS**;
+va de −1 a 1, y 0 indica que no hay relación.${indFin.soloNiif ? " La deuda solo se muestra para las EPS que reportan en formato NIIF." : ""}`
 ```
 
 ```{ojs}
@@ -636,12 +679,7 @@ P.plot({
 })
 ```
 
-<p class="nota-fuente">Fuente: Supersalud, catálogo de información financiera de las EPS (diciembre de
-2025) y reclamos en salud de 2025; afiliados: ADRES, BDUA. EPS con al menos 200.000 afiliados. La
-Nueva EPS no aparece porque no publica estados financieros desde junio de 2024. Deuda con prestadores:
-cuentas por pagar a prestadores de servicios de salud, reservas técnicas liquidadas pendientes de pago,
-obligaciones conocidas no liquidadas y glosas, expresada en meses de costo en salud. Es una asociación
-entre EPS, no una relación causal.</p>
+<p class="nota-fuente">Fuente: Supersalud, catálogo de información financiera de las EPS (diciembre de 2025) y reclamos en salud de 2025; afiliados: ADRES, BDUA.</p>
 
 ### Situación financiera de cada EPS (diciembre de 2025)
 
@@ -658,9 +696,51 @@ html`<table class="table table-sm tabla-datos">
 </table>`
 ```
 
-<p class="nota-fuente">Siniestralidad mayor a 100 %: la EPS gastó en salud más de lo que recibió.
-Patrimonio negativo: sus deudas superan sus activos. "—": EPS que reportan en formato del sector público,
-cuya deuda no es comparable.</p>
+<p class="nota-fuente">Fuente: Supersalud, catálogo de información financiera de las EPS (diciembre de 2025) y reclamos en salud de 2025; afiliados: ADRES, BDUA.</p>
+
+### ¿Niega más citas una EPS cuando crece su deuda?
+
+Cada punto es una EPS en un semestre: su deuda con prestadores al cierre del semestre anterior frente a
+sus negaciones del semestre, ambas medidas frente al promedio de esa EPS y descontando la tendencia común
+a todas las EPS. La línea punteada es la relación estimada.
+
+```{ojs}
+//| echo: false
+panelDeuda = FileAttachment("data/processed/eps_panel_deuda.csv").csv()
+  .then(f => f.map(d => ({...d, deuda_res: +d.deuda_res, negacion_res: +d.negacion_res, meses_deuda: +d.meses_deuda, negaciones: +d.negaciones})))
+panelRes = FileAttachment("data/processed/eps_panel_resumen.csv").csv()
+  .then(f => f.map(d => ({...d, coef: +d.coef, cambio_pct: +d.cambio_pct, ic_bajo: +d.ic_bajo, ic_alto: +d.ic_alto})))
+
+pctSigno = x => Math.abs(x) < 0.0005 ? "0 %" : (x >= 0 ? "+" : "−") + Math.abs(x * 100).toLocaleString("es-CO", {maximumFractionDigits: 1}) + " %"
+resDeuda = panelRes.find(d => d.indicador === "meses_deuda")
+
+md`Cambio estimado en las negaciones del semestre siguiente por cada mes adicional de costo adeudado a
+prestadores: **${pctSigno(resDeuda.cambio_pct)}** (intervalo de confianza del 95 %: **${pctSigno(resDeuda.ic_bajo)}** a
+**${pctSigno(resDeuda.ic_alto)}**), con **${resDeuda.observaciones} observaciones** de **${resDeuda.eps} EPS**.`
+```
+
+```{ojs}
+//| echo: false
+extDeuda = d3.extent(panelDeuda, d => d.deuda_res)
+P.plot({
+  width: 720,
+  height: 420,
+  grid: true,
+  x: {label: "Deuda frente al promedio de la EPS (meses de costo) →", tickFormat: d => d.toLocaleString("es-CO")},
+  y: {label: "↑ Negaciones del semestre siguiente frente al promedio de la EPS", tickFormat: pctSigno},
+  marks: [
+    P.ruleX([0], {stroke: "#c3c2b7"}),
+    P.ruleY([0], {stroke: "#c3c2b7"}),
+    P.line(d3.range(extDeuda[0], extDeuda[1], (extDeuda[1] - extDeuda[0]) / 50).concat(extDeuda[1]),
+      {x: d => d, y: d => Math.exp(resDeuda.coef * d) - 1, stroke: "#0b0b0b", strokeDasharray: "4,3"}),
+    P.dot(panelDeuda, {x: "deuda_res", y: "negacion_res", r: 5, fill: "#2a78d6", fillOpacity: 0.7, stroke: "#fcfcfb",
+      title: d => `${d.eps}, semestre ${d.periodo}\n${d.meses_deuda.toLocaleString("es-CO", {maximumFractionDigits: 1})} meses de deuda al cierre anterior\n${d.negaciones.toLocaleString("es-CO")} negaciones`,
+      tip: true})
+  ]
+})
+```
+
+<p class="nota-fuente">Fuente: Supersalud, catálogo de información financiera de las EPS (junio de 2023 a junio de 2025) y reclamos en salud (julio de 2023 a diciembre de 2025).</p>
 
 ### ¿Cambió la negación después de intervenir las EPS?
 
@@ -706,14 +786,4 @@ P.plot({
 })
 ```
 
-<p class="nota-fuente">Fuente: Supersalud, reclamos en salud de julio de 2023 a diciembre de 2025;
-fechas de intervención según las resoluciones de la Supersalud (SOS y Famisanar, solo mes). Control:
-Sura, Salud Total, Compensar, Mutual Ser, Cajacopi, Capital Salud, Comfenalco Valle y Aliansalud, EPS
-no intervenidas en el periodo. Si la línea de la EPS queda por encima de la del control después de la
-intervención, sus negaciones crecieron más que en el resto del sistema.</p>
-
-## Espera nacional por especialidad
-
-![](figures/espera_nacional_linea.svg)
-
-![](figures/espera_nacional_barras.svg)
+<p class="nota-fuente">Fuente: Supersalud, reclamos en salud de julio de 2023 a diciembre de 2025 y resoluciones de intervención de EPS.</p>

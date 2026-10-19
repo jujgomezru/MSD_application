@@ -1,0 +1,10 @@
+enfermedad,patron,pacientes,corte,fuente
+Hipertensión arterial,^HTA,6703467,2024-07-01/2025-06-30,"Cuenta de Alto Costo, Situación de la ERC, la HTA y la DM en Colombia 2025 (citado por Consultorsalud)"
+Diabetes mellitus,^DIABETES( MELLITUS)?$,2541648,2024-07-01/2025-06-30,"Cuenta de Alto Costo, Situación de la ERC, la HTA y la DM en Colombia 2025 (citado por Consultorsalud)"
+Enfermedad renal crónica,^IRC-,1502681,2024-07-01/2025-06-30,"Cuenta de Alto Costo, Situación de la ERC, la HTA y la DM en Colombia 2025 (citado por Consultorsalud)"
+Artritis reumatoide,^ARTRITIS REUMATOIDEA$,156865,2024-07-01/2025-06-30,"Cuenta de Alto Costo, Situación de la artritis reumatoide en Colombia 2025 (citado por Consultorsalud)"
+VIH,VIH,211431,2025-10-31,"Minsalud con datos de la Cuenta de Alto Costo, personas diagnosticadas con VIH (citado por Consultorsalud)"
+Cáncer (todos),C[AÁ]NCER|LEUCEMIA|LINFOMA|MIELOMA|TUMOR|SARCOMA|MELANOMA|NEOPLASIA|CARCINOMA|MIELODISPL,782868,2025-10-31,"Cuenta de Alto Costo, boletín del Día Mundial contra el Cáncer 2026 (citado por Publimetro)"
+Cáncer de mama,C[AÁ]NCER DE MAMA,125446,2025-04-30,"Minsalud y Cuenta de Alto Costo, datos preliminares de cáncer de mama invasivo (citado por Consultorsalud)"
+Cáncer de próstata,PR[OÓ]STATA,71609,2025-02-28,"Cuenta de Alto Costo, casos prevalentes de cáncer de próstata (citado por El Colombiano)"
+Hemofilia,HEMOFILIA,3847,2026-01-31,"Cuenta de Alto Costo, personas con hemofilia (citado por Consultorsalud)"

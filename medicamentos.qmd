@@ -1,15 +1,7 @@
 ---
 title: "Acceso a medicamentos de alto costo"
-subtitle: "Reclamos, desabastecimiento y medicamentos no disponibles"
-author: "jujgomezru"
-date: last-modified
+code-tools: false
 ---
-
-Análisis de las barreras de acceso a medicamentos en Colombia, distinguiendo los de **alto costo**
-de los demás. Se consideran de alto costo los medicamentos para las enfermedades que vigila la Cuenta
-de Alto Costo y las enfermedades huérfanas: cáncer, VIH, enfermedad renal crónica y trasplante,
-enfermedades autoinmunes y reumáticas, hemofilia y otras coagulopatías, y enfermedades huérfanas
-(criterio detallado en `R/clasificacion_medicamentos.R`).
 
 ```{ojs}
 //| echo: false
@@ -68,10 +60,52 @@ P.plot({
 })
 ```
 
-<p class="nota-fuente">Fuente: Superintendencia Nacional de Salud, base de reclamos en salud (datos
-abiertos), enero de 2017 a diciembre de 2025. Desde julio de 2023 cambió la clasificación de motivos:
-las cifras antes y después del corte no son directamente comparables. La mitad de los reclamos no
-especifica patología, por lo que la cifra de alto costo es un mínimo.</p>
+<p class="nota-fuente">Fuente: Superintendencia Nacional de Salud, base de reclamos en salud (datos abiertos), enero de 2017 a diciembre de 2025.</p>
+
+### Reclamos por medicamentos relativo
+
+Los reclamos ante la Supersalud crecen todos los años porque el canal se usa cada vez más. Para saber
+si el salto de 2025 es propio de los medicamentos, se compara con el total de reclamos.
+
+```{ojs}
+//| echo: false
+anual = leer(FileAttachment("data/processed/medh_anual_normalizado.csv"), ["anio", "total", "medicamentos", "alto_costo", "pct_medicamentos", "pct_alto_costo", "alto_costo_100k"])
+aumentoEps = leer(FileAttachment("data/processed/medh_aumento_eps.csv"), ["reclamos_2024", "reclamos_2025", "aumento", "pct_del_aumento", "pct_afiliados"])
+
+a24 = anual.find(d => d.anio === 2024)
+a25 = anual.find(d => d.anio === 2025)
+crec = (a, b) => pct(b / a - 1)
+nuevaEps = aumentoEps.find(d => d.eps === "Nueva EPS")
+
+md`Entre 2024 y 2025 el total de reclamos creció **${crec(a24.total, a25.total)}**, los de medicamentos
+**${crec(a24.medicamentos, a25.medicamentos)}** y los de alto costo **${crec(a24.alto_costo, a25.alto_costo)}**. Los
+medicamentos pasaron del ${pct(a24.pct_medicamentos)} al ${pct(a25.pct_medicamentos)} de todos los reclamos:
+**el aumento no se explica por un mayor uso del canal**. La Nueva EPS aportó el ${pct(nuevaEps.pct_del_aumento)}
+del aumento de los reclamos de alto costo, con el ${pct(nuevaEps.pct_afiliados)} de los afiliados.`
+```
+
+```{ojs}
+//| echo: false
+a23 = anual.find(d => d.anio === 2023)
+seriesAnual = [["Todos los reclamos", "total"], ["Medicamentos", "medicamentos"], ["Medicamentos de alto costo", "alto_costo"]]
+anualLargo = anual.flatMap(d => seriesAnual.map(([serie, campo]) => ({anio: d.anio, serie, n: d[campo], indice: d[campo] / a23[campo]})))
+
+P.plot({
+  width: 760,
+  height: 320,
+  grid: true,
+  x: {label: null, tickFormat: d => String(d)},
+  y: {label: "↑ Reclamos (2023 = 1)", zero: true, tickFormat: d => d.toLocaleString("es-CO")},
+  color: {domain: seriesAnual.map(d => d[0]), range: ["#898781", gris, azul], legend: true},
+  marks: [
+    P.ruleY([1], {stroke: "#c3c2b7"}),
+    P.lineY(anualLargo, {x: "anio", y: "indice", stroke: "serie", strokeWidth: 2, marker: "circle",
+      title: d => `${d.serie}, ${d.anio}: ${fmt(d.n)} reclamos (${d.indice.toLocaleString("es-CO", {maximumFractionDigits: 2})} veces 2023)`, tip: true})
+  ]
+})
+```
+
+<p class="nota-fuente">Fuente: Supersalud, reclamos en salud 2018-2025; afiliados: ADRES, BDUA.</p>
 
 ## Tipo de enfermedad
 
@@ -173,6 +207,148 @@ P.plot({
 })
 ```
 
+### Reclamos por departamento (2025)
+
+Reclamos por medicamentos ante la Supersalud de julio de 2023 a diciembre de 2025, con el mismo
+enfoque usado para las citas con especialistas.
+
+```{ojs}
+//| echo: false
+geoMed = FileAttachment("data/geo/departamentos.geojson").json()
+medDep = leer(FileAttachment("data/processed/medh_departamento.csv"), ["poblacion", "todos", "alto_costo", "todos_100k", "alto_costo_100k", "todos_nacional", "alto_costo_nacional"])
+
+viewof capaMed = Inputs.radio(new Map([["Alto costo", "alto_costo"], ["Todos los medicamentos", "todos"]]), {label: "Reclamos", value: "alto_costo"})
+```
+
+```{ojs}
+//| echo: false
+tasaMedNac = medDep[0][capaMed + "_nacional"]
+medPorCodigo = new Map(medDep.map(d => [d.cod_depto, d]))
+dominioMed = [Math.min(...medDep.map(d => d[capaMed + "_100k"]), tasaMedNac - 0.01), tasaMedNac, Math.max(...medDep.map(d => d[capaMed + "_100k"]), tasaMedNac + 0.01)]
+
+md`Tasa nacional: **${Math.round(tasaMedNac).toLocaleString("es-CO")} reclamos por cada 100.000 habitantes**.
+En verde, los departamentos por debajo de la tasa nacional; en rojo, los que están por encima.`
+```
+
+```{ojs}
+//| echo: false
+mapaMed = P.plot({
+  width: 640,
+  projection: {type: "mercator", domain: geoMed},
+  color: {type: "linear", domain: dominioMed, range: ["#1b7837", "#f0efec", "#b2182b"], label: "Reclamos por 100.000 habitantes", tickFormat: d => Math.round(d).toLocaleString("es-CO")},
+  marks: [
+    P.geo(geoMed, P.centroid({
+      fill: f => medPorCodigo.get(f.properties.DPTO_CCDGO)?.[capaMed + "_100k"],
+      stroke: "#fcfcfb", strokeWidth: 0.8,
+      title: f => {
+        const d = medPorCodigo.get(f.properties.DPTO_CCDGO);
+        if (!d) return null;
+        return `${d.departamento}\n${Math.round(d[capaMed + "_100k"]).toLocaleString("es-CO")} reclamos por 100.000 hab.\n${fmt(d[capaMed])} reclamos en 2025`;
+      },
+      tip: true
+    }))
+  ]
+})
+
+html`${mapaMed.legend("color", {marginLeft: 16, width: 360, tickFormat: d => Math.round(d).toLocaleString("es-CO")})}${mapaMed}`
+```
+
+<p class="nota-fuente">Fuente: Supersalud, reclamos en salud de 2025; población: DANE.</p>
+
+### Régimen, gravedad y población
+
+```{ojs}
+//| echo: false
+medReg = leer(FileAttachment("data/processed/medh_regimen.csv"), ["reclamos", "alto_costo", "pct_negacion_entrega", "alto_costo_10k_2025"])
+medRiesgo = leer(FileAttachment("data/processed/medh_riesgo.csv"), ["reclamos", "alto_costo", "pct_negacion_entrega"])
+
+html`<div class="row">
+<div class="col-md-6">${tabla(medReg.map(d => ({
+  "Régimen": d.regimen,
+  "Reclamos de alto costo": fmt(d.alto_costo),
+  "Alto costo por 10.000 afiliados (2025)": d.alto_costo_10k_2025 == null ? "—" : d.alto_costo_10k_2025.toLocaleString("es-CO", {maximumFractionDigits: 1}),
+  "% negación de la entrega": pct(d.pct_negacion_entrega)
+})), ["Reclamos de alto costo", "Alto costo por 10.000 afiliados (2025)", "% negación de la entrega"])}</div>
+<div class="col-md-6">${tabla(medRiesgo.map(d => ({
+  "Clasificación de riesgo": d.riesgo,
+  "Reclamos de alto costo": fmt(d.alto_costo),
+  "% negación de la entrega": pct(d.pct_negacion_entrega)
+})), ["Reclamos de alto costo", "% negación de la entrega"])}</div></div>`
+```
+
+```{ojs}
+//| echo: false
+medPob = leer(FileAttachment("data/processed/medh_poblacion.csv"), ["reclamos", "negacion_entrega", "pct_negacion_entrega"])
+viewof dimMed = Inputs.radio(["Nivel educativo", "Edad", "Población especial", "Grupo étnico", "Sexo"], {label: "Ver por", value: "Nivel educativo"})
+```
+
+```{ojs}
+//| echo: false
+// Las categorías se muestran en su orden natural (edad y nivel educativo) o
+// alfabético, no según el resultado.
+ordenCategoriasMed = ({
+  "Edad": ["De 0 a 5 años", "De 6 a 12 años", "De 13 a 17 años", "De 18 a 24 años", "De 25 a 29 años",
+    "De 30 a 37 años", "De 38 a 49 años", "De 50 a 62 años", "Mayor de 63 años"],
+  "Nivel educativo": ["Ninguno", "Primaria incompleta", "Primaria", "Secundaria incompleta", "Secundaria",
+    "Universitario incompleto", "Universitario", "Posgrado"]
+})
+medPobSel = medPob.filter(d => d.dimension === dimMed)
+dominioMedPob = (ordenCategoriasMed[dimMed] ?? medPobSel.map(d => d.valor).sort((a, b) => a.localeCompare(b, "es")))
+  .filter(v => medPobSel.some(d => d.valor === v))
+promMed = d3.sum(medPobSel, d => d.negacion_entrega) / d3.sum(medPobSel, d => d.reclamos)
+
+P.plot({
+  width: 760,
+  marginLeft: 260,
+  marginRight: 60,
+  x: {label: "Proporción de negación de la entrega (reclamos de alto costo)", domain: [0.3, 0.85], tickFormat: d => Math.round(d * 100) + " %", grid: true},
+  y: {label: null, domain: dominioMedPob},
+  marks: [
+    P.ruleX([promMed], {stroke: "#898781", strokeDasharray: "4,3"}),
+    P.text([promMed], {x: d => d, frameAnchor: "top", dy: -6, text: [`Promedio (${Math.round(promMed * 100)} %)`], fill: "#52514e", fontSize: 11}),
+    P.ruleY(medPobSel, {x1: 0.3, x2: "pct_negacion_entrega", y: "valor", stroke: "#c3c2b7"}),
+    P.dot(medPobSel, {x: "pct_negacion_entrega", y: "valor", r: 6, fill: azul,
+      title: d => `${d.valor}\n${Math.round(d.pct_negacion_entrega * 100)} % de negación de la entrega\n${fmt(d.reclamos)} reclamos de alto costo`, tip: true}),
+    P.text(medPobSel, {x: "pct_negacion_entrega", y: "valor", text: d => Math.round(d.pct_negacion_entrega * 100) + " %", dx: 12, textAnchor: "start", fill: "#52514e", fontSize: 11})
+  ]
+})
+```
+
+<p class="nota-fuente">Fuente: Supersalud, reclamos en salud de julio de 2023 a diciembre de 2025; afiliados: ADRES, BDUA.</p>
+
+### Reclamos por cada 10.000 pacientes
+
+```{ojs}
+//| echo: false
+cacMed = leer(FileAttachment("data/processed/medh_cac_pacientes.csv"), ["reclamos", "pacientes", "por_10k", "pct_negacion_entrega"])
+cacMax = cacMed[0]
+cacErc = cacMed.find(d => d.enfermedad === "Enfermedad renal crónica")
+
+md`Más reclamos no siempre significa más barreras: puede haber más pacientes. Con el número de pacientes
+de la Cuenta de Alto Costo, ${cacMax.enfermedad.toLowerCase()} tiene **${fmt(cacMax.por_10k)} reclamos por
+medicamentos por cada 10.000 pacientes** en 2025, unas ${Math.round(cacMax.por_10k / cacErc.por_10k)} veces más que
+la enfermedad renal crónica, cuyo registro incluye a muchos pacientes en etapas tempranas que no usan
+medicamentos de alto costo.`
+```
+
+```{ojs}
+//| echo: false
+P.plot({
+  width: 760,
+  marginLeft: 200,
+  marginRight: 140,
+  x: {label: "Reclamos por medicamentos por cada 10.000 pacientes (2025)", grid: true, tickFormat: fmt},
+  y: {label: null, domain: cacMed.map(d => d.enfermedad)},
+  marks: [
+    P.barX(cacMed, {x: "por_10k", y: "enfermedad", fill: d => d.enfermedad === "Cáncer (todos)" ? gris : azul,
+      title: d => `${d.enfermedad}\n${fmt(d.reclamos)} reclamos en 2025\n${fmt(d.pacientes)} pacientes (corte ${d.corte})`, tip: true}),
+    P.text(cacMed, {x: "por_10k", y: "enfermedad", text: d => `${fmt(d.por_10k)} (${Math.round(d.pct_negacion_entrega * 100)} % negación)`, dx: 4, textAnchor: "start", fill: "#52514e", fontSize: 11})
+  ]
+})
+```
+
+<p class="nota-fuente">Fuente: Supersalud, reclamos en salud de 2025; pacientes: Cuenta de Alto Costo, cortes de febrero de 2025 a enero de 2026.</p>
+
 ### EPS con más reclamos de alto costo
 
 Reclamos por medicamentos presentados en 2025, en total y por cada 10.000 afiliados. La tasa permite
@@ -195,11 +371,7 @@ tabla(
 )
 ```
 
-<p class="nota-fuente">Fuente: Superintendencia Nacional de Salud, reclamos en salud de 2025; afiliados:
-ADRES, Base de Datos Única de Afiliados (BDUA), regímenes contributivo y subsidiado, corte de octubre de
-2026. Se agrupan los códigos de cada EPS (régimen y movilidad). Solo EPS con al menos 200.000 afiliados.
-La tasa usa los afiliados actuales; las EPS que cambiaron de tamaño en el periodo pueden quedar sobre o
-subestimadas.</p>
+<p class="nota-fuente">Fuente: Superintendencia Nacional de Salud, reclamos en salud de 2025; afiliados: ADRES, Base de Datos Única de Afiliados (BDUA), corte de octubre de 2026.</p>
 
 ## Desabastecimiento de medicamentos
 
@@ -259,13 +431,7 @@ tabla(
 )
 ```
 
-<p class="nota-fuente">Fuente: Invima, listado de abastecimiento y desabastecimiento de medicamentos de
-agosto de 2026, en la versión tabulada de la Secretaría Distrital de Salud de Bogotá (datos abiertos),
-que agrega grupo terapéutico y prioridad en salud. Precios: Minsalud, Termómetro de Precios de
-Medicamentos 2024 (canal institucional, construido a partir del SISMED), por unidad de dispensación; el
-cruce es por principio activo y forma farmacéutica, así que el precio corresponde a las presentaciones
-de ese principio activo, no necesariamente a la concentración exacta del listado. "Precio regulado"
-indica si el principio activo tiene precio máximo de venta fijado por la CNPMDM.</p>
+<p class="nota-fuente">Fuente: Invima, listado de abastecimiento y desabastecimiento de medicamentos de agosto de 2026 (versión tabulada de la Secretaría Distrital de Salud de Bogotá, datos abiertos); Minsalud, Termómetro de Precios de Medicamentos 2024 (canal institucional, SISMED); CNPMDM, precios máximos de venta.</p>
 
 ## Cuello de botella por enfermedad
 
@@ -274,6 +440,11 @@ de botella entre sus tratamientos de referencia. Los reclamos de la Supersalud r
 enfermedad, no el medicamento, por lo que el cuello de botella se define con datos de disponibilidad y
 precio: primero un problema de abastecimiento (desabastecido, en riesgo, importación como vital no
 disponible o en monitorización) y, si ninguno lo tiene, el de mayor precio por unidad.
+
+La lista incluye tanto los medicamentos nuevos y costosos como los **de base de cada esquema**
+(quimioterapias convencionales, metotrexato, hormonoterapia, antirretrovirales del esquema inicial).
+Con ellos, el cuello de botella de varias enfermedades resulta ser un medicamento **barato y
+desabastecido**, no el más caro.
 
 ```{ojs}
 //| echo: false
@@ -304,7 +475,7 @@ pesosEnf = x => x == null ? "Sin dato" : "$" + x.toLocaleString("es-CO", {maximu
 
 tabla(
   medsEnf.filter(d => d.enfermedad === enfermedadSel).map(d => ({
-    "Medicamento": d.cuello_botella === "TRUE" ? html`<strong>${d.medicamento}</strong> ⚠` : d.medicamento,
+    "Medicamento": d.cuello_botella === "TRUE" ? html`<strong>${d.medicamento}</strong>` : d.medicamento,
     "Tipo": d.tipo,
     "Abastecimiento": d.estado,
     "Importaciones": fmt(d.vitales_desde_2023),
@@ -316,15 +487,7 @@ tabla(
 )
 ```
 
-<p class="nota-fuente">Lista de medicamentos de referencia: tratamientos estándar de cada enfermedad
-(<code>data/referencia/medicamentos_alto_costo_enfermedad.csv</code>), pendiente de validación clínica.
-Fuentes: Supersalud (reclamos por medicamentos según la patología del afectado); Invima (listado de
-desabastecimiento de agosto de 2026 y autorizaciones de medicamentos vitales no disponibles); Minsalud,
-Termómetro de Precios 2024 (canal institucional); CNPMDM (precio regulado). Los precios por unidad no
-son comparables entre formas farmacéuticas (vial frente a tableta) ni equivalen al costo del
-tratamiento. "Abastecimiento": estado en el listado del Invima de agosto de 2026 ("Sin reporte" si el
-medicamento no está en seguimiento). "Importaciones": autorizaciones como vital no disponible de 2023 a
-septiembre de 2026. ⚠ marca el cuello de botella.</p>
+<p class="nota-fuente">Fuentes: Supersalud, reclamos en salud de julio de 2023 a diciembre de 2025; Invima, listado de desabastecimiento de agosto de 2026 y medicamentos vitales no disponibles 2023-2026; Minsalud, Termómetro de Precios 2024 (canal institucional); CNPMDM, precios máximos de venta.</p>
 
 ## Medicamentos caros
 
@@ -353,7 +516,7 @@ tabla(
 )
 ```
 
-### ¿Se pueden ver los medicamentos caros en los reclamos?
+### Reclamos por medicamentos no UPC
 
 Los reclamos de la Supersalud no registran el nombre del medicamento. La aproximación natural serían
 los medicamentos **no financiados con la UPC** (antes "no POS"), que suelen ser los más nuevos y
@@ -368,8 +531,8 @@ P.plot({
   width: 760,
   height: 320,
   marginLeft: 50,
-  x: {label: null},
-  y: {label: "Reclamos por medicamentos no UPC (% del total)", tickFormat: d => Math.round(d * 100) + " %", grid: true, domain: [0, 0.7]},
+  x: {label: null, type: "band"},
+  y: {label: null, tickFormat: d => Math.round(d * 100) + " %", grid: true, domain: [0, 0.7]},
   marks: [
     P.barY(noUpc, {x: "anio", y: "participacion", fill: d => +d.anio >= 2023 ? azul : gris, insetLeft: 4, insetRight: 4,
       title: d => `${d.anio}: ${fmt(d.no_upc)} reclamos no UPC (${pct(d.participacion)})`, tip: true}),
@@ -387,10 +550,7 @@ medicamentos caros, y el análisis de reclamos de alto costo de las secciones an
 aproximación disponible. Que el 96 % de los reclamos sea por medicamentos de la UPC refuerza la
 conclusión: el problema no es la cobertura formal sino la entrega.
 
-<p class="nota-fuente">Fuentes: Invima (desabastecimiento, agosto de 2026); Minsalud, Termómetro de
-Precios 2024 (canal institucional); Supersalud, reclamos en salud 2017-2025 (en azul, después del cambio
-de clasificación de julio de 2023). El cruce de precios es por principio activo y forma farmacéutica;
-algunos precios pueden corresponder a presentaciones distintas de la del listado.</p>
+<p class="nota-fuente">Fuentes: Invima, listado de desabastecimiento de agosto de 2026; Minsalud, Termómetro de Precios 2024 (canal institucional); Supersalud, reclamos en salud 2017-2025.</p>
 
 ## Medicamentos vitales no disponibles
 
@@ -411,7 +571,7 @@ P.plot({
   width: 760,
   height: 320,
   marginLeft: 60,
-  x: {label: null},
+  x: {label: null, type: "band"},
   y: {label: "Autorizaciones", grid: true, tickFormat: fmt},
   color: {legend: true, range: ["#2a78d6", "#eb6834", "#1baf7a"]},
   marks: [
@@ -440,112 +600,7 @@ P.plot({
 })
 ```
 
-<p class="nota-fuente">Fuente: Invima, medicamentos vitales no disponibles (datos abiertos), enero de
-2018 a septiembre de 2026; 2026 es un año parcial.</p>
-
-## Perfil de los reclamos de alto costo
-
-Reclamos por medicamentos ante la Supersalud de julio de 2023 a diciembre de 2025, con el mismo
-enfoque usado para las citas con especialistas.
-
-### Reclamos por departamento (2025)
-
-```{ojs}
-//| echo: false
-geoMed = FileAttachment("data/geo/departamentos.geojson").json()
-medDep = leer(FileAttachment("data/processed/medh_departamento.csv"), ["poblacion", "todos", "alto_costo", "todos_100k", "alto_costo_100k", "todos_nacional", "alto_costo_nacional"])
-
-viewof capaMed = Inputs.radio(new Map([["Alto costo", "alto_costo"], ["Todos los medicamentos", "todos"]]), {label: "Reclamos", value: "alto_costo"})
-```
-
-```{ojs}
-//| echo: false
-tasaMedNac = medDep[0][capaMed + "_nacional"]
-medPorCodigo = new Map(medDep.map(d => [d.cod_depto, d]))
-dominioMed = [Math.min(...medDep.map(d => d[capaMed + "_100k"]), tasaMedNac - 0.01), tasaMedNac, Math.max(...medDep.map(d => d[capaMed + "_100k"]), tasaMedNac + 0.01)]
-
-md`Tasa nacional: **${Math.round(tasaMedNac).toLocaleString("es-CO")} reclamos por cada 100.000 habitantes**.
-En verde, los departamentos por debajo de la tasa nacional; en rojo, los que están por encima.`
-```
-
-```{ojs}
-//| echo: false
-mapaMed = P.plot({
-  width: 640,
-  projection: {type: "mercator", domain: geoMed},
-  color: {type: "linear", domain: dominioMed, range: ["#1b7837", "#f0efec", "#b2182b"], label: "Reclamos por 100.000 habitantes", tickFormat: d => Math.round(d).toLocaleString("es-CO")},
-  marks: [
-    P.geo(geoMed, P.centroid({
-      fill: f => medPorCodigo.get(f.properties.DPTO_CCDGO)?.[capaMed + "_100k"],
-      stroke: "#fcfcfb", strokeWidth: 0.8,
-      title: f => {
-        const d = medPorCodigo.get(f.properties.DPTO_CCDGO);
-        if (!d) return null;
-        return `${d.departamento}\n${Math.round(d[capaMed + "_100k"]).toLocaleString("es-CO")} reclamos por 100.000 hab.\n${fmt(d[capaMed])} reclamos en 2025`;
-      },
-      tip: true
-    }))
-  ]
-})
-
-html`${mapaMed.legend("color", {marginLeft: 16, width: 360, tickFormat: d => Math.round(d).toLocaleString("es-CO")})}${mapaMed}`
-```
-
-<p class="nota-fuente">Fuente: Supersalud, reclamos en salud de 2025 por departamento del afectado;
-población: DANE. Las tasas bajas pueden reflejar menor uso del canal de quejas.</p>
-
-### Régimen, gravedad y población
-
-```{ojs}
-//| echo: false
-medReg = leer(FileAttachment("data/processed/medh_regimen.csv"), ["reclamos", "alto_costo", "pct_negacion_entrega", "alto_costo_10k_2025"])
-medRiesgo = leer(FileAttachment("data/processed/medh_riesgo.csv"), ["reclamos", "alto_costo", "pct_negacion_entrega"])
-
-html`<div class="row">
-<div class="col-md-6">${tabla(medReg.map(d => ({
-  "Régimen": d.regimen,
-  "Reclamos de alto costo": fmt(d.alto_costo),
-  "Alto costo por 10.000 afiliados (2025)": d.alto_costo_10k_2025 == null ? "—" : d.alto_costo_10k_2025.toLocaleString("es-CO", {maximumFractionDigits: 1}),
-  "% negación de la entrega": pct(d.pct_negacion_entrega)
-})), ["Reclamos de alto costo", "Alto costo por 10.000 afiliados (2025)", "% negación de la entrega"])}</div>
-<div class="col-md-6">${tabla(medRiesgo.map(d => ({
-  "Clasificación de riesgo": d.riesgo,
-  "Reclamos de alto costo": fmt(d.alto_costo),
-  "% negación de la entrega": pct(d.pct_negacion_entrega)
-})), ["Reclamos de alto costo", "% negación de la entrega"])}</div></div>`
-```
-
-```{ojs}
-//| echo: false
-medPob = leer(FileAttachment("data/processed/medh_poblacion.csv"), ["reclamos", "negacion_entrega", "pct_negacion_entrega"])
-viewof dimMed = Inputs.radio(["Nivel educativo", "Edad", "Población especial", "Grupo étnico", "Sexo"], {label: "Ver por", value: "Nivel educativo"})
-```
-
-```{ojs}
-//| echo: false
-medPobSel = medPob.filter(d => d.dimension === dimMed)
-promMed = d3.sum(medPobSel, d => d.negacion_entrega) / d3.sum(medPobSel, d => d.reclamos)
-
-P.plot({
-  width: 760,
-  marginLeft: 260,
-  marginRight: 60,
-  x: {label: "Proporción de negación de la entrega (reclamos de alto costo)", domain: [0.3, 0.85], tickFormat: d => Math.round(d * 100) + " %", grid: true},
-  y: {label: null},
-  marks: [
-    P.ruleX([promMed], {stroke: "#898781", strokeDasharray: "4,3"}),
-    P.text([promMed], {x: d => d, frameAnchor: "top", dy: -6, text: [`Promedio (${Math.round(promMed * 100)} %)`], fill: "#52514e", fontSize: 11}),
-    P.ruleY(medPobSel, {x1: 0.3, x2: "pct_negacion_entrega", y: "valor", stroke: "#c3c2b7"}),
-    P.dot(medPobSel, {x: "pct_negacion_entrega", y: "valor", r: 6, fill: azul, sort: {y: "-x"},
-      title: d => `${d.valor}\n${Math.round(d.pct_negacion_entrega * 100)} % de negación de la entrega\n${fmt(d.reclamos)} reclamos de alto costo`, tip: true}),
-    P.text(medPobSel, {x: "pct_negacion_entrega", y: "valor", text: d => Math.round(d.pct_negacion_entrega * 100) + " %", dx: 12, textAnchor: "start", fill: "#52514e", fontSize: 11})
-  ]
-})
-```
-
-<p class="nota-fuente">Fuente: Supersalud, reclamos en salud de julio de 2023 a diciembre de 2025;
-afiliados: ADRES, BDUA. Se excluyen "No aplica" y las categorías con menos de 200 reclamos de alto costo.
-La Supersalud advierte que las variables de caracterización del afectado pueden tener errores de captura.</p>
+<p class="nota-fuente">Fuente: Invima, medicamentos vitales no disponibles (datos abiertos), enero de 2018 a septiembre de 2026.</p>
 
 ## ¿Por qué no llegan los medicamentos?
 
@@ -597,8 +652,22 @@ P.plot({
 })
 ```
 
-**Lectura:** la relación existe pero es más débil que en las citas. Las finanzas de la EPS son un factor
-de fondo, no la explicación completa: hay EPS con poca deuda y muchos reclamos, como Comfenalco Valle.
+```{ojs}
+//| echo: false
+panelMed = leer(FileAttachment("data/processed/medh_panel_resumen.csv"), ["cambio_pct", "ic_bajo", "ic_alto", "observaciones", "eps"])
+pMed = panelMed.find(d => d.reclamos === "alto_costo")
+signo = x => (x >= 0 ? "+" : "−") + pct(Math.abs(x))
+
+md`**¿Y si se compara cada EPS consigo misma?** Por cada mes adicional de deuda al cierre de un semestre,
+los reclamos de alto costo del semestre siguiente cambian **${signo(pMed.cambio_pct)}** (intervalo de
+confianza del 95 %: ${signo(pMed.ic_bajo)} a ${signo(pMed.ic_alto)}; ${pMed.observaciones} observaciones de
+${pMed.eps} EPS, con efectos fijos de EPS y de semestre). Cuando la deuda de una EPS crece, sus reclamos no
+suben más que los del resto, igual que en las citas con especialista.`
+```
+
+**Lectura:** la relación entre EPS existe pero es más débil que en las citas, y desaparece al seguir a
+cada EPS en el tiempo. Las finanzas son un factor de fondo que distingue a unas EPS de otras, no lo que
+mueve los reclamos de un semestre a otro: hay EPS con poca deuda y muchos reclamos, como Comfenalco Valle.
 
 ### 2. Barreras administrativas
 
@@ -674,23 +743,66 @@ tabla(resumenMercado.map(d => ({
 })), ["Medicamentos con precio", "Precio institucional mediano por unidad", "% con precio regulado"])
 ```
 
-**Lectura:** los medicamentos **desabastecidos son los más baratos** (mediana de unos $940 por unidad,
-frente a unos $3.000 de los no desabastecidos), y las causas más citadas son el aumento de la demanda y
+**Lectura:** los medicamentos **desabastecidos son los más baratos** (mediana de unos $880 por unidad,
+frente a unos $2.700 de los no desabastecidos), y las causas más citadas son el aumento de la demanda y
 los oferentes insuficientes. Es coherente con productos poco rentables que pocos fabrican o importan.
 El precio regulado no muestra un patrón claro (está en el 30 % de los desabastecidos y en el 48 % de los
 no desabastecidos), así que con estos datos no se puede atribuir el desabastecimiento a la regulación de
 precios.
+
+**¿El desabastecimiento antecede a los reclamos?** Estado de los medicamentos de referencia que tuvieron
+algún mes desabastecidos o en riesgo, en los listados mensuales del Invima:
+
+```{ojs}
+//| echo: false
+desabRef = leer(FileAttachment("data/processed/medh_desab_referencia.csv"), ["problemas"])
+  .then(f => f.map(d => ({...d, fecha: new Date(d.fecha + "T00:00:00"), fila: `${d.medicamento.replace(/ \(.*\)$/, "")} (${d.enfermedad})`})))
+desabPanel = leer(FileAttachment("data/processed/medh_desab_panel.csv"), ["cambio_pct", "ic_bajo", "ic_alto", "observaciones", "meses_con_problema", "enfermedades"])
+  .then(f => f[0])
+desabConProblema = desabRef.filter(d => d.problemas > 0)
+nListados = new Set(desabRef.map(d => d.medicamento)).size
+nProblema = new Set(desabConProblema.map(d => d.medicamento)).size
+
+P.plot({
+  width: 760,
+  height: 40 + 26 * new Set(desabConProblema.map(d => d.fila)).size,
+  marginLeft: 290,
+  x: {label: null, type: "band", tickFormat: d => d.getMonth() === 0 ? String(d.getFullYear()) : ""},
+  y: {label: null},
+  color: {domain: ["Desabastecido", "En riesgo de desabastecimiento", "En monitorización", "No desabastecido", "Sin reporte"],
+    range: ["#b2182b", "#eb6834", "#eda100", "#c3c2b7", "#f0efec"], legend: true},
+  marks: [
+    P.cell(desabConProblema, {x: "fecha", y: "fila", fill: "estado", inset: 0.5,
+      title: d => `${d.medicamento}\n${d.fecha.toLocaleDateString("es-CO", {month: "long", year: "numeric"})}: ${d.estado}`, tip: true})
+  ]
+})
+```
+
+```{ojs}
+//| echo: false
+md`De los medicamentos de referencia, ${nListados} aparecieron en los listados entre junio de 2023 y enero de
+2026, y solo **${nProblema}** estuvieron desabastecidos o en riesgo algún mes, casi todos **de bajo precio**
+(antirretrovirales del esquema inicial, eritropoyetina, quimioterapias convencionales). El mes siguiente a
+uno de esos problemas, los reclamos de la enfermedad cambian **${signo(desabPanel.cambio_pct)}** (intervalo de
+confianza del 95 %: ${signo(desabPanel.ic_bajo)} a ${signo(desabPanel.ic_alto)}; ${desabPanel.enfermedades}
+enfermedades, efectos fijos de enfermedad y de mes): no hay evidencia clara de que el desabastecimiento
+formal anteceda a los reclamos. Además, los problemas se concentran entre 2023 y 2024, y el salto de
+reclamos llegó en 2025.`
+```
+
+<p class="nota-fuente">Fuentes: Invima, listados mensuales de abastecimiento y desabastecimiento, junio de 2023 a enero de 2026; Supersalud, reclamos en salud de julio de 2023 a diciembre de 2025.</p>
 
 ### Conclusión
 
 Los datos no apoyan que el bajo acceso sea **solo** un problema de recursos. La evidencia apunta a
 **fallas en la cadena de entrega**: la negación de la entrega de medicamentos ya cubiertos crece mientras
 las barreras de autorización disminuyen, y la ruptura con un gestor farmacéutico se refleja en los
-reclamos. Las finanzas de las EPS son el contexto (las deudas con gestores y prestadores), y hay además
-**fallas de mercado** en medicamentos baratos y **barreras de disponibilidad** en medicamentos
-huérfanos, que se importan caso a caso.
+reclamos. El salto de 2025 es real (los medicamentos ganan peso dentro de todos los reclamos) y se
+concentra en la Nueva EPS.
 
-<p class="nota-fuente">Fuentes: Supersalud (reclamos en salud y estados financieros de las EPS); Invima
-(desabastecimiento); Minsalud (Termómetro de Precios 2024); CNPMDM (precios regulados); prensa sobre la
-terminación del contrato entre Famisanar y Colsubsidio (agosto de 2025) y la alerta de la Supersalud
-sobre gestores farmacéuticos. Son asociaciones, no relaciones causales.</p>
+Las finanzas de las EPS separan a unas EPS de otras, pero no explican los cambios de cada EPS en el tiempo.
+El desabastecimiento formal afecta sobre todo a **medicamentos baratos** de los esquemas de base, que
+pueden frenar un tratamiento completo, pero no explica el aumento de los reclamos. Hay además **barreras
+de disponibilidad** en medicamentos huérfanos, que se importan caso a caso.
+
+<p class="nota-fuente">Fuentes: Supersalud (reclamos en salud y estados financieros de las EPS); Invima (desabastecimiento); Minsalud (Termómetro de Precios 2024); CNPMDM (precios regulados); prensa sobre la terminación del contrato entre Famisanar y Colsubsidio (agosto de 2025).</p>

@@ -101,3 +101,58 @@ resumen <- evento |>
 write_csv(resumen, here("data", "processed", "eps_evento_resumen.csv"))
 print(resumen)
 cat("EPS de control:", paste(control, collapse = ", "), "\n")
+
+# Panel de deuda y negación ---------------------------------------------------------
+
+# ¿Niega más citas una EPS después de que crece su deuda con prestadores? Se
+# relaciona la deuda al cierre de cada semestre (junio o diciembre) con las
+# negaciones del semestre siguiente, con efectos fijos de EPS (compara cada EPS
+# consigo misma) y de semestre (descuenta la tendencia común). Solo EPS en
+# formato NIIF y semestres con al menos 50 negaciones. Errores estándar
+# agrupados por EPS.
+negacion_semestral <- read_csv(here("data", "processed", "reclamos_citas.csv.gz"),
+                               col_types = cols(.default = "c", n = "i")) |>
+  filter(corte == "post", str_detect(coalesce(tipo_motivo, ""), "^ESPECIALIDADES M"),
+         motivo_especifico == "NEGACIÓN EN LA ASIGNACIÓN DE CITAS O CONSULTAS") |>
+  mutate(eps = eps_canonico(eps)) |>
+  filter(!is.na(eps)) |>
+  count(eps, periodo, wt = n, name = "negaciones")
+
+panel <- read_csv(here("data", "processed", "eps_finanzas.csv"), show_col_types = FALSE) |>
+  filter(ingresos > 0, formato == "niif", !is.na(eps)) |>
+  mutate(periodo = if_else(month(corte) == 6, paste0(year(corte), "-2"), paste0(year(corte) + 1, "-1"))) |>
+  select(eps, corte_deuda = corte, periodo, meses_deuda, siniestralidad) |>
+  inner_join(negacion_semestral, by = c("eps", "periodo")) |>
+  filter(negaciones >= 50)
+
+# Errores estándar agrupados por EPS (CR1), sin paquetes adicionales.
+ee_agrupado <- \(modelo, grupo) {
+  X <- model.matrix(modelo)
+  e <- resid(modelo)
+  pan <- solve(crossprod(X))
+  carne <- Reduce(`+`, map(split(seq_along(e), grupo), \(i) tcrossprod(crossprod(X[i, , drop = FALSE], e[i]))))
+  g <- n_distinct(grupo)
+  sqrt(diag(pan %*% carne %*% pan * g / (g - 1) * (nrow(X) - 1) / (nrow(X) - ncol(X))))
+}
+estimar <- \(datos, x) {
+  modelo <- lm(reformulate(c(x, "factor(eps)", "factor(periodo)"), "log(negaciones)"), datos)
+  b <- unname(coef(modelo)[x])
+  ee <- unname(ee_agrupado(modelo, datos$eps)[x])
+  tibble(indicador = x, coef = b, ee, cambio_pct = exp(b) - 1,
+         ic_bajo = exp(b - 1.96 * ee) - 1, ic_alto = exp(b + 1.96 * ee) - 1,
+         observaciones = nrow(datos), eps = n_distinct(datos$eps))
+}
+resumen_panel <- bind_rows(estimar(panel, "meses_deuda"), estimar(panel, "siniestralidad")) |>
+  mutate(sd_dentro = c(sd(panel$meses_deuda - ave(panel$meses_deuda, panel$eps)),
+                       sd(panel$siniestralidad - ave(panel$siniestralidad, panel$eps))))
+write_csv(resumen_panel, here("data", "processed", "eps_panel_resumen.csv"))
+print(resumen_panel)
+
+# Para la gráfica: deuda y negaciones sin el promedio de cada EPS ni el de cada
+# semestre (residuos de los efectos fijos). La pendiente de esa nube es el
+# coeficiente del modelo.
+residuo <- \(f) resid(lm(f, panel))
+panel |>
+  mutate(deuda_res = residuo(meses_deuda ~ factor(eps) + factor(periodo)),
+         negacion_res = exp(residuo(log(negaciones) ~ factor(eps) + factor(periodo))) - 1) |>
+  write_csv(here("data", "processed", "eps_panel_deuda.csv"))
