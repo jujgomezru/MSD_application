@@ -1,0 +1,41 @@
+corte,grupo,patologia,n
+post,Autoinmunes y reumáticas,Artritis reumatoidea,16275
+post,Enfermedad renal y trasplante,Irc-enfermedad renal,13703
+post,Cáncer,Cáncer de mama,10992
+post,VIH,Vih sida,10130
+post,Cáncer,Cáncer de próstata,9314
+post,Enfermedad renal y trasplante,Irc-trasplante,4242
+post,Cáncer,Leucemia mieloide aguda,2481
+post,Cáncer,Cáncer colorectal,2244
+post,Cáncer,Cáncer de pulmón,1902
+post,Cáncer,Leucemia linfoide aguda,1734
+post,Cáncer,Cáncer gástrico,969
+post,Cáncer,Linfoma no hodgking,918
+post,Cáncer,Cáncer de útero,619
+post,Enfermedades huérfanas,Miastenia grave,518
+post,Cáncer,Cáncer hepático o de hígado,478
+post,Enfermedades huérfanas,Fibrosis quística,468
+post,Enfermedades huérfanas,Esclerosis lateral amiotrófica,431
+post,Cáncer,Linfoma hodgking,351
+post,Enfermedades huérfanas,Fibrosis pulmonar idiopática,334
+post,Enfermedades huérfanas,Grupo mucopolisacaridosis,332
+pre,Autoinmunes y reumáticas,Artritis reumatoidea,17028
+pre,Cáncer,Cáncer de mama,13570
+pre,VIH,Vih sida,10535
+pre,Cáncer,Cáncer de próstata,9344
+pre,Enfermedad renal y trasplante,Irc-enfermedad renal,8701
+pre,Enfermedad renal y trasplante,Irc-trasplante,5119
+pre,Cáncer,Leucemia mieloide aguda,2660
+pre,Cáncer,Cáncer de pulmón,2271
+pre,Cáncer,Cáncer colorectal,2151
+pre,Cáncer,Leucemia linfoide aguda,1679
+pre,Cáncer,Cáncer gástrico,1461
+pre,Cáncer,Linfoma no hodgking,978
+pre,Enfermedades huérfanas,Fibrosis quística,977
+pre,Cáncer,Cáncer de útero,923
+pre,Enfermedades huérfanas,Otros problemas genéticos,723
+pre,Cáncer,Cáncer hepático o de hígado,717
+pre,Enfermedades huérfanas,Síndrome de sjögren-larsson,670
+pre,Enfermedades huérfanas,Esclerosis lateral amiotrófica,633
+pre,Enfermedades huérfanas,Hipertensión arterial pulmonar idiopática y/o familiar,594
+pre,Cáncer,Linfoma hodgking,591

@@ -12,20 +12,30 @@ forma interactiva.
 
 ```
 ├── _quarto.yml            # configuración del sitio
-├── index.qmd              # página con las gráficas
+├── index.qmd              # citas con especialistas
+├── medicamentos.qmd       # medicamentos de alto costo
 ├── R/
 │   ├── setup.R            # paquetes y funciones; cada script lo carga
 │   ├── tema.R             # tema ggplot, paletas, escalas e hitos de política
 │   ├── utils.R            # guardar figuras
 │   ├── moca.R             # descarga de reportes del Observatorio de Calidad
-│   └── poblacion.R        # proyecciones de población del DANE
+│   ├── poblacion.R        # proyecciones de población del DANE
+│   ├── supersalud.R       # descarga y lectura por bloques de los reclamos en salud
+│   ├── medicamentos.R     # descarga de fuentes del Invima y la CNPMDM
+│   └── clasificacion_medicamentos.R  # criterio de alto costo y categorías de motivo
 ├── scripts/
 │   ├── 00_instalar_paquetes.R
 │   ├── 02_descargar_moca.R  # tiempos de espera por especialidad y departamento
 │   ├── 03_graficas_espera_nacional.R
 │   ├── 04_preparar_mapa.R   # datos y límites departamentales del mapa de espera
 │   ├── 05_preparar_especialistas.R   # especialistas por 100.000 habitantes (ReTHUS)
-│   └── 06_preparar_citas_per_capita.R  # citas por 1.000 habitantes frente a espera
+│   ├── 06_preparar_citas_per_capita.R  # citas por 1.000 habitantes frente a espera
+│   ├── 07_descargar_reclamos.R         # reclamos de la Supersalud 2017-2025 (5,9 GB)
+│   ├── 08_procesar_reclamos_citas.R    # agregados de reclamos para citas
+│   ├── 09_procesar_reclamos_medicamentos.R  # agregados de reclamos para medicamentos
+│   ├── 10_descargar_medicamentos.R     # Invima (vitales, desabastecimiento) y CNPMDM
+│   ├── 11_preparar_medicamentos.R      # datos de medicamentos.qmd
+│   └── 12_preparar_reclamos_citas.R    # datos de la sección de reclamos de index.qmd
 ├── data/
 │   ├── fuentes.csv        # catálogo de fuentes
 │   ├── geo/               # límites departamentales (DANE, MGN 2025)
@@ -50,10 +60,21 @@ source("scripts/03_graficas_espera_nacional.R")
 source("scripts/04_preparar_mapa.R")
 source("scripts/05_preparar_especialistas.R")
 source("scripts/06_preparar_citas_per_capita.R")
+
+# 4. Reclamos de la Supersalud y fuentes de medicamentos
+source("scripts/07_descargar_reclamos.R")              # ~15 min
+source("scripts/08_procesar_reclamos_citas.R")         # ~7 min
+source("scripts/09_procesar_reclamos_medicamentos.R")  # ~7 min
+source("scripts/10_descargar_medicamentos.R")
+source("scripts/11_preparar_medicamentos.R")
+source("scripts/12_preparar_reclamos_citas.R")
 ```
 
+Los reclamos cambiaron de clasificación de motivos el 1 de julio de 2023 (la Supersalud advierte que
+no son homologables), por lo que los agregados traen la columna `corte` (`pre` / `post`).
+
 ```bash
-# 4. Ver el sitio localmente
+# 5. Ver el sitio localmente
 quarto preview
 ```
 

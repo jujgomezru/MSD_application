@@ -17,3 +17,12 @@ figcaption {
   color: #898781;
   font-size: 0.8rem;
 }
+
+.tabla-datos {
+  font-size: 0.85rem;
+}
+
+.tabla-datos .num {
+  text-align: right;
+  white-space: nowrap;
+}

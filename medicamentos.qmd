@@ -1,0 +1,291 @@
+---
+title: "Acceso a medicamentos de alto costo"
+subtitle: "Reclamos, desabastecimiento y medicamentos no disponibles"
+author: "jujgomezru"
+date: last-modified
+---
+
+Análisis de las barreras de acceso a medicamentos en Colombia, distinguiendo los de **alto costo**
+de los demás. Se consideran de alto costo los medicamentos para las enfermedades que vigila la Cuenta
+de Alto Costo y las enfermedades huérfanas: cáncer, VIH, enfermedad renal crónica y trasplante,
+enfermedades autoinmunes y reumáticas, hemofilia y otras coagulopatías, y enfermedades huérfanas
+(criterio detallado en `R/clasificacion_medicamentos.R`).
+
+```{ojs}
+//| echo: false
+P = import("https://cdn.jsdelivr.net/npm/@observablehq/plot@0.6.17/+esm")
+
+fmt = x => x.toLocaleString("es-CO", {maximumFractionDigits: 0})
+pct = x => (x * 100).toLocaleString("es-CO", {maximumFractionDigits: 1}) + " %"
+
+leer = (archivo, numericas) => archivo.csv().then(filas => filas.map(d => {
+  const fila = {...d};
+  for (const c of numericas) fila[c] = d[c] === "" ? null : +d[c];
+  return fila;
+}))
+
+cortes = new Map([
+  ["Después de julio de 2023", "post"],
+  ["2017 a junio de 2023", "pre"]
+])
+
+azul = "#2a78d6"
+gris = "#c3c2b7"
+
+// Tabla HTML simple: filas es una lista de objetos; numericas, las columnas a alinear a la derecha.
+tabla = (filas, numericas = []) => html`<table class="table table-sm tabla-datos">
+  <thead><tr>${Object.keys(filas[0]).map(c => html`<th class=${numericas.includes(c) ? "num" : ""}>${c}</th>`)}</tr></thead>
+  <tbody>${filas.map(f => html`<tr>${Object.entries(f).map(([c, v]) => html`<td class=${numericas.includes(c) ? "num" : ""}>${v}</td>`)}</tr>`)}</tbody>
+</table>`
+```
+
+## Reclamos por medicamentos en el tiempo
+
+```{ojs}
+//| echo: false
+mensual = leer(FileAttachment("data/processed/med_reclamos_mensual.csv"), ["n"])
+  .then(filas => filas.map(d => ({...d, fecha: new Date(d.fecha + "T00:00:00")})))
+
+P.plot({
+  width: 760,
+  height: 380,
+  marginLeft: 60,
+  y: {label: "Reclamos por mes", grid: true, tickFormat: fmt, zero: true},
+  x: {label: null},
+  color: {domain: ["Alto costo", "Otros medicamentos"], range: [azul, gris], legend: true},
+  marks: [
+    P.ruleX([new Date("2023-07-01T00:00:00")], {stroke: "#898781", strokeDasharray: "4,3"}),
+    P.text([new Date("2023-07-01T00:00:00")], {
+      x: d => d, frameAnchor: "top", dx: 6, dy: 4, textAnchor: "start",
+      text: ["Cambio de clasificación de motivos (jul 2023)"], fill: "#52514e", fontSize: 11
+    }),
+    P.lineY(mensual, {x: "fecha", y: "n", stroke: "clase", z: d => d.clase + d.corte, sort: "fecha", strokeWidth: 2}),
+    P.tip(mensual, P.pointerX({
+      x: "fecha", y: "n", stroke: "clase",
+      title: d => `${d.clase}\n${d.fecha.toLocaleDateString("es-CO", {month: "long", year: "numeric"})}: ${fmt(d.n)} reclamos`
+    }))
+  ]
+})
+```
+
+<p class="nota-fuente">Fuente: Superintendencia Nacional de Salud, base de reclamos en salud (datos
+abiertos), enero de 2017 a diciembre de 2025. Desde julio de 2023 cambió la clasificación de motivos:
+las cifras antes y después del corte no son directamente comparables. La mitad de los reclamos no
+especifica patología, por lo que la cifra de alto costo es un mínimo.</p>
+
+## Tipo de enfermedad
+
+```{ojs}
+//| echo: false
+grupos = leer(FileAttachment("data/processed/med_reclamos_grupo.csv"), ["n", "participacion"])
+
+viewof corteGrupo = Inputs.radio(cortes, {label: "Periodo", value: "post"})
+```
+
+```{ojs}
+//| echo: false
+grupoSel = grupos.filter(d => d.corte === corteGrupo && d.grupo !== "Sin patología especificada")
+sinPatologia = grupos.find(d => d.corte === corteGrupo && d.grupo === "Sin patología especificada")
+
+md`Reclamos por medicamentos según el grupo de la patología del afectado. Los grupos de alto costo
+están en azul. Se excluyen los reclamos sin patología especificada
+(${fmt(sinPatologia.n)}, el ${pct(sinPatologia.participacion)} del total).`
+```
+
+```{ojs}
+//| echo: false
+P.plot({
+  width: 760,
+  marginLeft: 230,
+  marginRight: 70,
+  x: {label: "Reclamos", grid: true, tickFormat: fmt},
+  y: {label: null},
+  marks: [
+    P.barX(grupoSel, {
+      x: "n", y: "grupo", fill: d => d.alto_costo === "TRUE" ? azul : gris,
+      sort: {y: "-x"}, title: d => `${d.grupo}\n${fmt(d.n)} reclamos (${pct(d.participacion)})`, tip: true
+    }),
+    P.text(grupoSel, {x: "n", y: "grupo", text: d => fmt(d.n), dx: 4, textAnchor: "start", fill: "#52514e", fontSize: 11})
+  ]
+})
+```
+
+## Quejas más frecuentes sobre medicamentos de alto costo
+
+```{ojs}
+//| echo: false
+motivos = leer(FileAttachment("data/processed/med_alto_costo_motivo.csv"), ["n"])
+patologias = leer(FileAttachment("data/processed/med_alto_costo_patologia.csv"), ["n"])
+eps = leer(FileAttachment("data/processed/med_alto_costo_eps.csv"), ["alto_costo", "medicamentos", "participacion_alto_costo"])
+
+viewof corteAlto = Inputs.radio(cortes, {label: "Periodo", value: "post"})
+```
+
+### Motivo del reclamo, por grupo de enfermedad
+
+```{ojs}
+//| echo: false
+ordenMotivos = ["Negación de la entrega", "Demora o entrega incompleta", "Demora en la autorización", "Negación de la autorización", "Otros"]
+
+motivoSel = {
+  const filas = motivos.filter(d => d.corte === corteAlto).map(d => ({
+    ...d, motivo: ordenMotivos.includes(d.motivo) ? d.motivo : "Otros"
+  }));
+  const totales = d3.rollup(filas, v => d3.sum(v, d => d.n), d => d.grupo);
+  return filas.map(d => ({...d, total: totales.get(d.grupo), share: d.n / totales.get(d.grupo)}));
+}
+
+// Grupos ordenados de más a menos reclamos.
+ordenGrupos = [...new Set([...motivoSel].sort((a, b) => b.total - a.total).map(d => d.grupo))]
+
+P.plot({
+  width: 760,
+  marginLeft: 230,
+  x: {label: "Participación dentro del grupo", tickFormat: d => (d * 100) + " %"},
+  y: {label: null, domain: ordenGrupos},
+  color: {domain: ordenMotivos, range: ["#2a78d6", "#eb6834", "#1baf7a", "#eda100", "#c3c2b7"], legend: true},
+  marks: [
+    P.barX(motivoSel, P.stackX({
+      x: "share", y: "grupo", fill: "motivo", order: ordenMotivos, insetLeft: 1, insetRight: 1,
+      title: d => `${d.grupo}\n${d.motivo}: ${fmt(d.n)} (${pct(d.share)})`, tip: true
+    }))
+  ]
+})
+```
+
+### Patologías con más reclamos
+
+```{ojs}
+//| echo: false
+patologiaSel = patologias.filter(d => d.corte === corteAlto).slice(0, 15)
+
+P.plot({
+  width: 760,
+  marginLeft: 300,
+  marginRight: 60,
+  x: {label: "Reclamos por medicamentos", grid: true, tickFormat: fmt},
+  y: {label: null},
+  marks: [
+    P.barX(patologiaSel, {x: "n", y: "patologia", fill: azul, sort: {y: "-x"},
+      title: d => `${d.patologia} (${d.grupo})\n${fmt(d.n)} reclamos`, tip: true}),
+    P.text(patologiaSel, {x: "n", y: "patologia", text: d => fmt(d.n), dx: 4, textAnchor: "start", fill: "#52514e", fontSize: 11})
+  ]
+})
+```
+
+### EPS con más reclamos de alto costo
+
+```{ojs}
+//| echo: false
+tabla(
+  eps.filter(d => d.corte === corteAlto).slice(0, 15).map(d => ({
+    EPS: d.eps,
+    "Reclamos de alto costo": fmt(d.alto_costo),
+    "Reclamos por medicamentos": fmt(d.medicamentos),
+    "% de alto costo": pct(d.participacion_alto_costo)
+  })),
+  ["Reclamos de alto costo", "Reclamos por medicamentos", "% de alto costo"]
+)
+```
+
+<p class="nota-fuente">Fuente: Superintendencia Nacional de Salud, base de reclamos en salud. Solo EPS
+de los regímenes contributivo y subsidiado. Las cifras son absolutas: las EPS con más afiliados tienden
+a acumular más reclamos.</p>
+
+## Desabastecimiento de medicamentos
+
+```{ojs}
+//| echo: false
+desabastecimiento = leer(FileAttachment("data/processed/med_desabastecimiento.csv"), [])
+
+ordenEstados = ["Desabastecido", "En riesgo de desabastecimiento", "En monitorización", "No desabastecido"]
+
+md`El Invima clasifica cada mes los medicamentos en seguimiento según su abastecimiento. En el
+listado de agosto de 2026 hay **${desabastecimiento.length} medicamentos**, de los cuales
+**${desabastecimiento.filter(d => d.alto_costo === "TRUE").length}** son de alto costo.`
+```
+
+```{ojs}
+//| echo: false
+P.plot({
+  width: 760,
+  marginLeft: 210,
+  x: {label: "Medicamentos en seguimiento", grid: true},
+  y: {label: null},
+  color: {domain: ordenEstados, range: ["#d03b3b", "#ec835a", "#fab219", "#c3c2b7"], legend: true},
+  marks: [
+    P.barX(desabastecimiento, P.groupY({x: "count"}, {
+      y: "prioridad", fill: "estado", order: ordenEstados, sort: {y: "-x"}, insetTop: 1, insetBottom: 1,
+      title: d => d.estado, tip: true
+    }))
+  ]
+})
+```
+
+**Medicamentos de alto costo con problemas de abastecimiento** (desabastecidos, en riesgo o en
+monitorización):
+
+```{ojs}
+//| echo: false
+tabla(
+  desabastecimiento
+    .filter(d => d.alto_costo === "TRUE" && d.estado !== "No desabastecido")
+    .sort((a, b) => ordenEstados.indexOf(a.estado) - ordenEstados.indexOf(b.estado))
+    .map(d => ({Medicamento: d.medicamento, Grupo: d.grupo_alto_costo, Estado: d.estado, Causa: d.causa}))
+)
+```
+
+<p class="nota-fuente">Fuente: Invima, listado de abastecimiento y desabastecimiento de medicamentos de
+agosto de 2026, en la versión tabulada de la Secretaría Distrital de Salud de Bogotá (datos abiertos),
+que agrega grupo terapéutico y prioridad en salud.</p>
+
+## Medicamentos vitales no disponibles
+
+```{ojs}
+//| echo: false
+vitalesAnual = leer(FileAttachment("data/processed/med_vitales_anual.csv"), ["n"])
+  .then(filas => filas.filter(d => d.anio !== "").map(d => ({...d, anio: String(d.anio)})))
+vitalesTop = leer(FileAttachment("data/processed/med_vitales_top.csv"), ["autorizaciones"])
+
+md`Cuando un medicamento indispensable no se comercializa en el país, el Invima autoriza su
+importación como **medicamento vital no disponible**, a menudo para un paciente específico. El número
+de autorizaciones es un indicador de los medicamentos a los que no se accede por las vías normales.`
+```
+
+```{ojs}
+//| echo: false
+P.plot({
+  width: 760,
+  height: 320,
+  marginLeft: 60,
+  x: {label: null},
+  y: {label: "Autorizaciones", grid: true, tickFormat: fmt},
+  color: {legend: true, range: ["#2a78d6", "#eb6834", "#1baf7a"]},
+  marks: [
+    P.barY(vitalesAnual, {x: "anio", y: "n", fill: "tipo", insetLeft: 2, insetRight: 2,
+      title: d => `${d.anio}, ${d.tipo}: ${fmt(d.n)}`, tip: true}),
+    P.ruleY([0])
+  ]
+})
+```
+
+**Principios activos con más autorizaciones desde 2023:**
+
+```{ojs}
+//| echo: false
+P.plot({
+  width: 760,
+  marginLeft: 300,
+  marginRight: 60,
+  x: {label: "Autorizaciones (2023 a 2026)", grid: true},
+  y: {label: null},
+  marks: [
+    P.barX(vitalesTop.slice(0, 15), {x: "autorizaciones", y: "principio_activo", fill: azul, sort: {y: "-x"},
+      title: d => `${d.principio_activo}\nDiagnóstico más frecuente: ${d.diagnostico}\n${fmt(d.autorizaciones)} autorizaciones`, tip: true}),
+    P.text(vitalesTop.slice(0, 15), {x: "autorizaciones", y: "principio_activo", text: d => fmt(d.autorizaciones), dx: 4, textAnchor: "start", fill: "#52514e", fontSize: 11})
+  ]
+})
+```
+
+<p class="nota-fuente">Fuente: Invima, medicamentos vitales no disponibles (datos abiertos), enero de
+2018 a septiembre de 2026; 2026 es un año parcial.</p>

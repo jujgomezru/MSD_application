@@ -3,11 +3,14 @@ project:
   output-dir: _site
   render:
     - index.qmd
+    - medicamentos.qmd
   resources:
     - data/geo/departamentos.geojson
     - data/processed/mapa_espera_departamentos.csv
     - data/processed/mapa_especialistas_departamentos.csv
     - data/processed/citas_per_capita_departamentos.csv
+    - data/processed/med_*.csv
+    - data/processed/citas_reclamos_*.csv
 
 lang: es
 
@@ -16,7 +19,9 @@ website:
   navbar:
     left:
       - href: index.qmd
-        text: Inicio
+        text: Citas con especialistas
+      - href: medicamentos.qmd
+        text: Medicamentos de alto costo
     right:
       - icon: github
         href: https://github.com/jujgomezru/MSD_application

@@ -288,6 +288,118 @@ julio de 2025 a junio de 2026; población: DANE, proyecciones (promedio 2025-202
 en el departamento de la IPS que atiende, no en el de residencia del paciente, y dependen de la
 cobertura del reporte de cada departamento.</p>
 
+## Lo que el indicador no ve: reclamos por citas
+
+El indicador del Observatorio solo mide las citas que sí se asignaron. Los reclamos ante la
+Superintendencia Nacional de Salud muestran lo que queda por fuera: las citas negadas y las
+especialidades que el Observatorio no mide.
+
+```{ojs}
+//| echo: false
+reclamosMensual = FileAttachment("data/processed/citas_reclamos_mensual.csv").csv()
+  .then(filas => filas.map(d => ({...d, n: +d.n, fecha: new Date(d.fecha + "T00:00:00")})))
+
+ordenTiposCita = ["Negación de la cita", "Demora en la cita", "Demora en la autorización"]
+
+P.plot({
+  width: 760,
+  height: 380,
+  marginLeft: 60,
+  y: {label: "Reclamos por mes (citas con especialista)", grid: true, tickFormat: d => d.toLocaleString("es-CO"), zero: true},
+  x: {label: null},
+  color: {domain: ordenTiposCita, range: ["#eb6834", "#2a78d6", "#1baf7a"], legend: true},
+  marks: [
+    P.ruleX([new Date("2023-07-01T00:00:00")], {stroke: "#898781", strokeDasharray: "4,3"}),
+    P.text([new Date("2023-07-01T00:00:00")], {
+      x: d => d, frameAnchor: "top", dx: 6, dy: 4, textAnchor: "start",
+      text: ["Cambio de clasificación de motivos (jul 2023)"], fill: "#52514e", fontSize: 11
+    }),
+    P.lineY(reclamosMensual.filter(d => ordenTiposCita.includes(d.tipo)), {
+      x: "fecha", y: "n", stroke: "tipo", strokeWidth: 2, z: d => d.tipo + d.corte
+    }),
+    P.tip(reclamosMensual, P.pointerX({
+      x: "fecha", y: "n", stroke: "tipo",
+      title: d => `${d.tipo}\n${d.fecha.toLocaleDateString("es-CO", {month: "long", year: "numeric"})}: ${d.n.toLocaleString("es-CO")}`
+    }))
+  ]
+})
+```
+
+<p class="nota-fuente">Fuente: Superintendencia Nacional de Salud, base de reclamos en salud (datos
+abiertos), enero de 2017 a diciembre de 2025. Antes de julio de 2023 la clasificación casi no
+distinguía la negación de la cita, por lo que la comparación entre negación y demora solo es válida
+desde esa fecha.</p>
+
+### Especialidades con más reclamos
+
+```{ojs}
+//| echo: false
+reclamosEsp = FileAttachment("data/processed/citas_reclamos_especialidad.csv").csv()
+  .then(filas => filas.map(d => ({...d, n: +d.n, medida: d.medida_observatorio === "TRUE"})))
+
+topEsp = {
+  const totales = d3.rollups(reclamosEsp, v => d3.sum(v, d => d.n), d => d.especialidad)
+    .sort((a, b) => b[1] - a[1]).slice(0, 20).map(d => d[0]);
+  return reclamosEsp.filter(d => totales.includes(d.especialidad));
+}
+
+pctMedida = d3.sum(reclamosEsp.filter(d => d.medida), d => d.n) / d3.sum(reclamosEsp, d => d.n)
+
+md`Reclamos por negación o demora de citas con especialista, de julio de 2023 a diciembre de 2025.
+Las especialidades que mide el Observatorio (en azul) concentran solo el
+**${(pctMedida * 100).toLocaleString("es-CO", {maximumFractionDigits: 1})} %** de los reclamos.`
+```
+
+```{ojs}
+//| echo: false
+P.plot({
+  width: 760,
+  marginLeft: 260,
+  marginRight: 60,
+  x: {label: "Reclamos (julio de 2023 a diciembre de 2025)", grid: true, tickFormat: d => d.toLocaleString("es-CO")},
+  y: {label: null},
+  color: {domain: ["Medida por el Observatorio", "No medida"], range: ["#2a78d6", "#c3c2b7"], legend: true},
+  marks: [
+    P.barX(topEsp, P.groupY({x: "sum"}, {
+      x: "n", y: "especialidad", fill: d => d.medida ? "Medida por el Observatorio" : "No medida",
+      sort: {y: "-x"}, title: d => d.especialidad, tip: true
+    }))
+  ]
+})
+```
+
+### Reclamos y espera por departamento
+
+```{ojs}
+//| echo: false
+reclamosDep = FileAttachment("data/processed/citas_reclamos_departamento.csv").csv()
+  .then(filas => filas.map(d => ({...d, poblacion: +d.poblacion, dias: +d.dias, reclamos_100k: +d.reclamos_100k, pct_negacion: +d.pct_negacion, negacion: +d.negacion, demora: +d.demora})))
+
+P.plot({
+  width: 720,
+  height: 460,
+  grid: true,
+  x: {label: "Días de espera para medicina interna (Observatorio) →", tickFormat: fmt},
+  y: {label: "↑ Reclamos por citas con especialista por 100.000 hab. (2025)", tickFormat: d => d.toLocaleString("es-CO")},
+  r: {range: [3, 22]},
+  marks: [
+    P.dot(reclamosDep, {
+      x: "dias", y: "reclamos_100k", r: "poblacion", fill: "#2a78d6", fillOpacity: 0.7, stroke: "#fcfcfb",
+      title: d => `${d.departamento}\n${fmt(d.dias)} días de espera\n${Math.round(d.reclamos_100k).toLocaleString("es-CO")} reclamos por 100.000 hab.\n${Math.round(d.pct_negacion * 100)} % por negación`,
+      tip: true
+    }),
+    P.text(reclamosDep.filter(d => d.poblacion > 2500000 || d.reclamos_100k > 1400 || d.dias < 4 || ["Vaupés", "Guainía", "Amazonas"].includes(d.departamento)), {
+      x: "dias", y: "reclamos_100k", dy: -12, fontSize: 10, fill: "#0b0b0b",
+      text: d => d.departamento.replace("Archipiélago de San Andrés, Providencia y Santa Catalina", "San Andrés")
+    })
+  ]
+})
+```
+
+<p class="nota-fuente">Fuente: Superintendencia Nacional de Salud, base de reclamos en salud (2025, por
+departamento del afectado); Minsalud, Observatorio Nacional de Calidad en Salud; población: DANE. Los
+departamentos con pocos reclamos pueden reflejar menor uso del canal de quejas y no menos barreras.</p>
+
 ## Espera nacional por especialidad
 
 ![](figures/espera_nacional_linea.svg)

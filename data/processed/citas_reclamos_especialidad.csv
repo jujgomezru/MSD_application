@@ -1,0 +1,186 @@
+especialidad,tipo,n,medida_observatorio
+Alergología,Demora en la cita,3996,FALSE
+Alergología,Negación de la cita,4389,FALSE
+Anestesiología,Demora en la cita,25245,FALSE
+Anestesiología,Negación de la cita,21954,FALSE
+Anestesiología cardiotoráxica,Demora en la cita,7,FALSE
+Anestesiología cardiotoráxica,Negación de la cita,5,FALSE
+Anestesiología cardiovascular,Demora en la cita,62,FALSE
+Anestesiología cardiovascular,Negación de la cita,79,FALSE
+Artroscopia - ortopedia,Demora en la cita,518,FALSE
+Artroscopia - ortopedia,Negación de la cita,563,FALSE
+Cardiología,Demora en la cita,17301,FALSE
+Cardiología,Negación de la cita,24718,FALSE
+Cardiología intervencionista y hemodinamia,Demora en la cita,87,FALSE
+Cardiología intervencionista y hemodinamia,Negación de la cita,73,FALSE
+Cardiología pediátrica,Demora en la cita,1190,FALSE
+Cardiología pediátrica,Negación de la cita,1268,FALSE
+Cirugía cabeza y cuello - otorrinolaringología,Demora en la cita,4593,FALSE
+Cirugía cabeza y cuello - otorrinolaringología,Negación de la cita,4707,FALSE
+Cirugía cardiovascular,Demora en la cita,1983,FALSE
+Cirugía cardiovascular,Negación de la cita,2017,FALSE
+Cirugía craneofacial,Demora en la cita,22,FALSE
+Cirugía craneofacial,Negación de la cita,13,FALSE
+Cirugía de cadera,Demora en la cita,540,FALSE
+Cirugía de cadera,Negación de la cita,391,FALSE
+Cirugía de mama y tejidos blandos - mastología,Demora en la cita,2803,FALSE
+Cirugía de mama y tejidos blandos - mastología,Negación de la cita,3368,FALSE
+Cirugía de mano - ortopedia o cirugía plástica,Demora en la cita,2098,FALSE
+Cirugía de mano - ortopedia o cirugía plástica,Negación de la cita,2660,FALSE
+Cirugía de pie y tobillo - ortopedia,Demora en la cita,820,FALSE
+Cirugía de pie y tobillo - ortopedia,Negación de la cita,1058,FALSE
+Cirugía de rodilla - ortopedia,Demora en la cita,3106,FALSE
+Cirugía de rodilla - ortopedia,Negación de la cita,3916,FALSE
+Cirugía de trasplante,Demora en la cita,42,FALSE
+Cirugía de trasplante,Negación de la cita,31,FALSE
+Cirugía de tórax,Demora en la cita,822,FALSE
+Cirugía de tórax,Negación de la cita,821,FALSE
+Cirugía endoscópica ginecológica,Demora en la cita,102,FALSE
+Cirugía endoscópica ginecológica,Negación de la cita,53,FALSE
+Cirugía gastrointestinal,Demora en la cita,929,FALSE
+Cirugía gastrointestinal,Negación de la cita,1058,FALSE
+Cirugía gastrointestinal y endoscopia digestiva,Demora en la cita,110,FALSE
+Cirugía gastrointestinal y endoscopia digestiva,Negación de la cita,98,FALSE
+Cirugía general,Demora en la cita,15726,TRUE
+Cirugía general,Negación de la cita,15345,TRUE
+Cirugía laparoscópica,Demora en la cita,100,FALSE
+Cirugía laparoscópica,Negación de la cita,62,FALSE
+Cirugía maxilofacial,Demora en la cita,1733,FALSE
+Cirugía maxilofacial,Negación de la cita,1755,FALSE
+Cirugía oncológica,Demora en la cita,905,FALSE
+Cirugía oncológica,Negación de la cita,850,FALSE
+Cirugía pediátrica,Demora en la cita,2408,FALSE
+Cirugía pediátrica,Negación de la cita,2276,FALSE
+Cirugía plástica oncológica,Demora en la cita,281,FALSE
+Cirugía plástica oncológica,Negación de la cita,252,FALSE
+"Cirugía plástica, estética y reconstructiva",Demora en la cita,4690,FALSE
+"Cirugía plástica, estética y reconstructiva",Negación de la cita,5254,FALSE
+Cirugía vascular,Demora en la cita,8937,FALSE
+Cirugía vascular,Negación de la cita,13511,FALSE
+Coloproctología,Demora en la cita,3872,FALSE
+Coloproctología,Negación de la cita,4963,FALSE
+Cuidado intensivo,Demora en la cita,5,FALSE
+Cuidado intensivo,Negación de la cita,4,FALSE
+Cuidado intensivo pediátrico,Negación de la cita,1,FALSE
+Dermatología,Demora en la cita,17639,FALSE
+Dermatología,Negación de la cita,26759,FALSE
+Dermatología oncológica,Demora en la cita,1099,FALSE
+Dermatología oncológica,Negación de la cita,1093,FALSE
+Dolor y cuidados paliativos,Demora en la cita,9483,FALSE
+Dolor y cuidados paliativos,Negación de la cita,10907,FALSE
+Ecocardiografía,Demora en la cita,72,FALSE
+Ecocardiografía,Negación de la cita,29,FALSE
+Electrofisiología cardíaca,Demora en la cita,2417,FALSE
+Electrofisiología cardíaca,Negación de la cita,3514,FALSE
+Emergenciología,Demora en la cita,5,FALSE
+Emergenciología,Negación de la cita,8,FALSE
+Endocrinología,Demora en la cita,17404,FALSE
+Endocrinología,Negación de la cita,28243,FALSE
+Endocrinología pediátrica,Demora en la cita,3819,FALSE
+Endocrinología pediátrica,Negación de la cita,4509,FALSE
+Farmacología clínica,Demora en la cita,9,FALSE
+Farmacología clínica,Negación de la cita,7,FALSE
+Gastroenterología,Demora en la cita,14853,FALSE
+Gastroenterología,Negación de la cita,20228,FALSE
+Gastroenterología pediátrica,Demora en la cita,1961,FALSE
+Gastroenterología pediátrica,Negación de la cita,2270,FALSE
+Genética médica,Demora en la cita,2491,FALSE
+Genética médica,Negación de la cita,3380,FALSE
+Geriatría,Demora en la cita,769,FALSE
+Geriatría,Negación de la cita,1070,FALSE
+Ginecología oncológica,Demora en la cita,1640,FALSE
+Ginecología oncológica,Negación de la cita,1453,FALSE
+Ginecología y obstetricia,Demora en la cita,21431,TRUE
+Ginecología y obstetricia,Negación de la cita,21727,TRUE
+Hemato-oncología - oncohematología,Demora en la cita,544,FALSE
+Hemato-oncología - oncohematología,Negación de la cita,519,FALSE
+Hemato-oncología pediátrica - oncohematología pediátrica,Demora en la cita,190,FALSE
+Hemato-oncología pediátrica - oncohematología pediátrica,Negación de la cita,221,FALSE
+Hematología,Demora en la cita,5747,FALSE
+Hematología,Negación de la cita,7620,FALSE
+Hematología pediátrica,Demora en la cita,385,FALSE
+Hematología pediátrica,Negación de la cita,388,FALSE
+Hemodinamia,Demora en la cita,132,FALSE
+Hemodinamia,Negación de la cita,137,FALSE
+Hepatología,Demora en la cita,3314,FALSE
+Hepatología,Negación de la cita,3996,FALSE
+Infectología,Demora en la cita,3422,FALSE
+Infectología,Negación de la cita,4119,FALSE
+Medicina alternativa,Demora en la cita,436,FALSE
+Medicina alternativa,Negación de la cita,489,FALSE
+Medicina del deporte,Demora en la cita,690,FALSE
+Medicina del deporte,Negación de la cita,833,FALSE
+Medicina del trabajo o seguridad y salud en el trabajo,Demora en la cita,3854,FALSE
+Medicina del trabajo o seguridad y salud en el trabajo,Negación de la cita,2034,FALSE
+Medicina estética,Demora en la cita,2,FALSE
+Medicina estética,Negación de la cita,3,FALSE
+Medicina familiar,Demora en la cita,4039,FALSE
+Medicina familiar,Negación de la cita,4507,FALSE
+Medicina forense,Demora en la cita,2,FALSE
+Medicina forense,Negación de la cita,1,FALSE
+Medicina física y rehabilitación - fisiatría,Demora en la cita,11308,FALSE
+Medicina física y rehabilitación - fisiatría,Negación de la cita,13134,FALSE
+Medicina interna,Demora en la cita,29183,TRUE
+Medicina interna,Negación de la cita,34409,TRUE
+Medicina nuclear,Demora en la cita,615,FALSE
+Medicina nuclear,Negación de la cita,632,FALSE
+Miembro superior - ortopedia,Demora en la cita,830,FALSE
+Miembro superior - ortopedia,Negación de la cita,1267,FALSE
+Nefrología,Demora en la cita,5902,FALSE
+Nefrología,Negación de la cita,7579,FALSE
+Nefrología pediátrica,Demora en la cita,1082,FALSE
+Nefrología pediátrica,Negación de la cita,1270,FALSE
+Neonatología,Demora en la cita,20,FALSE
+Neonatología,Negación de la cita,24,FALSE
+Neumología,Demora en la cita,7551,FALSE
+Neumología,Negación de la cita,10738,FALSE
+Neumología pediátrica,Demora en la cita,2253,FALSE
+Neumología pediátrica,Negación de la cita,2792,FALSE
+Neurocirugía,Demora en la cita,14161,FALSE
+Neurocirugía,Negación de la cita,18632,FALSE
+Neurología,Demora en la cita,28721,FALSE
+Neurología,Negación de la cita,36830,FALSE
+Neurología pediátrica - neuropediatría,Demora en la cita,12695,FALSE
+Neurología pediátrica - neuropediatría,Negación de la cita,16614,FALSE
+Oculoplastia,Demora en la cita,1839,FALSE
+Oculoplastia,Negación de la cita,3343,FALSE
+Oftalmología,Demora en la cita,51243,FALSE
+Oftalmología,Negación de la cita,71742,FALSE
+Oncología,Demora en la cita,9318,FALSE
+Oncología,Negación de la cita,7085,FALSE
+Oncología pediátrica,Demora en la cita,198,FALSE
+Oncología pediátrica,Negación de la cita,121,FALSE
+Ortopedia y traumatología,Demora en la cita,56650,FALSE
+Ortopedia y traumatología,Negación de la cita,69885,FALSE
+Ortopedia y traumatología pediátrica,Demora en la cita,5310,FALSE
+Ortopedia y traumatología pediátrica,Negación de la cita,6647,FALSE
+Otorrinolaringología,Demora en la cita,34959,FALSE
+Otorrinolaringología,Negación de la cita,52752,FALSE
+Patología,Demora en la cita,41,FALSE
+Patología,Negación de la cita,37,FALSE
+Pediatría,Demora en la cita,11795,TRUE
+Pediatría,Negación de la cita,12209,TRUE
+Psiquiatría,Demora en la cita,19666,FALSE
+Psiquiatría,Negación de la cita,20889,FALSE
+Psiquiatría de enlace,Demora en la cita,8,FALSE
+Psiquiatría de enlace,Negación de la cita,6,FALSE
+Psiquiatría pediátrica,Demora en la cita,6612,FALSE
+Psiquiatría pediátrica,Negación de la cita,7961,FALSE
+Radiología e imágenes diagnósticas,Demora en la cita,2339,FALSE
+Radiología e imágenes diagnósticas,Negación de la cita,1777,FALSE
+Radioterapia,Demora en la cita,596,FALSE
+Radioterapia,Negación de la cita,554,FALSE
+Reumatología,Demora en la cita,9544,FALSE
+Reumatología,Negación de la cita,11930,FALSE
+Reumatología pediátrica,Demora en la cita,324,FALSE
+Reumatología pediátrica,Negación de la cita,377,FALSE
+Salud familiar y comunitaria,Demora en la cita,28,FALSE
+Salud familiar y comunitaria,Negación de la cita,38,FALSE
+Sexología clínica,Demora en la cita,51,FALSE
+Sexología clínica,Negación de la cita,40,FALSE
+Toxicología clínica,Demora en la cita,347,FALSE
+Toxicología clínica,Negación de la cita,271,FALSE
+Trasplantes,Demora en la cita,163,FALSE
+Trasplantes,Negación de la cita,155,FALSE
+Urología,Demora en la cita,29177,FALSE
+Urología,Negación de la cita,42859,FALSE

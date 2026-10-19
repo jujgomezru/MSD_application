@@ -1,0 +1,27 @@
+corte,grupo,alto_costo,n,participacion
+post,Autoinmunes y reumáticas,TRUE,16275,0.016112393722552003
+post,Cardiovasculares y metabólicas,FALSE,267290,0.2646194604055868
+post,Cáncer,TRUE,44086,0.04364552931812152
+post,Enfermedad renal y trasplante,TRUE,23156,0.02292464448782883
+post,Enfermedades huérfanas,TRUE,7035,0.006964712125232157
+post,Hemofilia y coagulopatías,TRUE,489,4.841143182997192e-4
+post,Materno-infantil,FALSE,20660,0.020453582445955416
+post,Otras,FALSE,800,7.920070647030172e-4
+post,Otras intervenciones de alto costo,TRUE,4823,0.004774812591328314
+post,Respiratorias e infecciosas,FALSE,14379,0.014235336979205855
+post,Salud mental y neurológicas,FALSE,126793,0.12552618969361207
+post,Sin patología especificada,FALSE,473887,0.4691523148386484
+post,VIH,TRUE,10419,0.01031490200892592
+pre,Autoinmunes y reumáticas,TRUE,17028,0.018537913015078112
+pre,Cardiovasculares y metabólicas,FALSE,216438,0.23563006913069512
+pre,Cáncer,TRUE,52482,0.05713570301017909
+pre,Enfermedad renal y trasplante,TRUE,18562,0.02020793642153394
+pre,Enfermedades huérfanas,TRUE,13655,0.014865821131130587
+pre,Hemofilia y coagulopatías,TRUE,861,9.373469054488052e-4
+pre,Materno-infantil,FALSE,16647,0.018123128844374285
+pre,Otras,FALSE,2437,0.002653094551194818
+pre,Otras intervenciones de alto costo,TRUE,3854,0.0041957432910565565
+pre,Respiratorias e infecciosas,FALSE,22479,0.024472266071525774
+pre,Salud mental y neurológicas,FALSE,91134,0.09921506722551848
+pre,Sin patología especificada,FALSE,451946,0.49202112024386263
+pre,VIH,TRUE,11027,0.01200479015840183
