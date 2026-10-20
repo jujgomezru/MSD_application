@@ -1,12 +1,3 @@
-# Perfil de los reclamos por medicamentos posteriores al cambio de
-# clasificación de julio de 2023 (departamento, régimen, edad, gravedad y
-# características del afectado). Requiere scripts/07_descargar_reclamos.R.
-#
-# Genera data/processed/perfil_medicamentos.csv.gz: reclamos por dimensión,
-# año, motivo específico, tipo de patología y marca de alto costo (para poder
-# separar alto costo después con R/clasificacion_medicamentos.R). La columna
-# `dimension` dice qué variable se agregó y `valor`, su categoría.
-
 source(here::here("R", "setup.R"))
 source(here("R", "supersalud.R"))
 

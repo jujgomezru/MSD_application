@@ -1,7 +1,3 @@
-# Prepara los datos de la sección de reclamos por citas de index.qmd a partir de
-# scripts/08_procesar_reclamos_citas.R. Escribe en data/processed/ los archivos
-# citas_reclamos_*.csv.
-
 source(here::here("R", "setup.R"))
 source(here("R", "poblacion.R"))
 source(here("R", "afiliados.R"))
@@ -9,11 +5,8 @@ source(here("R", "afiliados.R"))
 citas <- read_csv(here("data", "processed", "reclamos_citas.csv.gz"),
                   col_types = cols(.default = "c", n = "i")) |>
   mutate(
-    # Unas pocas filas no traen mes válido: quedan sin fecha y salen de la serie.
     fecha = suppressWarnings(make_date(as.integer(anio), as.integer(mes), 1)),
     motivo = str_squish(motivo_especifico),
-    # Antes del corte la especialidad va en el texto del motivo; después, en el
-    # tipo de motivo ("ESPECIALIDADES MÉDICAS") y el subtipo (la especialidad).
     nivel = case_when(
       corte == "post" & str_detect(tipo_motivo, "^ESPECIALIDADES M") ~ "Especialista",
       corte == "post" & tipo_motivo == "MEDICINA GENERAL" ~ "Medicina general",
@@ -29,13 +22,11 @@ citas <- read_csv(here("data", "processed", "reclamos_citas.csv.gz"),
     )
   )
 
-# Serie mensual de reclamos por citas con especialista, por tipo.
 citas |>
   filter(nivel == "Especialista", !is.na(fecha)) |>
   count(corte, fecha, tipo, wt = n) |>
   write_csv(here("data", "processed", "citas_reclamos_mensual.csv"))
 
-# Especialidades (solo después del corte, que trae la especialidad explícita).
 especialidades_observatorio <- c("MEDICINA INTERNA", "PEDIATRÍA", "GINECOLOGÍA Y OBSTETRICIA",
                                  "CIRUGÍA GENERAL", "GINECOLOGÍA", "OBSTETRICIA")
 citas |>
@@ -48,8 +39,6 @@ citas |>
   ) |>
   write_csv(here("data", "processed", "citas_reclamos_especialidad.csv"))
 
-# Departamentos: reclamos por citas con especialista en 2025 por 100.000
-# habitantes, frente a los días de espera de medicina interna del Observatorio.
 poblacion <- dane_poblacion() |> filter(anio == 2025) |> select(cod_depto, departamento, poblacion)
 espera <- read_csv(here("data", "processed", "mapa_espera_departamentos.csv"),
                    col_types = cols(cod_depto = "c")) |>
@@ -71,8 +60,6 @@ citas |>
   ) |>
   write_csv(here("data", "processed", "citas_reclamos_departamento.csv"))
 
-# EPS: reclamos por negación o demora de citas con especialista en 2025, totales
-# y por 10.000 afiliados (BDUA de la ADRES, último corte).
 citas |>
   filter(corte == "post", anio == "2025", nivel == "Especialista",
          tipo %in% c("Negación de la cita", "Demora en la cita"),

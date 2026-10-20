@@ -41,7 +41,6 @@ seleccion = datos.filter(d => d.especialidad === especialidad && d.dias !== null
 media = seleccion[0].promedio_nacional
 porCodigo = new Map(seleccion.map(d => [d.cod_depto, d]))
 
-// La escala pivota en el promedio nacional: verde por debajo, rojo por encima.
 dominio = {
   const valores = seleccion.map(d => d.dias);
   return [Math.min(...valores, media - 0.01), media, Math.max(...valores, media + 0.01)];
@@ -68,7 +67,6 @@ mapa = P.plot({
     P.geo(geo, {fill: "#e1e0d9", stroke: "#fcfcfb", strokeWidth: 0.8}),
     P.geo(geo, P.centroid({
       filter: f => porCodigo.has(f.properties.DPTO_CCDGO),
-      // El filtro se aplica después de evaluar los canales: de ahí el ?.
       fill: f => porCodigo.get(f.properties.DPTO_CCDGO)?.dias,
       stroke: "#fcfcfb",
       strokeWidth: 0.8,
@@ -136,7 +134,6 @@ seleccionEsp = especialistas.filter(d => d.especialidad === perfil)
 tasaNacional = seleccionEsp[0].tasa_nacional
 porCodigoEsp = new Map(seleccionEsp.map(d => [d.cod_depto, d]))
 
-// Pivote en la tasa nacional: verde por encima (más especialistas), rojo por debajo.
 dominioEsp = {
   const valores = seleccionEsp.map(d => d.por_100k);
   return [Math.min(...valores, tasaNacional - 0.01), tasaNacional, Math.max(...valores, tasaNacional + 0.01)];
@@ -225,7 +222,6 @@ seleccionPc = percapita.filter(d => d.especialidad === especialidadPc)
 citasNac = seleccionPc[0].citas_por_1000_nacional
 diasNac = seleccionPc[0].promedio_nacional
 
-// Se rotulan los departamentos más grandes y los más alejados del promedio.
 rotulados = new Set([
   ...[...seleccionPc].sort((a, b) => b.poblacion - a.poblacion).slice(0, 4),
   ...[...seleccionPc].sort((a, b) => a.citas_por_1000 - b.citas_por_1000).slice(0, 4),
@@ -324,7 +320,6 @@ P.plot({
 reclamosEsp = FileAttachment("data/processed/citas_reclamos_especialidad.csv").csv()
   .then(filas => filas.map(d => ({...d, n: +d.n, medida: d.medida_observatorio === "TRUE"})))
 
-// Total de reclamos (negación y demora) por especialidad; las 20 con más reclamos.
 topEsp = d3.rollups(reclamosEsp, v => ({n: d3.sum(v, d => d.n), medida: v[0].medida}), d => d.especialidad)
   .map(([especialidad, r]) => ({especialidad, ...r}))
   .sort((a, b) => b.n - a.n)
@@ -581,8 +576,6 @@ promedio de las categorías mostradas.`
 
 ```{ojs}
 //| echo: false
-// Las categorías se muestran en su orden natural (edad y nivel educativo) o
-// alfabético, no según el resultado.
 ordenCategorias = ({
   "Edad": ["De 0 a 5 años", "De 6 a 12 años", "De 13 a 17 años", "De 18 a 24 años", "De 25 a 29 años",
     "De 30 a 37 años", "De 38 a 49 años", "De 50 a 62 años", "Mayor de 63 años"],
@@ -591,7 +584,6 @@ ordenCategorias = ({
 })
 negPobSel = negPob.filter(d => d.dimension === dimNeg)
 dominioPob = ordenCategorias[dimNeg] ?? negPobSel.map(d => d.valor).sort((a, b) => a.localeCompare(b, "es"))
-// Promedio ponderado de las categorías mostradas (sin "No aplica").
 promNeg = d3.sum(negPobSel, d => d.negaciones) / d3.sum(negPobSel, d => d.total)
 
 P.plot({
@@ -644,7 +636,6 @@ viewof campoY = Inputs.radio(reclamosY, {label: "Reclamos (2025)", value: "negac
 
 ```{ojs}
 //| echo: false
-// Correlación de Spearman: correlación de Pearson entre los rangos.
 rangos = v => { const o = v.map((x, i) => [x, i]).sort((a, b) => a[0] - b[0]); const r = Array(v.length); o.forEach(([x, i], k) => r[i] = k + 1); return r; }
 spearman = (a, b) => { const ra = rangos(a), rb = rangos(b), ma = d3.mean(ra), mb = d3.mean(rb);
   return d3.sum(ra, (x, i) => (x - ma) * (rb[i] - mb)) / Math.sqrt(d3.sum(ra, x => (x - ma) ** 2) * d3.sum(rb, x => (x - mb) ** 2)); }

@@ -1,25 +1,11 @@
-# Prepara los datos de medicamentos.qmd a partir de los reclamos procesados
-# (scripts/09_procesar_reclamos_medicamentos.R) y de las fuentes del Invima
-# (scripts/10_descargar_medicamentos.R). Escribe en data/processed/ los archivos
-# med_*.csv.
-#
-# Criterio de alto costo: ver R/clasificacion_medicamentos.R. Un reclamo es de
-# alto costo si su patología pertenece a un grupo de alto costo o si la
-# Supersalud lo marcó con una intervención de alto costo. Como la mitad de los
-# reclamos no especifica patología, la cifra de alto costo es un mínimo.
-
 source(here::here("R", "setup.R"))
 source(here("R", "clasificacion_medicamentos.R"))
 source(here("R", "afiliados.R"))
 
-# Reclamos por medicamentos ------------------------------------------------------
-
 reclamos <- read_csv(here("data", "processed", "reclamos_medicamentos.csv.gz"),
                      col_types = cols(.default = "c", n = "i")) |>
-  # El filtro de texto también trae algunos reclamos solo de dispositivos médicos.
   filter(!str_detect(coalesce(tipo_motivo, ""), "^DISPOSITIVOS")) |>
   mutate(
-    # Unas pocas filas no traen mes válido: quedan sin fecha y salen de la serie.
     fecha = suppressWarnings(make_date(as.integer(anio), as.integer(mes), 1)),
     grupo = grupo_patologia(patologia_tipo),
     grupo = if_else(grupo %in% grupos_alto_costo, grupo,
@@ -29,13 +15,11 @@ reclamos <- read_csv(here("data", "processed", "reclamos_medicamentos.csv.gz"),
     motivo = categoria_motivo(motivo_especifico)
   )
 
-# Serie mensual por clase.
 reclamos |>
   filter(!is.na(fecha)) |>
   count(corte, fecha, clase, wt = n) |>
   write_csv(here("data", "processed", "med_reclamos_mensual.csv"))
 
-# Reclamos por grupo de enfermedad.
 reclamos |>
   count(corte, grupo, alto_costo, wt = n) |>
   mutate(participacion = n / sum(n), .by = corte) |>
@@ -43,23 +27,16 @@ reclamos |>
 
 alto <- filter(reclamos, alto_costo)
 
-# Motivos de los reclamos de alto costo, por grupo.
 alto |>
   count(corte, grupo, motivo, wt = n) |>
   write_csv(here("data", "processed", "med_alto_costo_motivo.csv"))
 
-# Patologías de alto costo más frecuentes.
-# Solo patologías que son de alto costo en sí mismas (no las de pacientes con una
-# intervención de alto costo, p. ej. hipertensos con cirugía cardiaca).
 alto |>
   filter(grupo_patologia(patologia_tipo) %in% grupos_alto_costo) |>
   count(corte, grupo, patologia = str_to_sentence(str_squish(patologia_tipo)), wt = n) |>
   slice_max(n, n = 20, by = corte) |>
   write_csv(here("data", "processed", "med_alto_costo_patologia.csv"))
 
-# EPS: reclamos por medicamentos y de alto costo en 2025, totales y por 10.000
-# afiliados (BDUA de la ADRES, último corte). Solo EPS de los regímenes
-# contributivo y subsidiado con al menos 50.000 afiliados.
 reclamos |>
   filter(anio == "2025", str_detect(coalesce(tipo_entidad, ""), "RÉGIMEN (CONTRIBUTIVO|SUBSIDIADO)")) |>
   mutate(eps = str_squish(toupper(eps))) |>
@@ -71,10 +48,6 @@ reclamos |>
   reclamos_por_afiliados(c("alto_costo", "medicamentos")) |>
   arrange(desc(alto_costo_10k)) |>
   write_csv(here("data", "processed", "med_alto_costo_eps.csv"))
-
-# Desabastecimiento (Invima, listado de agosto de 2026) ---------------------------
-# Tomado del conjunto de datos de la Secretaría Distrital de Salud de Bogotá,
-# que transcribe el listado del Invima y agrega grupo terapéutico y prioridad.
 
 desabastecimiento <- read_delim(here("data", "raw", "invima", "desabastecimiento_saludata.csv"),
                                 delim = ";", show_col_types = FALSE) |>
@@ -94,14 +67,9 @@ desabastecimiento <- read_delim(here("data", "raw", "invima", "desabastecimiento
     alto_costo = !is.na(grupo_alto_costo)
   )
 
-# Precio de compra institucional (lo que pagan IPS y EPS): Termómetro de Precios
-# del Minsalud, 2024, construido a partir del SISMED. El SISMED de datos abiertos
-# solo llega a 2019. El precio es por unidad de dispensación (tableta, vial...).
 termometro <- read_csv(here("data", "raw", "minsalud", "termometro_precios_2024.csv"), show_col_types = FALSE)
 precios <- precio_institucional(unique(desabastecimiento$medicamento), termometro)
 
-# Precio máximo regulado por la CNPMDM: si el principio activo está en algún
-# mercado relevante con precio máximo de venta.
 regulados <- read_csv(here("data", "raw", "cnpmdm", "precio_maximo_venta.csv"), show_col_types = FALSE) |>
   pull(mercado_relevante) |>
   str_remove(" - .*$") |>
@@ -116,8 +84,6 @@ desabastecimiento |>
   ) |>
   write_csv(here("data", "processed", "med_desabastecimiento.csv"), na = "")
 
-# Medicamentos vitales no disponibles (Invima) ---------------------------------------
-
 vitales <- read_csv(here("data", "raw", "invima", "vitales_no_disponibles.csv"), show_col_types = FALSE) |>
   transmute(
     anio = year(fecha_de_autorizaci_n),
@@ -131,7 +97,6 @@ vitales |>
   count(anio, tipo) |>
   write_csv(here("data", "processed", "med_vitales_anual.csv"))
 
-# Principios activos más autorizados desde 2023, con su diagnóstico más frecuente.
 vitales |>
   filter(anio >= 2023) |>
   summarise(

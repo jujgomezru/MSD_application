@@ -1,14 +1,3 @@
-# Perfil de los reclamos por negación o demora de citas con especialista, a
-# partir de los reclamos de la Supersalud posteriores al cambio de clasificación
-# de julio de 2023 (antes casi no existía la categoría de negación). Requiere
-# scripts/07_descargar_reclamos.R.
-#
-# Genera data/processed/negacion_especialistas.csv.gz con el número de reclamos
-# por dimensión (departamento, régimen, riesgo, patología, sexo, edad, etnia,
-# nivel educativo y población especial), tipo (negación o demora) y año. Cada
-# dimensión se agrega por separado: la columna `dimension` dice cuál es y
-# `valor`, su categoría.
-
 source(here::here("R", "setup.R"))
 source(here("R", "supersalud.R"))
 
@@ -27,7 +16,6 @@ agregaciones <- purrr::map(dimensiones, \(dim) list(
 )) |>
   purrr::set_names(dimensiones)
 
-# Riesgo por especialidad: qué especialidades concentran negaciones de casos graves.
 agregaciones$riesgo_especialidad <- list(
   filtro = es_cita_especialista,
   grupos = c("anio", "motivo_especifico", "riesgo", "subtipo_motivo")

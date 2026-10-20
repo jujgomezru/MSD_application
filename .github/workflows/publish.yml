@@ -1,5 +1,3 @@
-# Publica el sitio de Quarto en GitHub Pages (rama gh-pages) en cada push a main.
-# Usa los resultados congelados en _freeze/, por lo que no instala R.
 name: Publicar sitio
 
 on:

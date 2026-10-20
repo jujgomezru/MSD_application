@@ -1,7 +1,3 @@
-# Nombre canónico de una EPS a partir de cualquiera de sus nombres (razón
-# social de los estados financieros, nombre corto de la Supersalud o nombre de
-# la ADRES), para cruzar fuentes que no comparten código. El orden importa:
-# "NUEVA EPS" se evalúa antes que los nombres genéricos.
 eps_canonico <- function(nombre) {
   n <- toupper(stringi::stri_trans_general(nombre, "Latin-ASCII"))
   dplyr::case_when(
@@ -41,11 +37,6 @@ eps_canonico <- function(nombre) {
   )
 }
 
-# Intervenciones de la Supersalud (toma de posesión) a EPS de los regímenes
-# contributivo y subsidiado. Fechas según las resoluciones citadas en prensa
-# especializada (Consultorsalud, El Tiempo, Infobae); SOS y Famisanar solo con
-# mes conocido, se usa el día 1. Antes de julio de 2023 no hay serie comparable
-# de reclamos, así que esas intervenciones no entran al estudio de evento.
 eps_intervenciones <- tibble::tribble(
   ~eps,            ~fecha_intervencion,
   "Emssanar",      "2022-02-02",

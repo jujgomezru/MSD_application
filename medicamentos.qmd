@@ -24,7 +24,6 @@ cortes = new Map([
 azul = "#2a78d6"
 gris = "#c3c2b7"
 
-// Tabla HTML simple: filas es una lista de objetos; numericas, las columnas a alinear a la derecha.
 tabla = (filas, numericas = []) => html`<table class="table table-sm tabla-datos">
   <thead><tr>${Object.keys(filas[0]).map(c => html`<th class=${numericas.includes(c) ? "num" : ""}>${c}</th>`)}</tr></thead>
   <tbody>${filas.map(f => html`<tr>${Object.entries(f).map(([c, v]) => html`<td class=${numericas.includes(c) ? "num" : ""}>${v}</td>`)}</tr>`)}</tbody>
@@ -169,7 +168,6 @@ motivoSel = {
   return filas.map(d => ({...d, total: totales.get(d.grupo), share: d.n / totales.get(d.grupo)}));
 }
 
-// Grupos ordenados de más a menos reclamos.
 ordenGrupos = [...new Set([...motivoSel].sort((a, b) => b.total - a.total).map(d => d.grupo))]
 
 P.plot({
@@ -284,8 +282,6 @@ viewof dimMed = Inputs.radio(["Nivel educativo", "Edad", "Población especial", 
 
 ```{ojs}
 //| echo: false
-// Las categorías se muestran en su orden natural (edad y nivel educativo) o
-// alfabético, no según el resultado.
 ordenCategoriasMed = ({
   "Edad": ["De 0 a 5 años", "De 6 a 12 años", "De 13 a 17 años", "De 18 a 24 años", "De 25 a 29 años",
     "De 30 a 37 años", "De 38 a 49 años", "De 50 a 62 años", "Mayor de 63 años"],

@@ -1,14 +1,4 @@
-# Gráficas nacionales de tiempo de espera para asignación de citas:
-# 1. Evolución en el tiempo por especialidad (línea).
-# 2. Comparación de cada especialidad con medicina general (barras).
-# Requiere haber ejecutado scripts/02_descargar_moca.R.
-
 source(here::here("R", "setup.R"))
-
-# Textos ------------------------------------------------------------------------
-# Todo lo que se lee en las gráficas se edita aquí. En los textos de las barras,
-# {desde}, {hasta}, {min}, {max}, {dias} y {veces} se reemplazan por los valores
-# calculados.
 
 nombres_especialidad <- c(
   "Medicina General" = "Medicina general",
@@ -18,7 +8,7 @@ nombres_especialidad <- c(
   "Obstetricia"      = "Obstetricia",
   "Cirugía General"  = "Cirugía general"
 )
-referencia <- "Medicina general"  # debe coincidir con un valor de nombres_especialidad
+referencia <- "Medicina general"
 
 textos_fuente <- paste0(
   "Fuente: Minsalud, Observatorio Nacional de Calidad en Salud (Res. 256 de 2016).\n",
@@ -41,16 +31,9 @@ textos_barras <- list(
   etiqueta_especialidad = "{dias} días  ({veces}×)"
 )
 
-# Los hitos verticales de la gráfica de líneas se editan en R/tema.R
-# (eventos_politica).
-
-# Formatos ------------------------------------------------------------------------
-
 meses <- c("ene", "feb", "mar", "abr", "may", "jun", "jul", "ago", "sep", "oct", "nov", "dic")
 mes_anio <- function(fecha) paste(meses[month(fecha)], year(fecha))
 decimal <- function(x) format(round(x, 1), nsmall = 1, decimal.mark = ",", trim = TRUE)
-
-# Datos ---------------------------------------------------------------------------
 
 oportunidad <- read_csv(here("data", "processed", "moca_oportunidad_citas.csv"),
                         show_col_types = FALSE)
@@ -59,9 +42,6 @@ nacional <- oportunidad |>
   filter(nivel == "pais") |>
   mutate(especialidad = recode(str_remove(indicador, "^.*cita de "), !!!nombres_especialidad))
 
-# 1. Línea: evolución nacional -----------------------------------------------------
-
-# Orden de la leyenda: de mayor a menor espera en el último corte.
 orden <- nacional |>
   filter(fecha == max(fecha)) |>
   arrange(desc(dias_promedio)) |>
@@ -86,10 +66,6 @@ g_linea <- nacional |>
 
 guardar_grafica(g_linea, "espera_nacional_linea", ancho = 10, alto = 5.5)
 
-# 2. Barras: cada especialidad frente a medicina general ----------------------------
-
-# Últimos cuatro trimestres, ponderados por número de citas. Cada corte
-# trimestral cubre los tres meses que terminan en su fecha.
 hasta <- max(nacional$fecha)
 desde <- floor_date(hasta - months(11), "month")
 

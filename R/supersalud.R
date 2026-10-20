@@ -1,16 +1,3 @@
-# Bases de reclamos en salud de la Superintendencia Nacional de Salud, publicadas
-# en su portal de datos abiertos (https://mapas.supersalud.gov.co/arcgisportal).
-# Un registro por reclamo, con motivo, EPS, departamento del afectado y otras
-# características.
-#
-# El 1 de julio de 2023 la Supersalud cambió la clasificación de motivos y de
-# riesgo; según la entidad, no son homologables. Por eso los archivos se separan
-# en dos periodos.
-
-# `comillas`: si el archivo usa comillas para encerrar campos que contienen el
-# separador (TRUE) o si hay que ignorarlas (FALSE). En los segundos no hay
-# separadores dentro de los campos, pero algunos nombres de EPS traen comillas
-# mal formadas (""CCF ORIENTE """"COMFAORIENTE"""""") que rompen la lectura.
 supersalud_reclamos <- tibble::tribble(
   ~periodo,    ~corte,     ~id,                                  ~archivo,               ~comillas,
   "2017",      "pre",      "9d500fecea6e448aaafc656762b93ce5",   "reclamos_2017.csv",    FALSE,
@@ -27,8 +14,6 @@ supersalud_reclamos <- tibble::tribble(
   "2025-2",    "post",     "d36192e86d874296aeaf95cd1a53e904",   "reclamos_2025_2.zip",  FALSE
 )
 
-# Nombres unificados de columnas: antes del corte vienen en mayúsculas (sin tipo
-# ni subtipo de motivo) y después, en minúsculas.
 supersalud_columnas <- c(
   anio = "AÑO|periodo",
   mes = "MES|mes",
@@ -54,11 +39,6 @@ supersalud_columnas <- c(
   riesgo = "RIESGO_VIDA|clasificacion_de_riesgo"
 )
 
-# Recorre los archivos descargados por bloques y calcula varias agregaciones en
-# una sola lectura. `agregaciones` es una lista con nombre; cada elemento tiene
-# `grupos` (columnas unificadas) y opcionalmente `filtro` (función que recibe el
-# bloque y devuelve un vector lógico). Devuelve una lista de tibbles con las
-# columnas corte, periodo, grupos y n (número de reclamos).
 supersalud_agregar <- function(agregaciones,
                                carpeta = here::here("data", "raw", "supersalud"),
                                archivos = supersalud_reclamos,
@@ -69,7 +49,6 @@ supersalud_agregar <- function(agregaciones,
     ruta <- file.path(carpeta, archivos$archivo[i])
     message(sprintf("Procesando %s...", archivos$periodo[i]))
 
-    # Encabezado: define el separador (casi siempre ";", a veces ",") y las columnas.
     conexion <- if (grepl("\\.zip$", ruta)) unz(ruta, utils::unzip(ruta, list = TRUE)$Name[1]) else file(ruta)
     encabezado <- sub("^﻿", "", readLines(conexion, n = 1, encoding = "UTF-8", warn = FALSE))
     separador <- if (lengths(regmatches(encabezado, gregexpr(";", encabezado))) > 5) ";" else ","
@@ -84,7 +63,6 @@ supersalud_agregar <- function(agregaciones,
     procesar <- function(datos, posicion) {
       datos <- dplyr::rename(datos, dplyr::all_of(presentes))
       for (faltante in setdiff(names(supersalud_columnas), names(datos))) datos[[faltante]] <- NA_character_
-      # Unifica variantes de escritura entre años ("SALUD; Y OTROS" / "SALUD Y OTROS").
       datos <- dplyr::mutate(datos, dplyr::across(dplyr::everything(), \(x) stringr::str_squish(gsub(";", "", x, fixed = TRUE))))
       purrr::map(agregaciones, \(a) {
         if (!is.null(a$filtro)) datos <- datos[a$filtro(datos) %in% TRUE, , drop = FALSE]
@@ -111,8 +89,6 @@ supersalud_agregar <- function(agregaciones,
   purrr::map(resultados, purrr::list_rbind)
 }
 
-# Descarga los archivos que falten a data/raw/supersalud/. Usa el enlace de
-# descarga del portal (el servicio de consultas bloquea el acceso automatizado).
 supersalud_descargar <- function(carpeta = here::here("data", "raw", "supersalud"),
                                  archivos = supersalud_reclamos) {
   dir.create(carpeta, recursive = TRUE, showWarnings = FALSE)
@@ -126,14 +102,10 @@ supersalud_descargar <- function(carpeta = here::here("data", "raw", "supersalud
       httr2::req_timeout(3600) |>
       httr2::req_retry(max_tries = 3) |>
       httr2::req_perform(path = temporal)
-    # Solo se renombra al terminar, para no confundir una descarga cortada con una completa.
     file.rename(temporal, destino)
   }
 }
 
-# Catálogo de información financiera de las EPS (formato FT001) en el portal de
-# datos abiertos de la Supersalud: cortes de junio y diciembre. El de diciembre
-# de 2023 viene en formato Excel antiguo (.xls).
 supersalud_financiera <- tibble::tribble(
   ~archivo,            ~id,
   "eps_2021_12.xlsx",  "bad69a1516e7463ab03db489e4a3626e",

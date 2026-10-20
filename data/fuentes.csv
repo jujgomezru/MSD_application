@@ -1,6 +1,6 @@
 nombre,investigacion,entidad,descripcion,metodo,id_dataset,url
 pqrd_supersalud,ambas,Supersalud,"Peticiones, quejas y reclamos por motivo y EPS",datos.gov.co,,https://www.datos.gov.co
-moca_oportunidad_citas,especialistas,Minsalud,"Tiempos de espera por especialidad, departamento, municipio e IPS (Res. 256 de 2016), 2017-2026",scripts/02_descargar_moca.R,,https://rssvr2.sispro.gov.co/IndicadoresMOCA/
+moca_oportunidad_citas,especialistas,Minsalud,"Tiempos de espera por especialidad, departamento, municipio e IPS (Res. 256 de 2016), 2017-2026",scripts/descargar_moca.R,,https://rssvr2.sispro.gov.co/IndicadoresMOCA/
 ordenamiento_eps,especialistas,Minsalud,"Ordenamiento anual de EPS",manual,,https://www.minsalud.gov.co
 ecv_dane,especialistas,DANE,"Encuesta Nacional de Calidad de Vida, módulo de salud",manual,,https://microdatos.dane.gov.co
 tutelas_defensoria,ambas,Defensoría del Pueblo,"Informe La tutela y los derechos a la salud",manual,,https://www.defensoria.gov.co
@@ -8,12 +8,12 @@ cartera_achc,especialistas,ACHC,"Estudio de cartera hospitalaria",manual,,https:
 cac_informes,ambas,Cuenta de Alto Costo,"Situación de enfermedades de alto costo; pacientes por enfermedad en data/referencia/cac_pacientes.csv, cifras nacionales publicadas en prensa (el PDF exige registro)",manual,,https://cuentadealtocosto.org
 presupuestos_maximos_adres,medicamentos,ADRES,"Giros y ejecución de presupuestos máximos",manual,,https://www.adres.gov.co
 sismed,medicamentos,Minsalud,"Precios y unidades vendidas de medicamentos",manual,,https://www.sispro.gov.co
-desabastecimiento_invima,medicamentos,Invima,"Listados mensuales de abastecimiento y desabastecimiento (PDF, junio de 2023 a enero de 2026)",scripts/10_descargar_medicamentos.R,,https://www.invima.gov.co
+desabastecimiento_invima,medicamentos,Invima,"Listados mensuales de abastecimiento y desabastecimiento (PDF, junio de 2023 a enero de 2026)",scripts/descargar_medicamentos.R,,https://www.invima.gov.co
 rethus,especialistas,Minsalud,"Registro Único Nacional del Talento Humano en Salud por departamento de residencia y perfil (corte 2022)",datos.gov.co,my8c-6xkk,https://www.datos.gov.co/d/my8c-6xkk
 poblacion_dane,ambas,DANE,"Proyecciones de población departamental 2018-2050 (CNPV 2018, actualización post COVID-19)",R/poblacion.R,,https://www.dane.gov.co/index.php/estadisticas-por-tema/demografia-y-poblacion/proyecciones-de-poblacion
-mgn_departamentos,ambas,DANE,"Marco Geoestadístico Nacional 2025, límites departamentales",scripts/04_preparar_mapa.R,,https://geoportal.dane.gov.co/mparcgis/rest/services/Divipola/Serv_DIVIPOLA_MGN_2025/FeatureServer/319
-reclamos_supersalud,ambas,Supersalud,"Microdatos de reclamos en salud 2017-2025 (motivo, EPS, departamento, patología, alto costo)",scripts/07_descargar_reclamos.R,,https://mapas.supersalud.gov.co/arcgisportal/apps/sites/#/datos-abiertos
+mgn_departamentos,ambas,DANE,"Marco Geoestadístico Nacional 2025, límites departamentales",scripts/preparar_mapa.R,,https://geoportal.dane.gov.co/mparcgis/rest/services/Divipola/Serv_DIVIPOLA_MGN_2025/FeatureServer/319
+reclamos_supersalud,ambas,Supersalud,"Microdatos de reclamos en salud 2017-2025 (motivo, EPS, departamento, patología, alto costo)",scripts/descargar_reclamos.R,,https://mapas.supersalud.gov.co/arcgisportal/apps/sites/#/datos-abiertos
 afiliados_bdua,ambas,ADRES,"Afiliados activos por EPS, regímenes contributivo y subsidiado (BDUA)",R/afiliados.R,tq4m-hmg2;d7a5-cnra,https://www.datos.gov.co/d/tq4m-hmg2
-termometro_precios,medicamentos,Minsalud,"Termómetro de Precios de Medicamentos 2024 (precio por unidad, canal institucional y comercial)",scripts/11_preparar_medicamentos.R,n4dj-8r7k,https://www.datos.gov.co/d/n4dj-8r7k
-vitales_no_disponibles,medicamentos,Invima,"Autorizaciones de medicamentos vitales no disponibles 2018-2026",scripts/10_descargar_medicamentos.R,sdmr-tfmf,https://www.datos.gov.co/d/sdmr-tfmf
-desabastecimiento_saludata,medicamentos,Secretaría Distrital de Salud de Bogotá (a partir del Invima),"Listado de desabastecimiento de agosto de 2026 con grupo terapéutico y prioridad",scripts/11_preparar_medicamentos.R,,https://datosabiertos.bogota.gov.co/dataset/desabastecimiento-de-medicamentos
+termometro_precios,medicamentos,Minsalud,"Termómetro de Precios de Medicamentos 2024 (precio por unidad, canal institucional y comercial)",scripts/preparar_medicamentos.R,n4dj-8r7k,https://www.datos.gov.co/d/n4dj-8r7k
+vitales_no_disponibles,medicamentos,Invima,"Autorizaciones de medicamentos vitales no disponibles 2018-2026",scripts/descargar_medicamentos.R,sdmr-tfmf,https://www.datos.gov.co/d/sdmr-tfmf
+desabastecimiento_saludata,medicamentos,Secretaría Distrital de Salud de Bogotá (a partir del Invima),"Listado de desabastecimiento de agosto de 2026 con grupo terapéutico y prioridad",scripts/preparar_medicamentos.R,,https://datosabiertos.bogota.gov.co/dataset/desabastecimiento-de-medicamentos

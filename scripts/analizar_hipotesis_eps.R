@@ -1,19 +1,5 @@
-# Contrasta hipótesis sobre la negación de citas con especialista a nivel de EPS.
-# Requiere scripts/08, 12 y 16. Escribe en data/processed/:
-# - eps_hipotesis_2025.csv: por EPS, negaciones por 10.000 afiliados en 2025 e
-#   indicadores financieros de diciembre de 2025 (contención de costos y deudas
-#   con prestadores).
-# - eps_evento_intervencion.csv: estudio de evento. Reclamos mensuales por
-#   negación de citas con especialista de cada EPS intervenida, como índice
-#   respecto a su promedio antes de la intervención (=1), y el mismo índice para
-#   el grupo de EPS no intervenidas en las mismas fechas.
-# - eps_evento_resumen.csv: cambio promedio del índice en los 12 meses
-#   siguientes a la intervención, para la EPS y para el grupo de control.
-
 source(here::here("R", "setup.R"))
 source(here("R", "eps.R"))
-
-# Comparación entre EPS (2025) ----------------------------------------------------
 
 finanzas_2025 <- read_csv(here("data", "processed", "eps_finanzas.csv"), show_col_types = FALSE) |>
   filter(corte == as.Date("2025-12-01"), ingresos > 0)
@@ -30,9 +16,6 @@ hipotesis <- reclamos_eps |>
   )
 write_csv(hipotesis, here("data", "processed", "eps_hipotesis_2025.csv"))
 
-# Correlaciones de rango (Spearman) entre EPS con al menos 200.000 afiliados.
-# La deuda solo se compara entre EPS con formato NIIF (la del formato público no
-# es equivalente).
 grandes <- filter(hipotesis, afiliados >= 2e5)
 correlaciones <- tibble(
   indicador = c("Siniestralidad", "Patrimonio por afiliado", "Meses de costo adeudados a prestadores"),
@@ -45,8 +28,6 @@ correlaciones <- tibble(
 )
 print(correlaciones)
 
-# Estudio de evento de las intervenciones -------------------------------------------
-
 mensual <- read_csv(here("data", "processed", "reclamos_citas.csv.gz"),
                     col_types = cols(.default = "c", n = "i")) |>
   filter(corte == "post", str_detect(coalesce(tipo_motivo, ""), "^ESPECIALIDADES M"),
@@ -55,9 +36,6 @@ mensual <- read_csv(here("data", "processed", "reclamos_citas.csv.gz"),
   filter(!is.na(eps), !is.na(fecha)) |>
   count(eps, fecha, wt = n)
 
-# Tratadas: intervenidas dentro de la serie (desde julio de 2023). Control: EPS
-# grandes nunca intervenidas en el periodo (se excluyen las intervenidas antes y
-# Coosalud, cuyo estado no está confirmado).
 tratadas <- eps_intervenciones |> filter(fecha_intervencion >= as.Date("2023-10-01"))
 excluidas <- c(eps_intervenciones$eps, "Coosalud")
 control <- mensual |>
@@ -102,14 +80,6 @@ write_csv(resumen, here("data", "processed", "eps_evento_resumen.csv"))
 print(resumen)
 cat("EPS de control:", paste(control, collapse = ", "), "\n")
 
-# Panel de deuda y negación ---------------------------------------------------------
-
-# ¿Niega más citas una EPS después de que crece su deuda con prestadores? Se
-# relaciona la deuda al cierre de cada semestre (junio o diciembre) con las
-# negaciones del semestre siguiente, con efectos fijos de EPS (compara cada EPS
-# consigo misma) y de semestre (descuenta la tendencia común). Solo EPS en
-# formato NIIF y semestres con al menos 50 negaciones. Errores estándar
-# agrupados por EPS.
 negacion_semestral <- read_csv(here("data", "processed", "reclamos_citas.csv.gz"),
                                col_types = cols(.default = "c", n = "i")) |>
   filter(corte == "post", str_detect(coalesce(tipo_motivo, ""), "^ESPECIALIDADES M"),
@@ -125,7 +95,6 @@ panel <- read_csv(here("data", "processed", "eps_finanzas.csv"), show_col_types 
   inner_join(negacion_semestral, by = c("eps", "periodo")) |>
   filter(negaciones >= 50)
 
-# Errores estándar agrupados por EPS (CR1), sin paquetes adicionales.
 ee_agrupado <- \(modelo, grupo) {
   X <- model.matrix(modelo)
   e <- resid(modelo)
@@ -148,9 +117,6 @@ resumen_panel <- bind_rows(estimar(panel, "meses_deuda"), estimar(panel, "sinies
 write_csv(resumen_panel, here("data", "processed", "eps_panel_resumen.csv"))
 print(resumen_panel)
 
-# Para la gráfica: deuda y negaciones sin el promedio de cada EPS ni el de cada
-# semestre (residuos de los efectos fijos). La pendiente de esa nube es el
-# coeficiente del modelo.
 residuo <- \(f) resid(lm(f, panel))
 panel |>
   mutate(deuda_res = residuo(meses_deuda ~ factor(eps) + factor(periodo)),

@@ -1,11 +1,5 @@
-# Estilo gráfico común para todas las figuras del informe.
-# Cargar con source(here::here("R", "tema.R")) o mediante R/setup.R.
-
 library(ggplot2)
 
-# Colores ---------------------------------------------------------------------
-
-# Tinta y fondo (modo claro).
 colores_base <- c(
   fondo       = "#fcfcfb",
   texto       = "#0b0b0b",
@@ -13,13 +7,9 @@ colores_base <- c(
   texto_muted = "#898781",
   grilla      = "#e1e0d9",
   eje         = "#c3c2b7",
-  gris_serie  = "#c3c2b7"  # series de contexto ("resto de EPS")
+  gris_serie  = "#c3c2b7"
 )
 
-# Paleta categórica en orden fijo: asignar siempre en este orden, nunca ciclar.
-# Validada para daltonismo (ΔE adyacente >= 9.1). Aqua, amarillo y magenta
-# quedan bajo 3:1 de contraste sobre el fondo: usarlas con etiquetas directas.
-# Con más de 8 categorías, agrupar en "Otras" o usar facetas.
 paleta_categorica <- c(
   azul    = "#2a78d6",
   naranja = "#eb6834",
@@ -31,16 +21,12 @@ paleta_categorica <- c(
   rojo    = "#e34948"
 )
 
-# Rampa secuencial de un solo tono (azul), de claro a oscuro: mapas y heatmaps.
 paleta_secuencial <- c(
   "#cde2fb", "#9ec5f4", "#6da7ec", "#3987e5",
   "#256abf", "#184f95", "#0d366b"
 )
 
-# Divergente: azul <-> rojo con punto medio gris neutro.
 paleta_divergente <- c(bajo = "#2a78d6", medio = "#f0efec", alto = "#e34948")
-
-# Tema ------------------------------------------------------------------------
 
 theme_informe <- function(base_size = 12, base_family = "sans") {
   theme_minimal(base_size = base_size, base_family = base_family) +
@@ -71,8 +57,6 @@ theme_informe <- function(base_size = 12, base_family = "sans") {
     )
 }
 
-# Escalas ---------------------------------------------------------------------
-
 scale_colour_informe <- function(...) {
   scale_colour_manual(values = unname(paleta_categorica), ...)
 }
@@ -92,34 +76,21 @@ scale_fill_informe_div <- function(midpoint = 0, ...) {
                        midpoint = midpoint, ...)
 }
 
-# Resalta una o varias categorías (p. ej. una EPS) y deja el resto en gris.
-# Uso: scale_colour_manual(values = colores_destacar(niveles, "NUEVA EPS"))
-# Si el resto es "contexto", es más claro agruparlo en una sola categoría
-# ("Otras EPS") con aes(group = eps) y dibujar la destacada al final
-# (ver la gráfica de líneas en scripts/03_graficas_espera_nacional.R).
 colores_destacar <- function(niveles, destacar) {
   valores <- setNames(rep(colores_base[["gris_serie"]], length(niveles)), niveles)
   valores[destacar] <- paleta_categorica[seq_along(destacar)]
   valores
 }
 
-# Anotaciones -----------------------------------------------------------------
-
-# Texto estándar de fuente para plot.caption.
 fuente <- function(...) {
   paste0("Fuente: ", paste(..., sep = "; "), ".")
 }
 
-# Hitos de política que conviene marcar en las series de tiempo.
-# Pandemia y presupuestos máximos van juntos: separados, sus etiquetas se solapan.
 eventos_politica <- data.frame(
   fecha = as.Date(c("2020-03-01", "2024-04-01")),
   etiqueta = c("Pandemia y presupuestos máximos", "Intervención Nueva EPS")
 )
 
-# Capa con líneas verticales y etiquetas para los hitos, arriba del panel.
-# Requiere un eje x de tipo Date; filtrar `eventos` si no aplican todos.
-# Dejar espacio arriba: scale_y_continuous(expand = expansion(mult = c(0, 0.12))).
 capa_eventos <- function(eventos = eventos_politica) {
   list(
     geom_vline(data = eventos, aes(xintercept = fecha),

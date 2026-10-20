@@ -1,10 +1,3 @@
-# Estado de abastecimiento de los medicamentos de referencia de cada
-# enfermedad de alto costo en los listados mensuales del Invima (junio de 2023
-# a enero de 2026). Requiere scripts/10_descargar_medicamentos.R. Escribe
-# data/processed/med_desab_referencia_mensual.csv: por medicamento de
-# referencia y listado, el peor estado entre sus presentaciones ("Sin reporte"
-# si no está en seguimiento ese mes).
-
 source(here::here("R", "setup.R"))
 source(here("R", "medicamentos.R"))
 source(here("R", "clasificacion_medicamentos.R"))

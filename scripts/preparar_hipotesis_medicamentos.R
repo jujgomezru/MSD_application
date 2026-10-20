@@ -1,7 +1,3 @@
-# Prepara los datos de las secciones "Perfil de los reclamos de alto costo" e
-# "Hipótesis" de medicamentos.qmd. Requiere scripts/09, 11, 16, 18 y 20. Escribe
-# en data/processed/ los archivos medh_*.csv.
-
 source(here::here("R", "setup.R"))
 source(here("R", "poblacion.R"))
 source(here("R", "afiliados.R"))
@@ -18,14 +14,11 @@ clasificar <- \(datos) {
     )
 }
 
-# Perfil (julio de 2023 a diciembre de 2025) ---------------------------------------
-
 perfil <- read_csv(here("data", "processed", "perfil_medicamentos.csv.gz"),
                    col_types = cols(.default = "c", n = "i")) |>
   clasificar() |>
   mutate(valor = str_squish(valor))
 
-# Departamentos (2025): reclamos por 100.000 habitantes, todos y de alto costo.
 poblacion <- dane_poblacion() |> filter(anio == 2025)
 perfil |>
   filter(dimension == "depto", anio == "2025") |>
@@ -42,7 +35,6 @@ perfil |>
   select(cod_depto, departamento, poblacion, todos, alto_costo, todos_100k, alto_costo_100k, todos_nacional, alto_costo_nacional) |>
   write_csv(here("data", "processed", "medh_departamento.csv"))
 
-# Régimen: reclamos de 2025 por 10.000 afiliados y proporción de negación de la entrega.
 afiliados_regimen <- adres_afiliados() |> summarise(afiliados = sum(afiliados), .by = regimen)
 perfil |>
   filter(dimension == "regimen", valor %in% c("Contributivo", "Subsidiado", "Régimen Especial", "Régimen especial")) |>
@@ -57,7 +49,6 @@ perfil |>
   mutate(alto_costo_10k_2025 = alto_costo_2025 / afiliados * 1e4) |>
   write_csv(here("data", "processed", "medh_regimen.csv"), na = "")
 
-# Gravedad.
 perfil |>
   filter(dimension == "riesgo") |>
   mutate(riesgo = str_to_sentence(valor)) |>
@@ -66,8 +57,6 @@ perfil |>
             .by = riesgo) |>
   write_csv(here("data", "processed", "medh_riesgo.csv"))
 
-# Población y características del afectado: proporción de negación de la
-# entrega en los reclamos de alto costo (sin "No aplica" ni categorías pequeñas).
 etiquetas <- c(edad = "Edad", educacion = "Nivel educativo", poblacion_especial = "Población especial",
                etnia = "Grupo étnico", sexo = "Sexo")
 perfil |>
@@ -79,8 +68,6 @@ perfil |>
   mutate(dimension = etiquetas[dimension], pct_negacion_entrega = negacion_entrega / reclamos) |>
   write_csv(here("data", "processed", "medh_poblacion.csv"))
 
-# Hipótesis ---------------------------------------------------------------------------
-
 reclamos <- read_csv(here("data", "processed", "reclamos_medicamentos.csv.gz"),
                      col_types = cols(.default = "c", n = "i")) |>
   filter(corte == "post", !str_detect(coalesce(tipo_motivo, ""), "^DISPOSITIVOS")) |>
@@ -88,16 +75,12 @@ reclamos <- read_csv(here("data", "processed", "reclamos_medicamentos.csv.gz"),
   mutate(fecha = suppressWarnings(make_date(as.integer(anio), as.integer(mes), 1))) |>
   filter(!is.na(fecha))
 
-# H. barreras administrativas: participación de cada motivo por semestre.
 reclamos |>
   mutate(semestre = paste0(year(fecha), "-", if_else(month(fecha) <= 6, "I", "II"))) |>
   count(semestre, motivo, wt = n) |>
   mutate(participacion = n / sum(n), .by = semestre) |>
   write_csv(here("data", "processed", "medh_motivo_semestre.csv"))
 
-# H. cadena de dispensación: ruptura entre Famisanar y Colsubsidio (1 de agosto
-# de 2025). Reclamos mensuales como índice respecto a enero-julio de 2025,
-# Famisanar frente a EPS no intervenidas.
 control <- c("Aliansalud", "Cajacopi", "Capital Salud", "Comfenalco Valle", "Compensar", "Mutual Ser", "Salud Total", "Sura")
 reclamos |>
   mutate(eps = eps_canonico(eps),
@@ -107,8 +90,6 @@ reclamos |>
   mutate(indice = n / mean(n[fecha >= as.Date("2025-01-01") & fecha < as.Date("2025-08-01")]), .by = serie) |>
   write_csv(here("data", "processed", "medh_evento_famisanar.csv"))
 
-# H. recursos y deudas: reclamos por medicamentos por 10.000 afiliados (2025)
-# frente a finanzas de diciembre de 2025.
 finanzas <- read_csv(here("data", "processed", "eps_finanzas.csv"), show_col_types = FALSE) |>
   filter(corte == as.Date("2025-12-01"), ingresos > 0)
 read_csv(here("data", "processed", "med_alto_costo_eps.csv"), show_col_types = FALSE) |>
@@ -119,9 +100,6 @@ read_csv(here("data", "processed", "med_alto_costo_eps.csv"), show_col_types = F
             patrimonio_por_afiliado = patrimonio / afiliados, meses_deuda, formato) |>
   write_csv(here("data", "processed", "medh_eps_finanzas.csv"))
 
-# Medicamentos no financiados con la UPC (antes "no POS"): reclamos por año.
-# La categoría se reduce porque entre 2021 y 2023 muchos medicamentos pasaron a
-# ser financiados con la UPC; no es un indicador estable de medicamentos caros.
 read_csv(here("data", "processed", "reclamos_medicamentos.csv.gz"),
          col_types = cols(.default = "c", n = "i")) |>
   filter(!str_detect(coalesce(tipo_motivo, ""), "^DISPOSITIVOS")) |>
@@ -136,10 +114,6 @@ read_csv(here("data", "processed", "reclamos_medicamentos.csv.gz"),
   arrange(anio) |>
   write_csv(here("data", "processed", "medh_no_upc_anual.csv"))
 
-# ¿Es real el aumento de 2025? -------------------------------------------------------
-
-# Reclamos por medicamentos frente al total de reclamos ante la Supersalud y a la
-# población: si el canal de quejas se usa más, todo crece a la vez.
 anio_num <- \(x) as.integer(as.numeric(sub(",", ".", x)))
 medicamentos_anual <- read_csv(here("data", "processed", "reclamos_medicamentos.csv.gz"),
                                col_types = cols(.default = "c", n = "i")) |>
@@ -156,7 +130,6 @@ read_csv(here("data", "processed", "reclamos_totales_medicamentos.csv.gz"), col_
   arrange(anio) |>
   write_csv(here("data", "processed", "medh_anual_normalizado.csv"))
 
-# Aporte de cada EPS al aumento de los reclamos de alto costo entre 2024 y 2025.
 afiliados_eps <- adres_afiliados() |>
   mutate(eps = eps_canonico(ent_nombre)) |>
   summarise(afiliados = sum(afiliados), .by = eps)
@@ -171,12 +144,6 @@ medicamentos_anual |>
   arrange(desc(aumento)) |>
   write_csv(here("data", "processed", "medh_aumento_eps.csv"), na = "")
 
-# Panel de deuda y reclamos -----------------------------------------------------------
-
-# Como en las citas (scripts/17): deuda de cada EPS al cierre de un semestre
-# frente a sus reclamos de alto costo del semestre siguiente, con efectos fijos
-# de EPS y de semestre. Solo EPS en formato NIIF y semestres con al menos 30
-# reclamos. Errores estándar agrupados por EPS.
 reclamos_semestre <- reclamos |>
   mutate(eps = eps_canonico(eps), periodo = paste0(year(fecha), "-", if_else(month(fecha) <= 6, 1, 2))) |>
   filter(!is.na(eps)) |>
@@ -206,12 +173,6 @@ map(c("alto_costo", "medicamentos"), \(y) {
   list_rbind() |>
   write_csv(here("data", "processed", "medh_panel_resumen.csv"))
 
-# Reclamos por paciente (Cuenta de Alto Costo) ------------------------------------------
-
-# Reclamos por medicamentos de 2025 por cada 10.000 pacientes de cada
-# enfermedad. Los cortes de la CAC van de julio de 2024 a enero de 2026 según
-# la enfermedad (ver data/referencia/cac_pacientes.csv). La mitad de los
-# reclamos no especifica patología: las tasas son un piso.
 cac <- read_csv(here("data", "referencia", "cac_pacientes.csv"), show_col_types = FALSE)
 reclamos_2025 <- filter(reclamos, year(fecha) == 2025) |>
   mutate(patologia = toupper(str_squish(patologia_tipo)))
@@ -226,11 +187,6 @@ map(seq_len(nrow(cac)), \(i) {
   arrange(desc(por_10k)) |>
   write_csv(here("data", "processed", "medh_cac_pacientes.csv"))
 
-# Desabastecimiento y reclamos por enfermedad -------------------------------------------
-
-# ¿Suben los reclamos de una enfermedad el mes siguiente a que uno de sus
-# medicamentos de referencia aparezca desabastecido o en riesgo en el listado
-# del Invima? Panel enfermedad × mes con efectos fijos de enfermedad y de mes.
 patron_enfermedad <- c(
   "Artritis reumatoide" = "ARTRITIS REUMATOIDEA",
   "Enfermedad renal y trasplante" = "^IRC|RENAL CR[OÓ]NICA|TRASPLANTE",

@@ -1,6 +1,3 @@
-# Fuentes sobre disponibilidad y precio de medicamentos (medicamentos.qmd).
-
-# Descarga un conjunto de datos completo de datos.gov.co como CSV.
 descargar_datos_gov_csv <- function(id, destino, limite = 1e6) {
   dir.create(dirname(destino), recursive = TRUE, showWarnings = FALSE)
   httr2::request(sprintf("https://www.datos.gov.co/resource/%s.csv", id)) |>
@@ -11,9 +8,6 @@ descargar_datos_gov_csv <- function(id, destino, limite = 1e6) {
     invisible()
 }
 
-# Listados mensuales de abastecimiento y desabastecimiento del Invima (PDF).
-# Se toman los enlaces publicados en la página del Invima, más el listado de
-# 2026 que publica el Minsalud. Descarga solo los que falten.
 invima_desabastecimiento_pagina <- "https://www.invima.gov.co/productos-vigilados/medicamentos-y-productos-biologicos/desabastecimientos"
 invima_desabastecimiento_extra <- "https://www.minsalud.gov.co/sites/rid/Lists/BibliotecaDigital/RIDE/VS/MET/listado-abastecimiento-desabastecimiento-medicamentos-2026.pdf"
 
@@ -24,7 +18,6 @@ invima_descargar_desabastecimiento <- function(carpeta = here::here("data", "raw
     httr2::req_perform() |>
     httr2::resp_body_string()
   enlaces <- unique(regmatches(pagina, gregexpr('/invima_website/static/attachments/medicamentos_desabastecimientos/[^"]+\\.pdf', pagina))[[1]])
-  # Solo los listados mensuales (no los informes temáticos ni los consolidados de 2022).
   enlaces <- enlaces[grepl("listado", enlaces, ignore.case = TRUE)]
   urls <- c(paste0("https://www.invima.gov.co", enlaces), invima_desabastecimiento_extra)
 
@@ -40,15 +33,6 @@ invima_descargar_desabastecimiento <- function(carpeta = here::here("data", "raw
   invisible(urls)
 }
 
-# Lee un listado mensual de abastecimiento del Invima (PDF) y devuelve una fila
-# por registro: fecha del listado (mes que reporta), estado y el texto de la
-# columna del nombre. El formato de las tablas cambia entre 2023 y 2026 y en
-# algunos meses no trae el código ATC, así que cada registro se reconoce por su
-# línea de estado (con una fecha de seguimiento en la misma línea o en una
-# vecina) y su nombre es lo que hay en las primeras columnas desde el registro
-# anterior. Algunos listados tienen una fila por presentación y otros una por
-# principio activo: los conteos totales no son comparables entre meses, pero sí
-# si un principio activo aparece y con qué estado.
 invima_leer_listado <- function(archivo) {
   paginas <- pdftools::pdf_text(archivo)
   lineas <- unlist(strsplit(paginas, "\n"))

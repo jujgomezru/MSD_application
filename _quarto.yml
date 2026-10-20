@@ -40,8 +40,6 @@ format:
     fig-height: 5
 
 execute:
-  # Los resultados se calculan localmente y se guardan en _freeze/,
-  # así GitHub Actions publica sin instalar R ni descargar datos.
   freeze: auto
   echo: true
   warning: false

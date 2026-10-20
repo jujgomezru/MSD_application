@@ -1,20 +1,3 @@
-# Procesa los reclamos en salud de la Supersalud para el análisis de
-# medicamentos (medicamentos.qmd). Requiere haber ejecutado
-# scripts/07_descargar_reclamos.R.
-#
-# Genera en data/processed/:
-# - reclamos_medicamentos.csv.gz: reclamos cuyo motivo menciona medicamentos,
-#   por mes, departamento del afectado, EPS, régimen, motivo, alto costo, tipo
-#   de patología y riesgo.
-# - reclamos_medicamentos_patologia.csv.gz: los mismos reclamos por año y
-#   patología (incluido el código CIE-10).
-# - reclamos_totales_medicamentos.csv.gz: total de reclamos por mes,
-#   departamento y EPS, para calcular la participación de medicamentos.
-#
-# Antes de julio de 2023 el medicamento aparece en el motivo específico ("...
-# ENTREGA DE MEDICAMENTOS POS"); después, en el tipo de motivo ("MEDICAMENTOS
-# UPC"). La columna corte separa ambos periodos.
-
 source(here::here("R", "setup.R"))
 source(here("R", "supersalud.R"))
 

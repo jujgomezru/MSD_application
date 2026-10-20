@@ -1,6 +1,3 @@
-# Carga paquetes y funciones del proyecto. Cada .qmd y script empieza con:
-# source(here::here("R", "setup.R"))
-
 suppressPackageStartupMessages({
   library(tidyverse)
   library(here)

@@ -1,16 +1,9 @@
-# Prepara los datos del gráfico de citas per cápita de index.qmd:
-# data/processed/citas_per_capita_departamentos.csv, con las citas asignadas
-# por 1.000 habitantes y los días de espera por departamento y especialidad en
-# los últimos 12 meses, y su cuadrante frente a los valores nacionales.
-# Requiere haber ejecutado scripts/04_preparar_mapa.R.
-
 source(here::here("R", "setup.R"))
 source(here("R", "poblacion.R"))
 
 espera <- read_csv(here("data", "processed", "mapa_espera_departamentos.csv"),
                    col_types = cols(cod_depto = "c"))
 
-# El periodo (jul 2025 - jun 2026) abarca dos años: se promedia su población.
 anios <- unique(c(year(min(espera$desde)), year(max(espera$hasta))))
 poblacion <- dane_poblacion() |>
   filter(anio %in% anios) |>

@@ -1,6 +1,3 @@
-# Funciones auxiliares.
-
-# Guarda una figura en figures/ en SVG (web) y PNG (documentos).
 guardar_grafica <- function(grafica, nombre, ancho = 8, alto = 5, dpi = 300) {
   dir.create(here::here("figures"), showWarnings = FALSE)
   for (ext in c("svg", "png")) {
@@ -11,9 +8,6 @@ guardar_grafica <- function(grafica, nombre, ancho = 8, alto = 5, dpi = 300) {
     )
   }
 
-  # svglite escribe la fuente concreta del sistema (en Ubuntu, "Nimbus Sans"),
-  # que no existe en Windows y el navegador cambia por una con serifa. Se
-  # reemplaza por una lista de fuentes sans disponibles en cualquier sistema.
   svg <- here::here("figures", paste0(nombre, ".svg"))
   contenido <- readLines(svg, warn = FALSE)
   contenido <- gsub("font-family: [^;\"]*\"[^\"]*\"", "font-family: system-ui, Segoe UI, Helvetica, Arial, sans-serif", contenido)

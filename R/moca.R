@@ -1,11 +1,3 @@
-# Descarga de los reportes de oportunidad de citas del Observatorio Nacional de
-# Calidad en Salud (https://rssvr2.sispro.gov.co/IndicadoresMOCA/).
-#
-# La página es un ReportViewer de ASP.NET: cada filtro (indicador, departamento,
-# municipio) es un postback que devuelve la página con el siguiente filtro
-# habilitado. Estas funciones repiten esos postbacks y luego piden la exportación
-# a CSV, igual que el botón "Exportar" del navegador.
-
 library(httr2)
 library(rvest)
 
@@ -13,8 +5,6 @@ moca_url <- "https://rssvr2.sispro.gov.co/IndicadoresMOCA/"
 moca_reporte_ips <- "/Resolucion256-2016/IndicadoresIPS-ExperienciaAtencion-Resol256"
 moca_prefijo <- "ctl00$MainContent$rptContenedor$"
 
-# Indicadores de "asignación de cita" disponibles en el reporte por IPS.
-# El nombre es el que se usa en los archivos; el valor, el texto del indicador.
 moca_indicadores <- c(
   medicina_general = "Medicina General",
   medicina_interna = "Medicina Interna",
@@ -24,8 +14,6 @@ moca_indicadores <- c(
   cirugia_general  = "Cirugía General"
 )
 
-# Sesión y formulario ---------------------------------------------------------
-
 moca_peticion <- function(cookies) {
   request(moca_url) |>
     req_user_agent("MSD_application (https://github.com/jujgomezru/MSD_application)") |>
@@ -34,7 +22,6 @@ moca_peticion <- function(cookies) {
     req_retry(max_tries = 3)
 }
 
-# Reúne los campos que el navegador enviaría en el siguiente postback.
 moca_campos <- function(pagina) {
   inputs <- html_elements(pagina, "input")
   tipo <- html_attr(inputs, "type")
@@ -48,7 +35,6 @@ moca_campos <- function(pagina) {
     campos[[html_attr(sel, "name")]] <- dplyr::coalesce(elegido, "")
   }
 
-  # Campos que llena el JavaScript del visor; sin ellos el servidor responde 500.
   visibilidad <- paste0(moca_prefijo, "ctl09$VisibilityState$ctl00")
   if (is.null(campos[[visibilidad]]) || !nzchar(campos[[visibilidad]])) {
     campos[[visibilidad]] <- "None"
@@ -67,7 +53,6 @@ moca_postback <- function(cookies, campos, objetivo = "") {
     resp_body_html()
 }
 
-# Opciones de un <select>: data.frame con valor y etiqueta.
 moca_opciones <- function(pagina, nombre) {
   opciones <- html_elements(pagina, sprintf("select[name='%s'] option", nombre))
   data.frame(
@@ -76,9 +61,6 @@ moca_opciones <- function(pagina, nombre) {
   )
 }
 
-# Descarga ----------------------------------------------------------------------
-
-# Departamentos disponibles para un indicador (código DANE y etiqueta).
 moca_departamentos <- function(indicador = "Pediatría") {
   cookies <- tempfile()
   on.exit(unlink(cookies))
@@ -107,8 +89,6 @@ moca_seleccionar_indicador <- function(cookies, indicador) {
   moca_postback(cookies, campos, control)
 }
 
-# Descarga el CSV de un indicador y un departamento.
-# `departamento` es el código DANE de 2 dígitos, o "00" para el total país.
 moca_descargar <- function(indicador, departamento, destino, solo_total = TRUE) {
   cookies <- tempfile()
   on.exit(unlink(cookies))
@@ -127,10 +107,6 @@ moca_descargar <- function(indicador, departamento, destino, solo_total = TRUE) 
   campos[[control]] <- valor
   pagina <- moca_postback(cookies, campos, control)
 
-  # Municipio es de selección múltiple. La casilla ctl00 es "(Select All)" y
-  # solo aparece cuando hay más de una opción; la última opción es "Total".
-  # Con solo_total = TRUE se pide únicamente el total del departamento (o del
-  # país); si no, todos los municipios con su detalle por IPS.
   lista <- paste0(moca_prefijo, "ctl04$ctl07$divDropDown$")
   casillas <- html_attr(html_elements(pagina, "input[type='checkbox']"), "name")
   casillas <- casillas[startsWith(casillas, lista) & casillas != paste0(lista, "ctl00")]
@@ -159,8 +135,6 @@ moca_descargar <- function(indicador, departamento, destino, solo_total = TRUE) 
   invisible(destino)
 }
 
-# Descarga varias combinaciones a data/raw/moca/<indicador>_<depto>.csv.
-# Salta los archivos que ya existen, así que se puede interrumpir y reanudar.
 moca_descargar_todo <- function(indicadores = moca_indicadores,
                                 departamentos = NULL,
                                 carpeta = here::here("data", "raw", "moca"),
@@ -183,13 +157,6 @@ moca_descargar_todo <- function(indicadores = moca_indicadores,
   }
 }
 
-# Lectura -------------------------------------------------------------------------
-
-# Lee y une los CSV descargados. Los números vienen en formato colombiano
-# (punto de miles, coma decimal) y las 3 primeras líneas son metadatos.
-# `nivel` distingue el total país (cod_depto 170), el total departamental y las
-# filas por IPS. El reporte no trae totales municipales: se calculan sumando
-# numerador y denominador de las IPS del municipio.
 moca_leer <- function(carpeta = here::here("data", "raw", "moca")) {
   archivos <- list.files(carpeta, pattern = "\\.csv$", full.names = TRUE)
   numero <- function(x) readr::parse_number(x, locale = readr::locale(decimal_mark = ",", grouping_mark = "."))
