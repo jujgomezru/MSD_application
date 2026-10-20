@@ -31,7 +31,6 @@ figcaption {
   vertical-align: bottom;
 }
 
-/* Los encabezados sí pueden partirse en varias líneas. */
 .tabla-datos th.num {
   white-space: normal;
 }
